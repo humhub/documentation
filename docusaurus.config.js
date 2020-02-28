@@ -14,8 +14,8 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
-        {to: 'docs/admin/requirements', label: 'Admin', position: 'left'},
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
+        {to: 'docs/admin/requirements', activeBasePath: 'docs/admin',  label: 'Admin', position: 'left'},
+        {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
