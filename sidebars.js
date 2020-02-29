@@ -21,15 +21,18 @@ module.exports = {
         'Introduction': [
             'develop/overview',
             'develop/environment',
-            'develop/coding-standards',
+            'develop/coding-standards'
         ],
         'Module Development': [
             'develop/modules',
-            'develop/modules-base-class',
+            'develop/modules-base-class'
+
         ],
         'Basic Concepts': [],
-        'Javascript API': [],
-        'Advanced Topics': []
+        'Frontend Development': [],
+        'Advanced Topics': [
+            'develop/embedded-themes'
+        ]
     },
     Theming: {}
 };

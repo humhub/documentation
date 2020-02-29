@@ -46,6 +46,8 @@ Furthermore you may have to consider the following issues:
 ## Setup a module skeleton
 
 The easiest way of setting up a basic HumHub module is by using the [Developer Tools Module](https://github.com/humhub/humhub-modules-devtools).
+Once you've generated a module skeleton, copy the module to a [module loader path](environment.md#module-loader-path). Now the module
+should be visible under `Administration -> Modules` and can be [enabled](#enabled-a-module).
 
 ## Module Structure
 
@@ -69,8 +71,8 @@ my-module
 
 ### `config.php`
 
-The `config.php` file enables automatic module loading, event configuration, and the definition of [URL Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)
-and should contain the following attributes:
+The `config.php` can be used to define event handlers, and the definition of [URL Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)
+and consists of the following data:
 
 - **id** - Unique ID of the module **required**
 - **class** - Namespaced classname of the module class  **required**
@@ -82,9 +84,7 @@ and should contain the following attributes:
 **Example:**
 
 ```php
-<?php
-
-use johndoe\example\Module;
+// @example/config.php
 use humhub\widgets\TopMenu;
 
 return [
@@ -98,14 +98,16 @@ return [
         ]
     ]
 ];
-?>
 ```
 
-> ⚠️ Do not execute any code in `config.php` since the result will be cached!
+> ⚠️ Do not execute any dynamic code directly within `config.php` since the result will be cached!
+
+> ⚠️ Do choose a preferably unique module id which does not interfere with any [core](overview.md#core-modules-and-components)
+>or other available module.
 
 ### `module.json`
 
-The `module.json` file holds basic meta data which is used for example by the marketplace.
+The `module.json` file holds basic metadata of a module which is used besides others by the marketplace.
 
 Available attributes:
 
@@ -160,19 +162,20 @@ Available attributes:
 
 ### `Module.php`
 
-See chapter [Base Class](modules-base-class.md) for an introduction of module base classes.
+See chapter [Module Class](modules-base-class.md) for an introduction of the module base class.
 
 ### Documentation
 
-The documentation files of the module must be located in the folder 'docs'.
+The documentation files of a module must be located in the modules `docs` folder.
 
-The following table shows the default files.
+The following table lists files which can be added in order to provide module documentation for the marketplace. Note, the
+**required** field only applies to the marketplace modules and are not required for private modules.
 
 | File | Required | Description |
 | --- | --- | --- |
 | README.md | Yes | A description and overview of the features |
-| MANUAL.md | No | Information on how to use this module |
 | CHANGELOG.md | Yes | A file which contains a curated, chronologically ordered list of changes for each version |
+| MANUAL.md | No | Information on how to use this module |
 | LICENCE.md | No | Licencing information including the licence |
 | DEVELOPER.md | No | Additional information for developers |
 

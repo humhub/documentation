@@ -1,4 +1,6 @@
-Embedded themes
-=================
+---
+id: embedded-themes
+title: Embedded themes
+---
 
-(TBD)
+>⚠️ Under construction.

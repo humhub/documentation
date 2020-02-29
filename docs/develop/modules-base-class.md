@@ -3,39 +3,36 @@ id: modules-base-class
 title: Module Class
 ---
 
-The `Module.php` of a module defines the main module class which should either extend `humhub\components\Module` 
-or `humhub\modules\content\components\ContentContainerModule`. The `Module` class provides basic module functions 
-used for disabling and retrieving metadata and furthermore can be used to define module class configurations as described
-below.
+## Base Module Class
 
-A module instance can be fetched as follows:
+The main module class defined in `Module.php` implements basic module functionality which will be described in more detail
+in the following sections. Currently there are two base module classes:
 
-```
-$mymodule = Yii::$app->getModule('mymodule')
-```
+- `humhub\components\Module` - Used for modules which can only be installed on a global level.
+- `humhub\modules\content\components\ContentContainerModule` - Used for modules which can also be installed
+on space and/or user level.
 
-The `getModule()` function will only return instances of [enabled](modules.md#enabled-a-module) modules.
+### Module field configuration
 
-## Module class configuration
-
-Public fields of the `Module` class can be overwritten by the application configuration. 
-This can be useful in order to provide some extra settings.
+Public fields of the module class can be overwritten by [configuration](../admin/advanced-configuration.md). 
+This can be useful in order to provide module related configuration options, which do not necessarily 
+be configurable within the admin interface.
 
 **Example:**
 
 ```php
-namespace mymodule;
-
+// @mymodule/Module.php
 class Module extends \humhub\components\Module
 {
     public $maxValue = 200;
-    
     // ...
 }
 ```
-The `maxValue` can be overwritten by the following settings within the `@humhub/protected/config/common.php`
+
+The `maxValue` can be overwritten by the following configuration:
 
 ```php
+// @humhub/protected/config/common.php
 return [
     'modules' => [
         'mymodule' => [
@@ -45,46 +42,71 @@ return [
 ]
 ```
 
-The setting can be used within your module as follows:
+The configuration value can be read as follows:
 
 ```php
 $maxValue = Yii::$app->getModule('mymodule')->maxValue;
 ```
 
+> ℹ️ You can also define callback functions, which then can be implemented or overwritten within your configuration.
+
+### `getConfigUrl()`
+
 While module class level configurations are handy for values which are not changed that often, 
-you may should consider using [Module settings](#module-settings) in combination with the `Module::getConfigUrl()`
-to implement settings configurable within the admin interface.
+you may should consider using [module settings](settings.md) in combination with the `Module::getConfigUrl()` function
+to implement module settings configurable within the admin interface.
 
-## Module settings
+The `Module::getConfigUrl()` can be used to define a module configuration view. Once this function is implemented a `Configure`
+button will be added to your module in the module admin overview.
 
-The `Module::getConfigUrl()` can be used to set a module configuration view. Once this function is implemented a `Configure`
-button will be added to your module within the module admin overview.
 
-Your config controller should extend `humhub\modules\admin\components\Controller`.
-Refer to the [Settings and Configurations](settings.md) in order to learn how to save global or container related settings.
+**Example:**
 
-[ContentContainerModules](#use-of-contentcontainermodule) provide a `getContentContainerConfigUrl()` function respectively.
+```php
+// @mymodule/Module.php
+public function getConfigUrl()
+{
+    return Url::to(['/mymodule/config/index']);
+}
+```
 
-## Disable Module Logic
+Refer to the [Settings and Configurations](settings.md) section to learn how to save and load global or container related settings.
+See [getContentContainerConfigUrl()](#getcontentcontainerconfigurl) for providing a container specific config action.
 
-The modules `Module::disable()` function is called while disabling the module. Within the disable logic of your module
+### `getDescription()`
+
+This function should be overwritten to provide a short description of this module which will be displayed in
+the module overview. See [getcontentcontainerdescription](#getcontentcontainerdescription) for implementing 
+container specific module descriptions.
+
+**Example:**
+
+```php
+// @mymodule/Module.php
+public function getDescription()
+{
+    return Yii::t('MyModule.base', 'Adds some special features to your platform.');
+}
+```
+
+### `disable()`
+
+The `Module::disable()` function is called when the module was disabled. Within the disable logic of your module
 you should clear all module related database entries. Note that you should iterate over the entries and delete them by means of the
-`ActiveRecord::delete()` function in order to trigger ActiveRecord events. Note the `ActiveRecord::deleteAll()` **does
+`ActiveRecord::delete()` function in order to trigger **beforeDelete** and **afterDelete** events. Note the `ActiveRecord::deleteAll()` **does
 not trigger** those events. 
 
 ```php
-class Module extends \humhub\components\Module
+// @mymodule/Module.php
+public function disable()
 {
-    public function disable()
-    {
-        // Clear module related contentent etc...
-        foreach (MyContentModel::find()->all() as $model) {
-            $model->delete();
-        }
-        
-        // Don't forget to call this!!
-        parent::disable();
+    // Clear module related contentent etc...
+    foreach (MyContentModel::find()->all() as $model) {
+        $model->delete();
     }
+    
+    // Don't forget to call this!!
+    parent::disable();
 }
 ```
 
@@ -96,32 +118,41 @@ By default the `disable()` function will clear the following data:
 
 See the [Container Module](#container-module) section for information about disabling your module on `ContentContainer` level.
 
-## Permissions
+### `getPermissions()`
 
-Module specific permissions are exported by means of the [[humhub\components\Module::getPermissions()]] function. See the [Permissions](permissions.md) section for more information.
+Module specific permissions are exported by means of the `Module::getPermissions()` function. 
+See the [Permissions](permissions.md) section for more information.
 
-## Assets and `$resourcesPath`
+### `$resourcesPath`
 
-The [[humhub\components\Module::resourcesPath]] defines the modules resource directory, containing images, javascript files or other assets.
+The `Module::$resourcesPath` defines the modules resource directory, containing images, javascript files or other assets.
 
-
-## Use of ContentContainerModule
-
-In case your module can be enabled on space or user account level your `Module` class has to derive from [[humhub\modules\content\components\ContentContainerModule]]. 
-
-`ContentContainerModule` classes provide some additional functions as:
-
-- `getContentContainerTypes()` - defines for which container-type (space or user account) this module can be enabled. 
-
-- `disableContentContainer()` - is called when this module is disabled for a given container.
-
-- `getContentContentContainerDescription()` - provides a general description of this module for a given container.
-
-- `getContentContainerConfigUrl()` - returns an URL linking to a container level configuration
-
-The following example module can be enabled on space and profile level:
+**Example:**
 
 ```php
+// @mymodule/Module.php
+class Module extends \humhub\components\Module
+{
+    public $resourcesPath = 'resources';
+
+    //...
+}
+```
+
+## ContentContainerModule
+
+The `ContentContainerModule` class needs to be extended for modules which are
+installable on space or user profile level. A module can only be enabled on container level,
+once it is globally [enabled](modules.md#enabled-a-module). Enabling a module on container level will add a relation 
+to the `contentcontainer_module`. Note, this is not the case for modules, which are set as default for a given container type.
+
+`ContentContainerModule` extends the base `humhub\components\Module` class
+with additional container related functions, which will be described in the following. 
+
+**Example:**
+
+```php
+// @mymodule/Module.php
 namespace mymodule;
 
 use humhub\modules\content\components\ContentContainerModule;
@@ -130,81 +161,141 @@ use humhub\modules\user\models\User;
 
 class Module extends ContentContainerModule
 {
-
-    // Defines for which content container type this module can be enabled
+ 
     public function getContentContainerTypes()
     {
-        // This content container can be assigned to Spaces and User
-        return [
-            Space::class,
-            User::class,
-        ];
-    }
-
-    // Is called when the whole module is disabled
-    public function disable()
-    {
-        // Clear all Module data and call parent disable!
-        parent::disable();
-    }
-
-    // Is called when the module is disabled on a specific container
-    public function disableContentContainer(ContentContainerActiveRecord $container)
-    {
-        parent::disableContentContainer($container);
-        //Here you can clear all data related to the given container
-    }
-
-    // Can be used to define a specific description text for different container types
-    public function getContentContainerDescription(ContentContainerActiveRecord $container)
-    {
-        if ($container instanceof Space) {
-            return Yii::t('MyModule.base', 'Description related to spaces.');
-        } elseif ($container instanceof User) {
-            return Yii::t('MyModule.base', 'Description related to user.');
-        }
+            // This module can only be installed on spaces
+            return [Space::class];
     }
 }
 ```
 
-Globally enabled `ContentContainerModules` can be enabled on the container within the **User Account Module Settings** or **Space Module Settings** (depending
-on the `getContentContainerTypes()` return value), which will add an `contentcontainer_module` table entry.
+### `getContentContainerTypes()`
 
-By default the `CotnentContainerModule::disableContentContainer()` clears the following data:
+This function needs to be overwritten in order to define on which container types (Space and/or User) this module should
+be installable. The following implementation will add the module to the module overview of Spaces and Users.
 
-- All cotnainer related [settings](settings.md)
+```php
+// @mymodule/Module.php
+public function getContentContainerTypes()
+{
+    // This module can only be installed on Spaces and User level
+    return [
+        Space::class,
+        User::class
+    ];
+}
+```
 
-The `CotnentContainerModule::disable()` will
+### `getContentContainerConfigUrl()`
+
+Similar to [getConfigUrl()](#getconfigurl), this function can be used to define a container related config action.
+
+**Example:**
+
+```php
+// @mymodule/Module.php
+public function getContentContainerConfigUrl(ContentContainerActiveRecord $container)
+{
+    return $container->createUrl('/mymodule/config/index');
+}
+```
+
+### `disable()`
+
+In addition to `Module::disable` the `CotnentContainerModule::disable()` function will:
  
  - call `CotnentContainerModule::disableContentContainer()` for each container this module is enabled.
  - clear all `contentcontainer_module` entries related to this module.
- - call `parent::disable()` (see )
 
-The following example shows the usual `disable` logic of a module with an [ContentContainerActiveRecord](content.md#implement-custom-contentactiverecords)
+### `disableContentContainer()`
+
+This function is called after the module was disabled on a specific container. Overwrite this function in case you
+need to clear up container related module data as content and other records.
+
+By default, the `disableContentContainer()` clears the following data:
+
+- All container related [settings](settings.md)
+
+**Example:**
 
 ```php
-    /**
-     * @inheritdoc
-     */
-    public function disable()
-    {
-        foreach (Poll::find()->all() as $poll) {
-            $poll->delete();
-        }
-
-        parent::disable();
+// @mymodule/Module.php
+public function disableContentContainer(ContentContainerActiveRecord $container)
+{
+    
+    foreach (MyContent::find()->contentContainer($container)->all() as $entry) {
+        $entry->delete();
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function disableContentContainer(ContentContainerActiveRecord $container)
-    {
-        parent::disableContentContainer($container);
-
-        foreach (Poll::find()->contentContainer($container)->all() as $poll) {
-            $poll->delete();
-        }
-    }
+        
+    // Don't forget this!
+    parent::disableContentContainer($container);
+}
 ```
 
+### `getContainerPermissions()`
+
+Overwrite this function instead of [getPermissions()](#getpermissions) to return permission which are only relevant
+for containers this module is enabled on.
+
+**Instead of:**
+
+```php
+// @mymodule/Module.php
+public function getPermissions($contentContainer = null)
+{
+    if ($contentContainer && $contentContainer->moduleManager->isEnabled($this->id)) {
+        return [
+            SomePermission::class
+        ]
+    }
+
+    return parent::getPermissions($contentContainer);
+}
+```
+
+**Use this:**
+
+```php
+// @mymodule/Module.php
+protected function getContainerPermissions($contentContainer = null)
+{
+    return [
+        SomePermission::class
+    ]
+}
+```
+
+### `getGlobalPermissions()`
+
+Overwrite this function in order to define [global module permissions](permissions.md#group-permissions).
+
+**Example:**
+
+```php
+// @mymodule/Module.php
+protected function getGlobalPermissions()
+{
+    return [
+        SomeGroupPermission::class
+    ]
+}
+```
+
+### `getContentContainerDescription()`
+
+Overwrite this function in case you want to return a more specific description of this module for a given container.
+The module description is used within the module overview of a user/space. If not implemented, 
+the `Module::getDescription()` will be used for all containers as default.
+
+```php
+// @mymodule/Module.php
+public function getContentContainerDescription(ContentContainerActiveRecord $container)
+{
+    if ($container instanceof Space) {
+        return Yii::t('MyModule.base', 'Adds some nice space featues.');
+    } elseif ($container instanceof User) {
+       return Yii::t('MyModule.base', 'Adds some very nice profile featues.');
+    }
+}
+```

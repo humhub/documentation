@@ -65,17 +65,19 @@ have to run `queue/run` command manually in order to execute queued tasks as not
 
 ### Module Loader Path
 
-Custom modules can be located outside of the default HumHub `modules` directory by
-adding a path to the `moduleAutoloadPaths` array parameter within `protected/config/common.php`. 
-This separation can be useful while developing custom modules.
+The default path under which HumHub searches for installed modules is `@humhub/protected/modules`. Additional search paths
+can be configured within `@humhub/protected/config/common.php` as follows: 
 
 ```php
+// @humhub/protected/config/common.php
 return [
     'params' => [
         'moduleAutoloadPaths' => ['/some/folder/modules'],        
     ],
 ]
 ```
+This separation can be useful in your development environment in order to define a central module directory for different
+test installations and prevent interference with marketplace modules.
 
 ### Yii Debug Module
 
