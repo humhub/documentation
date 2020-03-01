@@ -1,7 +1,6 @@
 ---
 id: backup
 title: Backup
-sidebar_label: Backup
 ---
 
 Whether you are upgrading your installation of HumHub using the updater module or the manual, you must make sure you have your own set of backup data, one you can rely on and to which you can get back on your own terms.

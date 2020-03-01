@@ -1,5 +1,8 @@
-Sidebars and Snippets
-======================
+---
+id: snippet
+title: Sidebars
+---
+
 
 Snippets are self contained panels which can be added to the sidebar, for example the _space_, _directory_, or _dashboard_ layout.
 

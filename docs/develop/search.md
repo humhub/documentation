@@ -1,7 +1,9 @@
-Search
-======
+---
+id: search
+title: Search
+---
 
-TBD
+>⚠️ Under construction.
 
 
 See [[\humhub\modules\search\interfaces\Searchable]] interface for more details.

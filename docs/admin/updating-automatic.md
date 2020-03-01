@@ -1,7 +1,6 @@
 ---
 id: updating-automatic
 title: Automatic Update
-sidebar_label: Manual Update
 ---
 
 The [HumHub Updater Module](https://www.humhub.org/de/marketplace/details?id=17) enables updates of your HumHub installation 

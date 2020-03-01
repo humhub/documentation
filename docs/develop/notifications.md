@@ -1,5 +1,7 @@
-Notifications
-=============
+---
+id: notifications
+title: Notifications
+---
 
 Notifications are used to inform one or a given set of users about a specific event in your network as the liking of a post or mentioning of a user over multiple channels (e.g. web and mail). 
 

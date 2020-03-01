@@ -1,5 +1,7 @@
-Testing
-=======
+---
+id: testing
+title: Testing
+---
 
 ## Getting Started
 

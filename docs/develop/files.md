@@ -1,5 +1,8 @@
-File Handling
-=============
+---
+id: files
+title: Files
+---
+
 
 The HumHub core module *humhub/modules/file* provides a generic file management which can be used in custom modules to store and read files including access control.
 

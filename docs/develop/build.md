@@ -1,5 +1,7 @@
-HumHub Build
-============
+---
+id: build
+title: Build
+---
 
 HumHub provides some [grunt](https://gruntjs.com/) tasks to ease the execution of some console commands. This guide describes how to setup
 the grunt and use the available commands.

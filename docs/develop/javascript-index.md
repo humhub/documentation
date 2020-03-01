@@ -1,5 +1,7 @@
-Javascript Module Guide
-=======
+---
+id: javascript-index
+title: Javascript Modules
+---
 
 Since version 1.2, HumHub provides a module based Javascript API within the `humhub` namespace.
 Instead of embeding inline script blocks into your views, it's highly recommended to store your Javascript code in external script files and use the HumHub module system.

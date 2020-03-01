@@ -1,5 +1,7 @@
-Oembed providers
-======
+---
+id: oembed
+title: Oembed
+---
 
 HumHub provides an option for adding of additional OEmbed providers or override existing one. 
 Advanced OEmbed providers can be configured, by setting up event listener in your module config.php:

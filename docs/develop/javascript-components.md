@@ -1,5 +1,7 @@
-Javascript UI Components
-=======
+---
+id: javascript-components
+title: Components
+---
 
 UI Components can be used to bind specific dom parts of your view to a Javascript Widgets defined in your module. This can be achieved by extending the `action.Component` or the more powerful `ui.Widget` class.
 

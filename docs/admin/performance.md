@@ -1,7 +1,6 @@
 ---
 id: performance
 title: Performance
-sidebar_label: Performance
 ---
 
 Caching

@@ -1,7 +1,6 @@
 ---
 id: search
 title: Search
-sidebar_label: Search
 ---
 
 **The built in search system is used for:**

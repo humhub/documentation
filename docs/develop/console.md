@@ -1,5 +1,7 @@
-Console Application
-=====================
+---
+id: console
+title: Console
+---
 
 ## Add controller to the console application
 
@@ -17,11 +19,14 @@ return [
     'id' => 'translation',
     'class' => 'humhub\modules\translation\Module',
     'namespace' => 'humhub\modules\translation',
-    'events' => array(
+    'events' => [
 	    //...
-        array('class' => Application::className(), 'event' => Application::EVENT_ON_INIT, 'callback' => array('humhub\modules\translation\Module', 'onConsoleApplicationInit')),
+        [
+            'class' => Application::class, 'event' => Application::EVENT_ON_INIT, 
+            'callback' => ['humhub\modules\translation\Module', 'onConsoleApplicationInit']
+        ],
         //...
-    ),
+    ],
 ];
 ?>
 ```

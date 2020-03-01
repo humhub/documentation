@@ -1,7 +1,6 @@
 ---
 id: security
 title: Security
-sidebar_label: Security
 ---
 
 This guide describes recommended configurations and practices in order to keep your network secure.

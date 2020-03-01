@@ -1,5 +1,7 @@
-Permissions
-========
+---
+id: permissions
+title: Permissions
+---
 
 Permissions in HumHub are used to grant users access to specific areas or functions of your network.
 

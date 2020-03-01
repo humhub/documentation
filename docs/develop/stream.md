@@ -1,5 +1,8 @@
-Content Streams
-=================
+---
+id: stream
+title: Streams
+---
+
 Streams are used to asynchronously load batches of content entries which can be filtered or sorted. 
 The stream concept is used for example in _space and profile walls_, the _dashboard_ and
 _activity stream_.

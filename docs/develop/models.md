@@ -1,5 +1,8 @@
-Database and Models
-=================
+---
+id: models
+title: Database Models
+---
+
 
 This guide describes how to setup and update your modules database scheme. All database installation and update scripts will reside in
 your modules `migration` directory.

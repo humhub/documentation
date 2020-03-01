@@ -1,5 +1,7 @@
-Settings Manager
-================
+---
+id: settings
+title: Settings
+---
 
 The SettingsManager allows you to easily store key/value based configuration settings 
 based on module components and also optionally bound to a contentcontainer (e.g. users or spaces).

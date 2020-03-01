@@ -1,5 +1,7 @@
-Javascript UI Additions
-=======
+---
+id: javascript-uiadditions
+title: Additions
+---
 
 UI Additions are used to bind a specific behaviour to dom elements marked with a specific selector.
 The `autosize` addition for example is bound to all textareas with an `.autosize` class attribute and enables an automatic resize of the textarea.

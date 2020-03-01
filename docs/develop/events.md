@@ -1,5 +1,8 @@
-Events
-======
+---
+id: events
+title: Events
+---
+
 
 In order to extend or alter the behavior of some features, your module can listen to class level events as for example:
 

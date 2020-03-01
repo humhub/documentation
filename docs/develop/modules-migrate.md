@@ -1,3 +1,8 @@
+---
+id: modules-migrate
+title: Migrations
+---
+
 Module Migration Guide
 ======================
 

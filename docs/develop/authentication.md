@@ -1,5 +1,7 @@
-Authentication
-===============
+---
+id: authentication
+title: Authentication
+---
 
 HumHub is using <http://www.yiiframework.com/doc-2.0/ext-authclient-index.html> to provide an interface to pluggable authentication providers.
 

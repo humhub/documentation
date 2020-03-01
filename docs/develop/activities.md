@@ -1,5 +1,8 @@
-Activities
-==========
+---
+id: activities
+title: Activities
+---
+
 
 Activity instances are created for special events in the context of a [[humhub\modules\content\models\ContentContainer|ContentContainer]] like the creation of content.
 

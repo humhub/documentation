@@ -1,5 +1,7 @@
-Javascript Client
-=======
+---
+id: javascript-client
+title: Client
+---
 
 The `humhub.modules.client` module provides some utilities for calling backend actions. The client logic is build on top of jquerys `$.ajax` function and provides some additional functionality as a response wrapper, promises and enhanced error handling. 
 

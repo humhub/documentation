@@ -1,5 +1,7 @@
-Security
-=================
+---
+id: security
+title: Security
+---
 
 This guide assembles some tips and recommendations around the security of your module.
 

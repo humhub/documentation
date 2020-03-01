@@ -1,5 +1,8 @@
-Menus and Navigations
-=====================
+---
+id: menus
+title: Menus
+---
+
 
 All menus and navigation widgets are derived from the widget class [[humhub\modules\ui\menu\widgets\Menu]].
 

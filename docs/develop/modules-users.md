@@ -1,5 +1,7 @@
-Users
-=====
+---
+id: modules-users
+title: Users
+---
 
 User Component
 ---------------------

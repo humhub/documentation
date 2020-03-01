@@ -1,5 +1,7 @@
-Content
-=======
+---
+id: content
+title: Content
+---
 
 Before you keep reading, make sure you are familiar with the following Yii concepts:
  
