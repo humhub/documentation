@@ -1,11 +1,11 @@
 module.exports = {
   title: 'HumHub Documentation',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  tagline: 'Your source of information all around the Open Source social network HumHub',
+  url: 'https://docs.humhub.org',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'humhub', // Usually your GitHub org/user name.
+  projectName: 'humhub', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'HumHub Documentation',

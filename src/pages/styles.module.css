@@ -8,6 +8,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: rgb(126,211,223);
+  background: linear-gradient(180deg, rgba(126,211,223,1) 0%, rgba(133,224,237,1) 9%, rgba(97,194,208,1) 85%);
+
 }
 
 @media screen and (max-width: 966px) {
@@ -29,7 +32,16 @@
   width: 100%;
 }
 
+
+.feature {
+  text-align: center;
+}
+
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+.titleImage {
+  width:25%;
 }

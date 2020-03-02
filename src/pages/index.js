@@ -7,91 +7,126 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const features = [
-  {
-    title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+    {
+        title: <>Installation and Administration</>,
+        imageUrl: 'img/undraw_To_the_stars.svg',
+        href:'/docs/admin/requirements',
+        description: (
+            <>
+                Make your first steps by setting up HumHub. Although the installation of HumHub is quite simple, it offers many configuration options to meet the needs of your network.
+            </>
+        ),
+    },
+    {
+        title: <>Theming Guide</>,
+        imageUrl: 'img/undraw_flowers.svg',
+        href:'/docs/theming/overview',
+        description: (
+            <>
+                HumHub brings the tools to customize the look and feel of your platform. Learn more about the available theming
+                techniques of HumHub.
+            </>
+        ),
+    },
+    {
+        title: <>Development Guide</>,
+        imageUrl: 'img/undraw_code_review.svg',
+        href:'/docs/develop/overview',
+        description: (
+            <>
+                You want to add custom features or change the behavior of your HumHub installation? Then check the
+                development guide for all information around the development of HumHub modules.
+            </>
+        ),
+    },
+    {
+        title: <>Professional Edition</>,
+        imageUrl: 'img/undraw_reviewed_docs.svg',
+        href:'/docs/develop/professional',
+        description: (
+            <>
+                Learn more about the extended features of the enterprise edition and how to use them.
+            </>
+        ),
+    },
+    {
+        title: <>Modles and APIs</>,
+        imageUrl: 'img/undraw_hologram.svg',
+        href:'/docs/develop/professional',
+        description: (
+            <>
+                Some HumHub Modules provide additional features in order to connect your HumHub platform with external services or vice versa.
+            </>
+        ),
+    },
+    {
+        title: <>User Guide</>,
+        imageUrl: 'img/undraw_browsing.svg',
+        href:'/docs/develop/user',
+        description: (
+            <>
+                Check out the user guide in order to learn everything about how to use the HumHub platform from a user perspective.
+            </>
+        ),
+    },
+
+
 ];
 
-function Feature({imageUrl, title, description}) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div className={classnames('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+function Feature({imageUrl, title, href, description}) {
+    const imgUrl = useBaseUrl(imageUrl);
+    return (
+        <div className={classnames('col col--4', styles.feature)}>
+            {imgUrl && (
+                <div className="text--center">
+                    <a href={href}><img className={styles.featureImage} src={imgUrl} alt={title}/></a>
+                </div>
+            )}
+            <h3>{title}</h3>
+            <p>{description}</p>
         </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
+    );
 }
 
 function Home() {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/doc1')}>
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header>
-      <main>
-        {features && features.length && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
-    </Layout>
-  );
+    const context = useDocusaurusContext();
+    const {siteConfig = {}} = context;
+    return (
+        <Layout
+            title={siteConfig.title}
+            description="Description will go into a meta tag in <head />">
+            <header className={classnames('hero hero--primary', styles.heroBanner)}>
+                <div className="container">
+                    <img src="/img/undraw_File_bundle.svg" className={classnames('title-image', styles.titleImage)}  />
+                    <h1 className="hero__title">{siteConfig.title}</h1>
+                    <p className="hero__subtitle">{siteConfig.tagline}</p>
+                    <div className={styles.buttons}>
+                        <Link
+                            className={classnames(
+                                'button button--outline button--secondary button--lg',
+                                styles.getStarted,
+                            )}
+                            to={useBaseUrl('docs/doc1')}>
+                            Get Started
+                        </Link>
+                    </div>
+                </div>
+            </header>
+            <main>
+                {features && features.length && (
+                    <section className={styles.features}>
+                        <div className="container">
+                            <div className="row">
+                                {features.map((props, idx) => (
+                                    <Feature key={idx} {...props} />
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                )}
+            </main>
+        </Layout>
+    );
 }
 
 export default Home;
