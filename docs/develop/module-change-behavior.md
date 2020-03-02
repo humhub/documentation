@@ -109,12 +109,12 @@ Widget events are often used to extend view components as menus and forms. Here 
 
 ### Extend menus
 
-Widgets based on `humhub\widgets\BaseMenu]] and `humhub\widgets\BaseStack]] can be intercepted and extended by means of the `humhub\widgets\BaseMenu::EVENT_INIT]] event.
+Widgets based on `humhub\widgets\BaseMenu` and `humhub\widgets\BaseStack` can be intercepted and extended by means of the `humhub\widgets\BaseMenu::EVENT_INIT]] event.
 Please see the [Sidebars and Snippets](snippet.md#event-handlers) section for useful examples of such event handlers.
 
 ### Overwrite widget classes
 
-In order to completely replace a widget implementation you can use the `humhub\components\Widget::EVENT_CREATE]] as follows:
+In order to completely replace a widget implementation you can use the `humhub\components\Widget::EVENT_CREATE` as follows:
 
 **config.php:**
 

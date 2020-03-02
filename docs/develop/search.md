@@ -6,7 +6,7 @@ title: Search
 >⚠️ Under construction.
 
 
-See `\humhub\modules\search\interfaces\Searchable]] interface for more details.
+See `\humhub\modules\search\interfaces\Searchable` interface for more details.
 
 Example:
 
@@ -40,7 +40,7 @@ class Post extends ContentActiveRecord implements Searchable
 
 > TBD
 
-It's also required to handle/implement the `\humhub\modules\search\engine\Search::EVENT_ON_REBUILD]] event to rebuild the search index if nessessary.
+It's also required to handle/implement the `\humhub\modules\search\engine\Search::EVENT_ON_REBUILD` event to rebuild the search index if nessessary.
 
 Example:
 

@@ -5,20 +5,20 @@ title: Notifications
 
 Notifications are used to inform one or a given set of users about a specific event in your network as the liking of a post or mentioning of a user over multiple channels (e.g. web and mail). 
 
-Custom notification classes are derived from `humhub\modules\notification\components\BaseNotification]].
-A `humhub\modules\notification\components\BaseNotification|BaseNotification]] usually is assigned with an
+Custom notification classes are derived from `humhub\modules\notification\components\BaseNotification`.
+A `humhub\modules\notification\components\BaseNotification|BaseNotification` usually is assigned with an
 `$originator` user instance and a `$source` instance, which connects the Notification with a Content or any other kind of [yii\db\ActiveRecord](https://www.yiiframework.com/doc/api/2.0/yii-db-activerecord).
 
-A Notification can be sent to a user by calling the `send()` or `sendBulk()` function. This will persist an `humhub\modules\notification\models\Notification]] instance for each user and send out a notification to all allowed `NotificationTargets`.
+A Notification can be sent to a user by calling the `send()` or `sendBulk()` function. This will persist an `humhub\modules\notification\models\Notification` instance for each user and send out a notification to all allowed `NotificationTargets`.
 
 Since **HumHub v1.3** Notifications are sent by means of a [queued job](../admin/asynchronous-tasks.md).
 
 Examples for core notifications are:
 
- - `humhub\modules\like\notifications\NewLike]]: is sent if an user likes a post or comment.
- - `humhub\modules\user\notifications\Followed]]: is sent if an user follows another user.
- - `humhub\modules\user\notifications\Mentioned]]: is sent if an user is mentioned within an post or comment.
- - `humhub\modules\content\notifications\ContentCreated]]: is sent when content (e.g. a post) was created.
+ - `humhub\modules\like\notifications\NewLike`: is sent if an user likes a post or comment.
+ - `humhub\modules\user\notifications\Followed`: is sent if an user follows another user.
+ - `humhub\modules\user\notifications\Mentioned`: is sent if an user is mentioned within an post or comment.
+ - `humhub\modules\content\notifications\ContentCreated`: is sent when content (e.g. a post) was created.
 
 > Note: Unlike [Activities](activities.md) which are targeted for multiple users e.g. all Users of a Space, a Notification is always targeted to a single user.
 
@@ -85,7 +85,7 @@ SomethingHappend::instance()->from($user)->about($source)->sendBulk($users);
 Since HumHub v1.3 you have to overwrite `BaseNotification::requireOriginator` or `BaseNotification::requireSource` in case your notification does not require an
 `originator` or `source`, otherwise they won't be sent out.
 
-> Info: The `send` and `sendBulk` will create and persist a `humhub\modules\notification\models\Notification]] instance for each user.
+> Info: The `send` and `sendBulk` will create and persist a `humhub\modules\notification\models\Notification` instance for each user.
 
 > Tip: Notifications are often created and sent within the `afterSave` hook of the related `source` instance. This should be prefered over the instantiation within a controller.
 

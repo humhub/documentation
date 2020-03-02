@@ -97,7 +97,7 @@ return [
                         "self" => true
                     ],
                     "img-src" => [
-                        "data" => true
+                        "data" => true,
                         "allow" => [
                             "*"
                         ]

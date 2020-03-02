@@ -9,11 +9,11 @@ _activity stream_.
 
 ## Stream Channel
 
-The `stream_channel` attribute of a `humhub\modules\content\models\Content]] entry defines the relation of this content to
+The `stream_channel` attribute of a `humhub\modules\content\models\Content` entry defines the relation of this content to
 a specific type of stream. The `default` stream channel for example is used by _space_, _user_ and _dashboard_
 streams whereas the `activity` stream-channel is exclusively used in activity streams.
 
-The `stream_channel` of your content type can be overwritten by setting the `humhub\modules\content\components\ContentActiveRecord::streamChannel|ContentActiveRecord::streamChannel]] attribute.
+The `stream_channel` of your content type can be overwritten by setting the `humhub\modules\content\components\ContentActiveRecord::streamChannel|ContentActiveRecord::streamChannel` attribute.
 
 For own `ContentActiveRecord` you can consider the following `stream_channel` options:
 
@@ -25,8 +25,8 @@ For own `ContentActiveRecord` you can consider the following `stream_channel` op
 
 ## WallEntry Widget
 
-A `humhub\modules\content\widgets\WallEntry|WallEntry widget]] is responsible for rendering the individual `stream entries`
-of a `stream` and is defined by `humhub\modules\content\components\ContentActiveRecord::wallEntryClass|ContentActiveRecord::wallEntryClass]].
+A `humhub\modules\content\widgets\WallEntry|WallEntry` widget is responsible for rendering the individual `stream entries`
+of a `stream` and is defined by `humhub\modules\content\components\ContentActiveRecord::wallEntryClass|ContentActiveRecord::wallEntryClass`.
 
 The following example shows a very basic WallEntry widget implementation.
 
@@ -56,24 +56,24 @@ class WallEntry extends \humhub\modules\content\widgets\WallEntry
 </div>
 ```
 
-The `WallEntry` widget will be provided with a `humhub\modules\content\widgets\WallEntry::contentObject|contentObject]] which holds the
+The `WallEntry` widget will be provided with a `humhub\modules\content\widgets\WallEntry::contentObject|contentObject` which holds the
 `ContentActiveRecord` model to be rendered.
 
 Your `WallEntry` widget class can also set the following attributes:
 
- - `humhub\modules\content\widgets\WallEntry::editRoute|editRoute]] defines an edit route to your edit action which will be used to render an edit link (see WallEntryControls section)
- - `humhub\modules\content\widgets\WallEntry::editMode|editMode]] defines the way the edit action is triggered (see WallEntryControls section)
- - `humhub\modules\content\widgets\WallEntry::wallEntryLayout|wallEntryLayout]] defines the layout used to embed the result of `render()`, by default you only have to care about rendering the content section of your WallEntry
+ - `humhub\modules\content\widgets\WallEntry::editRoute|editRoute` defines an edit route to your edit action which will be used to render an edit link (see WallEntryControls section)
+ - `humhub\modules\content\widgets\WallEntry::editMode|editMode` defines the way the edit action is triggered (see WallEntryControls section)
+ - `humhub\modules\content\widgets\WallEntry::wallEntryLayout|wallEntryLayout` defines the layout used to embed the result of `render()`, by default you only have to care about rendering the content section of your WallEntry
 
 
 ### WallEntryControls
 
 The default WallEntry layout contains a context menu with content actions like `edit`, `delete`, `archive` etc.
-This menu can be manipulated by overwriting the `humhub\modules\content\widgets\WallEntry::getContextMenu()|getContextMenu()]] function and 
-or use the `humhub\modules\content\widgets\WallEntry::controlsOptions|controlsOptions]] property as in the following example.
+This menu can be manipulated by overwriting the `humhub\modules\content\widgets\WallEntry::getContextMenu()|getContextMenu()` function and 
+or use the `humhub\modules\content\widgets\WallEntry::controlsOptions|controlsOptions` property as in the following example.
 
-By setting the `humhub\modules\content\widgets\WallEntry::editRoute|editRoute]] we automatically add an edit link to our WallEntryControls in
-case the current user is allowed to edit the content. The type of the edit action is defined by the `humhub\modules\content\widgets\WallEntry::editMode|editMode]].
+By setting the `humhub\modules\content\widgets\WallEntry::editRoute|editRoute` we automatically add an edit link to our WallEntryControls in
+case the current user is allowed to edit the content. The type of the edit action is defined by the `humhub\modules\content\widgets\WallEntry::editMode|editMode`.
 
 There are the following edit modes available:
 
@@ -140,10 +140,10 @@ class CloseLink extends humhub\modules\content\widgets\WallEntryControlLink
 
 ### Implement StreamAction
 
-Derived from `humhub\modules\content\components\actions\ContentContainerStream]]
+Derived from `humhub\modules\content\components\actions\ContentContainerStream`
 
 A `StreamAction` is responsible for handling a stream request and filtering stream entries.
-The following example extends the default `humhub\modules\content\components\actions\ContentContainerStream|ContentContainerStream]] and
+The following example extends the default `humhub\modules\content\components\actions\ContentContainerStream|ContentContainerStream` and
 adds an content-type filter:
 
 ```php
@@ -180,7 +180,7 @@ class StreamController extends ContentContainerController
 
 ### Display Stream
 
-You can use the `humhub\modules\stream\widgets\StreamViewer|StreamViewer]] widget to display your stream within your view as follows:
+You can use the `humhub\modules\stream\widgets\StreamViewer|StreamViewer` widget to display your stream within your view as follows:
 
 ```php
 
@@ -197,12 +197,12 @@ You can use the `humhub\modules\stream\widgets\StreamViewer|StreamViewer]] widge
 
 ## Create Content Form
 
-You can add a `humhub\modules\content\widgets\WallCreateContentForm|WallCreateContentForm]] on top of your custom `stream` in
+You can add a `humhub\modules\content\widgets\WallCreateContentForm|WallCreateContentForm` on top of your custom `stream` in
 order to create new stream-entries within your stream view.
 
 ### Create Form Widget
 
-Create a Form Widget derived from `humhub\modules\content\widgets\WallCreateContentForm]]
+Create a Form Widget derived from `humhub\modules\content\widgets\WallCreateContentForm`
 
 ```php
 
@@ -244,7 +244,7 @@ Create a widget `view` which contains module specific fields. All standard field
 
 Create an action in your modules controller to receive form inputs.
 
-All default tasks (e.g. access validation, ContentContainer assignment) are handled by `humhub\modules\content\widgets\WallCreateContentForm::create()]]
+All default tasks (e.g. access validation, ContentContainer assignment) are handled by `humhub\modules\content\widgets\WallCreateContentForm::create()`
 
 
 Example:
@@ -280,7 +280,7 @@ Since HumHub v1.3 you are able to extend the stream filter by listening to
 - `\humhub\modules\stream\models\WallStreamQuery::EVENT_BEFORE_FILTER` to add the filter to the query
 - `humhub\modules\stream\widgets\WallStreamFilterNavigation::EVENT_BEFORE_RUN`
 
-The `humhub\modules\stream\widgets\WallStreamFilterNavigation]] class is of type `humhub\modules\ui\filter\widgets\FilterNavigation]].
+The `humhub\modules\stream\widgets\WallStreamFilterNavigation` class is of type `humhub\modules\ui\filter\widgets\FilterNavigation`.
 A `Filternavigation` consists of `filterPanels` and `filterBlocks`. The `WallStreamFilterNavigation` navigation for example contains three `filterPanels`
 
 - `WallStreamFilterNavigation::PANEL_POSITION_LEFT`

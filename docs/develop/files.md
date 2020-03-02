@@ -6,7 +6,7 @@ title: Files
 
 The HumHub core module *humhub/modules/file* provides a generic file management which can be used in custom modules to store and read files including access control.
 
-The file management is available for `humhub\components\ActiveRecord]] classes.
+The file management is available for `humhub\components\ActiveRecord` classes.
 
 Examples Usage
 --------------
@@ -62,7 +62,7 @@ if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->sa
 ```
 ### Read Files
  
-To read mapped files of an ActiveRecord, use the `humhub\modules\file\components\FileManager]] via `humhub\components\ActiveRecord::getFileManager]].
+To read mapped files of an ActiveRecord, use the `humhub\modules\file\components\FileManager` via `humhub\components\ActiveRecord::getFileManager`.
 
 ```php
 
@@ -97,7 +97,7 @@ if ($previewImage->applyFile($file)) {
 }
 ```
 
-You can also create own Converters by using `humhub\modules\file\converter\BaseConverter]].
+You can also create own Converters by using `humhub\modules\file\converter\BaseConverter`.
 
 > Note: Always create file variants (e.g. previews) on the fly - variants may deleted during the upgrade progress.
 

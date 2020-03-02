@@ -200,7 +200,7 @@ Now you will be able to reload your widget with `myWidget.reload()` or a `reload
 ## Widget Stacks
 
 HumHub uses Widget-Stacks to assemble multiple entries of a base widget as a naviagation or list.
-Stacked widget are derived from `humhub\widgets\BaseStack]] and will fire an `onInit` and `onRun` event by default,
+Stacked widget are derived from `humhub\widgets\BaseStack` and will fire an `onInit` and `onRun` event by default,
 which can be subscribed by other modules to inject widget items. This mechanism can be used for example for sidebars.
 
 Example of stack used as sidebar:
@@ -237,7 +237,7 @@ __Events.php__
 
 ## Menus
 
-All navigations widget classes inherit from the class `humhub\widgets\BaseMenu]], which allows modules
+All navigations widget classes inherit from the class `humhub\widgets\BaseMenu`, which allows modules
 to inject own items into navigation menu.
 
 Example: 

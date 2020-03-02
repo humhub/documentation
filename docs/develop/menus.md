@@ -19,13 +19,13 @@ Based on these base classes, following menu implementations are most frequently 
 - TopMenu (Main navigation with entries like Dashboard/Directory) -  `humhub\widgets\TopMenu`
 - FooterMenu - `humhub\widgets\FooterMenu`
 - AdminMenu - Administrative Section -  `humhub\modules\admin\widgets\AdminMenu`
-- AccountMenu - `humhub\modules\user\widgets\AccountTopMenu]]
+- AccountMenu - `humhub\modules\user\widgets\AccountTopMenu`
 
 
-Menu entries are represented by the class `humhub\modules\ui\menu\MenuEntry]]. 
+Menu entries are represented by the class `humhub\modules\ui\menu\MenuEntry`. 
 Instances of this class can be added via the menu class.
 
-See the `humhub\modules\ui\menu\MenuEntry]] class for a full list of properties and options.
+See the `humhub\modules\ui\menu\MenuEntry` class for a full list of properties and options.
 
 
 Events

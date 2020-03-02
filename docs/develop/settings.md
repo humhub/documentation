@@ -33,7 +33,7 @@ $value = $module->settings->get('key', $defaultValue);
 Save a serialized setting:
 
 ```php
-$value = $module->settings->setSerialized($key, `'complex' => 'value']])
+$value = $module->settings->setSerialized($key, [['complex' => 'value']])
 ```
 
 > Note: `setSerialized` will use `Json::encode()` to serialize.

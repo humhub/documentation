@@ -24,10 +24,10 @@ Content without a ContentContainer relation are considered global.
 
 ## Content and ContentActiveRecord 
 
-The `\humhub\modules\content\components\ContentActiveRecord|ContentActiveRecord]] class serves as the base class for
+The `\humhub\modules\content\components\ContentActiveRecord|ContentActiveRecord` class serves as the base class for
 every content type as for example Polls, Posts or Wiki pages. While the ContentActiveRecord implementation
 describes the specific behavior of a content type, all ContentActiveRecord instances are related 
-to a `humhub\modules\content\models\Content|Content]] record which holds general content data as:
+to a `humhub\modules\content\models\Content|Content` record which holds general content data as:
 
  - visibility
  - originator
@@ -224,7 +224,7 @@ class Example extends ContentContainerActiveRecord
 ## Content queries
 
 The `Content` class furthermore provides some extended [ActiveQuery](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#querying-data) capabilities.
-Calling `\humhub\modules\content\components\ContentActiveRecord::find()|ContentActiveRecord::find()]] will return a `\humhub\modules\content\components\ActiveQueryContent]] instance with additional methods to filter specific content entries:
+Calling `\humhub\modules\content\components\ContentActiveRecord::find()|ContentActiveRecord::find()` will return a `\humhub\modules\content\components\ActiveQueryContent]] instance with additional methods to filter specific content entries:
 
 ```php
 // Returns all MyModels related to the given $space
@@ -253,8 +253,8 @@ There are the following user related scopes available:
 
 ## Move Content
 
-In case your content should be movable to other spaces you'll have to enable the `\humhub\modules\content\components\ContentActiveRecord::canMove|ContentActiveRecord::canMove]] flag.
-For complex content-types you may want to overwrite the `\humhub\modules\content\components\ContentActiveRecord::afterMove()|ContentActiveRecord::afterMove()]] function.
+In case your content should be movable to other spaces you'll have to enable the `\humhub\modules\content\components\ContentActiveRecord::canMove|ContentActiveRecord::canMove` flag.
+For complex content-types you may want to overwrite the `\humhub\modules\content\components\ContentActiveRecord::afterMove()|ContentActiveRecord::afterMove()` function.
 This is required for example if your content is related to other sub content entries.
 
 ```php
@@ -322,7 +322,7 @@ $model->content->canArchive();
 ## ContentContainerController
 
 When working with Content or other ContentContainer related data, your controller should extend the
- `humhub\modules\content\components\ContentContainerController|ContentContainerController]] class.
+ `humhub\modules\content\components\ContentContainerController|ContentContainerController` class.
 This controller will automatically search and instantiate a container instance related to the 
 `cguid` request parameter and provide additional features as:
 
@@ -376,8 +376,8 @@ $url = \yii\helpers\Url::to(['/some/route', 'container' => $space);
 
 Content addons can be used to extend the content concept with further features. Examples of content addons are
 
-- `humhub\modules\like\models\Like|Like]]
-- `humhub\modules\comment\models\Comment|Comment]]
+- `humhub\modules\like\models\Like|Like`
+- `humhub\modules\comment\models\Comment|Comment`
 
 ## ContentContainerModule
 
