@@ -4,9 +4,9 @@ title: Activities
 ---
 
 
-Activity instances are created for special events in the context of a [[humhub\modules\content\models\ContentContainer|ContentContainer]] like the creation of content.
+Activity instances are created for special events in the context of a `humhub\modules\content\models\ContentContainer|ContentContainer` like the creation of content.
 
-Contrary to notifications - activities are always bound to a [[humhub\modules\content\models\ContentContainer|ContentContainer]], and are not targeted for specific users.
+Contrary to notifications - activities are always bound to a `humhub\modules\content\models\ContentContainer|ContentContainer`, and are not targeted for specific users.
 Besides the relation to the `ContentContainer` - an activity can also be assigned with a Content or ContentAddon and automatically inherits some content properties such as `visibility`.
 
 Similar to [notifications](notifications.md) activities can be related to an `originator` user and a `source` object. 

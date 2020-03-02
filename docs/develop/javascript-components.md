@@ -215,7 +215,7 @@ TBD
 
 #### JsWidget class
 
-In order to implement a Yii widget responsible for rendering your widgets markup, you can implement a PHP class derivated of [[humhub\widgets\JsWidget]] as in the following examples.
+In order to implement a Yii widget responsible for rendering your widgets markup, you can implement a PHP class derivated of `humhub\widgets\JsWidget` as in the following examples.
 
 Here are some of the available attributes of the JSWidget class:
 

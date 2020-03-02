@@ -1,7 +1,7 @@
 Settings and Configuration
 ================
 
-By means of a [[humhub\components\SettingsManager]] you can easily store module level key/value settings optionally bound 
+By means of a `humhub\components\SettingsManager` you can easily store module level key/value settings optionally bound 
 to a `ContentContainer` (e.g. users or spaces).
 
 The SettingsManager component is automatically added all to humhub\components\Module classes.
@@ -33,7 +33,7 @@ $value = $module->settings->get('key', $defaultValue);
 Save a serialized setting:
 
 ```php
-$value = $module->settings->setSerialized($key, [['complex' => 'value']])
+$value = $module->settings->setSerialized($key, `'complex' => 'value']])
 ```
 
 > Note: `setSerialized` will use `Json::encode()` to serialize.

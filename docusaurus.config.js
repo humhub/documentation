@@ -1,3 +1,5 @@
+// const versions = require('./versions.json');
+
 module.exports = {
   title: 'HumHub Documentation',
   tagline: 'Your source of information all around the Open Source social network HumHub',
@@ -14,12 +16,23 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
+        /*{
+          to: 'versions',
+          label: `${versions[0].substr(6)}`,
+          position: 'left',
+          style: {
+            whiteSpace: 'nowrap',
+            padding: '0.25rem 0.5rem 0.2rem 0.25rem',
+            fontSize: 'calc(0.9 * var(--ifm-font-size-base))',
+            textDecoration: 'underline',
+          },
+        },*/
         {to: 'docs/admin/requirements', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
         {to: 'docs/theme/overview', activeBasePath: 'docs/theme',  label: 'Theming', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/humhub/humhub',
           label: 'GitHub',
           position: 'right',
         },
@@ -29,15 +42,31 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Guides',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/doc1',
+              label: 'Administration',
+              to: 'docs/admin',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'Theming',
+              to: 'docs/theme',
+            },
+            {
+              label: 'Development',
+              to: 'docs/develop',
+            },
+            {
+              label: 'Professional Edition',
+              href: '#',
+            },
+            {
+              label: 'Models and APIs',
+              href: '#',
+            },
+            {
+              label: 'User Guide',
+              href: '#',
             },
           ],
         },
@@ -45,12 +74,12 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'HumHub Community',
+              href: 'https://community.humhub.com/dashboard',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'HumHub Translation',
+              href: 'https://translate.humhub.org',
             },
           ],
         },
@@ -63,16 +92,33 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/humhub/humhub',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/humhub',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/thehumhub'
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Homepage',
+              href: 'https://www.humhub.com',
+            },
+            {
+              label: 'Marketplace',
+              href: 'https://www.humhub.com/marketplace',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} HumHub. All rights reserved.  `,
     },
   },
   presets: [
@@ -82,7 +128,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/buddh4/humhub-docusaurus2/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

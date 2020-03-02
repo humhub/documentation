@@ -19,7 +19,7 @@ A very basic module consists of the following elements:
 ## Main Configuration File `config.php`
 
 The `config.php` file enables automatic module loading and event configuration, without the need to manually modify the main application config. 
-Module configuration files of enabled modules are processed by the [[humhub\components\bootstrap\ModuleAutoLoader]] within the `bootstrap` process of the application.
+Module configuration files of enabled modules are processed by the `humhub\components\bootstrap\ModuleAutoLoader` within the `bootstrap` process of the application.
 
 The `config.php` should contain the following attributes:
 
@@ -43,7 +43,7 @@ return [
     'class' => 'johndoe\example\Module',
     'namespace' => 'johndoe\example',
     'events' => [
-        ['class' => TopMenu::class, 'event' => TopMenu::EVENT_INIT, 'callback' => ['johndoe\example\Events', 'onTopMenuInit']],
+        ['class' => TopMenu::class, 'event' => TopMenu::EVENT_INIT, 'callback' => ['johndoe\example\Events', 'onTopMenuInit'`,
     ]
 ];
 ?>

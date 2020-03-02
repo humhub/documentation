@@ -19,21 +19,21 @@ Optionally your custom client can implement following interfaces to provide addi
 
 ### ApprovalBypass
 
-Use interface ([[humhub\modules\user\authclient\interfaces\ApprovalBypass]]) to skip user approval for new users.
+Use interface (`humhub\modules\user\authclient\interfaces\ApprovalBypass`) to skip user approval for new users.
 
 ### AutoSyncUsers
 
-The interface ([[humhub\modules\user\authclient\interfaces\AutoSyncUsers]]) the HumHub cronjob will execute 
+The interface (`humhub\modules\user\authclient\interfaces\AutoSyncUsers`) the HumHub cronjob will execute 
 the AuthClients syncUsers method hourly to create, update or delete existing users.
 
 ### SyncAttributes
 
-By using the interface ([[humhub\modules\user\authclient\interfaces\SyncAttributes]]) interface - you can define user attribute (e.g. profile fields) to 
+By using the interface (`humhub\modules\user\authclient\interfaces\SyncAttributes`) interface - you can define user attribute (e.g. profile fields) to 
 be automatically updated by the AuthClient and cannot be changed by the user.
 
 ### PrimaryClient
 
-A user can only belongs to one ([[humhub\modules\user\authclient\interfaces\PrimaryClient]]) AuthClient.
+A user can only belongs to one (`humhub\modules\user\authclient\interfaces\PrimaryClient`) AuthClient.
 
 Example for PrimaryClients:
 

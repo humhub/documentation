@@ -6,7 +6,7 @@ title: Users
 User Component
 ---------------------
 
-The [[\humhub\modules\user\components\User]] component can be accessed by `Yii::$app->user` and beside others provides the following
+The `\humhub\modules\user\components\User` component can be accessed by `Yii::$app->user` and beside others provides the following
 features:
 
 - Access the [user identity](#user-identity) of the currently logged in user:
@@ -32,9 +32,9 @@ User Identity
 ---------------------
 
 The user identity of the current logged in user can be accessed by `Yii::$app->user->identity` and in case for non guest
-users will return a [[\humhub\modules\user\models\User]] instance.
+users will return a `\humhub\modules\user\models\User` instance.
 
-The user profile can be accessed by `Yii::$app->user->identity->profile` see [[\humhub\modules\user\models\Profile]]
+The user profile can be accessed by `Yii::$app->user->identity->profile` see `\humhub\modules\user\models\Profile`
 
 > Note: `Yii::$app->user->identity` may returns `null` in case of guest users. Keep this in mind for guest accessible parts
 of your code.
@@ -51,9 +51,9 @@ A common use cases for the soft delete option is:
 - Delete participation statuses  (e.g. task assignments)
 - Delete personal information and images 
 
-You can manage the soft delete option by intercepting the event [[\humhub\modules\user\models\User::EVENT_BEFORE_SOFT_DELETE]].
+You can manage the soft delete option by intercepting the event `\humhub\modules\user\models\User::EVENT_BEFORE_SOFT_DELETE`.
  
-Example 'config.php':
+Example `config.php`:
 
 ```php
 <?php

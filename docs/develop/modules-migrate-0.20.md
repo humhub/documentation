@@ -25,7 +25,7 @@ See more information about Yii 2.0 here:
 Also the existing migration script needs to use Namespaces now.
 
 Because also class names of your module may stored in database (e.g. for Activities, Likes, Notification, ...)
-It's neccessary to create a new migration derived from [[humhub\components\Migration]] which uses **renameClass** method class to fix these records.
+It's neccessary to create a new migration derived from `humhub\components\Migration` which uses **renameClass** method class to fix these records.
 
 Example Migration:
 
@@ -76,13 +76,13 @@ TBD
 
 ### Urls
 
-[[\humhub\modules\content\components\activerecords\ContentContainer::createUrl]] (Space/User) still provides the method createUrl to build URLs in container context (sguid/uguid).
+`\humhub\modules\content\components\activerecords\ContentContainer::createUrl` (Space/User) still provides the method createUrl to build URLs in container context (sguid/uguid).
 
 Use [http://www.yiiframework.com/doc-2.0/yii-helpers-url.html](http://www.yiiframework.com/doc-2.0/yii-helpers-url.html) for other URLs.
 
 ### Activities
 
-Please recreate Activities as described here: [[dev-module-activities.md]]
+Please recreate Activities as described here: `dev-module-activities.md`
 
 Since 0.20 there is an automatic "created" Activity for Content. 
 

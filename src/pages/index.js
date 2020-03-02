@@ -50,7 +50,7 @@ const features = [
         ),
     },
     {
-        title: <>Modles and APIs</>,
+        title: <>Modules and APIs</>,
         imageUrl: 'img/undraw_hologram.svg',
         href:'/docs/develop/professional',
         description: (

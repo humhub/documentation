@@ -22,7 +22,7 @@ HumHub is based on the [Model-View-Controller (MVC)](https://en.wikipedia.org/wi
 pattern and uses frontend frameworks such as: 
 
 - [jQuery](https://jquery.com/)
-- [Bootstrap 3](http://getbootstrap.com/),
+- [Bootstrap 3](https://getbootstrap.com/docs/3.4/),
 - [Less](http://lesscss.org/)
 - [Fontawesome](https://fontawesome.com/v4.7.0/).
 

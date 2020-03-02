@@ -19,7 +19,7 @@ See [change the default behaviour](module-change-behavior.md) for additional eve
 
 [http://www.yiiframework.com/doc-2.0/guide-concept-events.html](http://www.yiiframework.com/doc-2.0/guide-concept-events.html)
 
-### Catching an Event
+### Register event listener
 
 Example event section of the **config.php** file:
 

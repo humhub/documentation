@@ -1,7 +1,7 @@
 Modals
 =======
 
-HumHub Modals are based upon [Bootstrap Modals](http://getbootstrap.com/javascript/#modals) and can be used to render forms or user feedback as confirmation requests or other information. The Javascript module `ui.modals` provides some additional functaionality for creating and loading modals.
+HumHub Modals are based upon [Bootstrap Modals](https://getbootstrap.com/docs/3.4/javascript/#modals) and can be used to render forms or user feedback as confirmation requests or other information. The Javascript module `ui.modals` provides some additional functaionality for creating and loading modals.
 
 ###### Global Modal
 

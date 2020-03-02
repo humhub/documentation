@@ -9,17 +9,17 @@ Database and Models
 
 ## ActiveRecord (Model)
 
-To be able to provide persistent data a module has to implement model class derived from [[humhub\components\ActiveRecord]].
+To be able to provide persistent data a module has to implement model class derived from `humhub\components\ActiveRecord`.
 Yii follows the concept of rich models, which means a model class can contain content in form of attributes as well as domain logic.
 More information about the use of ActiveRecords is available in the [Yii2 guide](http://www.yiiframework.com/doc-2.0/guide-db-active-record.html).
 
-> Info: [[humhub\components\ActiveRecord]] is derived from [[yii\db\ActiveRecord]] and provides some automatic attribute settings as `created_by` and `crated_at` if the underlying table contains these fields.
+> Info: `humhub\components\ActiveRecord` is derived from `yii\db\ActiveRecord` and provides some automatic attribute settings as `created_by` and `crated_at` if the underlying table contains these fields.
 
 ## Migrations
 
 See Yii 2.0 guide for more details about migrations [http://www.yiiframework.com/doc-2.0/guide-db-migrations.html](http://www.yiiframework.com/doc-2.0/guide-db-migrations.html).
 
-HumHub provides an enhanced Migration class [[humhub\components\Migration]] which provides the ability to rename class files. This is required because HumHub also stores some class names in database for Polymorphic relations.
+HumHub provides an enhanced Migration class `humhub\components\Migration` which provides the ability to rename class files. This is required because HumHub also stores some class names in database for Polymorphic relations.
 
 #### Usage
 

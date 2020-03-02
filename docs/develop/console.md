@@ -5,7 +5,7 @@ title: Console
 
 ## Add controller to the console application
 
-To add a custom controller to the console application, you need to catch the [[humhub\components\console\Application::EVENT_ON_INIT]].
+To add a custom controller to the console application, you need to catch the `humhub\components\console\Application::EVENT_ON_INIT`.
 
 
 Example event:
@@ -44,7 +44,7 @@ public static function onConsoleApplicationInit($event) {
 
 The integrity checker is a command which validates and if necessary repairs the application database.
 
-If you want to add own checking methods for your module to it, you can intercept the [[humhub\commands\IntegrityController::EVENT_ON_RUN]] event.
+If you want to add own checking methods for your module to it, you can intercept the `humhub\commands\IntegrityController::EVENT_ON_RUN` event.
 
 Example callback implementation:
 

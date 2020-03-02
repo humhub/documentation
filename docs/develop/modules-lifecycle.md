@@ -3,7 +3,7 @@ Module Life Cycle
 
 ## Bootstrap
 
-During the `bootstrap` phase of the application the [[humhub\components\bootstrap\ModuleAutoLoader]] will search for all `enabled` modules
+During the `bootstrap` phase of the application the `humhub\components\bootstrap\ModuleAutoLoader` will search for all `enabled` modules
 within the module autoload path and attach the [modules event listeners](events.md).
 
 ## Install Module

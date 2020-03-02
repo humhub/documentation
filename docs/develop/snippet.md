@@ -17,12 +17,12 @@ Your sidebar content
 <?php $this->endBlock(); ?>
 ```
 
-See also: [[humhub\modules\ui\view\components\View|getSidebar]]
+See also: `humhub\modules\ui\view\components\View|getSidebar`
 
 
 ## Event Handlers
 
-You can use the [[humhub\widgets\BaseMenu::EVENT_INIT]] event in order to append `snippets` to a sidebar.
+You can use the `humhub\widgets\BaseMenu::EVENT_INIT` event in order to append `snippets` to a sidebar.
 Your event handler will look something like this:
 
 ```php
@@ -80,7 +80,7 @@ return [
     'class' => 'humhub\modules\yourmodule\Module',
     'namespace' => 'humhub\modules\yourmodule',
     'events' => [
-        ['class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => ['humhub\modules\yourmodule\Module', 'onDashboardSidebarInit']],
+        ['class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => ['humhub\modules\yourmodule\Module', 'onDashboardSidebarInit'`,
   ],
 ];
 ```

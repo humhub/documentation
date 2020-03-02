@@ -12,7 +12,7 @@ This guide describes the usage of some HumHubs base widget types.
 ## JsWidgets
 
 JsWidgets in HumHub are used to connect your Yii Widget with a [javascript widget](javascript-components.md#widgets).
-Custom JsWidget are extended from [[humhub\widgets\JsWidget]] and can facilitate the following features:
+Custom JsWidget are extended from `humhub\widgets\JsWidget` and can facilitate the following features:
 
  - Transfer options from PHP to your javascript widget
  - Manage your widget initialization through the `init` field
@@ -83,10 +83,10 @@ humhub.module('example.SimpleWidget', function(module, require, $) {
 
 ### JsWidget rendering
 
-The example above does not overwrite the [[humhub\widgets\JsWidget::run()]] function and therefore uses the default
+The example above does not overwrite the `humhub\widgets\JsWidget::run()` function and therefore uses the default
 rendering of the JsWidget class, which can be used for very simple widgets. The default rendering mechanism uses renders
-a simple HTML tag defined by [[humhub\widgets\JsWidget::container]] and [[humhub\widgets\JsWidget::content]] and furthermore
-uses the [[humhub\widgets\JsWidget::getOptions()]] function for fetching the HTML attributes and widget data-* options.
+a simple HTML tag defined by `humhub\widgets\JsWidget::container` and `humhub\widgets\JsWidget::content` and furthermore
+uses the `humhub\widgets\JsWidget::getOptions()` function for fetching the HTML attributes and widget data-* options.
 
 In the following example we manipulate the default rendering to render a simple list:
 
@@ -158,7 +158,7 @@ to the root node of your widget.
 
 ### JsWidget initialization
 
-The initialization is managed by the [[humhub\widgets\JsWidget::init]] field, which either accepts a boolean or array.
+The initialization is managed by the `humhub\widgets\JsWidget::init` field, which either accepts a boolean or array.
 Please refer to [Widget Initialization](javascript-components.md#widget-initialization) for the javascript part of your
 initialization logic.
 
@@ -171,7 +171,7 @@ your `SimpleWidget.prototype.init` function.
 ### Reloadable JsWidgets
 
 Often you want to reload your widget in order to update parts of your view. This can be achieved by implementing the
-[[humhub\widgets\Reloadable]] interface and providing a reload-url in your `getReloadUrl()` as in the following example
+`humhub\widgets\Reloadable]] interface and providing a reload-url in your `getReloadUrl()` as in the following example
 
 ```php
 class ReloadableWidget extends JsWidget implements Reloadable
@@ -200,7 +200,7 @@ Now you will be able to reload your widget with `myWidget.reload()` or a `reload
 ## Widget Stacks
 
 HumHub uses Widget-Stacks to assemble multiple entries of a base widget as a naviagation or list.
-Stacked widget are derived from [[humhub\widgets\BaseStack]] and will fire an `onInit` and `onRun` event by default,
+Stacked widget are derived from `humhub\widgets\BaseStack]] and will fire an `onInit` and `onRun` event by default,
 which can be subscribed by other modules to inject widget items. This mechanism can be used for example for sidebars.
 
 Example of stack used as sidebar:
@@ -237,7 +237,7 @@ __Events.php__
 
 ## Menus
 
-All navigations widget classes inherit from the class [[humhub\widgets\BaseMenu]], which allows modules
+All navigations widget classes inherit from the class `humhub\widgets\BaseMenu]], which allows modules
 to inject own items into navigation menu.
 
 Example: 

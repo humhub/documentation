@@ -4,28 +4,28 @@ title: Menus
 ---
 
 
-All menus and navigation widgets are derived from the widget class [[humhub\modules\ui\menu\widgets\Menu]].
+All menus and navigation widgets are derived from the widget class `humhub\modules\ui\menu\widgets\Menu`.
 
 Additionally, there are following sub base classes with predefined templates available:
 
-- [[humhub\modules\ui\menu\widgets\LeftNavigation]]
-- [[humhub\modules\ui\menu\widgets\TabMenu]]
-- [[humhub\modules\ui\menu\widgets\SubTabMenu]]
-- [[humhub\modules\ui\menu\widgets\DropDownMenu]]
+- `humhub\modules\ui\menu\widgets\LeftNavigation`
+- `humhub\modules\ui\menu\widgets\TabMenu`
+- `humhub\modules\ui\menu\widgets\SubTabMenu`
+- `humhub\modules\ui\menu\widgets\DropDownMenu`
 
 
 Based on these base classes, following menu implementations are most frequently used:
 
-- TopMenu (Main navigation with entries like Dashboard/Directory) -  [[humhub\widgets\TopMenu]]
-- FooterMenu - [[humhub\widgets\FooterMenu]]
-- AdminMenu - Administrative Section -  [[humhub\modules\admin\widgets\AdminMenu]]
-- AccountMenu - [[humhub\modules\user\widgets\AccountTopMenu]]
+- TopMenu (Main navigation with entries like Dashboard/Directory) -  `humhub\widgets\TopMenu`
+- FooterMenu - `humhub\widgets\FooterMenu`
+- AdminMenu - Administrative Section -  `humhub\modules\admin\widgets\AdminMenu`
+- AccountMenu - `humhub\modules\user\widgets\AccountTopMenu]]
 
 
-Menu entries are represented by the class [[humhub\modules\ui\menu\MenuEntry]]. 
+Menu entries are represented by the class `humhub\modules\ui\menu\MenuEntry]]. 
 Instances of this class can be added via the menu class.
 
-See the [[humhub\modules\ui\menu\MenuEntry]] class for a full list of properties and options.
+See the `humhub\modules\ui\menu\MenuEntry]] class for a full list of properties and options.
 
 
 Events

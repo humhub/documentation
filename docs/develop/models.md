@@ -35,7 +35,7 @@ how to use the `Migration` guide.
 
 Your table names should be prefixed with your unique module id like `mymodule_entry`.
 
-> Info: The [[humhub\components\Migration]] class provides some additional helper functions.
+> Info: The `humhub\components\Migration` class provides some additional helper functions.
 
 > Tip: Since a `Migration::safeUp()` uses transactions you should consider splitting your migration files into multiple migrations.
 
@@ -89,7 +89,7 @@ class uninstall extends Migration
 
 The integrity check is a command which validates and if necessary repairs the application database.
 
-If you want to add own checking methods for your module to it, you can intercept the [[humhub\commands\IntegrityController::EVENT_ON_RUN]] event.
+If you want to add own checking methods for your module to it, you can intercept the `humhub\commands\IntegrityController::EVENT_ON_RUN` event.
 
 Example callback implementation:
 

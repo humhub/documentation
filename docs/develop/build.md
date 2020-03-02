@@ -24,7 +24,7 @@ Those compressed assets are only used when running in [production mode](admin-in
 
 Your production assets are saved under `/humhub/js/all-*.js` respectively `static/css/all-*.css`.
 
-> Note: Only [[humhub\assets\AppAsset]] dependencies are compressed.
+> Note: Only `humhub\assets\AppAsset` dependencies are compressed.
 
 - Grunt Asset Built
 

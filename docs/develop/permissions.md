@@ -15,27 +15,27 @@ Permissions in HumHub are used to grant users access to specific areas or functi
 
 To achieve the permission management in such cases, HumHub provides an own group and contentcontainer level permission system.
 
-There are two different types of permission: [[humhub\modules\user\models\GroupPermission]] and [[humhub\modules\content\models\ContentContainerPermission]].
+There are two different types of permission: `humhub\modules\user\models\GroupPermission` and `humhub\modules\content\models\ContentContainerPermission`.
 
 ## Verifying permissions
 
-Permissions are verified by means of a [[humhub\modules\user\components\PermissionManager]]. 
-There are two types of [[humhub\modules\user\components\PermissionManager|PermissionManager]], one for verifying [[humhub\modules\user\models\GroupPermission|GroupPermissions]]
-and one for [[humhub\modules\content\models\ContentContainerPermission|ContentContainerPermissions]].
+Permissions are verified by means of a `humhub\modules\user\components\PermissionManager`. 
+There are two types of `humhub\modules\user\components\PermissionManager|PermissionManager`, one for verifying `humhub\modules\user\models\GroupPermission|GroupPermissions`
+and one for `humhub\modules\content\models\ContentContainerPermission|ContentContainerPermissions`.
 
 ## Group Permissions
 
-[[humhub\modules\user\models\GroupPermission|GroupPermissions]] are system wide permissions which can be assigned to system groups (Administration -> Users -> Groups).
+`humhub\modules\user\models\GroupPermission|GroupPermissions` are system wide permissions which can be assigned to system groups (Administration -> Users -> Groups).
 
 Example of GroupPermissions `GroupPermissions are
 
- - [[humhub\modules\admin\permissions\ManageUsers]] - Permission to access the global user management section.
- - [[humhub\modules\admin\permissions\ManageGroups]] - Permission to access the global user group section.
- - [[humhub\modules\space\permissions\CreatePublicSpace]] - Permission to create public spaces.
+ - `humhub\modules\admin\permissions\ManageUsers` - Permission to access the global user management section.
+ - `humhub\modules\admin\permissions\ManageGroups` - Permission to access the global user group section.
+ - `humhub\modules\space\permissions\CreatePublicSpace` - Permission to create public spaces.
 
 ### Verify Group Permissions
 
-Group permissions of the current user can be verified by calling [[humhub\modules\user\components\User::can()]]:
+Group permissions of the current user can be verified by calling `humhub\modules\user\components\User::can()`:
 
 ```php
 // Note that we are using the user component and not the user model here!
@@ -52,7 +52,7 @@ $permissionManager->can(new MyPermission());
 
 ## Content Container Permissions
 
-[[humhub\modules\content\models\ContentContainerPermission|ContentContainerPermissions]] are container (Space/User) specific permissions and can be assigned to 
+`humhub\modules\content\models\ContentContainerPermission|ContentContainerPermissions` are container (Space/User) specific permissions and can be assigned to 
 so-called user-groups.
 
 User user-groups:
@@ -71,9 +71,9 @@ Space user-groups:
 
 Example of `ContentContainerPermissions` are:
 
- - [[humhub\modules\space\permissions\InviteUsers]] - Permission to invite users to a space.
- - [[humhub\modules\mail\permissions\SendMail]] - Allows/Disallows other users to send messages. (Require to install [Mail](https://github.com/humhub/humhub-modules-mail) module) 
- - [[humhub\modules\content\permissions\ManageContent]] - Permission to archive, pin to top or delete content within a space.
+ - `humhub\modules\space\permissions\InviteUsers` - Permission to invite users to a space.
+ - `humhub\modules\mail\permissions\SendMail` - Allows/Disallows other users to send messages. (Require to install [Mail](https://github.com/humhub/humhub-modules-mail) module) 
+ - `humhub\modules\content\permissions\ManageContent` - Permission to archive, pin to top or delete content within a space.
 
 ### Verify ContentContainer Permissions
 
@@ -92,18 +92,18 @@ $permissionManager->can([new MyPermissionA, new MyPermissionB], ['all' => true])
 
 ## Custom Permissions
 
-All permission classes are derived from [[humhub\libs\BasePermission]] and should reside in the `permissions` directory of your module. 
-A [[humhub\libs\BasePermission]] subclass should at least overwrite the following attributes:
+All permission classes are derived from `humhub\libs\BasePermission` and should reside in the `permissions` directory of your module. 
+A `humhub\libs\BasePermission` subclass should at least overwrite the following attributes:
 
- - [[humhub\libs\BasePermission::id|BasePermission::id]] - A unique permission id.
- - [[humhub\libs\BasePermission::moduleId|BasePermission::moduleId]] - The moduleId this Permission belongs to.
- - [[humhub\libs\BasePermission::title|BasePermission::title]] - Permission title used to display the permission.
- - [[humhub\libs\BasePermission::description|BasePermission::description]] - Short description of the permission.
+ - `humhub\libs\BasePermission::id|BasePermission::id` - A unique permission id.
+ - `humhub\libs\BasePermission::moduleId|BasePermission::moduleId` - The moduleId this Permission belongs to.
+ - `humhub\libs\BasePermission::title|BasePermission::title` - Permission title used to display the permission.
+ - `humhub\libs\BasePermission::description|BasePermission::description` - Short description of the permission.
 
 ### Default State
 
-By default a permission is only granted if either the [[humhub\libs\BasePermission::$defaultState|BasePermission::defaultState]] is set to [[humhub\libs\BasePermission::STATE_ALLOW|BasePermission::STATE_ALLOW]]
-or if the given group is contained in the [[humhub\libs\BasePermission::defaultAllowedGroups|BasePermission::defaultAllowedGroups]] array.
+By default a permission is only granted if either the `humhub\libs\BasePermission::$defaultState|BasePermission::defaultState` is set to `humhub\libs\BasePermission::STATE_ALLOW|BasePermission::STATE_ALLOW`
+or if the given group is contained in the `humhub\libs\BasePermission::defaultAllowedGroups|BasePermission::defaultAllowedGroups` array.
 
 The default state of a group can either be overwritten by setting a group state in the database
 
@@ -131,7 +131,7 @@ return [
 
 ### Fixed Groups
 
-The default-state of a group can be fixated by overwriting the [[humhub\libs\BasePermission::fixedGroups|BasePermission::fixedGroups]] array within your permission class.
+The default-state of a group can be fixated by overwriting the `humhub\libs\BasePermission::fixedGroups|BasePermission::fixedGroups` array within your permission class.
 This will disable the edit capabilities of the given groups.
 
 By default the following space user-groups are fixed:
@@ -143,7 +143,7 @@ By default the following space user-groups are fixed:
 ## Edit Permissions
 
 If you plan to make your custom permissions editable, you have to return an array of all your module permissions within the 
-[[humhub\components\Module::getPermissions()|Module::getPermissions()]] method of your Module.php. Your permissions will be added automatically to 
+`humhub\components\Module::getPermissions()|Module::getPermissions()` method of your Module.php. Your permissions will be added automatically to 
 the permission grid of your content-container or to the global permission settings in case of group level permissions.
 
 ```php
@@ -167,7 +167,7 @@ public function getPermissions($contentContainer = null)
 ## Controller Access Permission
 
 To restrict the access to a controller or specific controller actions your controller should overwrite the
- [[humhub\components\Controller::getAccessRules()]] function. This function should return an array of access rules as:
+ `humhub\components\Controller::getAccessRules()` function. This function should return an array of access rules as:
 
 ```php
 class SpecialController extends Controller
@@ -195,8 +195,8 @@ class SpecialController extends Controller
 }
 ```
 
-The set of available rules is defined by the [[humhub\components\access\ControllerAccess]] which is defined by 
-[[humhub\components\Controller::access]]. There are three `ControllerAccess` classes available:
+The set of available rules is defined by the `humhub\components\access\ControllerAccess` which is defined by 
+`humhub\components\Controller::access`. There are three `ControllerAccess` classes available:
 
  - `humhub\components\access\ControllerAccess` - default access control
  - `humhub\components\access\StrictAccess` - adds an additional restriction for guest users in non guest mode environments

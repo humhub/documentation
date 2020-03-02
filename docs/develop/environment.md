@@ -21,7 +21,7 @@ please follow the [Installation Guide for Administrators](../admin/installation.
 
 Crate a MySQL/MariaDB database:
 
-```
+```sql
  CREATE DATABASE `humhub` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
@@ -31,7 +31,7 @@ Fore more infos check the [Database Setup Section](../admin/installation.md#data
 
 Clone the git repository into the `htdocs` directory of your webserver:
 
-```
+```console
 git clone https://github.com/humhub/humhub.git
 ```
 
@@ -39,7 +39,7 @@ git clone https://github.com/humhub/humhub.git
 
 Navigate to your HumHub `web-root` directory and fetch your composer dependencies:
  
-```
+```console
 composer install
 ```
 
@@ -102,13 +102,13 @@ Git based installations can be updated manually as follows:
 
 - Pull updates from git:
  
-```
+```console
 git pull origin master
 ```
 
 - Run database migrations within your HumHub `protected` directory:
 
-```
+```console
 php yii migrate/up --includeModuleMigrations=1
 ```
 
