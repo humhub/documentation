@@ -1,7 +1,7 @@
 ---
 id: troubleshooting
-title: Troubleshooting and Help
-sidebar_label: Troubleshooting
+title: Troubleshooting & Help
+sidebar_label: Troubleshooting & Help
 ---
 
 This guide provides some assistance for common administrative problems. Please read this guide before creating a new

@@ -1,4 +1,4 @@
-Cron Job Setup
+Cron Job Setup (DEPRECATED)
 =======
 
 The following guides are meant to help you with your Cron Job setup, since those settings are highly dependent on your actual environment we can't assure those setting will work for your.

@@ -10,22 +10,20 @@ module.exports = {
         'Getting Stared': [
             'admin/requirements',
             'admin/installation',
-            'admin/installation-configuration'
-        ],
-        'Updating HumHub': [
-            'admin/updating-automatic',
             'admin/updating'
         ],
         'HumHub Administration': [
-            'admin/security',
-            'admin/backup',
-            'admin/performance',
+            'admin/console',
             'admin/advanced-configuration',
-            'admin/asynchronous-tasks',
+            'admin/security',
             'admin/authentication',
-            'admin/search',
             'admin/permissions',
+            'admin/performance',
+            'admin/asynchronous-tasks',
+            'admin/search',
+
             'admin/translations',
+            'admin/backup',
             'admin/troubleshooting'
         ]
     },
