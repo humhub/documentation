@@ -20,7 +20,7 @@ const features = [
     {
         title: <>Theming Guide</>,
         imageUrl: 'img/undraw_flowers.svg',
-        href:'/docs/theming/overview',
+        href:'/docs/theme/overview',
         description: (
             <>
                 HumHub brings the tools to customize the look and feel of your platform. Learn more about the available theming
@@ -42,7 +42,7 @@ const features = [
     {
         title: <>Professional Edition</>,
         imageUrl: 'img/undraw_reviewed_docs.svg',
-        href:'/docs/develop/professional',
+        href:'/docs/professional/installation',
         description: (
             <>
                 Learn more about the extended features of the enterprise edition and how to use them.

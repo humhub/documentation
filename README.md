@@ -73,6 +73,8 @@ return [
 ]
 ```
 
+- Check the [Style Guide](docs/doc1.md)
+
 ### Main Navigation
 
 The main navigation is managed in [docusaurus.config.js](docusaurus.config.js) within the `links` configuration.
