@@ -58,7 +58,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 - Wrap file names and paths into inline code: `index.php`
 - Use `>⚠️ Under construction` for missing parts
-- Use [Admonitions](docs/docs1.md#Admonitions) as warning,info etc block
+- Use [Admonitions](docs/doc1.md#Admonitions) as warning,info etc block
 - Add code types to code blocks
 - Add the filename as comment to the code block (if possible):
 
