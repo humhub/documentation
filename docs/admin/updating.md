@@ -46,6 +46,8 @@ php yii migrate/up --includeModuleMigrations=1
 php yii cache/flush-all
 ```
 
+> If you are using APC(u) as cache backend, you may also need to restart your web server. 
+
 6. Update installed marketplace modules within `@humhub/protected`:
 
 ```console
