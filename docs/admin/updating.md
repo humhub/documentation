@@ -40,7 +40,13 @@ Always **[backup](backup.md)** your data before updating
 php yii migrate/up --includeModuleMigrations=1
 ```
 
-5. Update installed marketplace modules within `@humhub/protected`:
+5. Flush caches
+
+```console
+php yii cache/flush-all
+```
+
+6. Update installed marketplace modules within `@humhub/protected`:
 
 ```console
 php yii module/update-all
