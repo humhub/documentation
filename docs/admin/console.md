@@ -4,7 +4,7 @@ title: Command Line Interface
 ---
 
 Some administrative tasks can also or exclusively be executed by console. This guide lists the most
-important console commands used to administer a HumHub. All available console commands can be displayed 
+important console commands used to administer HumHub. All available console commands can be displayed 
 by running `php yii` within the `protected` directory of your HumHub installation.
 
 All of the following commands can be executed withine the `@humhub/protected` directory.
