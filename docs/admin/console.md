@@ -1,6 +1,6 @@
 ---
 id: console
-title: HumHub CLI
+title: Command Line Interface
 ---
 
 Some administrative tasks can also or exclusively be executed by console. This guide lists the most

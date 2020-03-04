@@ -10,3 +10,4 @@
  - Backup.md not in use? Perhaps Backup and Server move guide
  - Changelog in root dir + align path e.g. update.md
  - Rework Configuration Guide, either more sub configuration or statistics/tracing as own
+ - Config -> Params advanced-configuration -> add all params

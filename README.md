@@ -1,8 +1,22 @@
-# Website
+# HumHub Documentation
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+>⚠️ Under construction.
+
+This documentation is built using [Docusaurus 2](https://v2.docusaurus.io/).
+
+Check [docs.humhub.org](http://docs.humhub.org) for a live version!
+
+### Guides
+
+ - [Adminisration](/docs/admin/o)
 
 ### Installation
+
+```
+$ npm install
+```
+
+or
 
 ```
 $ yarn
@@ -11,12 +25,24 @@ $ yarn
 ### Local Development
 
 ```
+$ npm run start
+```
+
+or
+
+```
 $ yarn start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
+
+```
+$ npm run build
+```
+
+or 
 
 ```
 $ yarn build
