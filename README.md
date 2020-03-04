@@ -54,6 +54,25 @@ $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
+### Guidelines
+
+- Wrap file names and paths into inline code: `index.php`
+- Use `>⚠️ Under construction` for missing parts
+- Use [Admonitions](docs/docs1.md#Admonitions) as warning,info etc block
+- Add code types to code blocks
+- Add the filename as comment to the code block (if possible):
+
+```php
+// protected/config/web.php
+return [
+    //..
+    'someValue' => [
+        'newValue'
+    ]
+    //..
+]
+```
+
 ### Main Navigation
 
 The main navigation is managed in [docusaurus.config.js](docusaurus.config.js) within the `links` configuration.
