@@ -30,7 +30,8 @@ module.exports = {
         {to: 'docs/admin/requirements', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
         {to: 'docs/theme/overview', activeBasePath: 'docs/theme',  label: 'Theming', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/professional/installation', activeBasePath: 'docs/professional', label: 'Professional Edition', position: 'left'},
+        //{to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/humhub/humhub',
           label: 'GitHub',
@@ -60,14 +61,14 @@ module.exports = {
               label: 'Professional Edition',
               href: '#',
             },
-            {
+           /* {
               label: 'Models and APIs',
               href: '#',
             },
             {
               label: 'User Guide',
               href: '#',
-            },
+            },*/
           ],
         },
         {
@@ -86,10 +87,10 @@ module.exports = {
         {
           title: 'Social',
           items: [
-            {
+           /* {
               label: 'Blog',
               to: 'blog',
-            },
+            },*/
             {
               label: 'GitHub',
               href: 'https://github.com/humhub/humhub',

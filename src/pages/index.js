@@ -49,7 +49,7 @@ const features = [
             </>
         ),
     },
-    {
+   /* {
         title: <>Modules and APIs</>,
         imageUrl: 'img/undraw_hologram.svg',
         href:'/docs/develop/professional',
@@ -68,7 +68,7 @@ const features = [
                 Check out the user guide in order to learn everything about how to use the HumHub platform from a user perspective.
             </>
         ),
-    },
+    },*/
 
 
 ];

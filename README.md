@@ -6,10 +6,6 @@ This documentation is built using [Docusaurus 2](https://v2.docusaurus.io/).
 
 Check [docs.humhub.org](http://docs.humhub.org) for a live version!
 
-### Guides
-
- - [Adminisration](/docs/admin/o)
-
 ### Installation
 
 ```
@@ -57,3 +53,12 @@ $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Main Navigation
+
+The main navigation is managed in [docusaurus.config.js](docusaurus.config.js) within the `links` configuration.
+
+### Documentation Sidebars
+
+The sidebars of the different guides are managed in [sidebars.js](sidebars.js). 
+See [Docusaurus2 Sidebars](https://v2.docusaurus.io/docs/sidebar/) for more information.

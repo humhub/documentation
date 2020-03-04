@@ -97,5 +97,23 @@ module.exports = {
             'theme/assets',
             'theme/mail',
         ]
+    },
+    Professional: {
+        'Getting Stared': [
+            'professional/installation',
+            'professional/update',
+            'professional/support',
+            'professional/CHANGELOG',
+            'professional/professional-edition',
+        ],
+        'Features': [
+            'professional/theme',
+            'professional/ldap',
+            'professional/space-types',
+            'professional/email-whitelisting',
+            'professional/email-groupmapping',
+            'professional/solr',
+            'professional/jwt',
+        ]
     }
 };
