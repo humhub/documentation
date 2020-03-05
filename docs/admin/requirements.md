@@ -13,8 +13,8 @@ All vital requirements will be checked during the web installation and can be re
 ## Shell Access
 
 While the installation and most configuration can be done without shell access, it's highly recommended to enable shell
-access (e.g. ssh) to the server in order to facilitate [console commands](console.md). 
-Console commands provide important features used to maintain and troubleshoot your HumHub installation.
+access (e.g. ssh) to the server in order to facilitate the [comand line interface](console.md). 
+The command line interface provide important features used to maintain and troubleshoot your HumHub installation.
 
 ## Webserver
 
