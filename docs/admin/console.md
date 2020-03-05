@@ -122,7 +122,7 @@ HumHub Search Tools
 | `search/queue-rebuild` |  Queue search index rebuild |
 | `search/rebuild`| Rebuilds the search index |     
 
-### `search`
+### `settings`
 
 Provides CLI access to database settings.
 
