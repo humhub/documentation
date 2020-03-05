@@ -34,13 +34,13 @@ Always **[backup](backup.md)** your data before updating
     - `/protected/modules/*`
     - `/themes/*`
 	
-4. Run database migration tool within `@humhub/protected`:
+5. Run database migration tool within `@humhub/protected`:
 
 ```console
 php yii migrate/up --includeModuleMigrations=1
 ```
 
-5. Flush caches
+6. Flush caches
 
 ```console
 php yii cache/flush-all
@@ -48,7 +48,7 @@ php yii cache/flush-all
 
 > If you are using APC(u) as cache backend, you may also need to restart your web server. 
 
-6. Update installed marketplace modules within `@humhub/protected`:
+7. Update installed marketplace modules within `@humhub/protected`:
 
 ```console
 php yii module/update-all
