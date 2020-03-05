@@ -12,7 +12,7 @@ module.exports = {
     navbar: {
       title: 'HumHub Documentation',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'HumHub',
         src: 'img/logo.svg',
       },
       links: [
@@ -129,7 +129,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/buddh4/humhub-docusaurus2/edit/master/',
+            'https://github.com/humhub/documentation/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
