@@ -3,18 +3,17 @@ id: requirements
 title: System Requirements
 ---
 
-This sections lists required and recommended server settings for running a HumHub installation.
+This sections lists all required and recommended server settings.
 
 :::note 
-All vital requirements will be checked during the web installation and can be reviewed under 
+All essential requirements will be tested during the web installation and can be reviewed under 
 `Administration -> Information -> Prerequisites`.
 :::
 
 ## Shell Access
 
-While the installation and most configuration can be done without shell access, it's highly recommended to enable shell
-access (e.g. ssh) to the server in order to facilitate the [comand line interface](console.md). 
-The command line interface provide important features used to maintain and troubleshoot your HumHub installation.
+Although the installation and most parts of the configuration can be carried out without a shell access, it's highly recommended to enable shell access (e.g. ssh) in order to facilitate the [comand line interface](console.md). 
+The command line interface provides important features, which are used to maintain and troubleshoot the software.
 
 ## Webserver
 
@@ -23,8 +22,8 @@ The command line interface provide important features used to maintain and troub
 
 ## Memory
 
-Since HumHub can be used for a variety of different platforms, the required memory highly depends on the amount and
-activity of users as well as the specific use case of your platform. The minimum memory requirements of HumHub are:
+Since HumHub itself can be used for a variety of use-cases, the required memory highly depends on the amount and
+activity within the network as well as the specific the specific actions of the users. The minimum memory requirements of HumHub are:
 
 **RAM**
 
@@ -44,7 +43,7 @@ activity of users as well as the specific use case of your platform. The minimum
 
 ### Extensions
 
-see the [PHP Manual](https://www.php.net/manual/en/extensions.php) for more information.
+This is just a short overview. See the [PHP Manual](https://www.php.net/manual/en/extensions.php) for more information.
 
 | Extension     | Required      | Description                                                               |
 | ------------- |:-------------:| --------------------------------------------------------------------------|
@@ -67,9 +66,9 @@ see the [PHP Manual](https://www.php.net/manual/en/extensions.php) for more info
 - **MariaDB 10.1+** 
 - **MySQL 5.6+**
 
-With **utf8mb4** character set support and **InnoDB** storage engine.
+**Utf8mb4** character set  and **InnoDB** storage engine are required.
 
-The following privilege are required for the HumHub database user:
+The database user requires following privileges:
 
 - SELECT
 - INSERT
