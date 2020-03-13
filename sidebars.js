@@ -8,24 +8,31 @@
 module.exports = {
     Administration: {
         'Getting Stared': [
-            'admin/requirements',
-            'admin/installation',
-            'admin/updating'
+            'admin/introduction',
         ],
-        'HumHub Administration': [
-            'admin/console',
-            'admin/advanced-configuration',
-            'admin/security',
-            'admin/authentication',
+        'Installation': [
+            'admin/requirements',
+            'admin/server-setup',
+            'admin/installation',
+        ],
+        'Configuration': [
             'admin/permissions',
+            'admin/authentication',
+            'admin/advanced-configuration',
             'admin/performance',
+            'admin/cron-jobs',
             'admin/asynchronous-tasks',
-            'admin/search',
-
             'admin/translations',
+            'admin/security',
+            'admin/search',
+        ],
+        'Maintenance': [
+            'admin/updating',
             'admin/backup',
+            'admin/console',
             'admin/troubleshooting'
-        ]
+        ],
+
     },
     Developement: {
         'Introduction': [

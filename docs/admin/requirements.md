@@ -18,44 +18,56 @@ The command line interface provide important features used to maintain and troub
 
 ## Webserver
 
-- [Apache Webserver](https://httpd.apache.org/)
-- [nginx](https://www.nginx.com/)
+- [Apache Webserver](https://httpd.apache.org/) 2.4 with mod_php or php-fpm (recommended)
+- [nginx](https://www.nginx.com/) with php-fpm
 
 ## Memory
 
 Since HumHub can be used for a variety of different platforms, the required memory highly depends on the amount and
 activity of users as well as the specific use case of your platform. The minimum memory requirements of HumHub are:
 
-- 500 MB of free disk space
+**RAM**
+
 - 64 MB of memory allocated to PHP
-- 50 MB of database space
+
+**Disk space**
+
+- 500 MB for the applications
+- 100 MB for the database
 
 ## PHP Environment
 
-HumHub requires a minimum of **PHP 7.1+**, as well as the following PHP Extensions, 
+- **PHP 7.4** (Recommended)
+- **PHP 7.3** (Recommended)
+- PHP 7.2
+- PHP 7.1
+
+### Extensions
+
 see the [PHP Manual](https://www.php.net/manual/en/extensions.php) for more information.
 
-**Required:**
- 
-- PHP GD Extension (With JPEG and PNG support)
-- PHP CUrl  Extension (w/ SSL Support) <https://secure.php.net/manual/en/curl.setup.php>
-- PHP Multibyte String Support <https://secure.php.net/manual/en/mbstring.setup.php> 
-- PHP PDO MySQL Extension (https://secure.php.net/manual/en/ref.pdo-mysql.php)
-- PHP Zip Extension (https://secure.php.net/manual/en/book.zip.php)
-- PHP EXIF Extension (https://secure.php.net/manual/en/book.exif.php)
-- PHP INTL Extension (https://secure.php.net/manual/en/intro.intl.php) (min ICU v49 see [Yii2 Internationalization](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n#setup-environment))
-- PHP FileInfo Extension (https://secure.php.net/manual/en/fileinfo.installation.php)
+| Extension     | Required      | Description                                                               |
+| ------------- |:-------------:| --------------------------------------------------------------------------|
+| GD            | Yes           | With JPEG and PNG support                                                 |
+| Curl          | Yes           | w/ SSL Support                                                            |
+| MBString      | Yes           | Multibyte Support                                                         |
+| MySQL         | Yes           | |
+| ZIP           | Yes           | |
+| EXIF          | Yes           | |
+| INTL          | Yes           | min ICU v49 see [Yii2 Internationalization](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n#setup-environment)         |
+| FileInfo      | Yes           | |
+| ImageMagck    | No            | |
+| LDAP          | No            | |
+| APC           | No            | |
+| Memcached     | No            | |
 
-**Optional:**
-
-- ImageMagick
-- PHP LDAP Support
-- PHP APC
-- PHP Memcached
 
 ## Database
 
-**MySQL 5.6+** or **MariaDB 10.1+** with **utf8mb4** character set support and **InnoDB** storage engine.
+- **MariaDB 10.1+** 
+- **MySQL 5.6+**
+
+With **utf8mb4** character set support and **InnoDB** storage engine.
 
 The following privilege are required for the HumHub database user:
 
@@ -75,8 +87,8 @@ The following privilege are required for the HumHub database user:
 
 ## Web browser
 
- - Microsoft Internet Explorer 11
- - Microsoft Edge
- - Mozilla Firefox
- - Google Chrome
+ - **Mozilla Firefox** (Recommended)
+ - **Google Chrome** (Recommended)
+ - **Microsoft Edge** (Recommended)
  - Apple Safari
+ - Microsoft Internet Explorer 11

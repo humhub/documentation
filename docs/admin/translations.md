@@ -1,7 +1,7 @@
 ---
 id: translations
-title: Translations
-sidebar_label: Translations
+title: Languages & Translations
+sidebar_label: Languages & Translations
 ---
 
 Limit available languages

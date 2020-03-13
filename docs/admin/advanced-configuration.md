@@ -1,6 +1,6 @@
 ---
 id: advanced-configuration
-title: Configuration
+title: Configuration Files
 ---
 
 While many HumHub settings can be configured directly within the administration backend, some more specific or low-level

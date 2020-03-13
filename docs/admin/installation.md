@@ -1,7 +1,12 @@
 ---
 id: installation
-title: Installation & Configuration
+title: HumHub Setup
 ---
+
+
+
+## Download and extract
+
 
 This guide describes the installation of the packaged version of HumHub. The packaged version of HumHub includes a
 production ready version of HumHub with all required third party dependencies and production assets. 
@@ -10,29 +15,21 @@ Make sure your server meets the [System Requirements](requirements.md) before yo
 If you intend to setup a development environment for HumHub, follow the [Development Environment](../develop/environment.md)
 guide instead.
 
-## Installation
-
-### Download HumHub
-
 The packaged version of HumHub is available at [https://www.humhub.org/download](https://www.humhub.org/download).
 After the download, just place the package into the `htdocs` folder of your web server.
 
-### Database Setup
+Example
 
-Create a MySQL Database, e.g.:
-
-```sql
-CREATE DATABASE `humhub` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-GRANT ALL ON `humhub`.* TO `humhub_dbuser`@localhost IDENTIFIED BY 'password_changeme';
-FLUSH PRIVILEGES;
 ```
-:::important
-Do not forget to change the `humhub_dbuser` and `password_changeme` placeholders!
-:::
+cd /tmp
+wget https://www.humhub.com/de/download/package/humhub-1.4.3.tar.gz
+tar xvfz humhub-1.4.3.tar.gz
+mv /tmp/humhub-1.4.3 /var/www/humhub
+```
 
-### File Permissions
+## File permissions
 
-Make sure the following directories and files are **writable** by the webserver:
+At least following directories and files needs to be **writable** by the PHP process:
 
 - `/assets`
 - `/protected/config/`
@@ -40,204 +37,83 @@ Make sure the following directories and files are **writable** by the webserver:
 - `/protected/runtime`
 - `/uploads/*`
 
-The following files need to be **executable**:
+If you want to use the HumHub automatic updater, all files must be writable.
 
- - `/protected/yii` (Linux)
- - `/protected/yii.bat` (Windows)
- 
-#### Protected files
- 
-Make sure the following directories are **not accessible over the web**:
- 
- - `/protected`
- - `/uploads/file`
- 
-Make sure files in the following directory are **not executable**:
- 
- - `/uploads`
- - `/assets`
- - `/static`
-
-:::note
-The `/protected` and `/uploads/file` directories are also protected by `.htaccess`
-:::
-
-### Run the web installer
-
-Open the web installer in your browser (e.g. [http://localhost/humhub](http://localhost/humhub))
-
-## E-Mail Configuration
-
-The mail-server settings can be found under `Administration -> Mailing -> Server Settings`.
-Depending on your hosting environment, you may want to specify a local or remote **SMTP Server** 
-like SendGrid, Postmark, Amazon SES or Mailgun. 
-[PHP Mail Transport](http://php.net/manual/en/mail.setup.php) is used by default.
-
-## Asynchronous Jobs
-
-Asynchronous jobs in HumHub are used to run potentially heavy or scheduled tasks such as sending out summary mails,
-notifications or search index optimization. The following section describes how to setup automatic job execution 
-required to handle such jobs. Since those settings are highly dependent on your server environment we can't assure 
-those setting will work for your. If you have trouble setting up the job scheduling described in this guide, please
-contact your provider to ask for support.
-
-There are two commands which needs to be scheduled:
-
- - **CronJob** - `cron/run`
- - **Queue** - `queue/run`
-
-### `cron/run`
-
-The cron command is used to run **scheduled jobs** which for example need to be executed hourly or daily. You can
-manually execute the cron command as follows:
-
-```console
-php /path/to/humhub/protected/yii cron/run
+```
+chown -R www-data.www-data /var/www/humhub
 ```
 
-### `queue/run`
+## Start installer
 
-The queue command is used to run **asynchronous jobs** which are potentially long running and therefore need to
-be executed in the background. The queue can either be scheduled as CronJob (see below) or with the help of another job-runner like 
-for example [Supervisor](http://supervisord.org/) or [Systemd](https://www.freedesktop.org/wiki/Software/systemd/). 
-Please refer to the [Asynchronous Tasks](asynchronous-tasks.md) section for more details about queuing and job processing.
+Open your browser and open the URL e.g. [https://temp.humhub.dev](https://temp.humhub.dev).
 
-The queue command can be executed manually as follows:
+The HumHub installer will now start and will guide you through the initial setup process.
 
-```console
-php /path/to/humhub/protected/yii queue/run
+For the first two steps [System Check](server-setup.md) and [Database Configuration](server-setup.md#create-database-schema) there is a detailed introduction in the [Server Setup](server-setup.md) document. 
+
+
+## CronJobs
+
+In the section below, only the most common method (also based on the installation structure of [Server Setup](server-setup.md)) is described.  
+
+On the page [Cron Jobs](cron-jobs.md) we will go into this topic in more detail. 
+
+** Cron job setup steps: **
+
+Open the crontab of HumHub/PHP process user e.g. ``www-data``.
+
 ```
+crontab -e -u www-data
+``` 
 
+Add following line to the crontab:
 
-
-### CronJob configuration
-
-As mentioned before, the CronJob configuration highly depends on your server environment. The following section is meant
-to help you with the CronJob setup and includes a guide for some common environments.
-
-If you are **not** using any other job-runner like _Supervisor_ or _Systemd_ for your queue, both commands can
-be scheduled as CronJob. Otherwise only the main `cron/run` command needs to be scheduled as CronJob. 
-
-
-**CronTab example**
-
-```console
-* * * * * /usr/bin/php /path/to/humhub/protected/yii queue/run >/dev/null 2>&1
-* * * * * /usr/bin/php /path/to/humhub/protected/yii cron/run >/dev/null 2>&1
 ```
+* * * * * /usr/bin/php /var/www/humhub/protected/yii queue/run >/dev/null 2>&1
+* * * * * /usr/bin/php /var/www/humhub/protected/yii cron/run >/dev/null 2>&1
+``` 
 
-:::important
-If you're on a **shared hosting environment**, you may need to add the `--isolate=0` option to the `queue/run`
-command e.g. `/usr/bin/php /path/to/humhub/protected/yii queue/run --isolate=0`.
-:::
+Make sure to replace ``/var/www/humhub`` with the path of your HumHub installation.
 
-:::caution
-Make sure to use the right [php cli executable](http://php.net/manual/en/features.commandline.introduction.php) for your jobs!
-:::
 
-#### CloudLinux (CentOS) 6
+## E-Mails
 
-The following is a default setup for CloudLinux (CentOS) 6 and may not work for all users.
+HumHub sends emails to the users e.g. during the registration, password recovery, notifications or for daily summaries.
 
-```console
-/usr/local/bin/php /home/USERNAME/public_html/WEB-DIRECTORY/protected/yii cron/run >/dev/null 2>&1
+A valid transport and a sender e-mail address must be provided for this purpose. This can be configured in the web interface under ``Administration -> Settings -> Advanced -> E-Mail`.
 
-* * * * *
+If you installed a local SMTP server e.g. [Postfix](server-setup.md#postfix), you can use ``PHP`` as ``Mail Transport Type`` option.
 
-/usr/local/bin/php /home/USERNAME/public_html/WEB-DIRECTORY/protected/yii queue/run >/dev/null 2>&1
+You can use external SMTP services like SendGrid, Postmark, Amazon SES or Mailgun with the ``SMTP`` as ``Mail Transport Type`` option. 
 
-* * * * *
-```
+## Pretty URLs 
 
-#### cPanel Hosted Server
+By default, the HumHub URL includes a index.php file part and looks like https://example.com/index.php?r=dashboard%2Fdashboard. 
+Using the Pretty URL or URL Rewriting feature, shorter and more meaningful URLs can be created such as https://temp.humhub.dev/dashboard.
 
-The following is a default setup for cPanel Hosted Server and may not work for all users.
+To enable this feature, both the HumHub configuration and, possibly, the WebServer configuration must be modified.
 
-```console
-/usr/local/bin/php /home/USERNAME/public_html/WEB-DIRECTORY/protected/yii cron/run >/dev/null 2>&1
-
-* * * * *
-
-/usr/local/bin/php /home/USERNAME/public_html/WEB-DIRECTORY/protected/yii queue/run >/dev/null 2>&1
-
-* * * * *
-```
-
-#### IIS Windows Server
-
-Using [Schtasks](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks) would be recommended over many other options for Windows 2012 and Windows 8 users.
-
-#### Plesk
-
-Refer to this [post](https://stackoverflow.com/questions/16700749/setting-up-cron-task-in-plesk-11)
-
-![](http://i.imgur.com/TbWEsjC.png)
-
-#### OVH
-
-[Follow this link](https://www.ovh.com/us/g1990.hosting_automated_taskscron)
-
-Create the following files then follow the above link.
-
-`cronh.php`
+Modify the HumHub [Configuration File](advanced-configuration.md) and add following block:
 
 ```php
-`<?php $humhubh = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii cron/run '; exec($humhubh); ?>`
+    'components' => [
+        'urlManager' => [
+            'showScriptName' => false,
+            'enablePrettyUrl' => true,
+        ],
+    ]
 ```
 
-
-`crond.php`
-
-```php
-<?php $humhubd = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii queue/run '; exec($humhubd); ?>
-```
-
-#### Debian
-
-Please read up on this [article](https://debian-administration.org/article/56/Command_scheduling_with_cron).
-
-#### Ubuntu
-
-Please read up on this [how-to guide](https://help.ubuntu.com/community/CronHowto).
-
-### Status and Troubleshooting
-
-In case you encounter any issues with the job execution like unsent notifications or summary mails you can check
-the job status under `Administration -> Information -> Background Jobs`. Ideally the `Last run` time of the *CronJob Status*
-should be set and updated regularly. The value `Waiting` of *Queue Status* should decrease or be empty, 
-while the `Done` value increases.
-
-![Background Jobs Status](images/asynchronous_job_status.JPG)
-
-Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Background Jobs` 
-as well as using the following cron configuration to log the output of the command to a `queue.log` and `cron.log` file:
-
-```
-* * * * * /usr/bin/php /path/to/humhub/protected/yii queue/run >/path/to/queue.log 2>&1
-* * * * * /usr/bin/php /path/to/humhub/protected/yii cron/run >/path/to/cron.log 2>&1
-```
-
-The log output may give you some hints about the problem and ideally should either be empty or filled with some stats if
-the job ran correctly. The modification time of the file furthermore informs you about the last time the cron job ran.
-
-## Pretty Urls (Optional)
-
-URL rewriting can be used in order to use pretty urls. Once enabled, your HumHub installation will make use of urls like
-
-`http://localhost/humhub/directory/directory` 
-
-instead of 
-
-`http://localhost/humhub/index.php?r=directory%2Fdirectory`.
-
-#### Setup Pretty Urls
-
-Rename the `.htaccess.dist` file residing in your HumHub root folder to `.htaccess` and modify the local 
-configuration located at `protected/config/common.php` as follow:
+Full example of the configuration file: ``/protected/config/common.php``
 
 ```php
 <?php
-
+/**
+ * This file provides to overwrite the default HumHub / Yii configuration by your local common (Console and Web) environments
+ * @see http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
+ * @see http://docs.humhub.org/admin-installation-configuration.html
+ * @see http://docs.humhub.org/dev-environment.html
+ */
 return [
     'components' => [
         'urlManager' => [
@@ -247,12 +123,74 @@ return [
     ]
 ];
 ```
-## Security
 
-Please see the [Security](advanced-configuration.md) section for security related configurations, especially required
-in production environments.
+### Apache
 
-## Advanced Configuration
+To enable URL Rewriting in Apache 2.4 based installations it is usually sufficient to copy the supplied file ``.htaccess.dist`` in the root directory of the HumHub installation to ``.htaccess``. 
 
-The [Advanced Configuration](advanced-configuration.md) section provides a deeper insight into the configuration of a
-HumHub installation.
+```bash
+cd /var/www/humhub
+cp .htaccess.dist .htaccess
+```
+
+Sometimes it is necessary to enable support for ``.htaccess`` files in the [Apache VirtualHost](server-setup.md#apache) via the ``AllowOverwrite all`` directive. 
+
+
+Example VirtualHost configuration:
+
+```
+<VirtualHost *:443>
+
+  # ...
+
+  <Directory /var/www/humhub/>
+     Options -Indexes -FollowSymLinks
+     AllowOverride All
+  </Directory>
+
+  # ...
+
+</VirtualHost>
+```
+
+### NGINX
+
+The [virtual server](server-setup.md#nginx) configuration for NGINX is already prepared for Pretty URLs and there are no further changes required.
+
+## Enable production mode
+
+By default HumHub is shipped in debug mode. This means that error messages are shown with maximum details directly to the users. In addition, the performance is reduced because no caching or compressed assets are used.
+
+To activate Production Mode, edit the index.php file  and comment out the following lines.
+To comment out lines, the line must begin with: //
+
+Example (/var/www/humhub/index.php):
+
+```php
+// comment out the following two lines when deployed to production
+// defined('YII_DEBUG') or define('YII_DEBUG', true);
+// defined('YII_ENV') or define('YII_ENV', 'dev');
+``` 
+
+You can see the current mode at ``Administration -> Information``.
+
+## Verify 
+
+- Cronjobs
+
+    You can find the last execution and number of open background jobs at: ``Administration -> Information -> Background jobs``
+
+- Error log
+
+    Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration -> Information -> Logging``
+
+- Protected folders
+
+    Please make sure that the following directory is **not** publicly accessible via the web server.
+
+    - /protected
+    - /uploads/file
+
+- Production Mode
+
+    Make sure that no warning about the ``Debug mode`` appears under ``Administration -> Information -> About HumHub``.
