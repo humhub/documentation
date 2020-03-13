@@ -3,13 +3,12 @@ id: server-setup
 title: Server Setup (Linux)
 ---
 
-This document covers a basic server configuration for a HumHub. 
+This document covers a basic server configuration under Linux.
 The operating system used here is ``Linux`` with the distribution ``Debian Buster 10``.
 
-HumHub is being installed into the ``/var/www/humhub`` directory here and runs with the user/group ``www-data``.
+HumHub is being installed into the ``/var/www/humhub`` directory in this case and runs with the user/group ``www-data``.
 
-In the example configuration the URL https://temp.humhub.dev is used. 
-This must be changed according to your address.
+The URL https://temp.humhub.dev is used in this example. Replace it with an URL of your choice.
 
 ## Database
 
@@ -25,7 +24,7 @@ Of course these values, especially the password, should be changed according to 
 ### Installation
 
 
-Install and configure MariaDB Server using Debian packages.
+Install and configure the MariaDB Server using Debian packages.
 
 ```bash
 apt update
@@ -35,13 +34,13 @@ mysql_secure_installation
 
 ### Create Database Schema
 
-Open MySQL console
+Open the MySQL console
 
 ```bash
 mysql -u root -p
 ```
 
-Create database user
+Create a new database user
 
 ```sql
 mysql> CREATE USER 'humhub_prod' IDENTIFIED BY 'change-me';
@@ -82,7 +81,7 @@ apt install php php-cli \
 ### Preparation
 
 
-Installation Certbot and obtain SSL certificates for the portal.
+Install Certbot and obtain SSL certificates for the portal.
 
 ```bash
 apt install certbot
@@ -100,7 +99,7 @@ apt install apache2 \
 	php-fpm 
 ```
 
-Create configuration file ``/etc/apache2/site-available/humhub.conf`` with following content.
+Create configuration file ``/etc/apache2/site-available/humhub.conf`` with the following content:
 
 
 ```apacheconf
@@ -137,7 +136,7 @@ Create configuration file ``/etc/apache2/site-available/humhub.conf`` with follo
 </VirtualHost>
 ```
 
-Enable the virtual host and additional Apache2 configurations and required modules.
+Enable the virtual host, additional Apache2 configurations and required modules.
 
 ```bash
 a2enmod ssl rewrite headers proxy_fcgi setenvif
@@ -209,7 +208,7 @@ server {
 
 ## Mail 
 
-If e-mails should be sent directly from this server, an SMTP server must be installed.
+If emails are supposed to be sent directly from this server, an SMTP server has to be installed.
 
 ### Postfix
 
