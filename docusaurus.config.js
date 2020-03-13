@@ -27,7 +27,7 @@ module.exports = {
             textDecoration: 'underline',
           },
         },*/
-        {to: 'docs/admin/requirements', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
+        {to: 'docs/admin/introduction', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
         {to: 'docs/theme/overview', activeBasePath: 'docs/theme',  label: 'Theming', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
         {to: 'docs/professional/installation', activeBasePath: 'docs/professional', label: 'Professional Edition', position: 'left'},
