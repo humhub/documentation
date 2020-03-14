@@ -23,7 +23,7 @@ The command line interface provides important features, which are used to mainta
 ## Memory
 
 Since HumHub itself can be used for a variety of use-cases, the required memory highly depends on the amount and
-activity within the network as well as the specific the specific actions of the users. The minimum memory requirements of HumHub are:
+activity within the network as well as the specific actions of the users. The minimum memory requirements of HumHub are:
 
 **RAM**
 
