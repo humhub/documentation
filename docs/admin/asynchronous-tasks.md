@@ -132,25 +132,8 @@ To enable this driver you need to add following block to your local configuratio
 ```
 ### Redis 
 
-If you're already using Redis (e.g. for caching or push) we recommend this queue driver.
-Please make sure you already configured Redis as described here: [Redis Configuration](redis.md).
+See [Redis](redis.md) for further information.
 
-To enable this driver you need to add following block to your local configuration file (protected/config/common.php):
-
-```
-    // ...
-    'components' => [
-        // ...
-
-        'queue' => [
-            'class' => 'humhub\modules\queue\driver\Redis',
-        ],
-        
-        // ...
-    ],
-    // ...
-
-```
 
 ### Sync and Instant Queue
 

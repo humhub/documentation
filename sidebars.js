@@ -23,6 +23,7 @@ module.exports = {
             'admin/asynchronous-tasks',
             'admin/permissions',
             'admin/cron-jobs',
+            'admin/redis',
             'admin/translations',
             'admin/security',
         ],

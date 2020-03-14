@@ -1,5 +1,8 @@
-Redis
-=====
+---
+id: redis
+title: Redis
+sidebar_label: Redis
+---
 
 We recommend installing an additional Redis server which can act as a caching, push service and job queuing service for HumHub.
 
@@ -9,7 +12,7 @@ Basic Configuration
 
 To enable Redis, you have to add following block to your local configuration file (protected/config/common.php):
 
-```
+```php
     // ...
     'components' => [
         // ...
@@ -30,18 +33,53 @@ To enable Redis, you have to add following block to your local configuration fil
 Caching 
 -------
 
-Once Redis is configured, you can also select it as a caching service: Administration -> Settings -> Advanced -> Caching.
+To use Redis as cache, the following block must be added to the configuration file (protected/config/common.php).
+
+```php
+    // ...
+    'components' => [
+        // ...
+
+        'cache' => [
+            'class' => 'yii\redis\Cache',
+        ],
+        
+        // ...
+    ],
+    // ...
+
+```
 
 
-Queuing of Asychronous Tasks
-----------------------------
 
-See [Asychronous Tasks](asychornous-tasks.md) for further information.
+Background Job Queue
+--------------------
+
+Besides acting as a cache, Redis can also be used to manage the queue of background tasks. 
+
+To enable this feature you need to add following block to your local configuration file (protected/config/common.php):
+
+
+```php
+    // ...
+    'components' => [
+        // ...
+
+        'queue' => [
+            'class' => 'humhub\modules\queue\driver\Redis',
+        ],
+        
+        // ...
+    ],
+    // ...
+
+```
+
+
+
 
 
 Push Updates
 ------------
 
-See [Push Updates](push-updates.md) for further information.
-
-
+TBD
