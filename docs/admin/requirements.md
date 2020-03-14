@@ -1,19 +1,10 @@
 ---
 id: requirements
 title: System Requirements
+sidebar_label: Requirements
 ---
 
 This sections lists all required and recommended server settings.
-
-:::note 
-All essential requirements will be tested during the web installation and can be reviewed under 
-`Administration -> Information -> Prerequisites`.
-:::
-
-## Shell Access
-
-Although the installation and most parts of the configuration can be carried out without a shell access, it's highly recommended to enable shell access (e.g. ssh) in order to facilitate the [comand line interface](console.md). 
-The command line interface provides important features, which are used to maintain and troubleshoot the software.
 
 ## Webserver
 
@@ -35,6 +26,11 @@ activity within the network as well as the specific actions of the users. The mi
 - 100 MB for the database
 
 ## PHP Environment
+
+:::note 
+All essential requirements will be tested during the web installation and can be reviewed under 
+`Administration -> Information -> Prerequisites`.
+:::
 
 - **PHP 7.4** (Recommended)
 - **PHP 7.3** (Recommended)
@@ -84,6 +80,13 @@ The database user requires following privileges:
 **MyISAM** is not supported due to the lack of foreign keys.
 :::
 
+## Shell Access
+
+Although the installation and most parts of the configuration can be carried out without a shell access, it's highly recommended to enable shell access (e.g. ssh) in order to facilitate the [comand line interface](console.md). 
+
+The command line interface provides important features, which are used to maintain and troubleshoot the software.
+
+
 ## Web browser
 
  - **Mozilla Firefox** (Recommended)
@@ -91,3 +94,6 @@ The database user requires following privileges:
  - **Microsoft Edge** (Recommended)
  - Apple Safari
  - Microsoft Internet Explorer 11
+
+
+
