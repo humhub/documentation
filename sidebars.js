@@ -24,6 +24,7 @@ module.exports = {
             'admin/permissions',
             'admin/cron-jobs',
             'admin/redis',
+            'admin/logging',
             'admin/translations',
             'admin/security',
         ],
