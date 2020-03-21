@@ -3,8 +3,27 @@ id: performance
 title: Performance
 ---
 
-Caching
--------
+
+HTTP Caching
+------------
+
+HTTP caching for assets (e.g. images, stylesheets or Javascript components) must be defined in the configuration of the web server.
+
+If you are using the configuration for Apache2 or NGINX described in the [Server Setup](server-setup.md#webserver) section, the recommended configuration is already in place and no further adjustment is necessary. 
+
+If not, all files of the following directories that are delivered directly by the web server should be delivered with a Cache HTTP Header.
+
+- /static
+- /uploads
+- /themes
+- /assets
+
+:::tip
+The expiration time can be set very high, because HumHub automatically changes the URL in case of an update.
+:::
+
+Application Caching
+-------------------
 
 HumHub supports different caching systems which can be configured at: `Administration -> Settings -> Advanced -> Caching`.
 

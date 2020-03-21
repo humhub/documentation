@@ -193,6 +193,11 @@ server {
 		deny all;
 	}
 
+    location ~ ^/(assets|static|themes|uploads) {
+        expires 10d;
+        add_header Cache-Control "public, no-transform";
+    }
+
 	location ~ \.php {
 		fastcgi_split_path_info  ^(.+\.php)(.*)$;
 
