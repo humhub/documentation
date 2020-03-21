@@ -128,6 +128,10 @@ Create configuration file ``/etc/apache2/site-available/humhub.conf`` with the f
      Order Deny,Allow
      Deny from all
   </FilesMatch>
+  
+  <DirectoryMatch "/var/www/humhub/(static|uploads|themes|assets)">
+        Header set Cache-Control "max-age=172800, public"
+  </DirectoryMatch>
 </VirtualHost>
 
 <VirtualHost *:80>
