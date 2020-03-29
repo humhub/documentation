@@ -51,10 +51,12 @@ This is just a short overview. See the [PHP Manual](https://www.php.net/manual/e
 | EXIF          | Yes           | |
 | INTL          | Yes           | min ICU v49 see [Yii2 Internationalization](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n#setup-environment)         |
 | FileInfo      | Yes           | |
-| ImageMagck    | No            | |
+| ImageMagick   | No            | Better image processing (alternative to GraphicsMagick) |
+| GraphicsMagick| No            | Better image processing (alternative to ImageMagick)|
 | LDAP          | No            | |
 | APC           | No            | |
 | Memcached     | No            | |
+
 
 
 ## Database

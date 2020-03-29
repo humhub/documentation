@@ -183,6 +183,7 @@ server {
 	ssl_certificate_key /etc/letsencrypt/live/temp.humhub.dev/privkey.pem;
 
 	charset utf-8;
+    client_max_body_size 256M;
 
 	location / {
 		index  index.php index.html ;
