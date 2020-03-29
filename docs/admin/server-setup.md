@@ -75,7 +75,7 @@ apt install php php-cli \
 
 Set the following parameters inside the PHP configuration file ``php.ini`` to at least following values:
 
-```
+```bash
 upload_max_filesize = 32M
 post_max_size = 32M
 max_execution_time = 120
@@ -88,7 +88,7 @@ The ``php.ini`` file is located in one of the following folders depending on the
 
 **Example for Apache2 module:** 
 
-``` 
+```bash
 sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.3/apache2/php.ini
 sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.3/apache2/php.ini
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.3/apache2/php.ini
@@ -98,7 +98,7 @@ systemctl restart apache2
 
 **Example for FPM:** 
 
-``` 
+```bash 
 sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.3/fpm/php.ini
 sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.3/fpm/php.ini
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.3/fpm/php.ini
