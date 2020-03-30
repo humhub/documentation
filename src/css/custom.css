@@ -28,7 +28,7 @@
 }
 
 .admonition a {
-  color: #292D3E;
-  text-decoration: underline;
+  color: var(--ra-admonition-color);
+  font-weight: bold;
 }
 
