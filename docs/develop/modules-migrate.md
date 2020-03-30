@@ -13,10 +13,98 @@ modules against new HumHub version. Also keep in mind to align the `minVersion` 
 You can execute code for specific versions by using the `version_compare` function as:
 
 ```php
-if (version_compare(Yii::$app->version, '1.3', '>')) {
+if (version_compare(Yii::$app->version, '1.3', '=>')) {
     // Use some 1.3+ features here
 } else {
      // Compatibility code for older versions
+}
+```
+
+Migrate from 1.4 to 1.5
+-----------------------
+
+### Asset Management
+
+In HumHub 1.5 the loading of core assets was optimized by splitting the main `humhub\assets\AppAsset` into two separate
+bundles. The old AppAsset bundle was reduced to only a few core scripts and stylesheets while a new `humhub\assets\CoreBundleAsset`
+was introduced which will load scrips with a `defer` attribute. This means that scripts within the CoreBundleAsset will
+be loaded deferred and may not be available directly in the html body. 
+
+You will need to migrate asset bundles which depend on one the following bundles:
+
+ - JqueryColorAsset::class, 
+ - JqueryHighlightAsset::class,
+ - JqueryAutosizeAsset::class,
+ - Select2Asset::class,
+ - Select2BootstrapAsset::class,
+ - JqueryWidgetAsset::class,
+ - NProgressAsset::class,
+ - JqueryNiceScrollAsset::class,
+ - BlueimpFileUploadAsset::class,
+ - BlueimpGalleryAsset::class,
+ - ClipboardJsAsset::class,
+ - ImagesLoadedAsset::class,
+ - HighlightJsAsset::class,
+ - SwipedEventsAssets::class,
+ - CoreExtensionAsset::class,
+ - ProsemirrorEditorAsset::class,
+ - ProseMirrorRichTextAsset::class,
+ - UserAsset::class,
+ - LiveAsset::class,
+ - NotificationAsset::class,
+ - ContentAsset::class,
+ - ContentContainerAsset::class,
+ - UserPickerAsset::class,
+ - FileAsset::class,
+ - PostAsset::class,
+ - SpaceAsset::class,
+ - TopicAsset::class,
+ - FilterAsset::class,
+ - CommentAsset::class,
+ - LikeAsset::class,
+ - StreamAsset::class,
+ - ActivityAsset::class,
+ - SpaceChooserAsset::class
+
+:::info
+There is a compatibility layer in HumHub 1.5 which automatically adds the dependency management and defer attribute to
+your existing bundles, which should prevent your existing scripts from failing.
+:::
+
+**>=1.5 only migration:**
+
+If you don't need to stay compatible with older HumHub versions you can achieve this by
+simply extending the new `humhub\components\assets\AssetBundle` class instead of `yii\web\AssetBundle` and set
+`"humhub": {"minVersion": "1.5"}` within your `module.json`. 
+
+```php
+use humhub\components\assets\AssetBundle;
+
+// By extending HumHub AssetBundle the defer and core dependency is handled automatically
+class MyAssetBundle extends AssetBundle
+{
+   //...
+}
+```
+
+**<1.5 compatibility migration:**
+
+Although your current scripts should not break even if you depend on one of the core assets you should add 
+the following in case you need to stay compatible with older HumHub versions:
+
+```php
+use yii\web\AssetBundle;
+use yii\web\View;
+
+class CoreBundleAsset extends AssetBundle
+{
+    //...
+
+    public $jsOptions = [
+        // Make sure scripts are added after CoreBundleAsset
+        'position' => View::POS_BEGIN, 
+        'defer' => 'defer'
+    ];
 }
 ```
 
