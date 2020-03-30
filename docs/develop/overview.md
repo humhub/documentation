@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Overview
-sidebar_label: Overview
+sidebar_label: Application Overview
 ---
 
 ## The HumHub platform
@@ -56,30 +56,34 @@ HumHub extends several Yii components such as:
 
 and consists of the following core modules:
 
- - **activity:** Assambles social network activities
- - **admin:**  Responsible for admin/configuration related issues
- - **comment:**  Content addon for commenting
- - **content:**  Base module for all content types (Post,Wiki,...) 
- - **dashboard:**  Dashboard related functionality
- - **directory:**  User/Space/Group directory
- - **file:**  Basic file module for accessing the filesystem
- - **friendship:**  User friendship module
- - **installer:**  HumHub installer module
- - **like:**  Content addon for likes
- - **live:**  Used for frontend live updates
- - **notification:**  User Notifications
- - **post:**  Simple user-post related functionality
- - **queue:** Queue drivers and interfaces
- - **search:**  Luceene Search Module
- - **space:**  Space related functionality
- - **stream:**  Content streams and walls
- - **topic:** Topics are used to categorize and filter content
- - **tour:**  HumHub user-guide
- - **ui:** Base ui components as widgets and theme logic
- - **user:**  Basic user module
+| Module | Description |    
+| -------- | ---------- |
+| `activity`  | Social network [activities](activities.md) | 
+| `admin` | Administration backend |
+| `comment` | Content add-on for commenting |
+| `content` | Base module for all content types (Post,Wiki,...) |
+| `dashboard` | HumHub Dashboard overview |
+| `directory` | HumHub Directory platform overview (User/Spaces/Groups) |
+| `file` | Base file module for managing uploaded files  |
+| `friendship` | Enables user friendship relations |
+| `installer` | HumHub platform installer |
+| `like` | Content add-on for likes |
+| `live` | Enables live updates in the frontend |
+| `marketplace` | Marketplace interface |
+| `notification` | Enables notification over different targets |
+| `post` | Simple post content type |
+| `queue` | Queue module for asynchronous jobs |
+| `search` | HumHub search abstraction + default implementation |
+| `space` | User Spaces |
+| `stream` | Content Streams |
+| `topic` | Content topics used to categorize content entries |
+| `tour` | Introduction tour (user-guide) |
+| `ui` | Base user interface components like widgets and theme logic |
+| `user` | HumHub user and authentication |
+| `web` | Web standard related classes |
  
-### Application structure
- 
+## Application structure
+
 The following structure lists the main directories of a HumHub installation, whereas the `humhub` directory will be referred as
  `web-root` throughout this guide.
 
@@ -107,3 +111,8 @@ in an production environment.
   - `vendor` - Contains third party libraries
 - `static` - Static asset files as production assets, core javascript/less files etc.
 - `uploads` - File uploads, profile images etc.
+
+:::info
+See [Yii2 - Application Structure](https://www.yiiframework.com/doc/guide/2.0/en/structure-overview) for an in depth description
+of a Yii2 application.
+:::

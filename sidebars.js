@@ -40,15 +40,15 @@ module.exports = {
         'Introduction': [
             'develop/overview',
             'develop/environment',
-            'develop/coding-standards'
+            'develop/coding-standards',
+            'develop/build',
         ],
         'Module Development': [
             'develop/modules',
             'develop/modules-base-class',
-            'develop/module-change-behavior',
+            'develop/modules-event-handler',
             'develop/testing',
             'develop/modules-migrate',
-
         ],
         'Basic Concepts': [
             'develop/models',
@@ -79,7 +79,6 @@ module.exports = {
             'develop/live',
             'develop/search',
             'develop/security',
-            'develop/build',
             'develop/console',
             'develop/oembed',
         ]

@@ -6,7 +6,7 @@ title: Module Class
 ## Base Module Class
 
 The main module class defined in `Module.php` implements basic module functionality which will be described in more detail
-in the following sections. Currently there are two base module classes:
+in the following section. There are two base module classes:
 
 - `humhub\components\Module` - Used for modules which can only be installed on a global level.
 - `humhub\modules\content\components\ContentContainerModule` - Used for modules which can also be installed
@@ -48,7 +48,9 @@ The configuration value can be read as follows:
 $maxValue = Yii::$app->getModule('mymodule')->maxValue;
 ```
 
-> ℹ️ You can also define callback functions, which then can be implemented or overwritten within your configuration.
+:::info
+You can also define callback functions, which then can be implemented or overwritten within the configuration.
+::: 
 
 ### `getConfigUrl()`
 

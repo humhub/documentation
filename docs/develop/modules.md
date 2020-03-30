@@ -24,7 +24,6 @@ Before starting with the development of your custom module, first consider the f
 - Does my module produce [content](content.md)?
 - Does my module produce [stream entries](stream.md)?
 - Does my module add any [sidebar snippets](snippet.md)?
-- Do I need to [extend or change the default behaviour](module-change-behavior.md) of core components?
 - Do I need specific [permissions](permissions.md) for my module?
 - Does my module create any [notifications](notifications.md) or [activities](activities.md)?
 - Should [guest users](permissions.md#guest-access) have access to some parts of my module?
@@ -42,6 +41,14 @@ Furthermore you may have to consider the following issues:
 - [Live UI updates](live.md)
 - [Security](security.md)
 - [Embedded Themes](../theme/module.md)
+
+:::tip
+It's always a good idea to get some inspiration from existing modules which may already solved some of
+the problems you are facing in your custom module. For example have a look at repositories at:
+
+- [https://github.com/humhub](https://github.com/humhub)
+- [https://github.com/humhub-contrib](https://github.com/humhub-contrib)
+:::
 
 ## Setup a module skeleton
 
@@ -74,12 +81,14 @@ my-module
 The `config.php` can be used to define event handlers, and the definition of [URL Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)
 and consists of the following data:
 
-- **id** - Unique ID of the module **required**
-- **class** - Namespaced classname of the module class  **required**
-- **namespace** - The namespace of your module  **required**
-- **events** - Array containing the modules event configuration
-- **urlManagerRules** - Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules) 
-- **modules** - Can be used to define submodules
+| Field | Description |    
+| -------- | ---------- |
+| `id`  | Unique module ID **required** | 
+| `class` | Namespaced classname of the module class **required** |
+| `namespace` | The namespace of your module **required** |
+| `events` | Array containing the modules event configuration |
+| `urlManagerRules` | Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)  |
+| `modules` | Can be used to define submodules |
 
 **Example:**
 
@@ -99,33 +108,32 @@ return [
     ]
 ];
 ```
+:::caution
+Do not execute any dynamic code directly within `config.php` since the result will be cached!
+:::
 
-> ⚠️ Do not execute any dynamic code directly within `config.php` since the result will be cached!
-
-> ⚠️ Do choose a preferably unique module id which does not interfere with any [core](overview.md#core-modules-and-components)
->or other available module.
+:::caution
+Do choose a preferably unique module id which does not interfere with any [core](overview.md#core-modules-and-components)
+or other available module.
+:::
 
 ### `module.json`
 
-The `module.json` file holds basic metadata of a module which is used besides others by the marketplace.
+The `module.json` file holds basic metadata of a module used by the marketplace.
 
 Available attributes:
 
-- **id** - The module ID **required**
-- **version** - The module version. This must follow the format of X.Y.Z. **required**
-- **name** - The modules name **required**
-- **description** - A short module description **required**
-- **humhub** - HumHub requirements
-    - **minVersion** - The minimum HumHub core version this module is compatible with.
-    - **maxVersion** - The maximum HumHub core version this module is compatible with.
-- **keywords** - (Array) Some keywords 
-- **screenshots** - (Array) Some screenshots for the marketplace, those should reside in the `resourcesPath` of your module.
-- **homepage** - An URL to the website of the module. (Optional)
-- **authors** - (Array) The authors of the module. (Optional)
-	- **name** - The author's name.
-	- **email** - The author's email address.
-	- **homepage** - An URL to the author's website.
-	- **role** -  The author's role (e.g. developer or translator)
+| Field | Description |    
+| -------- | ---------- |
+| `id`  | The module ID **required** | 
+| `version` | The module version. This must follow the format of X.Y.Z. **required** |
+| `name` | The modules name **required** |
+| `description` | A short module description **required** |
+| `humhub` | HumHub core `minVersion` and `maxVersion` requirements  |
+| `keywords` | Module related keywords as string array |
+| `screenshots` | Some screenshots file names for the marketplace, those should reside in the `Module::$resourcesPath` |
+| `homepage` | An URL to the website of the module |
+| `authors` | Author information as `name`, `email`, `homepage`, `role` |
 
 
 **Example:**
@@ -158,11 +166,16 @@ Available attributes:
     ]	
 }
 ```
-> ⚠️ You should align the `minVersion` of your module when using new features and test your modules on all supported versions.
+
+:::tip
+Align the `minVersion` of your module when using new features and test your modules on all supported versions. In case
+you are not sure about the `minVersion` use the version you are testing with or the latest stable HumHub version.
+:::
 
 ### `Module.php`
 
-See chapter [Module Class](modules-base-class.md) for an introduction of the module base class.
+The module class of a module may contains basic install/uninstall functionality as well as module class level configuration.
+See chapter [Module Class](modules-base-class.md) for an introduction of the base module class.
 
 ### Documentation
 
@@ -180,52 +193,41 @@ The following table lists files which can be added in order to provide module do
 | DEVELOPER.md | No | Additional information for developers |
 
 
-### Extended structure example
+### Extended module structure example
 
-The following structure contains some additional directories and files, which can be added for specific use-cases or features. 
+The following table describes other common module directories used for more specific use cases:
 
-```
-my-module
-├── activities - activity classes
-├── assets - asset bundle classes
-├── components - component classes
-├── controllers - see above
-├── live - live event classes
-├── jobs - queue job classes
-├── messages - contains the modules message files
-├── migrations - see above
-├── helpers - contains utility classes e.g. for URL generation
-├── models - see above
-├── modules - contains any submodules
-├── notifications - notification classes
-├── permissions - permission classes
-├── resources - contains web assets as javascript files or stylesheets
-├── tests- module tests
-├── views - see above
-├── widgets - see above
-├── views - see above
-├── Events.php - is often used for static event handlers
-├── Module.php - see above
-├── config.php - see above  
-└── module.json - see above
-```
+| Directory | Description |    
+| -------- | ---------- |
+| `activities`  | [Activity](activities.md) classes | 
+| `assets` | Asset Bundles |
+| `components` | [Components](https://www.yiiframework.com/doc/guide/2.0/en/concept-components) |
+| `controllers` | Web or Console controller |
+| `live` | HumHub live related classes used for live frontend updates  |
+| `jobs` | Asynchronous jobs (queue) |
+| `messages` | Translation message files |
+| `migrations` | Database migration files |
+| `helpers` | Helper and utility classes  |
+| `notifications` | Module notifications  |
+| `permissions` | Module [permissions](permissions.md)  |
+| `resources` | Assets as scripts, style sheets, images  |
+| `tests` | Module [tests](testing.md) |
+| `views` | [View](https://www.yiiframework.com/doc/guide/2.0/en/structure-views) files  |
+| `widgets` | [Widget](https://www.yiiframework.com/doc/guide/2.0/en/structure-widgets) classes  |
+| `Events.php` | Event handlers  |
 
 ## Module Lifecycle
 
-### Bootstrap
-
-During the `bootstrap` phase of the application the `humhub\components\bootstrap\ModuleAutoLoader` will search for 
-all `enabled` modules within the module autoload path and register the configured [module event listeners](events.md)
-defined in `config.php`.
-
 ### Install a Module
 
-A module is considered as installed once it resides in one of the `moduleAutoloadPaths`. 
+A module is considered as installed once it resides in one of the [module autoloader paths](environment.md#module-loader-path). 
 By default non-core modules reside in `@humhub/protected/modules`. You can install modules either by adding them 
 manually to an autoload path or by loading them from the marketplace. 
 
-> ℹ️ You can add additional module paths by means of the `moduleAutoloadPaths` parameter. 
+:::info
+You can add additional module paths by means of the `moduleAutoloadPaths` parameter. 
 Please see the [Development Environment Section](environment.md#module-loader-path) for more information.
+:::
 
 ### Enabled a Module
 
@@ -242,9 +244,22 @@ The `ModuleManager` responsible for enabling modules will trigger the following 
 - `ModuleManager::EVENT_BEFORE_MODULE_ENABLE`
 - `ModuleManager::EVENT_AFTER_MODULE_ENABLE`
 
+:::info
+[ContentContainerModules](modules-base-class.md#contentcontainermodule) also have to be enabled within
+a space or user profile within the containers module management section.
+:::
+
+### Module Bootstrap
+
+Every [request](https://www.yiiframework.com/doc/guide/2.0/en/runtime-overview) during the application bootstrap phase,
+the `humhub\components\bootstrap\ModuleAutoLoader` will search for all [enabled](#enabled-a-module) 
+modules within the [module autoload paths](environment.md#module-loader-path) and register configured [module event listeners](events.md) 
+defined in the modules `config.php`.
+
 ### Disable Module
 
-Disabling a module will usually drop all related module data from the database and will detach the module from the `bootstrap` process.
+Disabling a module will usually drop all related module data from the database and will detach the module from 
+the [bootstrap](#module-bootstrap) process.
 
 Modules can be disabled by means of
 
@@ -256,14 +271,16 @@ The `ModuleManager` responsible for disabling modules will trigger the following
 - `ModuleManager::EVENT_BEFORE_MODULE_DISABLE`
 - `ModuleManager::EVENT_AFTER_MODULE_DISABLE`
 
-> ℹ️ [ContentContainerModules](modules-base-class.md#use-of-contentcontainermodule) also have to be enabled within
-> a space or user profile by means of the space management section.
+See [Module::disable()](modules-base-class.md#disable) and [ContentContainerModule::disable()](modules-base-class.md#disable-1) 
+for more information about how to implement custom disable logic.
 
 ### Uninstall Module
 
 Uninstalling a module means removing it from the autoload path.
 
-> ⚠️ You should never delete an enabled module folder manually without disabling it first.
+:::warning
+You should never delete an enabled module folder manually without disabling it first.
+:::
 
 
 
