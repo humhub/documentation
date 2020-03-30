@@ -120,3 +120,13 @@ As Enterprise Edition user you can create direct support inquiries at:
 `Administration -> Enterprise Edition -> Support`.
 
 If you have problems related to the installation, please contact us at: info@humhub.com
+
+Common issues and problems
+--------------------------
+
+#### Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
+
+This problem is often caused when the HumHub application is used by different system users.  
+The reason for this error could be, that the [cron jobs](installation.md#cronjobs) (or other [command line calls](console.md)) have been executed under a different user.
+
+To resolve the problem, we recommend that you reset the file/directory owner for the entire HumHub directory or delete the ``/protected/runtime/cache`` directory. 

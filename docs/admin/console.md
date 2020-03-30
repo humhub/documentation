@@ -7,6 +7,11 @@ Some administrative tasks can also or exclusively be executed by console. This g
 important console commands used to administer HumHub. All available console commands can be displayed 
 by running `php yii` within the `protected` directory of your HumHub installation.
 
+:::important
+Make sure that you are working with the proper system user to prevent permission problems.
+To change the system user use e.g. ``su -s /bin/bash -l www-data``
+:::
+
 All of the following commands can be executed withine the `@humhub/protected` directory.
 
 **Example**
