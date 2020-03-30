@@ -129,4 +129,4 @@ Common issues and problems
 This problem is often caused when the HumHub application is used by different system users.  
 The reason for this error could be, that the [cron jobs](installation.md#cronjobs) (or other [command line calls](console.md)) have been executed under a different user.
 
-To resolve the problem, we recommend that you reset the file/directory owner for the entire HumHub directory or delete the ``/protected/runtime/cache`` directory. 
+To resolve the problem, we recommend that you [reset the file/directory owner](installation.md#file-permissions) for the entire HumHub directory or delete the ``/protected/runtime/cache`` directory. 
