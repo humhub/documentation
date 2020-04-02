@@ -26,11 +26,119 @@ Migrate from 1.4 to 1.5
 ### Asset Management
 
 In HumHub 1.5 the loading of core assets was optimized by splitting the main `humhub\assets\AppAsset` into two separate
-bundles. The old AppAsset bundle was reduced to only a few core scripts and stylesheets while a new `humhub\assets\CoreBundleAsset`
-was introduced which will load scrips with a `defer` attribute. This means that scripts within the CoreBundleAsset will
-be loaded deferred and may not be available directly in the html body. 
+bundles. The old AppAsset, which was reduced to only a few core scripts and stylesheets and a new `humhub\assets\CoreBundleAsset`.
+The CoreBundleAsset contains other core dependencies which are not as essential and will be loaded with [defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)
+script attribute, which means those assets may not be available immediately within the html body while not bocking the site rendering process.
 
-You will need to migrate asset bundles which depend on one the following bundles:
+By default scripts registered by `AssetBundle::register($view)` will now be attached with `defer` attribute in order to keep
+the dependency to the assets in CoreBundleAsset. In case you need to prevent the deferred loading behavior in your AssetBundles, which
+may be the case if you are using inline scripts, you have the following migration options:
+
+**HumHub >=1.5 only migration:**
+
+If you don't plant to stay compatible with older HumHub versions you can manage the script loading by
+extending the `humhub\components\assets\AssetBundle` class and disable the `$defer` property.
+Don't forget to update `"humhub": {"minVersion": "1.5"}` within your `module.json`. 
+
+```php
+use humhub\components\assets\AssetBundle;
+
+class MyAssetBundle extends AssetBundle
+{
+   // Will prevent defer attribute on scripts
+   public $defer = false;
+    
+   //... 
+}
+```
+
+:::info
+The new `humhub\components\assets\AssetBundle` provides some new useful features and default settings besides the script loading management.
+:::
+
+**HumHub < 1.5 compatibility**
+
+In case you want to stay compatible with older HumHub versions, you can disable the `defer` script loading similarly to
+to new bundles:
+
+```php
+use yii\web\AssetBundle;
+
+class MyAssetBundle extends AssetBundle
+{
+   // Will also prevent defer attribute on scripts
+   public $defer = false;
+    
+   //... 
+}
+```
+
+Although, the defer script loading is currently used by default also on old AssetBundle classes, 
+you should migrate your old bundle classes to explicitly define `defer` 
+(this is not required for subclasses of `humhub\components\assets\AssetBundle`):
+
+```php
+use yii\web\AssetBundle;
+use yii\web\View;
+
+class CoreBundleAsset extends AssetBundle
+{
+    //...
+
+    public $jsOptions = [
+        // Make sure scripts are added after CoreBundleAsset
+        'position' => View::POS_BEGIN, 
+        'defer' => 'defer'
+    ];
+}
+```
+
+**humhub:ready**
+
+Within your script you can listen to the `humhub:ready` event in order to make sure all deferred scripts are available:
+
+```javascript
+// Note, we are using one instead of on since we only want to execute this block once
+$(document).one('humhub:ready', function(event, isPjax, humhub) {
+    var stream = humhub.require('stream');
+    // do stuff...
+});
+
+/**
+ * You can also define a module within humhub:ready this will also ensure all dependencies are available and may be useful
+ * when working with inline scripts.
+ */
+$(document).one('humhub:ready', function(event) {    
+    humhub.module('myModule', function(module, require) {
+        var stream = require('stream');
+        // do stuff...
+    });
+});
+```
+
+**module init**
+
+The `init` function of your HumHub javascript module will always be called once all scripts are available.
+
+```javascript
+// myModule.js
+humhub.module('myModule', function(module, require) {
+    
+    /**
+      * If the 'stream' module is not currently loaded it will be loaded lazily and be available in init at the latest,
+      * but you should make sure to load this script deferred since the stream module is part of CoreAssetBundle.
+      */
+    var stream = require('stream');
+    
+    module.export({
+        init: function(isPjax) {
+            // All scripts are loaded and stream dependency is available
+        }
+    })
+});
+```
+
+The following bundles are now part of CoreAssetBundle and therefore loaded deferred:
 
  - JqueryColorAsset::class, 
  - JqueryHighlightAsset::class,
@@ -66,47 +174,48 @@ You will need to migrate asset bundles which depend on one the following bundles
  - ActivityAsset::class,
  - SpaceChooserAsset::class
 
-:::info
-There is a compatibility layer in HumHub 1.5 which automatically adds the dependency management and defer attribute to
-your existing bundles, which should prevent your existing scripts from failing.
+### Default lazy javascript module loading
+
+In HumHub 1.5 modules required by `humhub.require()` will be fetched lazily by default, which means a module will be
+initialized by `require()` in case it has not been loaded yet. In HumHub <1.5 a lazy flag was required to be set in `require`
+e.g. `require('moduleId', true)`. This behavior was introduced in order to be more tolerant regarding script loading order
+due to the core asset loading change. Since lazy loaded modules are rarely used on purpose a warning is logged to the console
+once a module was loaded lazily for troubleshooting. 
+
+:::warning
+Lazy module loading only works on real modules and not on exported classes:
+
+```javascript
+// Can be required lazily and will be available in init at the latest
+var stream = require('stream');
+
+// Can not be required lazily and won't be available if the module was not loaded already
+var Stream = require('stream.Stream');
+```
 :::
 
-**>=1.5 only migration:**
+### Other changes
 
-If you don't need to stay compatible with older HumHub versions you can achieve this by
-simply extending the new `humhub\components\assets\AssetBundle` class instead of `yii\web\AssetBundle` and set
-`"humhub": {"minVersion": "1.5"}` within your `module.json`. 
+Some assets bundles were removed from the AppAsset, in case one of them is required in your custom module,
+you should register them manually or even better include them in your custom module since they probably will be removed 
+in an upcoming release:
 
-```php
-use humhub\components\assets\AssetBundle;
+**Deprecated:**
 
-// By extending HumHub AssetBundle the defer and core dependency is handled automatically
-class MyAssetBundle extends AssetBundle
-{
-   //...
-}
-```
+- Removed legacy `humhub\assets\PagedownConverterAsset` from AppAsset
+- Removed legacy `humhub\assets\JqueryCookieAsset` from AppAsset
+- Removed legacy `resources/file/fileuploader.js` from AppAsset
+- Removed legacy `resources/user/userpicker.js` from AppAsset
+- Removed legacy `js/humhub/legacy/jquery.loader.js` from CoreApiAsset
+- Removed legacy `js/humhub/legacy/app.js` from CoreApiAsset
+- Removed legacy `js/humhub/humhub.ui.markdown.js` from CoreApiAsset 
+- `SocketIoAsset` is only registered on demand
+- Deprecated `humhub\modules\ui\form\widgets\MarkdownField` in order to favor `humhub\modules\content\widgets\richtext\RichTextField`
 
-**<1.5 compatibility migration:**
 
-Although your current scripts should not break even if you depend on one of the core assets you should add 
-the following in case you need to stay compatible with older HumHub versions:
+**Loaded on demand:**
 
-```php
-use yii\web\AssetBundle;
-use yii\web\View;
-
-class CoreBundleAsset extends AssetBundle
-{
-    //...
-
-    public $jsOptions = [
-        // Make sure scripts are added after CoreBundleAsset
-        'position' => View::POS_BEGIN, 
-        'defer' => 'defer'
-    ];
-}
-```
+- Removed `humhub\assets\SocketIoAsset` from AppAsset
 
 Migrate from 1.3 to 1.4
 -----------------------

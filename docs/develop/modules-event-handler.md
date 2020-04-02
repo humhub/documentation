@@ -397,7 +397,7 @@ public static function onUserQueryVisible(ActiveQueryEvent $event)
 
 ### Registration Events
 
-`humhub\modules\user\models\forms\Registration` provides events to raised within the registration process:
+The `humhub\modules\user\models\forms\Registration` class provides events raised within the registration process:
 
 | Event | Class | Description |    
 | -------- | ---------- | ---------- |
