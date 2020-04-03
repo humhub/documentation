@@ -95,6 +95,13 @@ By default HumHub uses the time zone of the web server. However, the time zone o
 
 You can switch the time zone at: ``Administration -> Settings -> General -> Server timezone``
 
+If you are not sure which time zone is configured on your Maria DB server, you can query the time zone with the following SQL statement.
+
+```sql
+mysql> SELECT @@global.time_zone, @@session.time_zone;
+``` 
+
+
 :::note
 Each registered user can also set its own primary time zone in the profile settings.
 :::
