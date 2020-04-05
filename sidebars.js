@@ -42,13 +42,14 @@ module.exports = {
             'develop/environment',
             'develop/coding-standards',
             'develop/build',
+            'develop/modules-migrate',
         ],
         'Module Development': [
             'develop/modules',
             'develop/modules-base-class',
             'develop/modules-event-handler',
             'develop/testing',
-            'develop/modules-migrate',
+
         ],
         'Basic Concepts': [
             'develop/models',
