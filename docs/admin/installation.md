@@ -75,8 +75,11 @@ Add following line to the crontab:
 
 Make sure to replace ``/var/www/humhub`` with the path of your HumHub installation.
 
+## Configuration
 
-## E-Mails
+The following configuration settings can be made directly in HumHub via the browser.
+
+### E-Mails
 
 HumHub sends emails to the users e.g. during the registration, password recovery, notifications or for daily summaries.
 
@@ -84,7 +87,24 @@ A valid transport and a sender e-mail address must be provided for this purpose.
 
 If you installed a local SMTP server e.g. [Postfix](server-setup.md#postfix), you can use ``PHP`` as ``Mail Transport Type`` option.
 
-You can use external SMTP services like SendGrid, Postmark, Amazon SES or Mailgun with the ``SMTP`` as ``Mail Transport Type`` option. 
+You can use external SMTP services like SendGrid, Postmark, Amazon SES, Mailgun or any other SMTP server with the ``SMTP`` as ``Mail Transport Type`` option. 
+
+### Time Zone
+
+By default HumHub uses the time zone of the web server. However, the time zone of the database server (MariaDB) is the relevant one. If these time zones differs or the server was moved to another location, you need to change this time zone.  
+
+You can switch the time zone at: ``Administration -> Settings -> General -> Server timezone``
+
+If you are not sure which time zone is configured on your Maria DB server, you can query the time zone with the following SQL statement.
+
+```sql
+mysql> SELECT @@global.time_zone, @@session.time_zone;
+``` 
+
+
+:::note
+Each registered user can also set its own primary time zone in the profile settings.
+:::
 
 ## Pretty URLs 
 
