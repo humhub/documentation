@@ -31,6 +31,7 @@ module.exports = {
         ],
         'Maintenance': [
             'admin/updating',
+            'admin/updating-migration2',
             'admin/backup',
             'admin/console',
             'admin/troubleshooting'
