@@ -15,7 +15,7 @@ In addition to this guide, you may also check the [Theme Migration Guide](../the
 
 Removed caching section from `.htaccess` file. See [Documentation](https://docs.humhub.org/docs/admin/performance#http-caching) for more details.
 
-**Image Extensions**
+**Image Handling**
 
 - ImageMagick "convert" command  ad ``Administration -> Settings -> Advanced -> Files`` was removed
 
