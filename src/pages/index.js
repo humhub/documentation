@@ -34,7 +34,7 @@ const features = [
         href:'/docs/develop/overview',
         description: (
             <>
-                You want to add custom features or change the behavior of your HumHub installation? Then check the
+                You want to add custom features or change the behavior of your HumHub installation? Then check out the
                 development guide for all information around the development of HumHub modules.
             </>
         ),

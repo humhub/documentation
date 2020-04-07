@@ -1,6 +1,6 @@
 ---
 id: modules-migrate
-title: Migrations
+title: Migration Guide
 ---
 
 Module Migration Guide
@@ -27,27 +27,80 @@ Migrate from 1.4 to 1.5
 
 In HumHub 1.5 the loading of core assets was optimized by splitting the main `humhub\assets\AppAsset` into two separate
 bundles. The old AppAsset, which was reduced to only a few core scripts and stylesheets and a new `humhub\assets\CoreBundleAsset`.
-The CoreBundleAsset contains other core dependencies which are not as essential and will be loaded with [defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)
-script attribute, which means those assets may not be available immediately within the html body while not bocking the site rendering process.
+The CoreBundleAsset contains other core dependencies which are not as essential and will be loaded with a [defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)
+script attribute, which means those assets are not available immediately within the html body while not blocking the site rendering process.
 
-By default scripts registered by `AssetBundle::register($view)` will now be attached with `defer` attribute in order to keep
-the dependency to the assets in CoreBundleAsset. In case you need to prevent the deferred loading behavior in your AssetBundles, which
-may be the case if you are using inline scripts, you have the following migration options:
+You'll have to follow one of the migration options described below in case your scripts depend on one of the following assets:
+
+ - JqueryColorAsset, 
+ - JqueryHighlightAsset,
+ - JqueryAutosizeAsset,
+ - Select2Asset,
+ - Select2BootstrapAsset,
+ - JqueryWidgetAsset,
+ - NProgressAsset,
+ - JqueryNiceScrollAsset,
+ - BlueimpFileUploadAsset,
+ - BlueimpGalleryAsset,
+ - ClipboardJsAsset,
+ - ImagesLoadedAsset,
+ - HighlightJsAsset,
+ - SwipedEventsAssets,
+ - CoreExtensionAsset,
+    - `js/humhub/humhub.ui.modal.js`,
+    - `js/humhub/humhub.ui.form.elements.js`,
+    - `js/humhub/humhub.ui.form.js`,
+    - `js/humhub/humhub.ui.showMore.js`,
+    - `js/humhub/humhub.ui.panel.js`,
+    - `js/humhub/humhub.ui.progress.js`,
+    - `js/humhub/humhub.ui.gallery.js`,
+    - `js/humhub/humhub.ui.picker.js`,
+    - `js/humhub/humhub.oembed.js`,
+    - `js/humhub/humhub.media.Jplayer.js`,
+    - `js/humhub/humhub.client.pjax.js`,
+ - ProsemirrorEditorAsset,
+ - ProseMirrorRichTextAsset,
+ - UserAsset,
+ - LiveAsset,
+ - NotificationAsset,
+ - ContentAsset,
+ - ContentContainerAsset,
+ - UserPickerAsset,
+ - FileAsset,
+ - PostAsset,
+ - SpaceAsset,
+ - TopicAsset,
+ - FilterAsset,
+ - CommentAsset,
+ - LikeAsset,
+ - StreamAsset,
+ - ActivityAsset,
+ - SpaceChooserAsset
+ 
+:::tip
+It is recommended to migrate to deferred scripts loading even if you don't depend on the CoreBundleAssets.
+:::
+
+:::info
+In case your scripts are exclusively loaded by ajax for example within the wall stream, you don't have to care about
+the CoreBundleAsset dependency.
+:::
+
+#### AssetBundle Migration
+
+If your AssetBundle depends on the CoreAssetBundle you'll need to add deferred script loading to your scripts.
 
 **HumHub >=1.5 only migration:**
 
 If you don't plant to stay compatible with older HumHub versions you can manage the script loading by
-extending the `humhub\components\assets\AssetBundle` class and disable the `$defer` property.
+extending the `humhub\components\assets\AssetBundle`, which will make use of deferred script loading by default.
 Don't forget to update `"humhub": {"minVersion": "1.5"}` within your `module.json`. 
 
 ```php
 use humhub\components\assets\AssetBundle;
 
 class MyAssetBundle extends AssetBundle
-{
-   // Will prevent defer attribute on scripts
-   public $defer = false;
-    
+{    
    //... 
 }
 ```
@@ -58,24 +111,22 @@ The new `humhub\components\assets\AssetBundle` provides some new useful features
 
 **HumHub < 1.5 compatibility**
 
-In case you want to stay compatible with older HumHub versions, you can disable the `defer` script loading similarly to
-to new bundles:
+In case you want to stay compatible with older HumHub versions, you can enable the `defer` script loading by setting 
+a `$defer` property as in the following example. This property will simply be ignored in HumHub versions < 1.5.
 
 ```php
 use yii\web\AssetBundle;
 
 class MyAssetBundle extends AssetBundle
 {
-   // Will also prevent defer attribute on scripts
-   public $defer = false;
+   // Activate deferred script loading (this prop
+   public $defer = true;
     
    //... 
 }
 ```
 
-Although, the defer script loading is currently used by default also on old AssetBundle classes, 
-you should migrate your old bundle classes to explicitly define `defer` 
-(this is not required for subclasses of `humhub\components\assets\AssetBundle`):
+The following example enables deferred script loading even on HumHub versions < 1.5.
 
 ```php
 use yii\web\AssetBundle;
@@ -93,21 +144,26 @@ class CoreBundleAsset extends AssetBundle
 }
 ```
 
-**humhub:ready**
+#### Script Migration
 
-Within your script you can listen to the `humhub:ready` event in order to make sure all deferred scripts are available:
+The following options are available to migrate non deferred scripts as for example inline scripts which are
+dependent on CoreAssetBundle.
+
+**Use of `humhub:ready` listener**
+
+The `humhub:ready` event is triggered once all modules are loaded and initialized.
 
 ```javascript
-// Note, we are using one instead of on since we only want to execute this block once
 $(document).one('humhub:ready', function(event, isPjax, humhub) {
     var stream = humhub.require('stream');
     // do stuff...
 });
+```
 
-/**
- * You can also define a module within humhub:ready this will also ensure all dependencies are available and may be useful
- * when working with inline scripts.
- */
+You can also define modules within a `humhub:ready` event handler,
+this will also ensure all dependencies are available and may be useful when working with inline scripts.
+
+```javascript
 $(document).one('humhub:ready', function(event) {    
     humhub.module('myModule', function(module, require) {
         var stream = require('stream');
@@ -116,7 +172,12 @@ $(document).one('humhub:ready', function(event) {
 });
 ```
 
-**module init**
+:::info
+By using `one` instead of  `on` we make sure our handler is only executed once, otherwise the handler would be executed
+on each `pjax` page transition.
+:::
+
+**HumHub module module `init()`**
 
 The `init` function of your HumHub javascript module will always be called once all scripts are available.
 
@@ -125,54 +186,53 @@ The `init` function of your HumHub javascript module will always be called once 
 humhub.module('myModule', function(module, require) {
     
     /**
-      * If the 'stream' module is not currently loaded it will be loaded lazily and be available in init at the latest,
-      * but you should make sure to load this script deferred since the stream module is part of CoreAssetBundle.
-      */
-    var stream = require('stream');
-    
+     * Outside of init some modules may not be available, so make sure to follow one of the other migration options
+     * when using requiring a js module included in CoreAssetBundle.
+    */
+
     module.export({
         init: function(isPjax) {
             // All scripts are loaded and stream dependency is available
+            var Stream = require('stream').Stream;
         }
     })
 });
 ```
 
-The following bundles are now part of CoreAssetBundle and therefore loaded deferred:
+#### Deactivate deferred script loading
 
- - JqueryColorAsset::class, 
- - JqueryHighlightAsset::class,
- - JqueryAutosizeAsset::class,
- - Select2Asset::class,
- - Select2BootstrapAsset::class,
- - JqueryWidgetAsset::class,
- - NProgressAsset::class,
- - JqueryNiceScrollAsset::class,
- - BlueimpFileUploadAsset::class,
- - BlueimpGalleryAsset::class,
- - ClipboardJsAsset::class,
- - ImagesLoadedAsset::class,
- - HighlightJsAsset::class,
- - SwipedEventsAssets::class,
- - CoreExtensionAsset::class,
- - ProsemirrorEditorAsset::class,
- - ProseMirrorRichTextAsset::class,
- - UserAsset::class,
- - LiveAsset::class,
- - NotificationAsset::class,
- - ContentAsset::class,
- - ContentContainerAsset::class,
- - UserPickerAsset::class,
- - FileAsset::class,
- - PostAsset::class,
- - SpaceAsset::class,
- - TopicAsset::class,
- - FilterAsset::class,
- - CommentAsset::class,
- - LikeAsset::class,
- - StreamAsset::class,
- - ActivityAsset::class,
- - SpaceChooserAsset::class
+If none of the above migration options makes you happy, you can disable the deferred script loading as follows:
+
+**Globally within `config.php`**
+
+```
+/protected/config/common.php
+return [
+    'components' => [
+        'assetManager' => [
+            'preventDefer' => true
+        ]
+    ]
+]
+```
+
+**By event handler**
+
+If the deferred script loading somehow interferes with your modules scripts and you can't manage to fix this by the
+aforementioned migration options you can consider using [event handler](modules-event-handler.md) e.g. `Application::EVENT_BEFORE_REQUEST`:
+
+```
+// myModule/Events.php
+public static function onBeforeRequest()
+{
+    Yii::$app->assetManager->preventDefer = true;
+}
+```
+
+:::warning
+You should not globally disable this behavior within your module, rather check for example specific controller actions
+so the behavior is disabled only when necessary.
+:::
 
 ### Default lazy javascript module loading
 
