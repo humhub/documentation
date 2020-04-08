@@ -10,6 +10,12 @@ HumHub is being installed into the ``/var/www/humhub`` directory in this case an
 
 The URL https://temp.humhub.dev is used in this example. Replace it with an URL of your choice.
 
+
+:::important
+HumHub can of course also be run on a **existing server setup** or **shared hosting** if all requirements are met. 
+:::
+  
+
 ## Database
 
 In this section we will create a database with the following values: 

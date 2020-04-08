@@ -110,21 +110,13 @@ module.exports = {
         ]
     },
     Professional: {
-        'Getting Stared': [
-            'professional/installation',
-            'professional/update',
-            'professional/support',
-            'professional/CHANGELOG',
-            'professional/professional-edition',
-        ],
-        'Features': [
-            'professional/theme',
-            'professional/ldap',
-            'professional/space-types',
-            'professional/email-whitelisting',
-            'professional/email-groupmapping',
-            'professional/solr',
-            'professional/jwt',
+        'Overview': [
+            'professional-edition/pe-intro',
+            'professional-edition/features',
+            'professional-edition/support',
+            'professional-edition/licence',
+            'professional-edition/saas',
+            'professional-edition/ee',
         ]
     }
 };

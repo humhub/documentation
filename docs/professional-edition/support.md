@@ -3,7 +3,7 @@ id: support
 title: Support
 ---
 
-Customer support is a vital part of the **HumHub** Enterprise Edition.
+Customer support is a vital part of the **HumHub** Professional Edition.
 
 We're happy to help you with:
 
@@ -13,11 +13,5 @@ We're happy to help you with:
 
 Please use following ways to get in touch:
 
-- Integrated support system at: `Administration` -> `Enterprise Edition` -> `Support` 
-- E-mail: [info@humhub.com](mailto:info@humhub.com)
-
-
-
-
-
-
+- E-mail: [hello@humhub.com](mailto:hello@humhub.com)
+- Integrated support system at: `Administration` -> `Cloud Hosting` -> `Support` (SaaS only) 
