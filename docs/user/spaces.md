@@ -1,3 +1,8 @@
+---
+id: spaces
+title: Spaces
+---
+
 Spaces
 =======
 

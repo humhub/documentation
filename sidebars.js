@@ -118,5 +118,10 @@ module.exports = {
             'professional-edition/saas',
             'professional-edition/ee',
         ]
-    }
+    },
+    User: {
+        'Overview': [
+            'user/gettingstarted',
+        ]
+    }    
 };
