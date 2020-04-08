@@ -121,7 +121,7 @@ module.exports = {
     },
     User: {
         'Overview': [
-            'user/gettingstarted',
+//            'user/gettingstarted',
         ]
     }    
 };
