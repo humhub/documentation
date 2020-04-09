@@ -7,7 +7,7 @@
 
 module.exports = {
     Administration: {
-        'Getting Stared': [
+        'Introduction': [
             'admin/introduction',
         ],
         'Installation': [
@@ -87,20 +87,13 @@ module.exports = {
         ]
     },
     Theming: {
-        'Getting Stared': [
+        'Introduction': [
             'theme/overview',
             'theme/structure',
             'theme/css',
             'theme/views',
             'theme/tutorial',
-        ],
-        'Migration': [
             'theme/migrate',
-            'theme/migrate-1.3',
-            'theme/migrate-1.2',
-            'theme/migrate-1.1',
-            'theme/migrate-1.0',
-            'theme/migrate-0.20',
         ],
         'Special Topics': [
             'theme/javascript',

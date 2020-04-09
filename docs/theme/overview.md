@@ -1,6 +1,8 @@
 ---
 id: overview
-title: Introduction
+title: Getting Started
+sidebar_label: Getting Started
+
 ---
 
 The **HumHub** default themes can be used out of the box to create clean and professional looking social networks. 
