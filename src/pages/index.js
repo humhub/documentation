@@ -8,12 +8,24 @@ import styles from './styles.module.css';
 
 const features = [
     {
+        title: <>About HumHub</>,
+        imageUrl: 'img/undraw_browsing.svg',
+        href:'/docs/about/humhub',
+        description: (
+            <>
+                Get to know the HumHub platform. This guide serves as brief overview of
+                the platform and its basic concepts. Find out whether or not HumHub fits your needs.
+            </>
+        ),
+    },
+    {
         title: <>Installation and Administration</>,
         imageUrl: 'img/undraw_To_the_stars.svg',
         href:'/docs/admin/requirements',
         description: (
             <>
-                Make your first steps by setting up HumHub. Although the installation of HumHub is quite simple, it offers many configuration options to meet the needs of your network.
+                Make your first steps by setting up HumHub. Although the installation of HumHub is quite simple,
+                it offers many configuration options to meet the needs of your network.
             </>
         ),
     },
@@ -23,8 +35,8 @@ const features = [
         href:'/docs/theme/overview',
         description: (
             <>
-                HumHub brings the tools to customize the look and feel of your platform. Learn more about the available theming
-                techniques of HumHub.
+                HumHub brings the tools to customize the look and feel of your platform. Learn more about the
+                available theming techniques of HumHub.
             </>
         ),
     },
@@ -40,12 +52,34 @@ const features = [
         ),
     },
     {
+        title: <>Release Notes</>,
+        imageUrl: 'img/undraw_product_tour.svg',
+        href:'/docs/about/releasenotes/release_notes',
+        description: (
+            <>
+                You want to learn more about upcoming features and releases? Take a look at the
+                release notes.
+            </>
+        ),
+    },
+    {
         title: <>Professional Edition</>,
         imageUrl: 'img/undraw_reviewed_docs.svg',
         href:'/docs/professional/installation',
         description: (
             <>
                 Learn more about the extended features of the enterprise edition and how to use them.
+            </>
+        ),
+    },
+    {
+        title: <>Community</>,
+        imageUrl: 'img/undraw_friends_online.svg',
+        href:'/docs/develop/professional',
+        description: (
+            <>
+                Any further questions? Be part of our ever growing community, ask questions, provide support or
+                share your ideas with other HumHub users around the world.
             </>
         ),
     },
@@ -106,7 +140,7 @@ function Home() {
                                 'button button--outline button--secondary button--lg',
                                 styles.getStarted,
                             )}
-                            to={useBaseUrl('/docs/admin/requirements')}>
+                            to={useBaseUrl('/docs/about/humhub')}>
                             Get Started
                         </Link>
                     </div>

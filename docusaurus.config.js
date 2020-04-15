@@ -15,6 +15,7 @@ module.exports = {
         alt: 'HumHub',
         src: 'img/logo.svg',
       },
+      hideOnScroll: true,
       links: [
         /*{
           to: 'versions',
@@ -27,6 +28,17 @@ module.exports = {
             textDecoration: 'underline',
           },
         },*/
+        {
+          label: 'About',
+          position: 'left',
+          activeBasePath: 'docs/about',
+          items: [
+            {label: 'HumHub', to: 'docs/about/humhub'},
+            {label: 'Contribution', to: 'docs/about/contribution'},
+            {label: 'Support', to: 'docs/about/support'},
+            {label: 'License', href: 'https://www.humhub.com/de/licences'},
+          ]},
+       // {to: 'docs/about/humhub', activeBasePath: 'docs/about',  label: 'About', position: 'left'},
         {to: 'docs/admin/introduction', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
         {to: 'docs/theme/overview', activeBasePath: 'docs/theme',  label: 'Theming', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},

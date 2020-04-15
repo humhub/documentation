@@ -6,9 +6,43 @@
  */
 
 module.exports = {
+    About: [
+        {
+            type: 'doc',
+            id: 'about/humhub'
+        },
+        {
+            type: 'category',
+            label: 'Release Notes',
+            items: [
+                'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_5'
+            ]
+        },
+        {
+            type: 'doc',
+            id: 'about/contribution'
+        },
+        {
+            type: 'doc',
+            id: 'about/support'
+        },
+        {
+            type: 'link',
+            label: 'License',
+            href: 'https://www.humhub.com/de/licences'
+        },
+
+       /* 'Release Notes': [
+            'about/spaces',
+        ],
+        'Contribution': [
+            'about/humhub',
+        ],*/
+    ],
     Administration: {
-        'Getting Stared': [
-            'admin/introduction',
+        'Getting Started': [
+            'admin/introduction'
         ],
         'Installation': [
             'admin/requirements',

@@ -4,29 +4,7 @@ title: Troubleshooting & Help
 sidebar_label: Troubleshooting & Help
 ---
 
-This guide provides some assistance for common administrative problems. Please read this guide before creating a new
-issue on github or the community. In case this guide does not help you with your problem, please add as much
-information as possible to your issue description as:
-
-- How to reproduce your problem
-- Add log error and info messages either from `Administration -> Information -> Logs` or under `protected/runtime/logs`
-- Information about your setup as:
-  - **HumHub version**: check `Administration -> Information` or `protected/humhub/config/common.php` 
-  - **Module version**: in case the problem is module related check `Administration -> Modules` or `protected/modules/<moduleId>/module.json`
-  - **PHP version**
-- Screenshots
-- Check the Javascript console of your browser: 
-  - [Chrome](https://developers.google.com/web/tools/chrome-devtools/console/)
-  - [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
-  - [Safari](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/EnableWebInspector/EnableWebInspector.html)
-  - [Opera](https://dev.opera.com/extensions/testing/)
-  - [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console)
-  - [IE 11](https://msdn.microsoft.com/en-us/library/hh968260(v=vs.85).aspx)
- - Is there any event, which could have triggered the problem as:
-   - HumHub Update
-   - Module Update
-   - Installed a new Module
-   - Changed server environment
+This guide provides some assistance for common administrative problems.
 
 Cron Job Setup
 ----------------------------------------
