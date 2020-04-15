@@ -216,24 +216,6 @@ return [
 ]
 ```
 
-**By event handler**
-
-If the deferred script loading somehow interferes with your modules scripts and you can't manage to fix this by the
-aforementioned migration options you can consider using [event handler](modules-event-handler.md) e.g. `Application::EVENT_BEFORE_REQUEST`:
-
-```
-// myModule/Events.php
-public static function onBeforeRequest()
-{
-    Yii::$app->assetManager->preventDefer = true;
-}
-```
-
-:::warning
-You should not globally disable this behavior within your module, rather check for example specific controller actions
-so the behavior is disabled only when necessary.
-:::
-
 ### Default lazy javascript module loading
 
 In HumHub 1.5 modules required by `humhub.require()` will be fetched lazily by default, which means a module will be
