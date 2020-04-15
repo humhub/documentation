@@ -41,8 +41,8 @@ module.exports = {
         ],*/
     ],
     Administration: {
-        'Getting Started': [
-            'admin/introduction'
+        'Introduction': [
+            'admin/introduction',
         ],
         'Installation': [
             'admin/requirements',
@@ -65,6 +65,7 @@ module.exports = {
         ],
         'Maintenance': [
             'admin/updating',
+            'admin/updating-migration2',
             'admin/backup',
             'admin/console',
             'admin/troubleshooting'
@@ -120,20 +121,13 @@ module.exports = {
         ]
     },
     Theming: {
-        'Getting Stared': [
+        'Introduction': [
             'theme/overview',
             'theme/structure',
             'theme/css',
             'theme/views',
             'theme/tutorial',
-        ],
-        'Migration': [
             'theme/migrate',
-            'theme/migrate-1.3',
-            'theme/migrate-1.2',
-            'theme/migrate-1.1',
-            'theme/migrate-1.0',
-            'theme/migrate-0.20',
         ],
         'Special Topics': [
             'theme/javascript',
@@ -143,21 +137,18 @@ module.exports = {
         ]
     },
     Professional: {
-        'Getting Stared': [
-            'professional/installation',
-            'professional/update',
-            'professional/support',
-            'professional/CHANGELOG',
-            'professional/professional-edition',
-        ],
-        'Features': [
-            'professional/theme',
-            'professional/ldap',
-            'professional/space-types',
-            'professional/email-whitelisting',
-            'professional/email-groupmapping',
-            'professional/solr',
-            'professional/jwt',
+        'Overview': [
+            'professional-edition/pe-intro',
+            'professional-edition/features',
+            'professional-edition/support',
+            'professional-edition/licence',
+            'professional-edition/saas',
+            'professional-edition/ee',
         ]
-    }
+    },
+    User: {
+        'Overview': [
+//            'user/gettingstarted',
+        ]
+    }    
 };
