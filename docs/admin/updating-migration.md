@@ -21,6 +21,14 @@ Removed caching section from `.htaccess` file. See [Documentation](https://docs.
 
 - New recommended PHP extensions (ImageMagicks, GraphicsMagick) 
 
+
+**Site logo**
+
+Your uploaded logo is now automatically scaled to different dimensions depending on the specific position.
+
+We recommend uploading a high resolution version of the used logo again.  ``Administration -> Settings -> Appearance ``
+
+
 1.4
 ----
 
