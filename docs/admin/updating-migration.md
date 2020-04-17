@@ -19,7 +19,7 @@ Removed caching section from `.htaccess` file. See [Documentation](https://docs.
 
 - ImageMagick "convert" command  ad ``Administration -> Settings -> Advanced -> Files`` was removed
 
-- New recommended PHP extensions (ImageMagicks, GraphicsMagick) 
+- New recommended PHP extension (**ImageMagicks** or GraphicsMagick) 
 
 
 **Site logo**
