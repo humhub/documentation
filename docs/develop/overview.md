@@ -12,7 +12,7 @@ features by means of custom modules.
 
 Languages used throughout the platform are: 
 
-- **PHP 7.1**
+- **PHP**
 - **JavaScript**
 - **SQL (MySQL/MariaDB)**
 - **HTML**
