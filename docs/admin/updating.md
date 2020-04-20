@@ -36,6 +36,8 @@ In the configuration of the module you can select the release channel for the av
 1. Select in left navigation: Administration -> Update HumHub
 2. Follow the updater steps
 
+The update packages we provide typically contain only one update step (e.g. 1.4.0 to 1.4.1). This means you have to re-run the update procedure as many times as you have reached the latest HumHub version. During these procedure, especially between major updates (e.g. 1.3 -> 1.4.) all installed marketplace modules should be also updated.
+
 :::note
 Keep your updater module itself up to date, otherwise new versions may not be available for you.  
 :::
