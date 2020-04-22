@@ -11,7 +11,7 @@ Permission defaults can be overwritten within the file `humhub/config/common.php
 
 The following example overwrites the default permission of `humhub\modules\mymodule\permissions\MyPermission` for the given groups.
 
-```
+```php
 return [
     'params' => [
         'defaultPermissions' => [
@@ -83,7 +83,9 @@ Examples
 
 ### Allow non friend users to access the "About" page.
 
-```
+```php
+<?php
+//...
 return [
     'params' => [
         'defaultPermissions' => [
@@ -92,11 +94,5 @@ return [
             ],
         ]
     ]
-]
+];
 ```
-
-
-
-
-
-
