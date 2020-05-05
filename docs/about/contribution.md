@@ -25,7 +25,7 @@ uses [GitHub](https://github.com/humhub/) as issue tracker in order to discuss i
 and directly link them to the actual code base.
 
 Besides the core platform, all of our official open source modules are hosted on github. Furthermore, there are repositories
-available solely for tracking issues of non open source modules as the profession edition as well as community contributed
+available solely for tracking issues of non open source modules as the Professional Edition as well as community contributed
 modules.
 
 In order for us to help you with your problems, please follow the [Support Guide](support.md) and ideally add as many
@@ -37,7 +37,7 @@ That said, feel free to open issues within the respective repository:
  - [Official HumHub modules](https://github.com/humhub/)
  - [Community driven HumHub modules](https://github.com/humhub-contrib/)
  - [HumHub Documentation](https://github.com/humhub/documentation)
- - [Professional edition](https://github.com/humhub/enterprise/issues)
+ - [Professional Edition](https://github.com/humhub/enterprise/issues)
  
 
 You can keep track of active and planned development here:
