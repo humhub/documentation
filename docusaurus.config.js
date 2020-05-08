@@ -9,6 +9,10 @@ module.exports = {
   organizationName: 'humhub', // Usually your GitHub org/user name.
   projectName: 'humhub', // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: '0000hidden0000',
+      indexName: 'humhub',
+    },
     navbar: {
       title: 'HumHub Documentation',
       logo: {
