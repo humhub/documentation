@@ -129,6 +129,21 @@ Example for running all functional tests of a tasks module in a master environme
 In order to run a test you can either use the conventional `codecept` command which requires a global installation,
 or the `grunt test` command. The `grunt test` command currently only works for core module tests.
 
+## Test Build:
+
+The first time you run a test, the test files need to be build, this can be achieved by adding the `-build` parameter to the test run command:
+
+```
+grunt test -b
+```
+
+Only build test files without test run:
+
+```
+cd protected/humhub/tests/
+codecept build
+```
+
 ### Run all core tests:
 
 ```
