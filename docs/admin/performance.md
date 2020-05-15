@@ -94,6 +94,11 @@ X-Sendfile
 X-Sendfile is a feature that allows us to pass file download requests directly by the webserver.
 This improves the application performance.
 
+:::warning
+If this was configured incorrectly, file downloads won't work, please test the file upload and download after 
+configuring X-Sendfile.
+:::
+
 **Installation**
 Administration -> Settings -> Files -> Enable X-Sendfile Support.
 
