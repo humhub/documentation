@@ -21,8 +21,12 @@ Restore HumHub from Backup Data
 
 * Restore and import backup database
 * Restore installation files
-- /protected/modules
-- /protected/config
-- /uploads
-- /themes/yourtheme (if you're running an own theme) 
+- `/protected/modules`
+- `/protected/config`
+- `/uploads`
+- `/themes/yourtheme` (if you're running an own theme) 
 * Rebuild the search index, see [Search chapter](search.md)
+
+:::note
+When uploading your files to `/uploads` by ftp make sure to use `binary` transfer mode.
+:::
