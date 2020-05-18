@@ -136,7 +136,8 @@ class CloseLink extends humhub\modules\content\widgets\WallEntryControlLink
 }
 ```
 
-## Create Module Content Streams
+## Create Module Content 
+
 
 ### Implement StreamAction
 
@@ -186,7 +187,7 @@ You can use the `humhub\modules\stream\widgets\StreamViewer|StreamViewer` widget
 
 <?= \humhub\modules\stream\widgets\StreamViewer::widget([
     'contentContainer' => $contentContainer,
-    'streamAction' => '/mymodule/stream/stream',
+    'streamAction' => 'stream',
     'messageStreamEmpty' => ($contentContainer->canWrite()) ?
             Yii::t('PollsModule.widgets_views_stream', '<b>There are no polls yet!</b><br>Be the first and create one...') :
             Yii::t('PollsModule.widgets_views_stream', '<b>There are no polls yet!</b>'),
