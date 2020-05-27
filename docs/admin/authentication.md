@@ -17,11 +17,15 @@ For example, the configuration file under Debian is `/etc/ldap/ldap.conf`.
 
 - For self-signed certificates, append the following option to the LDAP configuration file (make sure the file point to your certificate file):
 
-` TLS_CACERT /etc/ssl/certs/cacert.crt `
+```
+TLS_CACERT /etc/ssl/certs/cacert.crt
+```
 
 - To disable SSL certificate checking (not recommended), append the following option to the LDAP configuration file:
 
-` TLS_REQCERT ALLOW `
+```
+TLS_REQCERT ALLOW
+```
 
 **Important:** Please restart the Websever or the PHP-FPM process after changing the LDAP configuration. 
 
