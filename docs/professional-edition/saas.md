@@ -36,6 +36,23 @@ A Humhub update is free of charge.
 
 Please see ``Administration -> Cloud Hosting -> Export data`` for details
 
+### Migrate to On Premise 
+
+1.) [Install and setup](../admin/installation.md) a Humhub system with the same version locally
+
+2.) Download the provided data package and extract it to a temporary folder
+
+3.) Replace the folders `/uploads`, `/themes`, `/protected/modules`.
+
+4.) Replace the database (A full database dump is stored in the folder `runtime/dbbackup.sql.gz`)
+
+5.) Delete the file `/protected/config/dynamic.php` and empty the folder `protected/runtime/`.
+
+6.) Rebuild the [search index](../admin/search.md)
+
+7.) Restart the webserver and test the installation
+
+
 ## GDPR & Terms of use
 
 Please see:
