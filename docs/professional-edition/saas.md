@@ -79,7 +79,7 @@ You need to prepend the following code block in your [`localconfig.php` file](#c
 **Example:**
 
 ```php
-if (empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+if (empty($_SERVER['HTTP_X_FORWARDED_HOST'])) || $_SERVER['HTTP_X_FORWARDED_HOST'] === 'example.humhub.com') {
         header("Location: https://example.com". $_SERVER['REQUEST_URI']);
         exit;
 }
