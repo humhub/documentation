@@ -80,7 +80,7 @@ You need to prepend the following code block in your [`localconfig.php` file](#c
 
 ```php
 if (empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
-        print "https://example.com". $_SERVER['REQUEST_URI'];
+        header("Location: https://example.com". $_SERVER['REQUEST_URI']);
         exit;
 }
 // ...
