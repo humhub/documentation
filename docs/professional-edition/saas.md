@@ -79,12 +79,15 @@ You need to prepend the following code block in your [`localconfig.php` file](#c
 **Example:**
 
 ```php
-if (empty($_SERVER['HTTP_X_FORWARDED_HOST'])) || $_SERVER['HTTP_X_FORWARDED_HOST'] === 'example.humhub.com') {
-        header("Location: https://example.com". $_SERVER['REQUEST_URI']);
-        exit;
+$forwardedHost = empty($_SERVER['HTTP_X_FORWARDED_HOST']) ? '' : $_SERVER['HTTP_X_FORWARDED_HOST']; 
+if (!empty($_SERVER['REQUEST_URI']) && (empty($forwardedHost) || $forwardedHost === 'example.humhub.com')) {
+   header("Location: https://www.example.com". $_SERVER['REQUEST_URI']);
+   exit;
 }
+
 // ...
-´´`
+``` 
+
 :::note
 Make sure to replace "example.com" with your domain name. After this modification your default URL e.g. example.humhub.com is  not longer available.
 :::
