@@ -62,7 +62,7 @@ This is just a short overview. See the [PHP Manual](https://www.php.net/manual/e
 ## Database
 
 - **MariaDB 10.1+** 
-- **MySQL 5.6+**
+- **MySQL 5.7+**
 
 **Utf8mb4** character set  and **InnoDB** storage engine are required.
 
