@@ -6,7 +6,7 @@ title: Updating HumHub
 The following migration guides will additionally be available for each new version release (except maintenance releases):
 - [Admin Migration Guide](../admin/updating-migration.md)
 - [Theme Migration Guide](../theme/migrate.md) (If you are using your own theme.)
-- [Module Migration Guide](../developer/modules-migrate.md) (If you are using custom developed modules.)
+- [Module Migration Guide](../develop/modules-migrate.md) (If you are using custom developed modules.)
 
 Please follow these guides - if necessary - before you start the update process.
 
