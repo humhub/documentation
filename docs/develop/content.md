@@ -120,6 +120,11 @@ A global content entry can be created as follows:
 new Post(['message' => 'Some message'])
 ```
 
+If you have a global module without a contentContainer you need the user as Container.
+```php
+new Post(Yii::$app->user->getIdentity(), ['message' => 'Some message']);
+
+```
 You can instantiate your `ContentActiveRecord` as follows:
 
 ```php
