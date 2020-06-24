@@ -22,7 +22,7 @@ Example
 
 ```
 cd /tmp
-wget https://www.humhub.com/de/download/package/humhub-1.4.3.tar.gz
+wget https://www.humhub.com/download/package/humhub-1.5.2.tar.gz
 tar xvfz humhub-1.4.3.tar.gz
 mv /tmp/humhub-1.4.3 /var/www/humhub
 ```
