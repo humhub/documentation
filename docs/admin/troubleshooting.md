@@ -111,7 +111,7 @@ If you have problems related to the installation, please contact us at: info@hum
 Common issues and problems
 --------------------------
 
-## Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
+### Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
 
 This problem is often caused when the HumHub application is used by different system users.  
 The reason for this error could be, that the [cron jobs](installation.md#cronjobs) (or other [command line calls](console.md)) have been executed under a different user.
