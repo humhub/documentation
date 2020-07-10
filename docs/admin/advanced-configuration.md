@@ -19,7 +19,7 @@ residing in `@humhub/protected/config` can be used to specify custom configurati
 
 - `common.php`  - Configuration used in Console & Web Application
 - `web.php` - Configuration used exclusively in the Web Application
-- `console.log` - Configuration used exclusively the Console Application
+- `console.php` - Configuration used exclusively the Console Application
 
 Note, the shortcoming of this merging technique is, that it is not possible to replace an array value:
 
