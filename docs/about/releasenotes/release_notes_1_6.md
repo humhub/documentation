@@ -7,10 +7,8 @@ title: HumHub 1.6
 
 ### Nested comments
 
-Prior to HumHub 1.6 users were not able to directly reply to another users comment which sometimes led to cluttered
-conversations. In HumHub 1.6 we've added support for nested comments in order to enhance the clarity of such conversations. 
-Now users are able to directly reply to other comments within the stream. In this release we've introduced only one
-level of comment nesting which may change in upcoming releases.
+Prior to HumHub 1.6 users were not able to directly reply to another users comments. That sometimes led to cluttered
+conversations. With this update we have implemented support for nested comments, adding more structure and clarity to longer conversations. Users are now able to directly reply to other users comments. This release will be adding one additional level of comments. That may change with future releases.
 
 ### Stream enhancements
 
@@ -20,12 +18,11 @@ HumHub 1.6 introduced multiple stream and stream filter enhancements.
 
 #### New profile stream filter
 
-Since HumHub 1.5 the user profile stream supports the inclusion of all contents a user created even outside of the
-profile. This is a great way of getting an overview of user contributions and the activity of an user. 
+Since HumHub 1.5 all content a user creates, even outside of the profile, can be displayed on the profile stream. This is a great way to get an overview of a users activity.
 
-The only way of disabling this feature in version 1.5 was by [configuration file](../../admin/advanced-configuration.md). 
-HumHub 1.6 now introduced an additional stream filter to the profile stream to enable or disable this behavior on demand.
-Users now can activate or deactivate this filter by choice.
+The only way of disabling this feature was with a [configuration file](../../admin/advanced-configuration.md). 
+HumHub 1.6 will introduce an additional filter to the profile stream to enable or disable this behavior on demand.
+Users can activate or deactivate this filter by choice.
 
 You can manage the default state of this filter by adding the following [configuration](../../admin/advanced-configuration.md):
 
@@ -41,17 +38,17 @@ return [
 
 #### Archived stream filter
 
-In older versions of HumHub the "Include archived content" filter could be used to include archived contents
-but there was no way of explicitly filtering for archived contents. In HumHub 1.6 this filter was renamed to 
+In older versions of HumHub the "Include archived content" filter could be used to include archived content
+but there was no way of explicitly filtering for archived content. In HumHub 1.6 this filter was renamed to 
 "Archived" and now will only include archived content when activated.
 
 #### User profile archive
 
-Users now can archive content on their profile.
+Users now can archive content from their profile.
 
 #### Disable profile stream
 
-In order to support further use-cases of the HumHub platform, the user profile stream 
+In order to cover even more use-cases with the software, the profile stream 
 can now be disabled by the following [file configuration](../../admin/advanced-configuration.md):
 
 ```php
@@ -66,7 +63,7 @@ return [
 
 #### Maximum amount of pinned content entries
 
-Prior to HumHub 1.6 users could only pin up to two posts within a profile or space. This limit could not be configured
+Prior to HumHub 1.6 users could pin up to two posts within a profile or a space. This limit could not be configured
 and was set due to stream limitations of older HumHub versions. In HumHub 1.6 this value can be configured for profiles
 and spaces independently.
 
@@ -92,12 +89,12 @@ return [
 
 #### Additional user profile fields
 
-HumHub 1.6 adds the concept of virtual profile fields. Virtual profile fields can be used to add values to the profile
-which are not editable and are not part of the profile table.
+HumHub 1.6 adds the concept of virtual profile fields. Virtual profile fields can be used to add values
+which are not editable and which are not part of the profile table.
  
 HumHub 1.6 by default supports the following virtual profile fields:
 
-- User e-mail
+- User email
 - Username
 
 Those fields will be created by default when installing HumHub. In case of an existing installation, those two fields
@@ -105,9 +102,9 @@ can be added manually under `Administration -> Users -> Profiles`.
 
 ### Topic chooser visibility
 
-In older HumHub versions a Topic chooser input was visible for users even if there were no topics available on a space
-and the user did not have the permission to add topics, which may is confusing for users not familiar with the topic concept. 
-Now the topic chooser is only visible, either if topics are available, or the user is allowed to create topics.
+In older HumHub versions a topic chooser input was visible for users even if there were no topics available on a space
+and the user did not have the permission to add topics. This led to confusion for users not familiar with the topic concept. 
+Now the topic chooser is only visible to users which are either able to select existing or create new topics. 
 
 ### For developers
 
