@@ -42,6 +42,12 @@ If you identified a changed file, click on it to see changes.
 
 ## Required changes
 
+### 1.6
+
+There were some major changes in the **Comment** module. Please check any overwritten templates if you've made any changes here.
+
+Otherwise, besides minor LESS/CSS optimizations, there are no changes relevant to custom themes. 
+
 ### 1.5
 
 No breaking changes.
