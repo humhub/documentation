@@ -10,6 +10,10 @@ title: HumHub 1.6
 Prior to HumHub 1.6 users were not able to directly reply to another users comments. That sometimes led to cluttered
 conversations. With this update we have implemented support for nested comments, adding more structure and clarity to longer conversations. Users are now able to directly reply to other users comments. This release will be adding one additional level of comments. That may change with future releases.
 
+### Marketplace updates
+
+The HumHub [Marketplace](https://www.humhub.com/en/marketplace) has received several new features. In order to increase transparency, modules solely and independently developed by our [Community](https://community.humhub.com/) are now marked accordingly. To make the publishing and optimization process more efficient, beta versions can now be published in the Marketplace for interested users to test. To boost the development of custom modules, we have additionally added the possibility to purchase third-party modules directly from the developer/publisher and install them via the Marketplace. For this purpose users are now able to contact the developers via the HumHub Marketplace.
+
 ### Stream enhancements
 
 HumHub 1.6 introduced multiple stream and stream filter enhancements.
