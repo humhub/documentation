@@ -18,7 +18,7 @@ The HumHub [Marketplace](https://www.humhub.com/en/marketplace) has received sev
 
 HumHub 1.6 introduced multiple stream and stream filter enhancements.
 
-![](images/1_6/profile_stream_filter.JPG)
+![](https://github.com/humhub/documentation/raw/master/docs/about/releasenotes/images/1_6/profile_stream_filter.JPG)
 
 #### New profile stream filter
 
