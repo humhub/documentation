@@ -52,6 +52,8 @@ The integrity check can be used to ensure the data integrity of your modules.
 You can run the integrity check with the following command:
 
 ```
+cd protected
+php yii migrate/up --includeModuleMigrations=1
 php yii integrity/run
 ```
 
