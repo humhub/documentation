@@ -34,8 +34,7 @@ his/her profile. This is a great way to get an overview of an users activity in 
 
 The only way of disabling this feature was by [file configuration](../../admin/advanced-configuration.md).
 Instead of completely disabling or enabling this feature, HumHub 1.6 introduces an additional profile stream filter 
-allowing users to include or exclude content created outside of a user profile on demand.
-Users now can choose to include or exclude content created outside of the user profile by stream filter selection.
+allowing users to include or exclude content created outside of a user by stream filter selection.
 
 You can manage the default state of this filter by adding the following [configuration](../../admin/advanced-configuration.md):
 
