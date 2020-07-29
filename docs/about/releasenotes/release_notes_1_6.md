@@ -7,12 +7,19 @@ title: HumHub 1.6
 
 ### Nested comments
 
-Prior to HumHub 1.6 users were not able to directly reply to another users comments. That sometimes led to cluttered
-conversations. With this update we have implemented support for nested comments, adding more structure and clarity to longer conversations. Users are now able to directly reply to other users comments. This release will be adding one additional level of comments. That may change with future releases.
+Prior to HumHub 1.6 users were not able to directly reply to another users comments, which sometimes led to cluttered
+conversations. With this update we have added support for nested comments, offering more structure and clarity to longer 
+conversations. In this release we allow one level of sub-comments, which may increase in further releases.
 
 ### Marketplace updates
 
-The HumHub [Marketplace](https://www.humhub.com/en/marketplace) has received several new features. In order to increase transparency, modules solely and independently developed by our [Community](https://community.humhub.com/) are now marked accordingly. To make the publishing and optimization process more efficient, beta versions can now be published in the Marketplace for interested users to test. To boost the development of custom modules, we have additionally added the possibility to purchase third-party modules directly from the developer/publisher and install them via the Marketplace. For this purpose users are now able to contact the developers via the HumHub Marketplace.
+The [HumHub Marketplace](https://www.humhub.com/en/marketplace) has received several new features. 
+In order to increase transparency, modules independently developed by our [Community](https://community.humhub.com/) 
+are now marked accordingly. To make the publishing and optimization process more efficient, 
+beta versions can now be published in the marketplace for interested users to test. 
+To boost the development of custom modules, we have additionally added the possibility to purchase third-party modules 
+directly from the developer/publisher and install them via the marketplace. For this purpose users are now able to 
+contact the developers via the [HumHub Marketplace](https://www.humhub.com/en/marketplace).
 
 ### Stream enhancements
 
@@ -22,11 +29,13 @@ HumHub 1.6 introduced multiple stream and stream filter enhancements.
 
 #### New profile stream filter
 
-Since HumHub 1.5 all content a user creates, even outside of the profile, can be displayed on the profile stream. This is a great way to get an overview of a users activity.
+Since HumHub 1.5 the user profile stream by default includes all content created by the user, even outside of
+his/her profile. This is a great way to get an overview of an users activity in the network and to enliven user profiles.
 
-The only way of disabling this feature was with a [configuration file](../../admin/advanced-configuration.md). 
-HumHub 1.6 will introduce an additional filter to the profile stream to enable or disable this behavior on demand.
-Users can activate or deactivate this filter by choice.
+The only way of disabling this feature was by [file configuration](../../admin/advanced-configuration.md).
+Instead of completely disabling or enabling this feature, HumHub 1.6 introduces an additional profile stream filter 
+allowing users to include or exclude content created outside of a user profile on demand.
+Users now can choose to include or exclude content created outside of the user profile by stream filter selection.
 
 You can manage the default state of this filter by adding the following [configuration](../../admin/advanced-configuration.md):
 
@@ -40,11 +49,14 @@ return [
 ];
 ```
 
+> Note: In HumHub 1.5 the `includeAllUserContentsOnProfile` configuration was used to completely disable this feature.
+
 #### Archived stream filter
 
-In older versions of HumHub the "Include archived content" filter could be used to include archived content
-but there was no way of explicitly filtering for archived content. In HumHub 1.6 this filter was renamed to 
-"Archived" and now will only include archived content when activated.
+In older versions of HumHub the _"Include archived content"_ filter could be used to include archived content beside
+non archived content entries but there was no way of explicitly filtering for archived content. 
+In HumHub 1.6 this filter was renamed to "Archived" and now will only include archived content when activated in order
+to search through the content archive.
 
 #### User profile archive
 
@@ -52,7 +64,7 @@ Users now can archive content from their profile.
 
 #### Disable profile stream
 
-In order to cover even more use-cases with the software, the profile stream 
+To cover even more use-cases for the HumHub platform, the profile stream 
 can now be disabled by the following [file configuration](../../admin/advanced-configuration.md):
 
 ```php
@@ -67,7 +79,7 @@ return [
 
 #### Maximum amount of pinned content entries
 
-Prior to HumHub 1.6 users could pin up to two posts within a profile or a space. This limit could not be configured
+Prior to HumHub 1.6 users could pin up to two posts within a profile or space. This limit could not be configured
 and was set due to stream limitations of older HumHub versions. In HumHub 1.6 this value can be configured for profiles
 and spaces independently.
 
@@ -98,8 +110,8 @@ which are not editable and which are not part of the profile table.
  
 HumHub 1.6 by default supports the following virtual profile fields:
 
-- User email
-- Username
+- **User email**
+- **Username**
 
 Those fields will be created by default when installing HumHub. In case of an existing installation, those two fields
 can be added manually under `Administration -> Users -> Profiles`.
@@ -107,7 +119,7 @@ can be added manually under `Administration -> Users -> Profiles`.
 ### Topic chooser visibility
 
 In older HumHub versions a topic chooser input was visible for users even if there were no topics available on a space
-and the user did not have the permission to add topics. This led to confusion for users not familiar with the topic concept. 
+and the user did not have the permission to add new topics. This led to confusion for users not familiar with the topic concept. 
 Now the topic chooser is only visible to users which are either able to select existing or create new topics. 
 
 ### For developers
