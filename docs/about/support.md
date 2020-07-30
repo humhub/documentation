@@ -3,7 +3,7 @@ id: support
 title: Support
 ---
 
-If you need support with HumHub related issues, this guide will help you finding the right place to ask and how to
+If you need support with HumHub related issues, this guide will help you find the right place to ask and how to
 compose your issue.
 
 :::info
