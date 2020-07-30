@@ -162,7 +162,7 @@ rather than blocking the resources on the client. This can be used to test csp r
 **CSP Reporting:**
 
 As described above, the `csp-report-only` section of your web security configuration can be used to define csp rules
-which are only used for debugging and testing and do not have any affect on the client. The `csp-report-only` can be used along
+which are only used for debugging and testing and do not have any effect on the client. The `csp-report-only` can be used along
 with the `csp` configuration.
 
 It is also possible to set the `report` setting of your `csp` section to true, this will enable csp violation logging
