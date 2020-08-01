@@ -20,7 +20,7 @@ module.exports = {
         src: 'img/logo.svg',
       },
       hideOnScroll: true,
-      links: [
+      items: [
         /*{
           to: 'versions',
           label: `${versions[0].substr(6)}`,
@@ -63,20 +63,24 @@ module.exports = {
           title: 'Guides',
           items: [
             {
+              label: 'About',
+              to: 'docs/about/humhub',
+            },
+            {
               label: 'Administration',
-              to: 'docs/admin',
+              to: 'docs/admin/introduction',
             },
             {
               label: 'Theming',
-              to: 'docs/theme',
+              to: 'docs/theme/overview',
             },
             {
               label: 'Development',
-              to: 'docs/develop',
+              to: 'docs/develop/overview',
             },
             {
               label: 'Professional Edition',
-              href: 'docs/professional-edition',
+              to: 'docs/professional-edition/pe-intro',
             },
            /* {
               label: 'Models and APIs',

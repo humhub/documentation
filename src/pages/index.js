@@ -65,7 +65,7 @@ const features = [
     {
         title: <>Professional Edition</>,
         imageUrl: 'img/undraw_reviewed_docs.svg',
-        href:'/docs/professional/installation',
+        href:'/docs/professional-edition/pe-intro',
         description: (
             <>
                 Learn more about the extended features of the enterprise edition and how to use them.
@@ -75,7 +75,7 @@ const features = [
     {
         title: <>Community</>,
         imageUrl: 'img/undraw_friends_online.svg',
-        href:'/docs/develop/professional',
+        href:'https://community.humhub.com/',
         description: (
             <>
                 Any further questions? Be part of our ever growing community, ask questions, provide support or

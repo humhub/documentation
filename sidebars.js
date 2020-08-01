@@ -16,6 +16,7 @@ module.exports = {
             label: 'Release Notes',
             items: [
                 'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_6',
                 'about/releasenotes/release_notes_1_5'
             ]
         },
@@ -54,9 +55,9 @@ module.exports = {
             'admin/search',
             'admin/authentication',
             'admin/performance',
+            'admin/cron-jobs',
             'admin/asynchronous-tasks',
             'admin/permissions',
-            'admin/cron-jobs',
             'admin/redis',
             'admin/reverse-proxy',
             'admin/logging',

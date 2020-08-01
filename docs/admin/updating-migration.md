@@ -8,6 +8,11 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 
 In addition to this guide, you may also check the [Theme Migration Guide](../theme/migrate.md) or [Development Migration Guide](../developer/modules-migrate.md).
 
+1.6
+----
+
+No changes necessary.
+
 1.5
 ----
 

@@ -22,9 +22,9 @@ Example
 
 ```
 cd /tmp
-wget https://www.humhub.com/de/download/package/humhub-1.4.3.tar.gz
-tar xvfz humhub-1.4.3.tar.gz
-mv /tmp/humhub-1.4.3 /var/www/humhub
+wget https://www.humhub.com/download/package/humhub-1.5.2.tar.gz
+tar xvfz humhub-1.5.2.tar.gz
+mv /tmp/humhub-1.5.2 /var/www/humhub
 ```
 
 ## File permissions
@@ -40,7 +40,7 @@ At least following directories and files needs to be **writable** by the PHP pro
 If you want to use the HumHub automatic updater, all files must be writable.
 
 ```
-chown -R www-data.www-data /var/www/humhub
+chown -R www-data:www-data /var/www/humhub
 ```
 
 ## Start installer
@@ -210,6 +210,8 @@ You can see the current mode at ``Administration -> Information``.
 
     - /protected
     - /uploads/file
+    
+    The file `/protected/config/dynamic.php` contains the database credentials and should only be readable by the HumHub user (e.g. ``www-data``).
 
 - Production Mode
 

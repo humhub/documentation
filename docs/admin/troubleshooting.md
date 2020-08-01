@@ -34,6 +34,15 @@ In case you still need help please add the following information to your issue d
 - Can you provide screenshots of your Cron Job settings? (With personal information blurred out!)
 - What type of server are you using? (CloudLinux CentOS 6, Windows IIS, or etc)
 
+Clear cache
+-----------------------------------------
+
+Especially after manually updating HumHub or a module by git, you'll may have to clear the cache and update the asset files.
+
+The cache can be cleared either in the admin section `Administration -> Settings -> Advanced -> Caching - > Save & Flush` (this will also reset the asset files), or
+by console by [console](console.md#cache). When not using the administration backend, you'll have to manually clear the asset files by deleting the content of 
+`@humhub/assets/*` and `@humhub/static/assets/*`.
+
 Data Integrity
 -----------------------------------------
 
@@ -43,6 +52,8 @@ The integrity check can be used to ensure the data integrity of your modules.
 You can run the integrity check with the following command:
 
 ```
+cd protected
+php yii migrate/up --includeModuleMigrations=1
 php yii integrity/run
 ```
 
@@ -102,7 +113,7 @@ If you have problems related to the installation, please contact us at: info@hum
 Common issues and problems
 --------------------------
 
-#### Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
+### Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
 
 This problem is often caused when the HumHub application is used by different system users.  
 The reason for this error could be, that the [cron jobs](installation.md#cronjobs) (or other [command line calls](console.md)) have been executed under a different user.
