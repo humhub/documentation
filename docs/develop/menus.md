@@ -58,7 +58,7 @@ namespace humhub\modules\example;
 
 use humhub\modules\dashboard\widgets\ShareWidget;
 use humhub\modules\ui\widgets\Icon;
-use humhub\modules\ui\menu\MenuEntry;
+use humhub\modules\ui\menu\MenuLink;
 use humhub\widgets\TopMenu;
 
 use Yii;
@@ -84,7 +84,7 @@ class Events
         /** @var TopMenu $topMenu */
         $topMenu = $event->sender;
 
-        $entry = new MenuEntry();
+        $entry = new MenuLink();
 
         $entry->setId('dashboard');
         $entry->setLabel(Yii::t('DashboardModule.base', 'Dashboard'));
