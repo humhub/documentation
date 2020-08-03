@@ -189,6 +189,7 @@ The following table lists files which can be added in order to provide module do
 | README.md | Yes | A description and overview of the features |
 | CHANGELOG.md | Yes | A file which contains a curated, chronologically ordered list of changes for each version |
 | MANUAL.md | No | Information on how to use this module |
+| INSTALLATION.md | No | Additional installation information |
 | LICENCE.md | No | Licencing information including the licence |
 | DEVELOPER.md | No | Additional information for developers |
 
