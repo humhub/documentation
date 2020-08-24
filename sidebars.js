@@ -119,6 +119,18 @@ module.exports = {
             'develop/security',
             'develop/console',
             'develop/oembed',
+        ],
+        'Rest API': [
+            {
+                type: 'link',
+                label: 'Documentation',
+                href: 'https://www.humhub.com/en/marketplace/rest/#Manual'
+            },
+            {
+                type: 'link',
+                label: 'GitHub Repository',
+                href: 'https://github.com/humhub/humhub-modules-rest'
+            }
         ]
     },
     Theming: {
