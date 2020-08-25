@@ -112,14 +112,14 @@ Create the following files then follow the above link.
 `cronh.php`
 
 ```php
-`<?php $humhubh = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii cron/run '; exec($humhubh); ?>`
+`<?php $humhubh = '/usr/local/php7.4/bin/php '.__DIR__.'/protected/yii cron/run '; exec($humhubh); ?>`
 ```
 
 
 `crond.php`
 
 ```php
-<?php $humhubd = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii queue/run '; exec($humhubd); ?>
+<?php $humhubd = '/usr/local/php7.4/bin/php '.__DIR__.'/protected/yii queue/run '; exec($humhubd); ?>
 ```
 
 ### Debian
