@@ -20,11 +20,8 @@ return [
     'class' => 'humhub\modules\translation\Module',
     'namespace' => 'humhub\modules\translation',
     'events' => [
-	    //...
-        [
-            'class' => Application::class, 'event' => Application::EVENT_ON_INIT, 
-            'callback' => ['humhub\modules\translation\Module', 'onConsoleApplicationInit']
-        ],
+        //...
+        [Application::class, Application::EVENT_ON_INIT, ['humhub\modules\translation\Module', 'onConsoleApplicationInit']],
         //...
     ],
 ];
@@ -36,7 +33,7 @@ Example callback:
 ```php
 public static function onConsoleApplicationInit($event) {
     $application = $event->sender;
-    $application->controllerMap['translation'] = commands\TranslationController::className();
+    $application->controllerMap['translation'] = commands\TranslationController::class;
 }
 ```
 
