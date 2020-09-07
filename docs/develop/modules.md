@@ -81,14 +81,15 @@ my-module
 The `config.php` can be used to define event handlers, and the definition of [URL Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)
 and consists of the following data:
 
-| Field | Description |    
-| -------- | ---------- |
-| `id`  | Unique module ID **required** | 
-| `class` | Namespaced classname of the module class **required** |
-| `namespace` | The namespace of your module **required** |
-| `events` | Array containing the modules event configuration |
-| `urlManagerRules` | Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)  |
-| `modules` | Can be used to define submodules |
+| Attribute              | Description |    
+| ---------------------- | ---------- |
+| `id`                   | Unique module ID **(required)** | 
+| `class`                | Namespaced classname of the module class **(required)** |
+| `namespace`            | The namespace of your module **(required)** |
+| `events`               | Array containing the modules event configuration |
+| `urlManagerRules`      | Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)  |
+| `modules`              | Can be used to define submodules |
+| `consoleControllerMap` | List of console controllers. See also: [Yii2 API](https://www.yiiframework.com/doc/api/2.0/yii-base-module#$controllerMap-detail) **(HumHub 1.7+)**|
 
 **Example:**
 
@@ -105,6 +106,9 @@ return [
            'class' => TopMenu::class, 'event' => TopMenu::EVENT_INIT, 
            'callback' => ['johndoe\example\Events', 'onTopMenuInit']
         ]
+    ],
+    'consoleControllerMap' => [
+          'example' => 'johndoe\example\console\ExampleController'
     ]
 ];
 ```
@@ -125,10 +129,10 @@ Available attributes:
 
 | Field | Description |    
 | -------- | ---------- |
-| `id`  | The module ID **required** | 
-| `version` | The module version. This must follow the format of X.Y.Z. **required** |
-| `name` | The modules name **required** |
-| `description` | A short module description **required** |
+| `id`  | The module ID **(required)** | 
+| `version` | The module version. This must follow the format of X.Y.Z. **(required)** |
+| `name` | The modules name **(required)** |
+| `description` | A short module description **(required)** |
 | `humhub` | HumHub core `minVersion` and `maxVersion` requirements  |
 | `keywords` | Module related keywords as string array |
 | `screenshots` | Some screenshots file names for the marketplace, those should reside in the `Module::$resourcesPath` |
