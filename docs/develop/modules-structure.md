@@ -78,7 +78,7 @@ Available attributes:
 	- **role** -  The author's role (e.g. developer or translator)
 
 
-Example `module.php` file:
+Example `module.json` file:
 
 ```json
 {
