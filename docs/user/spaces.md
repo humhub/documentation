@@ -13,7 +13,7 @@ A space can be used by space members to share content with other users.
 ## Add Spaces
 
 Administrators can configure which groups are allowed to create new spaces under **Administration->Groups->Permissions**.
-Please read the [Group Section](admin-groups.md) for more information about groups.
+Please read the [Group Section](../adminuser/user.md#Groups) for more information about groups.
 Spaces can be added by clicking _Add Space_ within the _Space Navigation_. 
 A new space will require at least a space name. Furthermore, you are able to define a space color, a description and advanced access settings.
 The access settings consists of:

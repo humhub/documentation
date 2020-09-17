@@ -6,7 +6,6 @@ Since HumHub 0.20 is now based on Yii 2 you also need to migrate your modules to
 
 See more information about Yii 2.0 here: 
 - [Yii: Upgrading from Version 1.1](http://www.yiiframework.com/doc-2.0/guide-intro-upgrade-from-v1.html)
-- [Yii2 Migration Notes](dev-migrate-0.20-yii2.md)
 
 ## Migration
 
@@ -16,7 +15,7 @@ See more information about Yii 2.0 here:
 - Migrate to Yii 2.0 (Controllers, Models, Views, Assets, ...) 
 - Migrate to HumHub Namespaced classes
 - Raname e.g. ExampleModule.php && ExampleEvents.php   to Module.php / Events.php
-- Changed former autostart.php to config.php: [config.php](dev-module-index.md#configphp)
+- Changed former autostart.php to config.php
 - Migrate database (see below)
  
 

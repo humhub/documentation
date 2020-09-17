@@ -215,7 +215,7 @@ class Example extends ContentContainerActiveRecord
 }
 ```
 
-> Info: For more information about permissions, please see the [Permission Section](module-permissions.md).
+> Info: For more information about permissions, please see the [Permission Section](permissions.md).
 
 > Note: Many content-types provide a private/public flag within the create/edit form.
 

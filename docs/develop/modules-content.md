@@ -59,9 +59,9 @@ of your ContentContainer instance. This will add the required sguid or uguid to 
 Each ContentContainer class is derived from `\humhub\modules\content\components\ContentContainerActiveRecord`.
 Beside others, this abstract class provides the following functionality:
 
-- [Permission Management](dev-permissions.md) `getPermissionManager()`
+- [Permission Management](permissions.md) `getPermissionManager()`
 - Profile-/Banner-image access `getProfileImage()`, `getProfileBannerImage()`
-- Rendering the container stream `getWallOut()` (see [Permission Management](dev-stream.md))
+- Rendering the container stream `getWallOut()` (see [Permission Management](stream.md))
 
 Profile image example:
 

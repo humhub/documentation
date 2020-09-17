@@ -176,13 +176,13 @@ Checkout the following links for more information:
 
 The HumHub [professional edition](https://www.humhub.com/de/professional-edition) consists of a 
 suite of [additional modules](https://www.humhub.com/de/marketplace) especially useful in enterprise environments with
-features as [extended LDAP](../professional/space-types.md) and [single sign on (SSO)](../professional/jwt.md) support
-as well as an additional [enterprise theme](../professional/theme.md). You can install and test all professional modules
+features as [extended LDAP](../professional-edition/features.md) and [single sign on (SSO)](https://www.humhub.com/en/marketplace/jwt-sso/md) support
+as well as an additional [enterprise theme](https://www.humhub.com/en/marketplace/enterprise-theme/). You can install and test all professional modules
 for a limited time in your HumHub administration section without the need to install any further software or components.
 
 Further information are available at:
 
- - [Professional Edition Guide](../professional/installation.md)
+ - [Professional Edition Guide](../professional-edition/intro.md)
  - [Enterprise Edition Homepage](https://www.humhub.com/en/professional-edition)
 
 ## Limitations
@@ -207,7 +207,7 @@ vastly reduces the overall complexity, it also does not allow custom content vis
 
 - There is currently no concept available or planned for **nested spaces** or **sub-spaces**. The [topic](#topics) feature adds 
 some kind of content categorization within a space and can be used to separate/filter contents of a space. 
-Furthermore, the professional edition adds a [space type feature](../professional/space-types.md) for categorizing spaces,
+Furthermore, the professional edition adds a [space type feature](../professional-edition/features.md) for categorizing spaces,
 which allows one additional level of space classification.
 
 - HumHub currently can not be operated as a real **multi-client system** with entirely separated user bases. 

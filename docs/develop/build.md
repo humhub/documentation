@@ -21,7 +21,7 @@ npm install -g grunt-cli
 
 HumHub uses Yii`s build-in mechanism for [compressing and combining assets](https://www.yiiframework.com/doc/guide/2.0/en/structure-assets#combining-compressing-assets)
 as javascript or stylesheet files in combination with grunt. Those compressed assets are only used when running 
-in [production mode](admin-installation.md#disable-errors-debugging) and in [acceptance tests](testing.md#run-acceptance-tests).
+in [production mode](../admin/installation.md##enable-production-mode) and in [acceptance tests](testing.md#run-acceptance-tests).
 When running in debug mode, separate assets files are used to ease development and debugging.
 
 When running a [development environment](environment.md#gitcomposer-installation), you'll have to manually build those

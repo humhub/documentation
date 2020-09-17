@@ -30,7 +30,7 @@ Basically there are two types of views:
 - **Controller views** (located directly in the directory `views` of the module)
 - **Widget views** (located in the directory `widgets/views` of the module)
 
-> See also: [Overview](../developer/overview.md) of available HumHub core modules.
+> See also: [Overview](../develop/overview.md) of available HumHub core modules.
 
 Another possible straightforward approach to determine the correct view is to search the files for a piece of view code.
 As example: The search for `id="login-form"` will lead you to the file `humhub/modules/user/views/auth/login.php`. 

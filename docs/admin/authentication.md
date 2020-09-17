@@ -243,5 +243,5 @@ return [
 
 Other providers
 ---------------
-Please see [Development - Authentication](dev-authentication.md) for more information
+Please see [Development - Authentication](../develop/authentication.md) for more information
 about additional authentication providers. 
