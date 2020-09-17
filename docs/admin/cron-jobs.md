@@ -124,7 +124,7 @@ Create the following files then follow the above link.
 
 ### Debian
 
-See also [CronJob Setup](installation#cronjobs).
+See also [CronJob Setup](installation.md#cronjobs).
 
 Please read up on this [article](https://debian-administration.org/article/56/Command_scheduling_with_cron).
 
@@ -132,7 +132,7 @@ Please read up on this [article](https://debian-administration.org/article/56/Co
 
 ### Ubuntu
 
-See also [CronJob Setup](installation#cronjobs).
+See also [CronJob Setup](installation.md#cronjobs).
 
 Please read up on this [how-to guide](https://help.ubuntu.com/community/CronHowto).
 
