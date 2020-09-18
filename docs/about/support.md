@@ -70,4 +70,4 @@ In case you are interested in a collaboration, please use the contact form at [w
 ### Professional Edition support
 
 Users of the [Professional Edition](https://www.humhub.com/de/professional-edition) can request support directly
-within the [administration section](../professional/support.md) of their HumHub installation.
+within the [administration section](../professional-edition/support.md) of their HumHub installation.

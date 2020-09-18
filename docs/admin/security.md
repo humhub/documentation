@@ -178,7 +178,7 @@ If enabled modern browsers will only execute scripts containing a generated nonc
 
 > Note: Some settings as the nonce configuration, may not be supported by some modules. In case you notice modules not working
 properly with your security configuration, please contact the module owner or refer to the module description. Also check the 
-[Developer Javascript Guide](../developer/javascript.md) for assuring nonce support of your custom modules.
+[Developer Javascript Guide](../develop/javascript-index.md) for assuring nonce support of your custom modules.
 
 > Note: The security rules are cached, you may have to clear the cache in order to update the active rule configuration.
 
@@ -195,8 +195,9 @@ information about csp restrictions in your module description.
 Keep HumHub Up-To-Date 
 ---------------------------------------
 
-As an admin you'll receive notifications about new HumHub releases. We strongly recommend to always update to the latest stable version if possible.
-Check the [automatic](updating-automatic.md) or [manual](updating.md) update guide for more information about updating your HumHub installation.
+As an admin you'll receive notifications about new HumHub releases. We strongly recommend to always update to the latest
+stable version if possible.
+Check the [update guide](updating.md) for more information about updating your HumHub installation.
 
 Furthermore, you should regularly check the `Administration -> Modules -> Available Updates` section for module updates. 
 

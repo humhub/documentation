@@ -1,4 +1,4 @@
-[Back to 0.20 Migration](dev-migrate-0.20.md)
+[Back to 0.20 Migration](modules-migrate-0.20.md)
 
 # Yii2 Migration Notes
 

@@ -176,13 +176,13 @@ Checkout the following links for more information:
 
 The HumHub [professional edition](https://www.humhub.com/de/professional-edition) consists of a 
 suite of [additional modules](https://www.humhub.com/de/marketplace) especially useful in enterprise environments with
-features as [extended LDAP](../professional/space-types.md) and [single sign on (SSO)](../professional/jwt.md) support
-as well as an additional [enterprise theme](../professional/theme.md). You can install and test all professional modules
+features as [extended LDAP](../professional-edition/features.md#advanced-ldap) and [single sign on (SSO)](../professional-edition/features.md##feature-list) support
+as well as an additional [enterprise theme](../professional-edition/features.md#enterprise-theme). You can install and test all professional modules
 for a limited time in your HumHub administration section without the need to install any further software or components.
 
 Further information are available at:
 
- - [Professional Edition Guide](../professional/installation.md)
+ - [Professional Edition Guide](../professional-edition/intro.md)
  - [Enterprise Edition Homepage](https://www.humhub.com/en/professional-edition)
 
 ## Limitations
