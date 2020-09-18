@@ -197,23 +197,24 @@ You can see the current mode at ``Administration -> Information``.
 
 ## Verify 
 
-- Cronjobs
+- **Cronjobs**
 
     You can find the last execution and number of open background jobs at: ``Administration -> Information -> Background jobs``
 
-- Error log
+- **Error log**
 
     Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration -> Information -> Logging``
 
-- Protected folders
+- **Protected folders**
 
     Please make sure that the following directory is **not** publicly accessible via the web server.
 
     - /protected
     - /uploads/file
+    - /themes/*/views
     
     The file `/protected/config/dynamic.php` contains the database credentials and should only be readable by the HumHub user (e.g. ``www-data``).
 
-- Production Mode
+- **Production Mode**
 
     Make sure that no warning about the ``Debug mode`` appears under ``Administration -> Information -> About HumHub``.
