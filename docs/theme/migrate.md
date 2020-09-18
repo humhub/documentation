@@ -266,7 +266,7 @@ As with other less files this file can be excluded from your theme build by less
 
 #### Use of new Theming
 
-HumHub 1.2 introduced an enhanced theming structure, which allows you to overwrite only the style definitions you want to change. This leads to smaller and cleaner themes without the need to manually maintain each small style change or addition of a new release. Please refer to the  [Theming Guide](theming-index.md) for more details about the new theme structure.
+HumHub 1.2 introduced an enhanced theming structure, which allows you to overwrite only the style definitions you want to change. This leads to smaller and cleaner themes without the need to manually maintain each small style change or addition of a new release. Please refer to the [Theming Guide](structure.md) for more details about the new theme structure.
 
 > Note: You can still use your old theme, but you'll have to maintain your theme manually as before. You should at least create your themes `variables.less` file as described in the following, since these variables are used within your mails.
 
@@ -279,7 +279,7 @@ The steps below, describe how to merge your old theme to the new theming structu
 5. Ideally, only add the differences between your theme and the default theme to `humhub\themes\yourTheme\less\theme.less`.
 6. Build your theme with `lessc -x build.less ../css/theme.css`.
 
-If your theme overwrites major parts of the defalt theme, you can disable the import of some default less files by setting variables as for example `@prev-login: true;` to disable the import of `humhub/static/less/login.less`. Please see the [Theming Guide](theming-index.md) for more information about this technique.
+If your theme overwrites major parts of the defalt theme, you can disable the import of some default less files by setting variables as for example `@prev-login: true;` to disable the import of `humhub/static/less/login.less`. Please see the [Theming Guide](overview.md) for more information about this technique.
 
 > Info: You should rebuild your theme after each HumHub release to adopt new theme changes automatically.
 

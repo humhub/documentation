@@ -112,19 +112,19 @@ Create the following files then follow the above link.
 `cronh.php`
 
 ```php
-`<?php $humhubh = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii cron/run '; exec($humhubh); ?>`
+`<?php $humhubh = '/usr/local/php7.4/bin/php '.__DIR__.'/protected/yii cron/run '; exec($humhubh); ?>`
 ```
 
 
 `crond.php`
 
 ```php
-<?php $humhubd = '/usr/local/php5.6/bin/php '.__DIR__.'/protected/yii queue/run '; exec($humhubd); ?>
+<?php $humhubd = '/usr/local/php7.4/bin/php '.__DIR__.'/protected/yii queue/run '; exec($humhubd); ?>
 ```
 
 ### Debian
 
-See also [CronJob Setup](installation#cronjobs).
+See also [CronJob Setup](installation.md#cronjobs).
 
 Please read up on this [article](https://debian-administration.org/article/56/Command_scheduling_with_cron).
 
@@ -132,7 +132,7 @@ Please read up on this [article](https://debian-administration.org/article/56/Co
 
 ### Ubuntu
 
-See also [CronJob Setup](installation#cronjobs).
+See also [CronJob Setup](installation.md#cronjobs).
 
 Please read up on this [how-to guide](https://help.ubuntu.com/community/CronHowto).
 

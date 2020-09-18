@@ -209,8 +209,8 @@ Example of stack used as sidebar:
 <?php
 // Render the sidebar with two default item
 echo \humhub\core\space\widgets\Sidebar::widget(['widgets' => [
-        [\humhub\core\activity\widgets\Stream::className(), ['streamAction' => '/space/space/stream', 'contentContainer' => $space], ['sortOrder' => 10]],
-        [\humhub\core\space\widgets\Members::className(), ['space' => $space], ['sortOrder' => 20]]
+        [\humhub\core\activity\widgets\Stream::class, ['streamAction' => '/space/space/stream', 'contentContainer' => $space], ['sortOrder' => 10]],
+        [\humhub\core\space\widgets\Members::class, ['space' => $space], ['sortOrder' => 20]]
 ]]);
 ?>
 ```
@@ -219,10 +219,10 @@ __config.php__
 
 ```php
     // Subscribe to the onInit event of the sidebar
-    'events' => array(
+    'events' => [
         // Wait for TopMenu Initalization Event
-        array('class' => 'DashboardSidebarWidget', 'event' => 'onInit', 'callback' => array('ExampleModule', 'onDashboardSidebarInit')),
-    ),
+        ['class' => 'DashboardSidebarWidget', 'event' => 'onInit', 'callback' => ['ExampleModule', 'onDashboardSidebarInit']],
+    ],
     //...
 ```
 
@@ -231,51 +231,7 @@ __Events.php__
 ```php
     // This handler function will inject a custom widget to the stack
     public static function onDashboardSidebarInit($event) {
-        $event->sender->addWidget('application.modules.example.widgets.MyCoolWidget', array(), array('sortOrder' => 1));
+        $event->sender->addWidget('application.modules.example.widgets.MyCoolWidget', [], ['sortOrder' => 1]);
     }
 ```
 
-## Menus
-
-All navigations widget classes inherit from the class `humhub\widgets\BaseMenu`, which allows modules
-to inject own items into navigation menu.
-
-Example: 
-
-__config.php__ - Catching Event
-
-```php
-use humhub\widgets\TopMenu;
-
-return [
-    //...
-    'events' => [
-        ['class' => TopMenu::className(), 'event' => TopMenu::EVENT_INIT, 'callback' => ['humhub\modules\calendar\Events', 'onTopMenuInit']],
-    ],
-]
-```
-
-
-__Events.php__ - Handling the Event
-
-```php
-//...
-public static function onTopMenuInit($event)
-{
-    if (Yii::$app->user->isGuest) {
-        return;
-    }
-
-    $user = Yii::$app->user->getIdentity();
-    if ($user->isModuleEnabled('calendar')) {
-        $event->sender->addItem([
-            'label' => Yii::t('CalendarModule.base', 'Calendar'),
-            'url' => Url::to(['/calendar/global/index']),
-            'icon' => '<i class="fa fa-calendar"></i>',
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'calendar' && Yii::$app->controller->id == 'global'),
-            'sortOrder' => 300,
-        ]);
-    }
-}
-//...
-```

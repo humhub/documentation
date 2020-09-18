@@ -207,7 +207,7 @@ vastly reduces the overall complexity, it also does not allow custom content vis
 
 - There is currently no concept available or planned for **nested spaces** or **sub-spaces**. The [topic](#topics) feature adds 
 some kind of content categorization within a space and can be used to separate/filter contents of a space. 
-Furthermore, the professional edition adds a [space type feature](../professional/space-types.md) for categorizing spaces,
+Furthermore, the professional edition adds a [space type feature](../professional-edition/features.md) for categorizing spaces,
 which allows one additional level of space classification.
 
 - HumHub currently can not be operated as a real **multi-client system** with entirely separated user bases. 

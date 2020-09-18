@@ -54,7 +54,7 @@ If you have already installed the HumHub Community Edition, please follow the st
 
 Once installed, you can enter your licence key at: `Administration` -> `Enterprise Edition` .
 
-The [Enterprise Theme](theme.md) can be selected under `Administration` -> `Settings` -> `Appearance`.
+The [Enterprise Theme](https://www.humhub.com/en/marketplace/enterprise-theme/) can be selected under `Administration` -> `Settings` -> `Appearance`.
 
 **Option 2: Download Package**
 

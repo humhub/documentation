@@ -22,10 +22,11 @@ Example
 
 ```
 cd /tmp
-wget https://www.humhub.com/download/package/humhub-1.5.2.tar.gz
-tar xvfz humhub-1.5.2.tar.gz
-mv /tmp/humhub-1.5.2 /var/www/humhub
+wget https://www.humhub.com/download/package/humhub-<version>.tar.gz
+tar xvfz humhub-<version>.tar.gz
+mv /tmp/humhub-<version> /var/www/humhub
 ```
+> Please replace the `<verion>` with the latest HumHub version.
 
 ## File permissions
 

@@ -134,7 +134,7 @@ module.export({
 [...]
 ```
 
-> Warning: Once registered, your modules `init` function may be called even if you are not currently in your desired modules view. This occures especially if [Pjax](javascript-pjax.md) is enabled and `initOnPjaxLoad` is set to `true`. Therfore, if your modules initialization logic only makes sense in a specific context, make sure you reside in the desired view before running your actual initialization code e.g: `if(!$('#mySpecialElement').length) {return;}`.
+> Warning: Once registered, your modules `init` function may be called even if you are not currently in your desired modules view. This occures especially if [Pjax](javascript-client.md) is enabled and `initOnPjaxLoad` is set to `true`. Therfore, if your modules initialization logic only makes sense in a specific context, make sure you reside in the desired view before running your actual initialization code e.g: `if(!$('#mySpecialElement').length) {return;}`.
 
 ### Module Unload
 

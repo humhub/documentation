@@ -56,6 +56,8 @@ The easiest way of setting up a basic HumHub module is by using the [Developer T
 Once you've generated a module skeleton, copy the module to a [module loader path](environment.md#module-loader-path). Now the module
 should be visible under `Administration -> Modules` and can be [enabled](#enabled-a-module).
 
+Alternatively, you can take a look at the following GitHub template project: [Example Module](https://github.com/humhub/humhub-modules-example-basic).
+
 ## Module Structure
 
 Basically HumHub modules are identical to [Yii2 modules](http://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
@@ -81,14 +83,15 @@ my-module
 The `config.php` can be used to define event handlers, and the definition of [URL Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)
 and consists of the following data:
 
-| Field | Description |    
-| -------- | ---------- |
-| `id`  | Unique module ID **required** | 
-| `class` | Namespaced classname of the module class **required** |
-| `namespace` | The namespace of your module **required** |
-| `events` | Array containing the modules event configuration |
-| `urlManagerRules` | Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)  |
-| `modules` | Can be used to define submodules |
+| Attribute              | Description |    
+| ---------------------- | ---------- |
+| `id`                   | Unique module ID **(required)** | 
+| `class`                | Namespaced classname of the module class **(required)** |
+| `namespace`            | The namespace of your module **(required)** |
+| `events`               | Array containing the modules event configuration |
+| `urlManagerRules`      | Array of [URL Manager Rules](https://www.yiiframework.com/doc/guide/2.0/en/runtime-routing#creating-rules)  |
+| `modules`              | Can be used to define submodules |
+| `consoleControllerMap` | List of console controllers. See also: [Yii2 API](https://www.yiiframework.com/doc/api/2.0/yii-base-module#$controllerMap-detail) **(HumHub 1.7+)**|
 
 **Example:**
 
@@ -105,6 +108,9 @@ return [
            'class' => TopMenu::class, 'event' => TopMenu::EVENT_INIT, 
            'callback' => ['johndoe\example\Events', 'onTopMenuInit']
         ]
+    ],
+    'consoleControllerMap' => [
+          'example' => 'johndoe\example\console\ExampleController'
     ]
 ];
 ```
@@ -125,10 +131,10 @@ Available attributes:
 
 | Field | Description |    
 | -------- | ---------- |
-| `id`  | The module ID **required** | 
-| `version` | The module version. This must follow the format of X.Y.Z. **required** |
-| `name` | The modules name **required** |
-| `description` | A short module description **required** |
+| `id`  | The module ID **(required)** | 
+| `version` | The module version. This must follow the format of X.Y.Z. **(required)** |
+| `name` | The modules name **(required)** |
+| `description` | A short module description **(required)** |
 | `humhub` | HumHub core `minVersion` and `maxVersion` requirements  |
 | `keywords` | Module related keywords as string array |
 | `screenshots` | Some screenshots file names for the marketplace, those should reside in the `Module::$resourcesPath` |
@@ -189,6 +195,7 @@ The following table lists files which can be added in order to provide module do
 | README.md | Yes | A description and overview of the features |
 | CHANGELOG.md | Yes | A file which contains a curated, chronologically ordered list of changes for each version |
 | MANUAL.md | No | Information on how to use this module |
+| INSTALLATION.md | No | Additional installation information |
 | LICENCE.md | No | Licencing information including the licence |
 | DEVELOPER.md | No | Additional information for developers |
 
