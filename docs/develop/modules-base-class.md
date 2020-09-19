@@ -55,7 +55,7 @@ You can also define callback functions, which then can be implemented or overwri
 ### `getConfigUrl()`
 
 While module class level configurations are handy for values which are not changed that often, 
-you may should consider using [module settings](settings.md) in combination with the `Module::getConfigUrl()` function
+you may should consider using [module settings](modules-settings.md) in combination with the `Module::getConfigUrl()` function
 to implement module settings configurable within the admin interface.
 
 The `Module::getConfigUrl()` can be used to define a module configuration view. Once this function is implemented a `Configure`
@@ -72,7 +72,7 @@ public function getConfigUrl()
 }
 ```
 
-Refer to the [Settings and Configurations](settings.md) section to learn how to save and load global or container related settings.
+Refer to the [Settings and Configurations](modules-settings.md) section to learn how to save and load global or container related settings.
 See [getContentContainerConfigUrl()](#getcontentcontainerconfigurl) for providing a container specific config action.
 
 ### `getDescription()`
@@ -217,7 +217,7 @@ need to clear up container related module data as content and other records.
 
 By default, the `disableContentContainer()` clears the following data:
 
-- All container related [settings](settings.md)
+- All container related [settings](modules-settings.md)
 
 **Example:**
 

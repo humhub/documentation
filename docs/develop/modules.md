@@ -30,7 +30,7 @@ Before starting with the development of your custom module, first consider the f
 
 Furthermore you may have to consider the following issues:
 
-- [Module settings and configuration](settings.md)
+- [Module settings and configuration](modules-settings.md)
 - [Append a module to a specific navigation](module-change-behavior.md#extend-menus)
 - [Client side development](javascript-index.md)
 - [Schema Migrations and Integrity](models.md)
