@@ -151,7 +151,7 @@ To enable URL Rewriting in Apache 2.4 based installations it is usually sufficie
 
 ```bash
 cd /var/www/humhub
-cp .htaccess.dist .htaccess
+mv .htaccess.dist .htaccess
 ```
 
 Sometimes it is necessary to enable support for ``.htaccess`` files in the [Apache VirtualHost](server-setup.md#apache) via the ``AllowOverwrite all`` directive. 
