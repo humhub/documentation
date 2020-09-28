@@ -12,7 +12,7 @@ Foreword
 HumHub's templating system enables web-designers and developers to easily build their own theme, provided they have a solid technical grounding.
 
 Required technical background:
-- PHP 5.6+
+- PHP 7.1+
 - MVC concept
 - HTML, CSS & Javascript
 - Bootstrap v3
