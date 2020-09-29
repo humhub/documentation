@@ -20,12 +20,6 @@ cd /path/to/humhub/protected
 php yii search/rebuild
 ```
 
-or by means of [grunt](../develop/build.md):
-
-```
-grunt build-search
-```
-
 File Content Indexing
 ---------------------
 
