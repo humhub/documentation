@@ -3,285 +3,464 @@ id: stream
 title: Streams
 ---
 
-Streams are used to asynchronously load batches of content entries which can be filtered or sorted. 
-The stream concept is used for example in _space and profile walls_, the _dashboard_ and
-_activity stream_.
+Streams are used to asynchronously load batches of content entries which may can be filtered or sorted. 
+The most common type of stream is the WallStream used for example on the dashboard or space stream view.
+Besides WallStreams the HumHub core only implements one additional stream type, the activity sidebar stream.
+The following section describes how to implement custom streams and extend existing streams.
 
 ## Stream Channel
 
-The `stream_channel` attribute of a `humhub\modules\content\models\Content` entry defines the relation of this content to
-a specific type of stream. The `default` stream channel for example is used by _space_, _user_ and _dashboard_
-streams whereas the `activity` stream-channel is exclusively used in activity streams.
+The `Content::$stream_channel` property defines the default stream type of this content. If not
+otherwise defined the 'default' stream channel will be used, which means this content will be included in wall streams as
+the space, profile or dashboard stream.
 
-The `stream_channel` of your content type can be overwritten by setting the `humhub\modules\content\components\ContentActiveRecord::streamChannel|ContentActiveRecord::streamChannel` attribute.
+The `ContentActiveRecord::$streamChannel` property of your custom content type can be used to overwrite the default stream type.
+Its common practice to set `$this->stream_channel = null` for certain records in order to exclude specific entries from the
+default wall streams. An example of a custom stream channel is the activity stream. Activity records are not included in
+the wall streams but are part of an activity sidebar stream.
 
-For own `ContentActiveRecord` you can consider the following `stream_channel` options:
-
-- `default` this stream_channel will include your content to default _space/profile walls_ and the _dashboard_. You are still able to create a custom stream view which filters content by type.
-- `null` will exclude the content from the default streams
-- Use a custom stream channel if you exclusively want your content to be included in your own custom stream (similar to the activity concept).
-
-> Note: A custom stream channel should be unique, so choose a meaningful name preferably with module prefix.
-
-## WallEntry Widget
-
-A `humhub\modules\content\widgets\WallEntry|WallEntry` widget is responsible for rendering the individual `stream entries`
-of a `stream` and is defined by `humhub\modules\content\components\ContentActiveRecord::wallEntryClass|ContentActiveRecord::wallEntryClass`.
-
-The following example shows a very basic WallEntry widget implementation.
-
-> Note: By default your WallEntry view only have to render the actual content, the default WallEntry layout is available in `@humhub/modules/content/widgets/views/wallEntry.php`
-
-**mymodule\widgets\WallEntry.php**:
+**Exclude all instances from default wall streams:**
 
 ```php
-class WallEntry extends \humhub\modules\content\widgets\WallEntry
+class MyContent extends ContentActiveRecord
 {
-    public function run()
-    {
-        return $this->render('wallEntry', [
-                'model' => $this->contentObject
-        ]);
-    }
+    public $streamChannel = null;
+    
+    //...
 }
 ```
 
-**mymodule\widgets\views\wallEntry.php**:
+**Exclude specific entries from default wall streams:**
 
-```html
-<div>
-    <?= $model->title ?>
-    <?= $model->myContent ?>
-    ...
-</div>
+```php
+class MyContent extends ContentActiveRecord
+{
+    public function beforeSave($insert)
+    {
+        if($this->isNotImportant()) {
+          $this->streamChannel = null;
+        }
+
+        return parent::beforeSave($inser)
+    }
+    
+    //...
+}
 ```
 
-The `WallEntry` widget will be provided with a `humhub\modules\content\widgets\WallEntry::contentObject|contentObject` which holds the
-`ContentActiveRecord` model to be rendered.
+For your custom `ContentActiveRecord` you can consider the following stream channel options:
 
-Your `WallEntry` widget class can also set the following attributes:
+- **default**: this stream channel will include your content to space/profile walls and the dashboard
+- **null** will exclude the content from the default wall streams (space/profile/dashboard)
+- Use a custom stream channel if you exclusively want your content to be included in your own custom stream
 
- - `humhub\modules\content\widgets\WallEntry::editRoute|editRoute` defines an edit route to your edit action which will be used to render an edit link (see WallEntryControls section)
- - `humhub\modules\content\widgets\WallEntry::editMode|editMode` defines the way the edit action is triggered (see WallEntryControls section)
- - `humhub\modules\content\widgets\WallEntry::wallEntryLayout|wallEntryLayout` defines the layout used to embed the result of `render()`, by default you only have to care about rendering the content section of your WallEntry
+> Note: A custom stream channel should be unique, so choose a meaningful name preferably with module prefix.
 
+## StreamEntryWidget
 
+A `StreamEntryWidget` is responsible for rendering stream entries. The `StreamEntryWidget` class
+is the base widget class for all types of stream entries. The default widget class of a content type
+is defined by the `ContentActiveRecord::$wallEntryClass` property. For wall streams there are two different widget 
+types available, the `WallStreamEntryWidget` and `WallStreamModuleEntryWidget`. 
+
+### WallStreamEntryWidget
+
+The `WallStreamEntryWidget` renders a post style wall entry with user image and name in the head part of the wall entry.
+This widget type should be used for content which emphasizes the author of the content and contains mainly personal 
+(not collaborative) content. For content with collaborative nature you should rather use the `WallStreamModuleEntryWidget`
+class.
+
+When extending a `WallStreamEntryWidget` you'll have to implement the `WallStreamEntryWidget::renderContent()` function
+which will be embedded in the content section of your stream entry.
+
+Example:
+
+````php
+use humhub\modules\content\widgets\stream\WallStreamEntryWidget;
+
+class WallEntry extends WallStreamEntryWidget
+{
+    public $editRoute = '/mymodule/mycontent/edit';
+
+    protected function renderContent()
+    {
+        return $this->render('wallEntry', ['model' => $this->model]);
+    }
+}
+````
+
+### WallStreamModuleEntryWidget
+
+The `WallStreamModuleEntryWidget` does not emphasize the user, but instead the content type and the content title. 
+This widget should be used for content types in which the author is not that important as for example a wiki or other 
+collaborative content.
+
+When extending `WallStreamModuleEntryWidget` you'll have to implement the `WallStreamEntryWidget::renderContent()` as
+well as the `WallStreamEntryWidget::getTitle()` function. You may also want to overwrite the `WallStreamEntryWidget::getIcon()`
+function to overwrite the default icon provided by `ContentActiveRecord::getIcon()`.
+
+Example:
+
+```php
+use humhub\modules\content\widgets\stream\WallStreamModuleEntryWidget;
+
+class WallEntry extends WallStreamModuleEntryWidget
+{
+    public $editRoute = '/mymodule/mycontent/edit';
+
+    protected function renderContent()
+    {
+        return $this->render('wallEntry', ['model' => $this->model]);
+    }
+
+    protected function getIcon()
+    {
+        // By default we do not have to overwrite this function unless we want to overwrite the default ContentActiveRecord::$icon
+        return 'tasks';
+    }
+
+    protected function getTitle()
+    {
+        return $this->model->title;
+    }
+}
+```
+ 
 ### WallEntryControls
 
-The default WallEntry layout contains a context menu with content actions like `edit`, `delete`, `archive` etc.
-This menu can be manipulated by overwriting the `humhub\modules\content\widgets\WallEntry::getContextMenu()|getContextMenu()` function and 
-or use the `humhub\modules\content\widgets\WallEntry::controlsOptions|controlsOptions` property as in the following example.
+The WallEntryControls menu is part of all wall stream entries and includes stream links as Delete or Edit. 
+The following entries are added to the stream entry by default (depending on the current user and view context):
 
-By setting the `humhub\modules\content\widgets\WallEntry::editRoute|editRoute` we automatically add an edit link to our WallEntryControls in
-case the current user is allowed to edit the content. The type of the edit action is defined by the `humhub\modules\content\widgets\WallEntry::editMode|editMode`.
+ - **PermaLink**: Opens a modal with the content url
+ - **DeleteLink**: Used to delete an entry
+ - **EditLink**: Used to edit an entry
+ - **VisibilityLink**: Used to switch the visibility of a content
+ - **NotificationSwitchLink**: Used enable/disable receiving notifications for a content.
+ - **PinLink**: Used to pin/unpin content entries to a stream
+ - **MoveContentLink**: Used to move a content entry to another space
+ - **ArchiveLink**: Used to archive/unarchive an entry
+ - **TopicLink**: Used to manage topics of a content entry 
+
+By overwriting `WallStreamModuleEntryWidget::getControlsMenuEntries()` your content type can add additional menu entries to
+your wall stream entry controls menu as follows:
+
+```php
+public function getControlsMenuEntries()
+{
+    $result = parent::getControlsMenuEntries();
+    $result[] = new MySpecialLink()
+    return $result;
+}
+```
+
+You can also disable default entries as follows:
+
+````php
+use humhub\modules\content\widgets\stream\WallStreamEntryWidget;
+
+class WallEntry extends WallStreamEntryWidget
+{
+    //...
+
+    protected function init()
+    {
+        parent::init(); 
+        // Exclude the delete link from the controls menu
+        $this->renderOptions->disableControlsDelete();
+    }
+}
+````
+
+
+### WallStreamEntryOptions
+
+The `StreamEntryWidget::$renderOptions` property can be used to configure the appearance of an wall entry, for example by:
+
+ - Disabling controls menu entries
+ - Disabling the whole controls menu
+ - Disabling certain stream entry addons
+ - Changing the output depending on the view context
+ 
+#### View context
+
+The appearance of a stream entry may differentiate depending on the view context. Wall entries on the dashboard for example
+include further information about the container the content is assigned to. Posts in the detail view display the whole content
+without the use of a collapsed read-more section. The default streams support the following view contexts:
+
+ -  `StreamEntryOptions::VIEW_CONTEXT_DEFAULT`: Default appearance (e.g. on space/profile stream)
+ -  `StreamEntryOptions::VIEW_CONTEXT_DASHBOARD`: Dashboard stream
+ -  `StreamEntryOptions::VIEW_CONTEXT_SEARCH`: Content search stream
+ -  `StreamEntryOptions::VIEW_CONTEXT_DETAIL`: Detail view (single entry stream)
+ -  `StreamEntryOptions::VIEW_CONTEXT_MODAL`: Rendered within a modal dialog
+ 
+**Example:**
+
+````php
+use humhub\modules\content\widgets\stream\WallStreamEntryWidget;
+
+class WallEntry extends WallStreamEntryWidget
+{
+    //...
+
+    protected function getControlsMenuEntries()
+    {
+        $result = parent::getControlsMenuEntries();
+            
+        // Only add this link in default (e.g. space) context
+        if($this->renderOptions->isViewContext(StreamEntryOptions::VIEW_CONTEXT_DEFAULT) {
+           $result[] = new MySpecialLink(['model' => $this->model])
+        }
+
+        return $result;
+    }
+}
+````
+
+### editRoute and editMode
+
+If a `WallStreamEntryWidget::$editRoute` is defined an edit menu item will be added to the controls menu in case the current
+user is allowed to edit the content. The `WallStreamEntryWidget::$editMode` defines how a content should be edited e.g.
+within a modal, inline, or within a new page.
 
 There are the following edit modes available:
 
  - `EDIT_MODE_MODAL` the response of `editRoute` will be loaded into a modal.
  - `EDIT_MODE_INLINE` the response of `editRoute` will be embeded into the WallEntry content.
  - `EDIT_MODE_NEW_WINDOW` the page response of `editRoute` will be fully loaded.
- 
+
+## Custom streams
+
+You can add custom streams as for example own wall or sidebar streams to your custom module. A stream contains of the
+following components:
+
+ - **Stream action** responsible for handling stream requests
+ - **Stream query** responsible for fetching and filtering the stream result
+ - **StreamViewer** widget responsible for rendering the stream container in the view
+ - **Stream navigation** (optional) can be used to filter stream results
+
+The following sections explains the different parts of a stream by implementing a custom content info stream. The
+stream will extend the dashboard stream and instead of rendering the usual stream entries render blocks of content
+meta data.
+
+### Stream view
+
+The `humhub\modules\stream\widgets\StreamViewer` widget is used to render the stream. Note, the stream entries of
+a stream are loaded asynchronously and therefore will not directly be rendered by the StreamViewer widget itself. 
+The StreamViewer widget expects a `streamAction` property pointing to the controller action handling stream requests. 
+The optional `streamFilterNavigation` can be set with a widget class of a stream filter navigation in case the stream supports being
+filtered. Wall streams come with an default stream filter navigation. In case you want to disable the default navigation
+for your custom stream, just set `streamFilterNavigation` to false or null.
+
 ```php
-class WallEntry extends \humhub\modules\content\widgets\WallEntry
-{
-    public $editRoute = "/my-module/entry/edit";
-    
-    public $editMode = self::EDIT_MODE_MODAL;
-    
-    // Will prevent the default DeleteLink and always add a MySpecialLink
-    $this->controlsOptions = [
-        'prevent' => [\humhub\modules\content\widgets\DeleteLink::class],
-        'add' => [MySpecialLink::class]
-    ];
-    
-    //...
-    
-    public function getContextMenu()
-    {
-      $result = parent::getContextMenu();
-      
-      // Only add a CloseLink if the user is allowed to edit the content.
-      if($this->contentObject->content->canEdit()) {
-        $this->addControl($result, [CloseLink::class, ['model' => $this->contentObject], ['sortOrder' => 200]]);
-      }
-      
-      return $result;
-    ]
-}
+<?= StreamViewer::widget([
+    'streamAction' => '/mymodule/stream/stream',
+    'streamFilterNavigation' => ContentInfoStreamFilterNavigation::class
+])?>
 ```
 
-**CloseLink example**:
+### Stream filter navigation
 
-```php
-class CloseLink extends humhub\modules\content\widgets\WallEntryControlLink
+The stream filter navigation can be used to add additional filter options to your stream. In our content info stream
+we replace the default filter navigation with a custom filter navigation widget. The filter navigation will include
+a single checkbox filter which will only include content created by the current user if active.
+
+**widgets\ContentInfoStreamFilterNavigation:**
+
+```
+class ContentInfoStreamFilterNavigation extends FilterNavigation
 {
-    public $model;
-    
-    public function init()
+
+    protected function initFilterPanels(){}
+
+    protected function initFilterBlocks(){}
+
+    protected function initFilters(){}
+
+    public function getAttributes()
     {
-        if($this->model->closed) {
-            $this->label = Yii::t('MyModule.base', 'Reopen');
-            $this->icon = 'fa-check';
-        } else {
-            $this->label = Yii::t('MyModule.base', 'Close');
-            $this->icon = 'fa-times';
-        }
-        
-        $this->options = [
-            // set some further html options
+        return [
+            'style' => 'padding-left:15px'
         ];
-        
-        parent::init();
     }
 }
 ```
 
-## Create Module Content Streams
+:::note
+In our example we render a very simple and static filter navigation, for more complex and extendable stream navigations, 
+you might want to work with separated filter blocks and panels, see `humhub\modules\stream\widgets\WallStreamFilterNavigation`.
+In such cases we would register the filters within `initFilters` instead of directly rendering them in the view.
+:::
 
-### Implement StreamAction
+**widgets\views\filterNavigation.php:**
 
-Derived from `humhub\modules\content\components\actions\ContentContainerStream`
+The view of our filter navigation widget looks like the following:
 
-A `StreamAction` is responsible for handling a stream request and filtering stream entries.
-The following example extends the default `humhub\modules\content\components\actions\ContentContainerStream|ContentContainerStream` and
-adds an content-type filter:
+```
+<?= Html::beginTag('div', $options)?>
+
+    <?= CheckboxFilterInput::widget([
+        'id' => OwnContentStreamFilter::FILTER_ID,
+        'title' => Yii::t('DevtoolsModule.base','Only show my own content')
+    ])?>
+
+<?= Html::endTag('div')?>
+```
+
+:::tip
+The filter in the previous example will be added to the default `filters[]` request parameter. 
+In case you want to use another parameter you need to overwrite the `category` property of your filter input.
+:::
+
+### Stream filter implementation
+
+Stream filters extend `humhub\modules\stream\models\filters\StreamQueryFilter` and can be used to add query conditions
+to your stream query. In the following example we implement our `filter_my_content` filter.
 
 ```php
-namespace mymodule\actions;
-
-use humhub\modules\content\components\actions\ContentContainerStream;
-
-class StreamAction extends ContentContainerStream
+class OwnContentStreamFilter extends StreamQueryFilter
 {
-    public function setupFilters()
+    const FILTER_ID = 'filter_my_content';
+
+    public $filters = [];
+
+    public function rules()
     {
-		// Limit output to specific content type
-        $this->activeQuery->andWhere(['content.object_model' => MyModel::class]);
+        return [
+            ['filters', 'safe']
+        ];
+    }
+
+    public function apply()
+    {
+        if($this->filters === static::FILTER_ID || in_array(static::FILTER_ID, $this->filters, true)) {
+            $this->streamQuery->query()->andWhere(['content.created_by' => Yii::$app->user->id]);
+        }
     }
 }
 ```
 
-Add the `StreamAction` to your Controller:
+### Stream controller
+
+The `humhub\modules\stream\actions\Stream` is the base [controller action class](https://www.yiiframework.com/doc/guide/2.0/en/structure-controllers#standalone-actions)
+for all streams responsible for handling stream results. The HumHub core provides the following default stream actions:
+
+ - `ContentContainerStream`: Includes an optional content container filter and should be used for streams on container 
+ level, e.g. include all content of content type x in space y.
+ - `DashboardStreamAction`: Includes dashboard content visibility filters
+
+**Example Controller**
+
+In this example we register our action and register our custom filter handler. Furthermore, we overwrite the widget class used 
+to render the stream entries.
 
 ```php
-class StreamController extends ContentContainerController
+class StreamController extends DevtoolsController
 {
-
     public function actions()
     {
         return [
             'stream' => [
-                'class' => StreamAction::class,
-                'contentContainer' => $this->contentContainer
+                'class' => DashboardStreamAction::class,
+                'filterHandlers' => [OwnContentStreamFilter::class],
+                'streamEntryOptions' => (new WallStreamEntryOptions)->overwriteWidgetClass(ContentInfoWallStreamEntryWidget::class)
             ],
         ];
     }
+}
 ```
 
-### Display Stream
+### Stream action
 
-You can use the `humhub\modules\stream\widgets\StreamViewer|StreamViewer` widget to display your stream within your view as follows:
-
-```php
-
-<?= \humhub\modules\stream\widgets\StreamViewer::widget([
-    'contentContainer' => $contentContainer,
-    'streamAction' => '/mymodule/stream/stream',
-    'messageStreamEmpty' => ($contentContainer->canWrite()) ?
-            Yii::t('PollsModule.widgets_views_stream', '<b>There are no polls yet!</b><br>Be the first and create one...') :
-            Yii::t('PollsModule.widgets_views_stream', '<b>There are no polls yet!</b>'),
-    'messageStreamEmptyCss' => ($contentContainer->canWrite()) ? 'placeholder-empty-stream' : '',
-]); ?>
-
-```
-
-## Create Content Form
-
-You can add a `humhub\modules\content\widgets\WallCreateContentForm|WallCreateContentForm` on top of your custom `stream` in
-order to create new stream-entries within your stream view.
-
-### Create Form Widget
-
-Create a Form Widget derived from `humhub\modules\content\widgets\WallCreateContentForm`
+In case you have a more complex custom stream scenario, or want your stream action to be extendable by events you can consider
+implementing a custom stream action as follows:
 
 ```php
-
-namespace mymodule\widgets;
-
-use humhub\modules\content\widgets\WallCreateContentForm;
-
-class WallCreateForm extends WallCreateContentForm
+class ContentInfoStreamAction extends DashboardStreamAction
 {
+   protected function initQuery($options = [])
+   {
+       $query = parent::initQuery($options);
+       $query->addFilterHandler(OwnContentStreamFilter::class);
+       return $query;
+   }
+}
+```
 
-    public $submitUrl = '/mymodule/mymodel/create';
+### Stream query
 
-    public function renderForm()
-    {
-        // Render your custom form here
-        return $this->render('form', []);
-    }
+You can also consider implementing a reusable stream query class as follows:
 
+```php
+class ContentInfoStreamAction extends ContentContainerStream
+{
+   public $streamQuery = MyStreamQuery::class;
+}
+```
+
+class ContentInfoStreamQuery extends ContentContainerStreamQuery
+{
+   protected function beforeApplyFilters()
+   {
+       $this->addFilterHandler(MyStreamFilter::class);
+       parent::beforeApplyFilters();
+   }
 }
 
-```
+### Stream entry widget
 
-Create a widget `view` which contains module specific fields. All standard fields (e.g. visibility) are added automatically.
+Since we do not want to render the default layout for our new stream, we need to implement a custom `StreamEntryWidget`:
+
+**widgets\ContentInfoWallStreamEntryWidget:**
 
 ```php
-<?= Html::textArea("question", "", ['id' => 'contentForm_question', 'class' => 'form-control autosize contentForm', 'rows' => '1', "tabindex" => "1", "placeholder" => Yii::t('PollsModule.widgets_views_pollForm', "Ask something..."])); ?>
+use humhub\modules\content\widgets\stream\StreamEntryWidget;
 
-<div class="contentForm_options">
-    <?= Html::textArea("answersText", "", ['id' => "contentForm_answersText", 'rows' => '5', 'style' => 'height: auto !important;', "class" => "form-control contentForm", "tabindex" => "2", "placeholder" => Yii::t('PollsModule.widgets_views_pollForm', "Possible answers (one per line)")]); ?>
-    <div class="checkbox">
-        <label>
-            <?= Html::checkbox("allowMultiple", "", ['id' => "contentForm_allowMultiple", 'class' => 'checkbox contentForm', "tabindex" => "4"]); ?> <?= Yii::t('PollsModule.widgets_views_pollForm', 'Allow multiple answers per user?'); ?>
-        </label>
-    </div>
+class ContentInfoWallStreamEntryWidget extends StreamEntryWidget
+{
+    protected function renderBody()
+    {
+        return $this->render('contentInfoWallStreamEntry', [
+            'model' => $this->model
+        ]);
+    }
+}
+```
+
+**widgets\views\contentInfoWallStreamEntry:**
+
+```php
+use humhub\libs\Html;
+use humhub\modules\content\widgets\VisibilityIcon; ?>
+
+<?php
+/* @var $this \humhub\modules\ui\view\components\View */
+/* @var $model \humhub\modules\content\components\ContentActiveRecord */
+
+use humhub\libs\Html;
+use humhub\modules\content\widgets\VisibilityIcon; ?>
+
+<div style="border:1px solid <?= $this->theme->variable('info'); ?>;margin:10px;padding:10px;">
+    <b>Content id:</b> <?= $model->content->id ?><br>
+    <b>Content name:</b> <?= $model->getContentName() ?> <?= VisibilityIcon::getByModel($model) ?><br>
+    <b>Created at:</b> <?=  Yii::$app->formatter->asDatetime($model->content->created_at) ?><br>
+    <b>Created by:</b> <?=  Html::containerLink($model->content->createdBy) ?><br>
+    <?php if($model->content->isUpdated()) :?>
+        <b>Last updated at:</b> <?=  Yii::$app->formatter->asDatetime($model->content->updated_at) ?><br>
+        <b>Updated by:</b> <?=  Html::containerLink($model->content->updatedBy) ?><br>
+    <?php endif; ?>
+    <b>Container:</b> <?=  Html::containerLink($model->content->container) ?><br>
 </div>
 ```
 
-### Create Action
+## Extend stream filters
 
-Create an action in your modules controller to receive form inputs.
+Since HumHub v1.3 you are able to extend the stream filter navigation implementing following event handlers: 
 
-All default tasks (e.g. access validation, ContentContainer assignment) are handled by `humhub\modules\content\widgets\WallCreateContentForm::create()`
+- `WallStreamQuery::EVENT_BEFORE_FILTER` to add the filter to the query
+- `WallStreamFilterNavigation::EVENT_BEFORE_RUN`
 
-
-Example:
-
-```php
-
-public function actionCreate()
-{
-    $model = new MyModel();
-    $model->question = Yii::$app->request->post('question');
-    $model->answersText = Yii::$app->request->post('answersText');
-    $model->allow_multiple = Yii::$app->request->post('allowMultiple', 0);
-
-    return \mymodule\widgets\WallCreateForm::create($model);
-}
-
-```
-
-### Display Form
-
-Place the Form widget above the Stream widget in your view.
-
-e.g.
-
-```php
-<?= \humhub\modules\polls\widgets\WallCreateForm::widget(array('contentContainer' => $contentContainer)); ?>
-```
-
-## Stream Filter (sinve v1.3)
-
-Since HumHub v1.3 you are able to extend the stream filter by listening to 
-
-- `\humhub\modules\stream\models\WallStreamQuery::EVENT_BEFORE_FILTER` to add the filter to the query
-- `humhub\modules\stream\widgets\WallStreamFilterNavigation::EVENT_BEFORE_RUN`
-
-The `humhub\modules\stream\widgets\WallStreamFilterNavigation` class is of type `humhub\modules\ui\filter\widgets\FilterNavigation`.
-A `Filternavigation` consists of `filterPanels` and `filterBlocks`. The `WallStreamFilterNavigation` navigation for example contains three `filterPanels`
+Usually a `WallStreamFilterNavigation` consists of `filterPanels` 
+and `filterBlocks`. The `WallStreamFilterNavigation` navigation for example contains three `filterPanels`
 
 - `WallStreamFilterNavigation::PANEL_POSITION_LEFT`
 - `WallStreamFilterNavigation::PANEL_POSITION_CENTER`
@@ -289,24 +468,26 @@ A `Filternavigation` consists of `filterPanels` and `filterBlocks`. The `WallStr
 
 and multiple `filterBlocks` containing the actual filters assigned to a specific panel and sorted by a `sortOrder`.
 
-The following example adds a `originator` filter to the wall stream:
+The following example adds an `originator` filter to the wall stream:
 
-Event configuration:
+**Event configuration:**
 
 ```php
-[
-    'class' => \humhub\modules\stream\models\WallStreamQuery::class,
-    'event' =>  \humhub\modules\stream\models\WallStreamQuery::EVENT_BEFORE_FILTER,
-    'callback' => ['\humhub\modules\demo\Events', 'onStreamFilterBeforeFilter'],
-],
-[
-    'class' => \humhub\modules\stream\widgets\WallStreamFilterNavigation::class,
-    'event' =>  \humhub\modules\stream\widgets\WallStreamFilterNavigation::EVENT_BEFORE_RUN,
-    'callback' => ['\humhub\modules\demo\Events', 'onStreamFilterBeforeRun'],
-],
+return [
+    [
+        'class' => \humhub\modules\stream\models\WallStreamQuery::class,
+        'event' =>  \humhub\modules\stream\models\WallStreamQuery::EVENT_BEFORE_FILTER,
+        'callback' => ['\humhub\modules\demo\Events', 'onStreamFilterBeforeFilter'],
+    ],
+    [
+        'class' => \humhub\modules\stream\widgets\WallStreamFilterNavigation::class,
+        'event' =>  \humhub\modules\stream\widgets\WallStreamFilterNavigation::EVENT_BEFORE_RUN,
+        'callback' => ['\humhub\modules\demo\Events', 'onStreamFilterBeforeRun'],
+    ]
+]
 ```
 
-Event handlers:
+**Event handlers:**
 
 
 ```php
@@ -350,7 +531,7 @@ class Events extends \yii\base\Object
 }
 ```
 
-OriginatorStreamFilter.php
+**OriginatorStreamFilter.php**
 
 ```php
 class OriginatorStreamFilter extends StreamQueryFilter
@@ -386,3 +567,8 @@ class OriginatorStreamFilter extends StreamQueryFilter
     }
 }
 ```
+
+## WallCreateContentForm
+
+You can add a `humhub\modules\content\widgets\WallCreateContentForm` on top of your custom `stream` in
+order to create new stream-entries within your stream view.
