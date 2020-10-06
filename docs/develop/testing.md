@@ -167,7 +167,7 @@ codecept run
 or
 
 ```
-grunt test --module=user
+grunt test -module=user
 ```
 
 ### Run specific suite
@@ -180,7 +180,7 @@ codecept run unit
 or
 
 ```
-grunt test --module=user --suite=unit
+grunt test -module=user --suite=unit
 ```
 
 ### Run single test file
@@ -193,7 +193,7 @@ codecept run codeception/unit/FollowTest
 or
 
 ```
-grunt test --module=user --path=unit/FollowTest
+grunt test -module=user --path=unit/FollowTest
 ```
 
 ### Run single test function
@@ -206,7 +206,7 @@ codecept run codeception/unit/FollowTest:testFollowUser
 or
 
 ```
-grunt test --module=user --path=unit/FollowTest:testFollowUser
+grunt test -module=user --path=unit/FollowTest:testFollowUser
 ```
 
 ### Run non core module tests
