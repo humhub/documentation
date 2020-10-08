@@ -20,6 +20,12 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Migrate from 1.6 to 1.7
+-----------------------
+
+- The sort order for Menu Entries or BaseStack (e.g. Sidebars) classes should now be set to a maximum of 10000. If no sort order is specified, the sort order is set to 9000.
+
+
 Migrate from 1.5 to 1.6
 -----------------------
 
