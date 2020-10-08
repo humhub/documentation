@@ -9,6 +9,13 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 In addition to this guide, you may also check the [Theme Migration Guide](../theme/migrate.md) 
 or [Development Migration Guide](../develop/modules-migrate.md).
 
+
+1.7
+----
+
+- The space description is now limited to 100 characters. For longer texts there is a new "About" field.
+
+
 1.6
 ----
 
