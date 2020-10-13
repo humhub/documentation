@@ -2,9 +2,6 @@
 title: Git Repositories
 ---
 
-Git Repositories
-================
-
 This section describes the organization of Git Repositories for Modules in GitHub/GitLab environments operated by HumHub.
 
 ## Branches
