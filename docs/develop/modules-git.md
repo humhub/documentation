@@ -1,5 +1,9 @@
-Git
-===
+---
+title: Git Repositories
+---
+
+Git Repositories
+================
 
 This section describes the organization of Git Repositories for Modules in GitHub/GitLab environments operated by HumHub.
 
@@ -26,7 +30,7 @@ Additionally the new minimum version of HumHub should be added in the `docs/CHAN
 
 Steps to release a new module version:
 
-1.) Merge `develop` into `master` (if applicable)
-2.) Add release date to `docs/CHANGELOG.md` and check version number in `module.json`.
-3.) Create a Git tag for the new version e.g. ```git add -a "1.1.0" -m "Release 1.1.0"```
+1. Merge `develop` into `master` (if applicable)
+2. Add release date to `docs/CHANGELOG.md` and check version number in `module.json`.
+3. Create a Git tag for the new version e.g. ```git add -a "1.1.0" -m "Release 1.1.0"```
 
