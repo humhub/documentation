@@ -85,6 +85,7 @@ module.exports = {
             'develop/modules',
             'develop/modules-base-class',
             'develop/modules-event-handler',
+            'develop/modules-git',
             'develop/testing',
 
         ],
