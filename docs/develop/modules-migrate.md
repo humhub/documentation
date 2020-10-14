@@ -27,6 +27,7 @@ Migrate from 1.6 to 1.7
 
 - Classes (LDAP, HTTP Client) from the deprecated Zend Framework have been replaced by the compatible Laminas Framework. There is a compatibility layer but classes should be replaced up to HumHub 1.8. 
 
+- Removed `humhub\modules\space\widgets\Picker` which is deprecated since `v1.2`.
 
 Migrate from 1.5 to 1.6
 -----------------------
