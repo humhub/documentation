@@ -25,6 +25,8 @@ Migrate from 1.6 to 1.7
 
 - The sort order for Menu Entries or BaseStack (e.g. Sidebars) classes should now be set to a maximum of 10000. If no sort order is specified, the sort order is set to 9000.
 
+- Classes (LDAP, HTTP Client) from the deprecated Zend Framework have been replaced by the compatible Laminas Framework. There is a compatibility layer but classes should be replaced up to HumHub 1.8. 
+
 
 Migrate from 1.5 to 1.6
 -----------------------
