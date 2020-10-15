@@ -45,8 +45,8 @@ Example configuration:
                                 'only' => ['pdf']
                             ],
                             [
-                                 'cmd' => '/usr/bin/java -jar /srv/www/var/lib/tika-app-1.18.jar --text {fileName} 2>/dev/null',
-                                 'except' => ['image/']
+                                 'cmd' => '/usr/bin/java -jar /srv/www/var/lib/tika-app-1.18.jar -maxFileSizeBytes=67108864 --text {fileName} 2>/dev/null',
+                                 'except' => ['image/', 'application/x-tar', 'application/zip', ]
                             ],
                          ]
                     ]

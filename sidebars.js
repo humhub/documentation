@@ -55,6 +55,7 @@ module.exports = {
             'admin/search',
             'admin/authentication',
             'admin/performance',
+            'admin/uploads',
             'admin/cron-jobs',
             'admin/asynchronous-tasks',
             'admin/permissions',
