@@ -163,3 +163,24 @@ Theme CLI Tools
 | `theme/info` (default) | Shows all available and active themes |
 | `theme/switch` (default) | Switches the current theme |
 
+### `user`
+
+User management tools. (HumHub 1.7+)
+
+| Command | Description |    
+| -------- | ---------- |
+| `user/create`             | Creates a new user account.                  |
+| `user/make-admin`         | Add user to the admin group.                 |
+| `user/set-password`       | Sets the password for a user account.        |
+
+
+### `file`
+
+Management of uploaded files. (HumHub 1.7+)
+
+| Command | Description |    
+| -------- | ---------- |
+| `file/delete-variants`             | Deletes all automatically generated file variants (previews, converted versions).    |
+| `file/downscale-images`            | Scales down already uploaded images to the maximum dimensions and quality.           |
+| `file/index (default)`             | Overview of uploaded files and automatically generated variants.                     |
+
