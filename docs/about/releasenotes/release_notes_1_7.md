@@ -57,3 +57,5 @@ a more appealing default color scheme and furthermore improve the accessibility 
 ### New Space About section
 
 ### Other features at a glance
+
+- New command line tools for console `User` and `File` management 
