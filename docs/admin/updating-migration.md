@@ -13,7 +13,13 @@ or [Development Migration Guide](../develop/modules-migrate.md).
 1.7
 ----
 
-- The space description is now limited to 100 characters. For longer texts there is a new "About" field.
+- The Space description is now limited to 100 characters. For longer texts there is a new "About" field.
+
+- The file names of some automatically generated file variants (like the preview images) have changed. Therefore the "cache" for those file variants should be deleted after the upgrade. The variants will be created again automatically later.
+
+```
+php protected/yii file/delete-variants
+```
 
 
 1.6
