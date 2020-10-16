@@ -119,7 +119,7 @@ Example:
   - Task state 
   - Wiki category 
   - Canceled event
-  - Calendar
+  - Calendar Type
 
 ##### WallEntry::run()
 
