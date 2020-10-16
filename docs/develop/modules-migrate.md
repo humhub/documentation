@@ -29,6 +29,8 @@ Migrate from 1.6 to 1.7
 
 - Removed `humhub\modules\space\widgets\Picker` which is deprecated since `v1.2`.
 
+- Removed class `humhub\widgets\RichtextField` which is deprecated since `v1.4`. 
+
 Migrate from 1.5 to 1.6
 -----------------------
 
