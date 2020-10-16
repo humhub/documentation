@@ -154,7 +154,7 @@ your `WallStreamEntryWidget` depending on the view context.
 
 **Here are some usecases:**
 
- We may want to disable some menu items in the modal or search view since they do not work or are not expected in this context
+- We may want to disable some menu items in the modal or search view since they do not work or are not expected in this context
 - You want to display the whole content of a post (without read more) in the single stream entry view, but not in the container or dashboard stream
 - A dashboard stream entry adds some additional information as the target container while this information is not rendered in container streams.
 - We may want to disable stream entry addons and most of the controls on archived content
