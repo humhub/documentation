@@ -63,4 +63,4 @@ TBD
 ### Other features at a glance
 
 - New command line tools for console `User` and `File` management
-- New optional [image downscaling](../admin/uploads.md#compression--downscaling) for user uploads
+- New optional [image downscaling](../../admin/uploads.md#compression--downscaling) for user uploads
