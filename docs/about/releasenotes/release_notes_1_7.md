@@ -35,15 +35,17 @@ The stream attachment preview section was improved by using a grid view for atta
 
 Other stream improvements at a glance:
 
- - 
- - 
- - 
-
-
+ - TBD
+ - TBD
+ - TBD
 
 #### Context dependent streams
 
+TBD
+
 #### Accessibility
+
+TBD
 
 #### Stream API
 
@@ -56,6 +58,9 @@ a more appealing default color scheme and furthermore improve the accessibility 
 
 ### New Space About section
 
+TBD
+
 ### Other features at a glance
 
-- New command line tools for console `User` and `File` management 
+- New command line tools for console `User` and `File` management
+- New optional [image downscaling](../admin/uploads.md#compression--downscaling) for user uploads
