@@ -32,12 +32,8 @@ return [
     ]
 ]
 ```
-- New profile fields UserMemberSince and UserLastLogin can be added
-- Image scale options can be defined as follows:
-
-```
-TBD
-```
+- New profile field types `UserMemberSince` and `UserLastLogin` can be added
+- New [image scale options](uploads.md)
 
 1.6
 ----
