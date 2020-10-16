@@ -5,8 +5,8 @@ title: Uploads
 This chapter covers the topic of file uploads and the associated file management.
 
 
-Compression / Downscaling
--------------------------
+Image Compression / Downscaling
+-------------------------------
 
 To keep HumHub's storage requirements low, uploaded image files can be automatically adjusted for quality or compression rate.
 It is also possible to downscale image files with a very high resolution (e.g. 8K) to a user-defined maximum resolution size.
