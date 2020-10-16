@@ -147,6 +147,11 @@ public function getControlsMenuEntries()
   return $result;
 ```
 
+The `WallEntry::controlsOptions` is not available anymore replace:
+
+ - `$controlsOptions['prevent']` with `$this->renderOptions->disableControlsEntry()`
+ - `$controlsOptions['add']` with simple `$result[] = $linkdefinition`
+
 ##### WallStreamEntryOptions
 
 Within your `WallStreamEntryWidget` you now can use `WallStreamEntryOptions` to change the behavior or appearance of
