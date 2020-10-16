@@ -72,22 +72,6 @@ Memcached Configuration Example:
 ]
 ```
 
-
-
-Image Processing
-----------------
-
-We recommend using the `imagemagick` commandline tool for faster image processing (resizing, file format conversions).
-
-You can activate imagemagick at:  `Administration -> Settings -> Advanced -> Files` by entering the location of the `convert` command (e.g. /usr/bin/convert). 
-
-
-Job Scheduling
---------------
-
-TBD
-
-
 X-Sendfile
 ----------
 
