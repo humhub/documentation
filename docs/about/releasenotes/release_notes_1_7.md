@@ -60,6 +60,10 @@ a more appealing default color scheme and furthermore improve the accessibility 
 
 TBD
 
+### New MemberSince and LastLogin profile fields
+
+There are two new profile fields available which can be added to your user profiles. A member since and last login field.
+
 ### Other features at a glance
 
 - New command line tools for console `User` and `File` management

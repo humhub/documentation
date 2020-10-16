@@ -21,6 +21,23 @@ or [Development Migration Guide](../develop/modules-migrate.md).
 php protected/yii file/delete-variants
 ```
 
+- The new About section can be disabled by space [module configuration](advanced-configuration.md#module-configurations):
+
+```
+return [
+    'modules' => [
+        'space' => [
+            'hideAboutPage' => true 
+        ]
+    ]
+]
+```
+- New profile fields UserMemberSince and UserLastLogin can be added
+- Image scale options can be defined as follows:
+
+```
+TBD
+```
 
 1.6
 ----

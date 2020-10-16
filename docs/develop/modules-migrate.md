@@ -23,6 +23,161 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 Migrate from 1.6 to 1.7
 -----------------------
 
+### New WallEnry Layouts
+
+The new `humhub\modules\content\widgets\stream\StreamEntryWidget` classes replaces the old `humhub\modules\content\widgets\WallEntry`.  
+Beside the `StreamEntryWidget`, which is now the base class for all kinds of stream entries, there are two different widget types for 
+wall streams (e.g. Dashboard, Space, Profile) the `humhub\modules\content\widgets\stream\WallStreamEntryWidget` 
+and `humhub\modules\content\widgets\stream\WallStreamModuleEntryWidget`. 
+
+#### humhub\modules\content\widgets\stream\WallStreamEntryWidget
+
+The `WallStreamEntryWidget` renders a similar as the current but enhanced stream entry layout with the user 
+image and user name in the head section of the stream entry. This widget type should be used for content which 
+emphasizes the author of the content and contains mainly personal (not collaborative) content.
+
+#### humhub\modules\content\widgets\stream\WallStreamModuleEntryWidget
+
+The `WallStreamModuleEntryWidget` on the other hand is new and does not emphasize the user, but instead the content 
+type and the content title.  This widget should be used for content types in which the author is not that important 
+as for example a wiki or other collaborative content.
+
+#### Migration
+
+The old `humhub\modules\content\widgets\WallEntry` widget was deprecated and modules should be migrated as soon as possible.
+
+**Old Post WallEntry:**
+
+````php
+namespace humhub\modules\post\widgets;
+
+class WallEntry extends \humhub\modules\content\widgets\WallEntry
+{
+    public $editRoute = '/post/post/edit';
+
+    public function run()
+    {
+        return $this->render('wallEntry', ['post' => $this->contentObject, 'justEdited' => $this->justEdited]);
+    }
+
+}
+````
+
+**New Post WallEntry:**
+
+````php
+use humhub\modules\content\widgets\stream\WallStreamEntryWidget;
+
+class WallEntry extends WallStreamEntryWidget
+{
+    public $editRoute = '/post/post/edit';
+
+    protected function renderContent()
+    {
+        return $this->render('wallEntry', ['post' => $this->model, 'justEdited' => $this->renderOptions->isJustEdited()]);
+    }
+}
+````
+
+**Example of WallStreamModuleEntryWidget:**
+
+```php
+use humhub\modules\content\widgets\stream\WallStreamModuleEntryWidget;
+
+class WallEntry extends WallStreamModuleEntryWidget
+{
+    public $editRoute = '/mymodule/mycontent/edit';
+
+    protected function renderContent()
+    {
+        return $this->render('wallEntry', ['model' => $this->model, 'renderOptions' => $this->renderOptions]);
+    }
+
+    protected function getIcon()
+    {
+        // By default we do not have to define an icon unless we want to overwrite the default ContentActiveRecord::$icon
+        return 'tasks';
+    }
+
+    protected function getTitle()
+    {
+        return $this->model->title;
+    }
+}
+```
+
+##### Integration of other ContentTags
+
+In the old WallEntry widget all content labels returned by  `ContentActiveRecord::getLabels()` as topics 
+and content specific badges were added to the head section of the stream entry. 
+In the new layout the topics are the only content tags which are automatically rendered. 
+Content specific tags now need to be manually integrated into the body part of the stream entry. 
+
+Example:
+ 
+  - Closed Poll
+  - Task state 
+  - Wiki category 
+  - Canceled event
+  - Calendar
+
+##### WallEntry::run()
+
+Sub classes of `WallStreamEntryWidget` need to implement the `renderContent` instead of `run`. 
+
+##### WallEntry::getContextMenu()
+
+In the old WallEntry widget class context entries should be added as follows
+
+```
+public function getContextMenu()
+{
+  $result = parent::getContextMenu();
+  $this->addControl($result, [SomeLink::class, ['content' => $this->contentObject], ['sortOrder' => 200]]);
+  return $result;
+```
+
+In the new WallStreamEntryWidget class you should directly add the widget or array definition to the result array e.g.:
+
+```
+public function getContextMenu()
+{
+  $result = parent::getContextMenu();
+  $result[] = [SomeLink::class, ['content' => $this->contentObject], ['sortOrder' => 200]];
+  return $result;
+```
+
+##### WallStreamEntryOptions
+
+Within your `WallStreamEntryWidget` you now can use `WallStreamEntryOptions` to change the behavior or appearance of
+your `WallStreamEntryWidget` depending on the view context.
+
+**Here are some usecases:**
+
+ We may want to disable some menu items in the modal or search view since they do not work or are not expected in this context
+- You want to display the whole content of a post (without read more) in the single stream entry view, but not in the container or dashboard stream
+- A dashboard stream entry adds some additional information as the target container while this information is not rendered in container streams.
+- We may want to disable stream entry addons and most of the controls on archived content
+- We want to implement a custom stream and overwrite the default widget class bound to the ContentActiveRecord
+- Content which was edited can be highlighted
+- You want to disable the default edit link, and replace it with your own implementation
+
+### Deprecations in stream and stream action logic
+
+The following deprecations were added to the Stream class and moved to a `humhub\modules\stream\actions\LegacyStreamTrait`
+
+ - `humhub\modules\stream\actions\Stream::$mode` (which is not in use since 1.5)
+ - `humhub\modules\stream\actions\Stream::$from` was replaced with `StreamQuery::from` (which is not new the old property is just deprecated and was not in use)
+ - `humhub\modules\stream\actions\Stream::$to` was replaced with `StreamQuery::to` (which is not new the old property is just deprecated and was not in use)
+ - `humhub\modules\stream\actions\Stream::$activeQuery` - `StreamQuery::query()` should be used to access activeQuery directly
+ - `humhub\modules\stream\actions\Stream::getContentResultEntry()` was deprecated and replaced with `StreamEntryResponse::asArray()` or `StreamEntryResponse::asJson()` should be used
+ - `humhub\modules\stream\actions\Stream::renderEntry()` was deprecated and replaced with `StreamEntryWidget::renderEntry()`
+ - `humhub\modules\stream\actions\Stream::setupCriteria()` and `setupFilters()` are deprecated, in order to set filters or manipulate the query you should overwrite `Stream::beforeApplyFilters()`or `Stream::afterApplyFilters()`
+ - `humhub\modules\stream\actions\Stream::MODE_NORMAL`, `Stream::MODE_ACTIVITY`, `Stream::FROM_DASHBOARD` are replaced with `StreamEntryOptions::viewMode` (only the FROM_DASHBOARD was active anyways)
+ - `humhub\modules\content\components\ContentActiveRecord::getWallOut()` was replaced with `StreamEntryWidget::renderEntry()`
+
+### Other 1.7 Migration Issues
+
 - The sort order for Menu Entries or BaseStack (e.g. Sidebars) classes should now be set to a maximum of 10000. If no sort order is specified, the sort order is set to 9000.
 
 - Classes (LDAP, HTTP Client) from the deprecated Zend Framework have been replaced by the compatible Laminas Framework. There is a compatibility layer but classes should be replaced up to HumHub 1.8. 
@@ -30,6 +185,7 @@ Migrate from 1.6 to 1.7
 - Removed `humhub\modules\space\widgets\Picker` which is deprecated since `v1.2`.
 
 - Removed class `humhub\widgets\RichtextField` which is deprecated since `v1.4`. 
+
 
 Migrate from 1.5 to 1.6
 -----------------------
