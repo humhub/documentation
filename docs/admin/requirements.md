@@ -95,7 +95,4 @@ The command line interface provides important features, which are used to mainta
  - **Google Chrome** (Recommended)
  - **Microsoft Edge** (Recommended)
  - Apple Safari
- - Microsoft Internet Explorer 11
-
-
 
