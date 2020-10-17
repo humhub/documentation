@@ -232,9 +232,9 @@ You can add custom streams as for example own wall or sidebar streams to your cu
 contains of the following components:
 
  - **Stream action** responsible for handling stream requests
- - **Stream query** responsible for fetching and filtering the stream result
+ - **StreamQuery** responsible for fetching and filtering the stream result
  - **StreamViewer** widget responsible for rendering the stream container in the view
- - **Stream navigation** (optional) can be used to render a filter navigation for your stream
+ - **Stream filter navigation** (optional) can be used to render a filter navigation for your stream
 
 The following sections explain the different components of a stream by implementing a custom content info stream. Our custom
 stream will render stream entries in form of content metadata blocks by extending the dashboard stream. Furthermore,
