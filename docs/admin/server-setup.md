@@ -12,7 +12,7 @@ The URL https://temp.humhub.dev is used in this example. Replace it with an URL 
 
 
 :::important
-HumHub can of course also be run on a **existing server setup** or **shared hosting** if all requirements are met. 
+HumHub can of course also be run on an **existing server setup** or **shared hosting** if all [requirements](requirements.md) are met. 
 :::
   
 
