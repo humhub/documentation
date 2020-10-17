@@ -15,7 +15,7 @@ otherwise defined the 'default' stream channel will be used, which means this co
 the space, profile or dashboard stream.
 
 The `ContentActiveRecord::$streamChannel` property of your custom content type can be used to overwrite the default stream type.
-Its common practice to set `$this->stream_channel = null` for certain records in order to exclude specific entries from the
+Its common practice to set `$this->streamChannel  = null` for certain records in order to exclude specific entries from the
 default wall streams. An example of a custom stream channel is the activity stream. Activity records are not included in
 the wall streams but are part of an activity sidebar stream.
 
@@ -41,7 +41,7 @@ class MyContent extends ContentActiveRecord
           $this->streamChannel = null;
         }
 
-        return parent::beforeSave($inser)
+        return parent::beforeSave($insert)
     }
     
     //...
