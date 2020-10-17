@@ -10,7 +10,7 @@ The most common core events used to manipulate existing features are described i
 
 :::info
 Please refer to the [Yii Events Guide](https://www.yiiframework.com/doc/guide/2.0/en/concept-events) for general information
-about the usage of events. Also check the [Events Concept ](modules.md#module-events) section for information about implementing
+about the usage of events. Also check the [Events Concept ](events.md) section for information about implementing
 own events.
 ::: 
 
@@ -233,7 +233,7 @@ Use the `CronController::EVENT_BEFORE_ACTION` in case you want to implement a cu
 | [Response::EVENT_BEFORE_SEND](https://www.yiiframework.com/doc/api/2.0/yii-web-response#EVENT_BEFORE_SEND-detail) | `yii\base\Event` | at the beginning of `send()` |
 
 
-::info
+:::info
 See [Yii Response Events](https://www.yiiframework.com/doc/api/2.0/yii-web-response#events) for more information.
 :::
 
