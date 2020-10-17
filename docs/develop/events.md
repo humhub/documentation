@@ -15,7 +15,7 @@ Events are configured within your modules `config.php` file as described in the 
 extra `Events` class, especially if you plan multiple event handlers. In simpler cases events handlers may be implemented directly within the `Module` class
 itself.
 
-See [change the default behaviour](module-change-behavior.md) for additional event use-cases.
+See [Event Handler](modules-event-handler.md) for an overview of core events.
 
 [http://www.yiiframework.com/doc-2.0/guide-concept-events.html](http://www.yiiframework.com/doc-2.0/guide-concept-events.html)
 
