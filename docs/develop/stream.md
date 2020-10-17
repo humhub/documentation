@@ -246,7 +246,7 @@ The `humhub\modules\stream\widgets\StreamViewer` widget is used to render our cu
 a stream are loaded asynchronously and therefore will not directly be rendered by the StreamViewer widget itself. 
 The StreamViewer widget expects a `streamAction` property pointing to the controller action handling stream requests. 
 The optional `streamFilterNavigation` can be used to define a stream filter navigation widget class. 
-Wall streams come with an default stream filter navigation. In case you want to disable the default navigation
+Wall streams come with a default stream filter navigation. In case you want to disable the default navigation
 for your custom stream, just set `streamFilterNavigation` to false or null.
 
 **views/index/index.php:**
@@ -300,7 +300,7 @@ The view of our filter navigation widget looks like the following:
 
     <?= CheckboxFilterInput::widget([
         'id' => OwnContentStreamFilter::FILTER_ID,
-        'title' => Yii::t('DevtoolsModule.base','Only show my own content')
+        'title' => Yii::t('ContentInfoModule.base','Only show my own content')
     ])?>
 
 <?= Html::endTag('div')?>
@@ -354,7 +354,7 @@ In this example we register our action and register our custom filter handler. F
 to render the stream entries.
 
 ```php
-class StreamController extends DevtoolsController
+class StreamController extends Controller
 {
     public function actions()
     {
