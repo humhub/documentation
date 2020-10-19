@@ -42,6 +42,21 @@ If you identified a changed file, click on it to see changes.
 
 ## Required changes
 
+### 1.7
+
+#### Wall Stream Entry
+
+HumHub 1.7 introduces two new wall entry layouts, the old entry layout was deprecated. In case your theme contains 
+adjustments of the old wall entry layout, make sure your changes are compatible with the new entry layouts. 
+Otherwise a theme rebuild should be sufficient.
+
+#### New @link variable
+
+Themes build with HumHub 1.7 can facilitate a new `@link` color variable, which is used for inner content links and
+special links as comment/like within the stream entries. Prior to 1.7 such links used the `@info` color which
+currently still is the default color for the new link variable. For example, you may want to consider choosing a 
+darker link color by setting `@link: darken(@info, 5%)`.
+
 ### 1.6
 
 There were some major changes in the **Comment** module. Please check any overwritten templates if you've made any changes here.
