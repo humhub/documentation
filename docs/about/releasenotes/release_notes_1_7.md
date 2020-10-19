@@ -3,62 +3,47 @@ id: release_notes_1_7
 title: HumHub 1.7
 ---
 
-## Released October 2020 (Beta)
+## HumHub 1.7 (Currently Beta)
 
-### Stream enhancements
+#### Stream Enhancements
 
-#### New Stream Entry Layout
+Streams are an integral part of HumHub. They represent the main form in which content is delivered and they are a core element of other components of the software like the Dashboard, Spaces and user profiles. In order to do justice to the importance of such a core element we will fundamentally rework the Stream design and connected components starting with this version. As a basis for this process, we are moving away from the principle of an uniform post design with an emphasis on the content creator.
+Instead, this version introduces the distinction between content-focused and user-focused contributions. For contributions where the type of content and the content itself should be in the foreground (e.g. wikis, calendar entries or surveys), the content, respectively the typeof content will be emphasized in form of icons, headlines, highlighting and design in general. For this purpose we are introducing a completely new wall entry layout. The creator will move into the background, the information itself will be emphasized. With this step hope to improve the visibility and exchange of relevant information substantially. This does not mean, however, that we have neglected user-centric contributions. These have also been fundamentally revised in terms of structure and presentation. But see for yourself: 
 
-Streams as the dashboard or space stream are integral components of the HumHub platform. HumHub 1.7 comes with many 
-stream improvements and an additional wall entry layout. Prior to HumHub 1.7 all types of content share the same 
-stream layout with author image and name. For collaborative content types as for example a Wiki Page however the author
-is rather secondary and should not be emphasized since Wiki Pages are maintained and edited by multiple users. The new
-wall entry layout will emphasize the content type and content title instead.
+Screenshot comparison
 
-#### Emphasized short text posts
+In addition to these conceptual changes, we have also added many others to optimize the presentation, like: 
 
-Posts with only a short text used to look rather poor and the actual text was too subtle. In HumHub 1.7 short texts up to
-150 characters will be rendered with a higher font size and therefore will now be more visible.
+- Posts with one line are now emphasized
+- Improved comment section layout
+- New grid view for files 
+- Icons instead of badges (public, private etc.) 
+-	New mouse-over texts
+- New 'Topics' badge design
 
-#### Less bloated stream entry layout
+Screenshot example
 
-We replaced most of the badges used in the wall entry head section with icons and a descriptive tooltip. Topics are
-not rendered under the head section which looks cleaner especially on mobile devices.
+#### 'About' Pages for Spaces
 
-#### Reworked comment section
+In previous versions, users often used pinned posts to communicate the purpose of a Space to new members. This was especially the case when the Enterprise Theme was in use, as it does not provide an option to add a Space description. To make the process more practical, we will be introducing 'About' pages for Spaces with this version. Every Space will have a dedicated information page going forward, enabling administrators to share basic information and users to learn about the Space, its settings and and their own role within the Space. Besides the description, which can be created using a WYSIWIG editor, the 'About'´page will also provide information about the key users like administrators and moderators as well as give an overview about the security settings of the Space.  From the user's point of view, another widget will be part of the concept. In the "About your membership" section it will inform users about their own role in the Space. If desired, the new 'About' page can also be defined as the homepage of the Space. 
 
-We've reduced the user image size of comments in order to further emphasize the content of the comment.
+Screenshot
 
-#### File preview improvements
+#### Image compression
 
-The stream attachment preview section was improved by using a grid view for attached files as images and videos.
-
-Other stream improvements at a glance:
-
- - TBD
- - TBD
- - TBD
-
-#### Context dependent streams
-
-TBD
+In order to maintain the performance of the stream and to keep the software's memory requirements low in general, we are also introducing options for image compression and downscaling. With this step we want to prevent high-resolution images taken with a mobile phone, for example, from slowing down the network. Likewise, we also intend to maintain a pleasant experience for users of larger networks.  
 
 #### Accessibility
+
+Adapting to accessibility standards such as the WCAG is a constant process, which is also very important for us. With this update we are introducing further improvements regarding this subjects like an improved default theme coloring, new info texts and a new theme variable ('@link') for link coloring.
+
+#### Context dependent streams
 
 TBD
 
 #### Stream API
 
 The new and enhances stream API introduced with HumHub 1.7 also eases the development of custom content types and custom streams.
-
-### Reworked default theme colors
-
-We've changed some of the default theme colors and introduced a new `@link` theme color variable in order to provide
-a more appealing default color scheme and furthermore improve the accessibility in terms of text color contrast.
-
-### New Space About section
-
-TBD
 
 ### New MemberSince and LastLogin profile fields
 
