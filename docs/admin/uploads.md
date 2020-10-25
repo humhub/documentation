@@ -8,6 +8,8 @@ This part covers the topic of file uploads and the associated file management.
 Image Compression / Downscaling
 -------------------------------
 
+:::note These options are only available in HumHub 1.7 and later. :::
+
 To keep HumHub's storage requirements low, uploaded images can automatically be optimized in terms of quality or compression rate.
 It is also possible to downscale image files with a very high resolution (e.g. 8K) to a predefined maximum resolution size.
 
@@ -57,6 +59,8 @@ The original files are overwritten and therefore this process cannot be undone.
 
 Upload Folder
 --------------
+
+:::note These option are only available in HumHub 1.7 and later. :::
 
 By default, uploaded files are stored in the folder 'uploads/files'. This folder should not be reachable via the web server.
 
