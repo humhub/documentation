@@ -223,6 +223,14 @@ The following table describes other common module directories used for more spec
 | `widgets` | [Widget](https://www.yiiframework.com/doc/guide/2.0/en/structure-widgets) classes  |
 | `Events.php` | Event handlers  |
 
+### Module Icon
+
+Each module should also provide an icon image.  
+
+The icon must be provided in PNG format, squared and with a minimum size of 128x128 pixels.
+
+The image must be stored in the following location: 'resources/module_image.png' 
+
 ## Module Lifecycle
 
 ### Install a Module
