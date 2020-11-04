@@ -10,7 +10,7 @@ title: HumHub 1.7
 Streams are an integral part of HumHub. They represent the main form in which content is delivered and they are a core element of other components of the software like the Dashboard, Spaces and user profiles. In order to do justice to the importance of such a core element we will fundamentally rework the Stream design and connected components starting with this version. As a basis for this process, we are moving away from the principle of an uniform post design with an emphasis on the content creator.
 Instead, this version introduces the distinction between content-focused and user-focused contributions. For contributions where the type of content and the content itself should be in the foreground (e.g. wikis, calendar entries or surveys), the content, respectively the typeof content will be emphasized in form of icons, headlines, highlighting and design in general. For this purpose we are introducing a completely new wall entry layout. The creator will move into the background, the information itself will be emphasized. With this step hope to improve the visibility and exchange of relevant information substantially. This does not mean, however, that we have neglected user-centric contributions. These have also been fundamentally revised in terms of structure and presentation. But see for yourself: 
 
-![](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/Layout1.PNG)
+![](https://raw.githubusercontent.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/Layout1.PNG)
 
 In addition to these conceptual changes, we have also added many others to optimize the presentation, like: 
 
@@ -21,13 +21,13 @@ In addition to these conceptual changes, we have also added many others to optim
 -	New mouse-over texts
 - New 'Topics' badge design
 
-![](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/Layout2.PNG)
+![](https://raw.githubusercontent.com/humhub/documentation/master/docs/about/releasenotes/images/1_7/Layout2.PNG)
 
 #### 'About' Pages for Spaces
 
 In previous versions, users often used pinned posts to communicate the purpose of a Space to new members. This was especially the case when the Enterprise Theme was in use, as it does not provide an option to add a Space description. To make the process more practical, we will be introducing 'About' pages for Spaces with this version. Every Space will have a dedicated information page going forward, enabling administrators to share basic information and users to learn about the Space, its settings and and their own role within the Space. Besides the description, which can be created using a WYSIWIG editor, the 'About'´page will also provide information about the key users like administrators and moderators as well as give an overview about the security settings of the Space.  From the user's point of view, another widget will be part of the concept. In the "About your membership" section it will inform users about their own role in the Space. If desired, the new 'About' page can also be defined as the homepage of the Space. 
 
-![](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/About1.PNG)
+![](https://raw.githubusercontent.com/humhub/documentation/master/docs/about/releasenotes/images/1_7/About1.PNG)
 
 #### Image compression
 
