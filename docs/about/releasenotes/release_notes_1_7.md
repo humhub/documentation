@@ -3,7 +3,7 @@ id: release_notes_1_7
 title: HumHub 1.7
 ---
 
-## HumHub 1.7 (Currently Beta)
+## HumHub 1.7
 
 #### Stream Enhancements
 
@@ -41,11 +41,11 @@ Adapting to accessibility standards such as the WCAG is a constant process, whic
 
 The new and enhances stream API introduced with HumHub 1.7 also eases the development of custom content types and custom streams.
 
-### New MemberSince and LastLogin profile fields
+#### New MemberSince and LastLogin profile fields
 
 There are two new profile fields available which can be added to your user profiles. A member since and last login field.
 
-### Other features at a glance
+#### Other features at a glance
 
 - New command line tools for console `User` and `File` management
 - New optional [image downscaling](../../admin/uploads.md#compression--downscaling) for user uploads
