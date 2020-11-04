@@ -21,9 +21,13 @@ In addition to these conceptual changes, we have also added many others to optim
 -	New mouse-over texts
 - New 'Topics' badge design
 
+![](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/Layout2.PNG)
+
 #### 'About' Pages for Spaces
 
 In previous versions, users often used pinned posts to communicate the purpose of a Space to new members. This was especially the case when the Enterprise Theme was in use, as it does not provide an option to add a Space description. To make the process more practical, we will be introducing 'About' pages for Spaces with this version. Every Space will have a dedicated information page going forward, enabling administrators to share basic information and users to learn about the Space, its settings and and their own role within the Space. Besides the description, which can be created using a WYSIWIG editor, the 'About'´page will also provide information about the key users like administrators and moderators as well as give an overview about the security settings of the Space.  From the user's point of view, another widget will be part of the concept. In the "About your membership" section it will inform users about their own role in the Space. If desired, the new 'About' page can also be defined as the homepage of the Space. 
+
+![](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/images/1_7/About1.PNG)
 
 #### Image compression
 
@@ -32,10 +36,6 @@ In order to maintain the performance of the stream and to keep the software's me
 #### Accessibility
 
 Adapting to accessibility standards such as the WCAG is a constant process, which is also very important for us. With this update we are introducing further improvements regarding this subjects like an improved default theme coloring, new info texts and a new theme variable ('@link') for link coloring.
-
-#### Context dependent streams
-
-TBD
 
 #### Stream API
 
