@@ -8,6 +8,12 @@ Here you will learn how you can adapt existing themes to work with the latest Hu
 
 ## Foreword
 
+### Theme Builder
+
+If you are using a theme created with the [Theme Builder](https://www.humhub.com/en/marketplace/theme-builder/) module, you only need to save the **Stylesheet** again with the latest HumHub version.
+
+Go to the page `Administration -> Theme Builder -> Select your theme -> Stylesheet`  and click `Save and Rebuild Stylesheet`.
+
 ### Custom Stylesheets
 
 Since **HumHub** version 1.2 you simply need to rebuild your theme stylesheet.
