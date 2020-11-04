@@ -129,7 +129,7 @@ Sub classes of `WallStreamEntryWidget` need to implement the `renderContent` ins
 
 In the old `WallEntry::getContextMenu()` was renamed to `WallStreamEntryWidget::getControlsMenuEntries()` widget class context entries should be added as follows
 
-```
+```php
 public function getContextMenu()
 {
   $result = parent::getContextMenu();
@@ -139,7 +139,7 @@ public function getContextMenu()
 
 In the new WallStreamEntryWidget class you should directly add the widget or array definition to the result array e.g.:
 
-```
+```php
 public function getControlsMenuEntries()
 {
   $result = parent::getContextMenu();
