@@ -26,7 +26,7 @@ To begin, you need to:
 
 **docs/README.md** 
 
-A description and overview of your Theme features. [See Example](https://raw.githubusercontent.com/humhub/humhub-modules-cfiles/master/docs/CHANGELOG.md)
+A description and overview of your Theme features. [See Example](https://raw.githubusercontent.com/humhub/humhub-modules-cfiles/master/docs/README.md)
 
 **docs/CHANGELOG.md**
 
@@ -34,7 +34,7 @@ A file which contains a curated, chronologically ordered list of changes for eac
 
 **themes/example1/**
 
-Place all Theme related files in this directory. (Same structure as directly under `/themes`.)
+Place all Theme related files in this directory (Same structure as directly under `/themes`.).
 
 **Module.php**
 
@@ -82,12 +82,12 @@ return [
 
 **resources/screen1.jpg** - **resources/screen4.jpg**
 
-Some screenshots for the marketplace. Are defined in the file `module.json`.
+Add some screenshots for the marketplace. Are defined in the file `module.json`.
 
 
 **resources/module_image**
 
-A square icon at least a 128x128px PNG image.
+Add a square icon at least a 128x128px PNG image.
 
 
 Marketplace
