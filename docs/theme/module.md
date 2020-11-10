@@ -1,6 +1,6 @@
 ---
 id: module
-title: Marketplace
+title: Marketplace / Theme Module 
 ---
 
 :::caution
