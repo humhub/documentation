@@ -119,3 +119,25 @@ This problem is often caused when the HumHub application is used by different sy
 The reason for this error could be, that the [cron jobs](installation.md#cronjobs) (or other [command line calls](console.md)) have been executed under a different user.
 
 To resolve the problem, we recommend that you [reset the file/directory owner](installation.md#file-permissions) for the entire HumHub directory or delete the ``/protected/runtime/cache`` directory. 
+
+### ErrorException: Maximum execution time of 30 seconds exceeded in /var/www/humhub/...:
+
+The problem occurs if the processing of a request takes longer than 30 seconds but a time limit is configured in the PHP configuration file. 
+
+To fix this, the following variable must be increased in the file 'php.ini': 
+
+```ini
+; Maximum execution time of each script, in seconds
+; http://php.net/max-execution-time
+; Note: This directive is hardcoded to 0 for the CLI SAPI
+max_execution_time = 300
+``` 
+The location of the php.ini depends on the used operating system/Linux distribution and configuration. 
+
+Common locations are: `/etc/php/php.ini`, `/etc/php/7.3/fpm/php.ini`, `/etc/php/7.3/apache2/php.ini`
+
+:::note
+Please note that after a change to the `php.ini` the PHP process e.g. Apache2 or PHP-FPM must be restarted!
+:::
+
+
