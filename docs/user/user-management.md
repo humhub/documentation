@@ -1,10 +1,10 @@
 User
 =======
-##User Management
+## User Management
 
 Users are managed under _Administration -> Users_.
 
-###Overview:
+### Overview:
 
 The user overview lists all registered users with actions to 
 
@@ -14,11 +14,11 @@ The user overview lists all registered users with actions to
 
 > Note: You can only delete users who are not the owner of a space. You'll have to assign a new space owner in order to delte the user account.
 
-###Add new users:
+### Add new users:
 
 Beside the registration, users can be added by system administrators under _Administration -> Users -> Add new user_.
 
-###Login as a specific User:
+### Login as a specific User:
 
 Administrators are able to login as another user by clicking the **Become this user** button within the user edit view. 
 
@@ -50,7 +50,7 @@ Sets the time in seconds before inactive user sessions are closed, min value 20 
 Sets the default visibility of user profiles. This is only applicable when limited access for non-authenticated users is enabled.
 Note: Changes of this selection will only affect new users. It can either be set to _members only_ or _members and guests_.
 
-##User Approval
+## User Approval
 
 Pending users can either be approved by group managers under the _Dashboard/Account Dropdown -> User Approval_ or by administrators under _Administration -> User Approval_.
 
