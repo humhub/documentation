@@ -6,6 +6,8 @@ title: Additions
 UI Additions are used to bind a specific behaviour to dom elements marked with a specific selector.
 The `autosize` addition for example is bound to all textareas with an `.autosize` class attribute and enables an automatic resize of the textarea.
 
+UI Additions are automatically applied on full or pjax page loads. In case you need to apply additions to other dom elements you can [manually apply additions](#manually-apply-additions).
+
 ### Register Additions
 
 New additions can be registered by calling the `ui.additions.register()` method as follows
@@ -19,7 +21,7 @@ require('ui.additions').register('toggle', '.toggle', function($match) {
 ```
 In this example we added a `toggle` addition which will be applied to all nodes with a `.toggle` class selector.
 
-> Note: the additions should be registered within your modules `init` function, in this case your addition will be automatically be applied within the initialization phase.
+> Note: custom additions should be registered within your modules `init` function, in this case your addition will be automatically be applied within the initialization phase.
 
 > Tip: You should only add new additions in case they are used regularly within your application, since each new addition will add an additional selector search to your initialization process.
 
@@ -61,7 +63,7 @@ additions.register('toggle', '.toggle', function($match) {
 additions.extend('toggle', '.toggle', function($match) { /* ... */ });
 ```
 
-### Apply Additions
+### Manually apply Additions
 
 By default the document `body` will be parsed for additions within the humhub initialization phase. If you require to apply 
 additions to nodes inserted after the initialization phase e.g. nodes loaded by ajax, you'll either have to call the `applyTo()` function on your new nodes as
