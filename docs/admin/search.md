@@ -13,7 +13,17 @@ title: Search
 Index Rebuilding
 ----------------
 
-If you need to rebuild the search index (e.g. after updating) you need to run following command:
+If you want to rebuild the search index (e.g. after updating/restore backup), you have two methods:
+
+**Browser**
+
+Log in to your HumHub with an administrator account and go to the following section: `Administration` -> `Information` -> `Database`.
+
+On this page click on the button "Rebuild search index". The process can take several minutes.   
+
+**Console**
+
+To start the rebuild job, you need to run following command:
 
 ```
 cd /path/to/humhub/protected
