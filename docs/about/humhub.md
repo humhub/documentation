@@ -172,7 +172,7 @@ Checkout the following links for more information:
  - [GitHub (Contribution)](https://github.com/humhub-contrib) hosts many of the community driven modules
 :::
 
-## Professional edition
+## Professional Edition
 
 The HumHub [professional edition](https://www.humhub.com/de/professional-edition) consists of a 
 suite of [additional modules](https://www.humhub.com/de/marketplace) especially useful in enterprise environments with
