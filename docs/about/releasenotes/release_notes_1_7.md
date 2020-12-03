@@ -3,7 +3,7 @@ id: release_notes_1_7
 title: HumHub 1.7
 ---
 
-## HumHub 1.7
+## Released November 2020
 
 #### Stream Enhancements
 
