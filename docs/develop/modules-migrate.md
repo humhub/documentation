@@ -20,6 +20,12 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Migrate from 1.7 to 1.8
+-----------------------
+
+TBD
+
+
 Migrate from 1.6 to 1.7
 -----------------------
 
