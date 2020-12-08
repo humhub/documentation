@@ -86,6 +86,10 @@ HumHub sends emails to the users e.g. during the registration, password recovery
 
 A valid transport and a sender e-mail address must be provided for this purpose. This can be configured in the web interface under ``Administration -> Settings -> Advanced -> E-Mail`.
 
+:::note
+You should use a `noreply` sender e-mail address sice reply by mail is currently not supported.
+:::
+
 If you installed a local SMTP server e.g. [Postfix](server-setup.md#postfix), you can use ``PHP`` as ``Mail Transport Type`` option.
 
 You can use external SMTP services like SendGrid, Postmark, Amazon SES, Mailgun or any other SMTP server with the ``SMTP`` as ``Mail Transport Type`` option. 
