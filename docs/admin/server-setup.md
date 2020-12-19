@@ -241,7 +241,7 @@ server {
 	location ~ \.php {
 		fastcgi_split_path_info  ^(.+\.php)(.*)$;
 
-		#let yii catch the calls to unexising PHP files
+		#let yii catch the calls to unexisting PHP files
 		set $fsn /index.php;
 		if (-f $document_root$fastcgi_script_name){
 				set $fsn $fastcgi_script_name;
