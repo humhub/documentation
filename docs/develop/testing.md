@@ -248,7 +248,7 @@ Alternatively start the test server as described below (in humhub root directory
 
 ```
 cd protected/vendor/bin
-phantomjs --webdriver=44444
+phantomjs --webdriver=4444
 ```
 
 #### With chrome driver/selenium (recommended)
