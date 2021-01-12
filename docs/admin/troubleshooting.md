@@ -41,7 +41,7 @@ Especially after manually updating HumHub or a module by git, you'll may have to
 
 The cache can be cleared either in the admin section `Administration -> Settings -> Advanced -> Caching - > Save & Flush` (this will also reset the asset files), or
 by console by [console](console.md#cache). When not using the administration backend, you'll have to manually clear the asset files by deleting the content of 
-`@humhub/assets/*` and `@humhub/static/assets/*`.
+`@humhub/assets/*` folder.
 
 Data Integrity
 -----------------------------------------
