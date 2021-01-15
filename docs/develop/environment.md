@@ -19,7 +19,7 @@ please follow the [Installation Guide for Administrators](../admin/installation.
 
 ### Database Setup
 
-Crate a MySQL/MariaDB database:
+Create a MySQL/MariaDB database:
 
 ```sql
  CREATE DATABASE `humhub` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
