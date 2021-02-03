@@ -10,6 +10,12 @@ In addition to this guide, you may also check the [Theme Migration Guide](../the
 or [Development Migration Guide](../develop/modules-migrate.md).
 
 
+1.8
+----
+
+- Usernames are now validated more strictly and can only contain letters, numbers and the characters `-_.@` by default.  This behavior can be customized via the User Module variable `validUsernameRegexp`. New Value: `/^[\p{L}\d_\-@\.]+$/iu` - Old Value: `/^[\p{L}\d_\-@#$%^&*\(\)\[\]\{\}+=<>:;,.?!|~"\'\\\\]+$/iu`.
+
+
 1.7
 ----
 
