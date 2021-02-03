@@ -24,8 +24,7 @@ Migrate from 1.7 to 1.8
 -----------------------
 
 - AdminMenu: A visibility must always be specified for custom menu entries. [See example code.](https://github.com/humhub/humhub/blob/2ff4053d66743755cecdd57cfb8b46dae78e1a3d/protected/humhub/modules/admin/widgets/AdminMenu.php#L40)
-
-TBD
+- User Account "Security" page renamed to "Permissions". (Changed action id and views)
 
 
 Migrate from 1.6 to 1.7
