@@ -15,6 +15,9 @@ or [Development Migration Guide](../develop/modules-migrate.md).
 
 - Usernames are now validated more strictly and can only contain letters, numbers and the characters `-_.@` by default.  This behavior can be customized via the User Module variable `validUsernameRegexp`. New Value: `/^[\p{L}\d_\-@\.]+$/iu` - Old Value: `/^[\p{L}\d_\-@#$%^&*\(\)\[\]\{\}+=<>:;,.?!|~"\'\\\\]+$/iu`.
 
+- Default permissions for Spaces or User Profiles can now be defined easily in the administration area.
+
+
 
 1.7
 ----
