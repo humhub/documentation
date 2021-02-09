@@ -62,7 +62,7 @@ Alternatively, you can take a look at the following GitHub template project: [Ex
 
 Basically HumHub modules are identical to [Yii2 modules](http://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
 
-A minimal HumHub module at least have to define the following files and metadata:
+A minimal HumHub module at least has to define the following files and metadata:
 
 ```
 my-module
@@ -138,7 +138,7 @@ Available attributes:
 | `humhub` | HumHub core `minVersion` and `maxVersion` requirements  |
 | `keywords` | Module related keywords as string array |
 | `screenshots` | Some screenshots file names for the marketplace, those should reside in the `Module::$resourcesPath` |
-| `homepage` | An URL to the website of the module |
+| `homepage` | A URL to the website of the module |
 | `authors` | Author information as `name`, `email`, `homepage`, `role` |
 
 
@@ -180,15 +180,15 @@ you are not sure about the `minVersion` use the version you are testing with or 
 
 ### `Module.php`
 
-The module class of a module may contains basic install/uninstall functionality as well as module class level configuration.
+The module class of a module may contain basic install/uninstall functionality as well as module class level configuration.
 See chapter [Module Class](modules-base-class.md) for an introduction of the base module class.
 
 ### Documentation
 
-The documentation files of a module must be located in the modules `docs` folder.
+The documentation files of a module must be located in the module's `docs` folder.
 
 The following table lists files which can be added in order to provide module documentation for the marketplace. Note, the
-**required** field only applies to the marketplace modules and are not required for private modules.
+**required** field only applies to the marketplace modules and is not required for private modules.
 
 | File | Required | Description |
 | --- | --- | --- |
@@ -261,7 +261,7 @@ The `ModuleManager` responsible for enabling modules will trigger the following 
 
 :::info
 [ContentContainerModules](modules-base-class.md#contentcontainermodule) also have to be enabled within
-a space or user profile within the containers module management section.
+a space or user profile within the container's module management section.
 :::
 
 ### Module Bootstrap
