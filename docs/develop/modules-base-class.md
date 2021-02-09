@@ -205,9 +205,10 @@ public function getContentContainerConfigUrl(ContentContainerActiveRecord $conta
 
 ### `disable()`
 
-In addition to `Module::disable` the `CotnentContainerModule::disable()` function will:
+In addition to `Module::disable` the `ContentContainerModule::disable()` function will:
  
- - call `CotnentContainerModule::disableContentContainer()` for each container this module is enabled.
+ - call `Cont
+ entContainerModule::disableContentContainer()` for each container this module is enabled.
  - clear all `contentcontainer_module` entries related to this module.
 
 ### `disableContentContainer()`
