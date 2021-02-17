@@ -1,13 +1,14 @@
 ---
 id: updating-migration2
-title: Migration Guide
+title: Migration Guide for Administrators
+sidebar_label: Migration Guide
 ---
 
 Besides the normal Humhub update, major version upgrades may also require changes to the server system or configuration files.
 For example, this could be a new PHP dependency or a changed setting in the configuration file.
 
-In addition to this guide, you may also check the [Theme Migration Guide](../theme/migrate.md) 
-or [Development Migration Guide](../develop/modules-migrate.md).
+In addition to this guide, you may also check the [**Theme Migration Guide**](../theme/migrate.md) 
+or [**Development Migration Guide**](../develop/modules-migrate.md).
 
 
 1.8
@@ -17,6 +18,8 @@ or [Development Migration Guide](../develop/modules-migrate.md).
 
 - Default permissions for Spaces or User Profiles can now be defined easily in the administration area.
 
+- The minimum PHP Version is now **7.2**
+ 
 
 
 1.7

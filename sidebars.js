@@ -67,13 +67,14 @@ module.exports = {
             'admin/security',
         ],
         'Maintenance': [
-            'admin/updating',
-            'admin/updating-migration2',
             'admin/backup',
             'admin/console',
             'admin/troubleshooting'
         ],
-
+        'Updating': [
+            'admin/updating',
+            'admin/updating-migration2',
+        ],        
     },
     Developement: {
         'Introduction': [
