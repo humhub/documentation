@@ -192,13 +192,14 @@ systemctl reload apache2
 
 ### NGINX
 
-
 ```
 apt update
 apt install nginx \
 	php-fpm
 ```
 
+
+Create configuration file ``/etc/nginx/site-available/humhub.conf`` with the following content:
 
 ```conf
 server {
@@ -217,8 +218,8 @@ server {
 
 	server_name temp.humhub.dev;
 	
-	include snippets/letsencrypt.conf;
-    ssl_certificate /etc/letsencrypt/live/temp.humhub.dev/fullchain.pem;
+	#include snippets/letsencrypt.conf;
+	ssl_certificate /etc/letsencrypt/live/temp.humhub.dev/fullchain.pem;
 	ssl_certificate_key /etc/letsencrypt/live/temp.humhub.dev/privkey.pem;
 
 	charset utf-8;
@@ -254,6 +255,12 @@ server {
 }
 ```
 
+Activate the configuration:
+
+```
+ln -s /etc/nginx/sites-available/humhub.conf /etc/nginx/sites-enabled/humhub.conf
+systemctl restart nginx
+```
 
 ## Mail 
 
