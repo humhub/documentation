@@ -31,6 +31,10 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.8
+
+No breaking changes.
+
 ### 1.7
 
 #### Wall Stream Entry
