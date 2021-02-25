@@ -25,28 +25,15 @@ All changes or additions will be automatically applied to your theme.
 
 As mentioned in the [View Files](views.md) section, you may need to manually adjust overwritten view files if there are any changes made in the new **HumHub** version.
 
-#### Identifing changes using Git command
-
-> Note: You'll need the git software and a current checkout for this approach.
-
-Switch to the HumHub Git directory and execute:
-
-``` 
-git diff v1.0.0 v1.1.0 -- protected/humhub/modules/user/views/auth/login.php
-```
-
-This example commands shows all made changes on the login view file between HumHub version 1.0.0 and 1.1.0.
-
-#### Identifing changes using GitHub
-
-You can easily create a list of modified files in HumHub via GitHub.
-
-Example link to get changes between HumHub v1.0 and v1.1: https://github.com/humhub/humhub/compare/v1.0.0...v1.1.0
-
-On the GitHub page click on `Files changed` and search for your modified view files.
-If you identified a changed file, click on it to see changes.
+:::tip
+This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199) might help you to identify template changes more easily.
+:::
 
 ## Required changes
+
+### 1.8
+
+No breaking changes.
 
 ### 1.7
 
