@@ -1,7 +1,7 @@
 ---
 id: advanced-configuration
-title: Introduction
-sidebar_label: Introduction
+title: Configuration Files
+sidebar_label: Configuration Files
 ---
 
 While many HumHub settings can be configured directly within the administration backend, some more specific or low-level
@@ -125,3 +125,4 @@ return [
     ]
 ]
 ```
+

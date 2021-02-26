@@ -16,6 +16,7 @@ module.exports = {
             label: 'Release Notes',
             items: [
                 'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_8',
                 'about/releasenotes/release_notes_1_7',
                 'about/releasenotes/release_notes_1_6',
                 'about/releasenotes/release_notes_1_5'
@@ -53,6 +54,7 @@ module.exports = {
         ],
         'Configuration': [
             'admin/advanced-configuration',
+            'admin/config-options',
             'admin/search',
             'admin/authentication',
             'admin/performance',
@@ -67,13 +69,14 @@ module.exports = {
             'admin/security',
         ],
         'Maintenance': [
-            'admin/updating',
-            'admin/updating-migration2',
             'admin/backup',
             'admin/console',
             'admin/troubleshooting'
         ],
-
+        'Updating': [
+            'admin/updating',
+            'admin/updating-migration2',
+        ],        
     },
     Developement: {
         'Introduction': [
