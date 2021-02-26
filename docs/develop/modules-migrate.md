@@ -20,6 +20,13 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Migrate from 1.8 to 1.9
+-----------------------
+
+- New [Ajax Validator](https://github.com/humhub/humhub/pull/4814) for ControllerAccess to force Ajax requests. 
+
+
+
 Migrate from 1.7 to 1.8
 -----------------------
 
