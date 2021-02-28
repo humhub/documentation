@@ -58,7 +58,7 @@ Of course, in addition to the mentioned enhancements we have improved many small
 - Shortened high member numbers in e.g. Space Headers
 - Added possibility to block modules via the configuration
 - Added support for collapsible form fields
-- Implemented live poll result sharing by BroadCastChannel
+- Implemented live poll result to decrease server load
 - Optimized dashboard streams and Richtext conversion performance
 - Improved Richtext preview rendering for activities and notifications
 - Added database related checks (Driver, Collation, Table Engine) to the prerequisites check list
