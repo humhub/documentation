@@ -8,7 +8,7 @@ title: HumHub 1.8
 #### Space Mapping with Groups
 
 Without the use of advanced solutions like LDAP, it has always been a bit difficult to automatically assign multiple 
-users to certain Spaces. In order to overcome this shortcoming HumHub now supports the configuration of more than only
+users to certain Spaces. In order to address this issue HumHub now supports the configuration of more than only
 one default Space per user group. This heavily simplifies the automatic mapping between Spaces and users. Furthermore,
 newly configured default spaces will now be assigned not only to new members but also to existing users of a group, so you
 are able to define new default Spaces for all group members at a later point in time.
