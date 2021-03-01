@@ -26,7 +26,7 @@ has been completed. The maintenance mode can be managed in `Administration -> Se
 In the area of design improvements, we have fine-tuned the Richtext output in streams, previews and detail views as for
 example Wiki pages. Besides that, the possibility to align images as well as further usability enhancements as improved
 list management was added to the Richtext editor. Richtext output in HTML mails as notifications for new content or comments
-are now rendered as formatted Html content instead of plain text blocks.
+are now rendered as formatted HTML content instead of plain text blocks.
 
 #### Admin Password Change
 
