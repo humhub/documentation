@@ -29,6 +29,28 @@ Migrate from 1.7 to 1.8
 - Groups can now have multiple default spaces. The `Group::getSpace()` method has been removed and replaced by `Group::getGroupSpaces()`. 
 
 
+### Richtext changes
+
+In 1.8 we've introduced some changes in the Richtext API by introducing converter classes as:
+
+- `RichTextToShortTextConverter`: Used to convert Richtext to a html preview without text formatting. 
+- `RichTextToHtmlTextConverter`: Used to convert Richtext to plain html e.g. in html mails
+- `RichTextToMarkdownTextConverter`: Used to convert Richtext to plain markdown without HumHub richtext extensions
+- `RichTextToPlainTextConverter`: Used to convert Richtext to plain text e.g. for text mails
+
+Richtext conversion can also be achieved by the `RichText::convert()` function.
+
+In this step we've added the following deprecations:
+
+- `humhub\libs\Markdown` is deprecated in favor of `RichTextToHtmlConverter` or `RichText::convert()`
+- `humhub\libs\MarkdownPreview` is deprecated in favor of `RichTextToShortTextConverter` or `RichText::convert()`
+- `RichText:$minimal` option was deprecated in favor of `RichTextToShortTextConverter` or `RichText::convert()` should be used for previews.
+- `RichText:$maxLength` option was deprecated, Richtext content should not be cut anymore, only `RichTextToShortTextConverter`
+  should be used for previews.
+- `ProsemirrorRichText::parseOutput()` was used for additional Richtext extensions and should be replaced with a `RichTextExtension` implementation
+- `ProsemirrorRichText::scanLinkExtension()` is deprecated in favor of a `RichTextExtension` implementation
+- `ProsemirrorRichText::replaceLinkExtension()` is deprecated in favor of a `RichTextExtension` implementation
+
 Migrate from 1.6 to 1.7
 -----------------------
 
