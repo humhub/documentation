@@ -102,7 +102,7 @@ not trigger** those events.
 // @mymodule/Module.php
 public function disable()
 {
-    // Clear module related contentent etc...
+    // Clear module related content etc...
     foreach (MyContentModel::find()->all() as $model) {
         $model->delete();
     }
