@@ -51,6 +51,20 @@ In this step we've added the following deprecations:
 - `ProsemirrorRichText::scanLinkExtension()` is deprecated in favor of a `RichTextExtension` implementation
 - `ProsemirrorRichText::replaceLinkExtension()` is deprecated in favor of a `RichTextExtension` implementation
 
+### Richtext compatibility parser
+
+Prior of this update the Richtext compatibility parser responsible for supporting richtext syntax < HumHub 1.3 was active by default and could not easily be deactivated. In HumHub 1.8 this parser is deactivated for new installations and can be deactivated for existing installation, which do not need to support richtext created with HumHub < 1.3. The compatibility parser can be deactivated in order to improve performance by configuration file:
+
+```php
+return [
+    'modules' => [
+        'content' => [
+            'richtextCompatMode' => false
+        ]
+    ]
+];
+```
+
 Migrate from 1.6 to 1.7
 -----------------------
 
