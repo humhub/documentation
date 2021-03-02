@@ -56,6 +56,6 @@ Below you can see a complete overview of the currently available Professional Ed
 
 - [Translation Manager](https://www.humhub.com/en/marketplace/translation-manager/)
 
-- SAML SSO (Coming soon)
+- [SAML SSO](https://www.humhub.com/en/marketplace/saml-sso/)
 
 
