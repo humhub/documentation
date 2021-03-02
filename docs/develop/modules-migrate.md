@@ -53,7 +53,7 @@ In this step we've added the following deprecations:
 
 ### Richtext compatibility parser
 
-Prior of this update the Richtext compatibility parser responsible for supporting richtext syntax < HumHub 1.3 was active by default and could not easily be deactivated. In HumHub 1.8 this parser is deactivated for new installations and can be deactivated for existing installation, which do not need to support richtext created with HumHub < 1.3. The compatibility parser can be deactivated in order to improve performance by configuration file:
+Prior to this update the Richtext compatibility parser responsible for supporting richtext syntax of HumHub < 1.3 was active by default and could not easily be deactivated. In HumHub 1.8 this parser is deactivated for new installations and can be deactivated for existing installation, which do not need to support richtext created with HumHub < 1.3. The compatibility parser can be deactivated in order to improve performance by configuration file:
 
 ```php
 return [
