@@ -35,7 +35,7 @@ All essential requirements will be tested during the web installation and can be
 - **PHP 8.0** (Recommended)
 - **PHP 7.4** (Recommended)
 - PHP 7.3
-- PHP 7.2
+- PHP 7.2 (Up to HumHub 1.8)
 - PHP 7.1 (Up to HumHub 1.8)
 
 ### Extensions
