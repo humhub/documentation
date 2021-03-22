@@ -140,4 +140,18 @@ Common locations are: `/etc/php/php.ini`, `/etc/php/7.3/fpm/php.ini`, `/etc/php/
 Please note that after a change to the `php.ini` the PHP process e.g. Apache2 or PHP-FPM must be restarted!
 :::
 
+### Curl error: #60 - SSL certificate problem: unable to get local issuer certificate
 
+- Download the [certificate bundle](https://curl.haxx.se/docs/caextract.html).
+- Place them in a path that is accessible for the PHP process.
+- Adjust `php.ini` file(s):
+
+```ini
+curl.cainfo="C:/certs/certs.pem"
+```
+
+- Restart Webserver or PHP 
+
+See also:
+- https://thisinterestsme.com/php-curl-ssl-certificate-error/
+- https://webdev-training.de/tutorials/xampp/anleitung-fuer-das-ssl-zertifikatsproblem-unter-xampp-ssl-certificate-error-unable-to-get-local-issuer-certificate
