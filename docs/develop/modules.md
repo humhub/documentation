@@ -56,7 +56,7 @@ The easiest way of setting up a basic HumHub module is by using the [Developer T
 Once you've generated a module skeleton, copy the module to a [module loader path](environment.md#module-loader-path). Now the module
 should be visible under `Administration -> Modules` and can be [enabled](#enabled-a-module).
 
-Alternatively, you can take a look at the following GitHub template project: [Example Module](https://github.com/humhub/humhub-modules-example-basic).
+Alternatively, you can take a look at the following GitHub template project: [Example Module](https://github.com/humhub/example-basic).
 
 ## Module Structure
 
