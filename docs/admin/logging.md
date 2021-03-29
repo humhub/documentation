@@ -20,7 +20,7 @@ All Log table rows older than 7 days are automatically deleted by the HumHub Cro
 
 ### Logfile
 
-The log file is located in the folder ``/protected/runtime/app.log`` by default. 
+The log file is located in the folder ``/protected/runtime/logs/app.log`` by default. 
 
 This file is automatically rotated by the HumHub CronJob.
 
