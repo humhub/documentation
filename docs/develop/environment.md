@@ -122,7 +122,7 @@ php yii migrate/up --includeModuleMigrations=1
 A git based installation won't run in production mode without [building the production assets](build.md#build-assets)
 manually. This is also required in order to run [acceptance tests](testing.md#run-acceptance-tests).
 
-## Test Enironment
+## Test Environment
 
 Please refer to the [Testing Guide](testing.md#test-environment-setup) for information about setting up a test environment
 and running tests on core custom modules.
