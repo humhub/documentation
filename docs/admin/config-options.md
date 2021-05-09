@@ -177,6 +177,16 @@ Since: `1.6`<br/>
 Default: `[]`<br/>
 Data type: `Array`<br/>
 
+### Advanced-LDAP `PRO`
+
+Module ID: `advanced-ldap`
+
+**enableLdapParentMembershipLookup** - Recursive lookup of membership of included groups.<br/>
+Default: `false`<br/>
+Since: `1.4`<br/>
+Data type: `Boolean`<br/>
+
+
 ### Like
 
 **autoFollowLikedContent** - Enable automatic follow liked content.<br/>

@@ -138,7 +138,7 @@ apt install apache2 \
 	php-fpm 
 ```
 
-Create configuration file ``/etc/apache2/site-available/humhub.conf`` with the following content:
+Create configuration file ``/etc/apache2/sites-available/humhub.conf`` with the following content:
 
 
 ```apacheconf

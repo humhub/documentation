@@ -15,8 +15,8 @@ on space and/or user level.
 ### Module field configuration
 
 Public fields of the module class can be overwritten by [configuration](../admin/advanced-configuration.md). 
-This can be useful in order to provide module related configuration options, which do not necessarily 
-be configurable within the admin interface.
+This can be useful in order to provide module related configuration options, which are not necessarily 
+configurable within the admin interface.
 
 **Example:**
 
@@ -102,7 +102,7 @@ not trigger** those events.
 // @mymodule/Module.php
 public function disable()
 {
-    // Clear module related contentent etc...
+    // Clear module related content etc...
     foreach (MyContentModel::find()->all() as $model) {
         $model->delete();
     }
