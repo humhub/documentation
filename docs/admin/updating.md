@@ -124,7 +124,7 @@ php yii module/update-all
 If you did not run the previous steps as the actual HumHub system user (e.g. www-data), you may need to correct the permissions.
 
 ```
-chown -R www-data.www-data /var/www/humhub 
+chown -R www-data:www-data /var/www/humhub 
 ```
 
 

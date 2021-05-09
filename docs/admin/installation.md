@@ -222,3 +222,10 @@ You can see the current mode at ``Administration -> Information``.
 - **Production Mode**
 
     Make sure that no warning about the ``Debug mode`` appears under ``Administration -> Information -> About HumHub``.
+    
+ ## Staging/Test Environment
+ 
+ :::tip
+ You can find a guide to setup an additional staging environment in our [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/page/view?title=Staging+Environment).
+:::
+
