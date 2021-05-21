@@ -45,6 +45,27 @@ An array value is a list of headers to trust. These will be matched against $sec
 
 You can find more information in the Yii2 documentation: https://www.yiiframework.com/doc/api/2.0/yii-web-request#$trustedHosts-detail
 
+HTTPS/SSL Detection
+-------------------
+
+Typically HumHub detects the currently used protocol (HTTP or HTTPS) and uses this automatically to generate links.
+
+With an SSL Terminating ReverseProxy this should also be done using HTTP header information. If this detection fails, the generation of HTTPS URLs can be forced via the configuration files.
+
+Example (`protected/config/web.php`): 
+
+```php
+
+<?php
+
+// Enfore HTTPS link generation
+$_SERVER['HTTPS'] = 'on';
+
+return [
+    // Further configuration options
+];
+```
+
 
 Caching
 -------
