@@ -56,9 +56,10 @@ module.exports = {
         'Configuration': [
             'admin/advanced-configuration',
             'admin/config-options',
-            'admin/search',
             'admin/authentication',
+            'admin/ldap',
             'admin/performance',
+            'admin/search',
             'admin/uploads',
             'admin/cron-jobs',
             'admin/asynchronous-tasks',
