@@ -11,6 +11,12 @@ In addition to this guide, you may also check the [**Theme Migration Guide**](..
 or [**Development Migration Guide**](../develop/modules-migrate.md).
 
 
+1.9
+----
+
+- The minimum PHP Version is now **7.3**
+ 
+
 1.8
 ----
 
