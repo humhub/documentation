@@ -31,6 +31,10 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.9
+
+- The "Directory" section has been completely revised. 
+
 ### 1.8
 
 No breaking changes.
