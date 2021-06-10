@@ -5,6 +5,12 @@ title: HumHub 1.9
 
 ## Release July
 
+
+:::caution
+This page is currently under development!
+:::
+
+
 - Directory Rework
 
 - Administrators now have the option to reset email summary or notification settings of users which have already been changed. 
