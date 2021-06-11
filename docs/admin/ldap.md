@@ -7,7 +7,7 @@ You can enable authentication against LDAP (e.g. against Active Directory or Ope
 
 ### Advanced Features
 
-The Professional Edition module "Advanced LDAP" provides additional LDAP features like:
+The [Professional Edition](https://www.humhub.com/en/professional-edition) module [Advanced LDAP](https://www.humhub.com/en/marketplace/advanced-ldap) provides additional LDAP features like:
 
 - Automatic mapping of LDAP users to Spaces
 - Automatic linking of LDAP users to predefined groups (e.g. administrators)
