@@ -73,6 +73,7 @@ module.exports = {
         'Maintenance': [
             'admin/backup',
             'admin/console',
+            'admin/modules',
             'admin/troubleshooting'
         ],
         'Updating': [
