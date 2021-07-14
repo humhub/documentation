@@ -10,7 +10,7 @@ title: HumHub 1.9
 This page is currently under development!
 :::
 
-#### Direcotry Rework - 'People'
+#### Directory Rework - 'People'
 
 ![People](https://user-images.githubusercontent.com/38326726/125630213-3c9aa888-98e0-4f03-bb86-1847efa04c10.png)
 
