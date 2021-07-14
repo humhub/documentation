@@ -7,7 +7,8 @@ title: HumHub 1.9
 
 
 :::caution
-This page is currently under development!:::
+This page is currently under development!
+:::
 
 #### Direcotry Rework - 'People'
 
