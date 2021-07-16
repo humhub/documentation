@@ -33,7 +33,8 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ### 1.9
 
-- The "Directory" section has been completely revised. 
+- The "Directory" section has been removed and replaced with new "People" and "Spaces" pages. 
+
 
 ### 1.8
 
