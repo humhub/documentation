@@ -76,6 +76,12 @@ Add following line to the crontab:
 
 Make sure to replace ``/var/www/humhub`` with the path of your HumHub installation.
 
+
+:::tip
+Instead of the `queue/run` Cron Job you can also setup permanent worker processes. With these, background tasks have a shorter delay and a better performance.  More information can be found in the [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/page/view?title=Queue+Worker). 
+:::
+
+
 ## Configuration
 
 The following configuration settings can be made directly in HumHub via the browser.
