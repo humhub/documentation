@@ -26,7 +26,8 @@ Migrate from 1.8 to 1.9
 - New [Ajax Validator](https://github.com/humhub/humhub/pull/4814) for ControllerAccess to force Ajax requests.
 - New setting "Default Timezone" `Yii::$app->settings->get('defaultTimeZone')` instead of the deprecated setting "Server Timezone" `Yii::$app->settings->get('timeZone')`.
 - CodeMirror is now directly bundled with HumHub core from `humhub\modules\ui\form\widgets\CodeMirrorInputWidget` and can be applied to any textarea field with code like `$form->field($model, 'textareaFieldName')->widget(CodeMirrorInputWidget::class)`.
-
+- Updated to PHPUnit 8.5 (#4757)
+- Added `EVENT_BEFORE_CHECKING_USER_STATUS` in `AuthController` 
 
 
 Migrate from 1.7 to 1.8
@@ -36,7 +37,6 @@ Migrate from 1.7 to 1.8
 - User Account "Security" page renamed to "Permissions". (Changed action id and views)
 - Removed unused legacy widget `modules/admin/widgets/UserSettingMenu.php` 
 - Groups can now have multiple default spaces. The `Group::getSpace()` method has been removed and replaced by `Group::getGroupSpaces()`. 
-
 
 ### Richtext changes
 
