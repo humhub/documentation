@@ -5,11 +5,6 @@ title: HumHub 1.9
 
 ## Release July 2021
 
-
-:::caution
-This page is currently under development!
-:::
-
 #### Directory Rework - 'People'
 
 ![People](https://user-images.githubusercontent.com/38326726/125630213-3c9aa888-98e0-4f03-bb86-1847efa04c10.png)
@@ -26,23 +21,20 @@ To further foster the targeted search for relevant colleagues and members, we ha
 
 The card design is of course also integrated in the new section dedicated to spaces. Likewise, we have also added new search, filter and sorting options.  All information is at your fingertips and users can easily follow or join spaces directly from the overview. In order to minimize the required effort, the information on the cards is sourced directly from the short description of the space in question. With these new features, we are sure that users will find the right people with the right know-how and interests in the right spaces much faster than before.
 
-#### Support for images in e-mail notifications / summaries
-
-tbd
-
 #### Administrators now have the option to reset email summary or notification settings of users which have already been changed
 
-tbd
+Administrators can now easily change or reset the settings regarding email notifications and summaries for all users via the admin panel. This also applies to settings already overwritten by users. 
 
 #### Allow to Follow users independent of Friendship state
 
-tbd
+Users are now able to befriend other users but unfollow them. This will result in the friendship being preserved but the notifications about the content of the friend concerned will be disabled.
 
 #### And more..
 
 - Default time zone can be set for non-logged-in users 
 - New Command Line Features: Delete users & Add possibility to register purchased modules
 - New Space module setting to allow all users to add users without invite
+- Partial support for images in email notifications added 
 - Various performance improvements 
 - New Tag Picker Input Widget for Space / User Profiles.
 - LDAP: New skip list to exclude incorrect DNs from import. 
