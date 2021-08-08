@@ -270,7 +270,7 @@ Start test server:
 
 ```
 cd /myhumHubInstallation
-php -S localhost:8080
+php --server 127.0.0.1:8080 index-test.php
 ```
 
 or
