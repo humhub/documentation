@@ -58,10 +58,9 @@ return [
 ```
 
 Key should be a valid regular expression, and value - error message.
-To localize error message you have to define a new message file with one of the following paths:
+To localize error message you have to define a new message file with the following path pattern:
 
-- `protected/config/messages/<language>/UserModule.custom.php`
-- `protected/humhub/modules/user/messages/<language>/custom.php`
+`protected/config/messages/<language>/UserModule.custom.php`
 
 Web Security Configuration
 ---------------------
