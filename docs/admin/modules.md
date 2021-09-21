@@ -30,4 +30,4 @@ If the HumHub server does not have a direct or filtered internet connection, the
 
 - Whitelist HumHub API Endpoints. Following hosts `www.humhub.com` and `api.humhub.com` must be accessible with HTTPS (443) protocol.
 
-- Disable Outgoing Marketplace connections. [See configuration options](config-options#marketplace)
+- Disable Outgoing Marketplace connections. [See configuration options](config-options.md#marketplace)
