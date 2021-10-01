@@ -23,7 +23,7 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 Migrate from 1.9 to 1.10
 ------------------------
 
-- Removed `Followable` behavior methods `getFollowingCount()` and `getFollowingObjects($query)`
+- Removed `Followable` behavior methods `getFollowingCount()`, `getFollowingObjects($query)`, `getFollowers()`
 
 
 Migrate from 1.8 to 1.9
