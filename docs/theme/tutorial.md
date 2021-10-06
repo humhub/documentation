@@ -12,6 +12,10 @@ This quick tutorial shows you all necessary steps to create a custom **HumHub** 
 - Step 3: Modify login template ([View Files](views.md))
 
 
+:::caution
+If you have installed HumHub via Git, make sure you have done the following steps first: [Git Installation](develop/environment.md#gitcomposer-installation)
+:::
+
 Step 1: Create an own theme folder
 ---------------------------------
 - Go to the HumHub installation directory
