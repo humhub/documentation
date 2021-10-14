@@ -88,6 +88,7 @@ module.exports = {
             'develop/coding-standards',
             'develop/build',
             'develop/modules-migrate',
+            'develop/pull-requests',
         ],
         'Module Development': [
             'develop/modules',
