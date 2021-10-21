@@ -78,9 +78,8 @@ $bannerFile = $record->fileManager->find()->andWhere(['title' => 'banner')->one(
 ### Replace/Modify
 
 :::caution
-Since HumHub 1.10 a file versioning has been introduced. From this version, files are immutable.
+Draft API since 1.10
 :::
-
 
 ```php
 $currentFile = $record->fileManager->find()->one();
