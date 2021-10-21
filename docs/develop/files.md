@@ -6,14 +6,15 @@ title: Files
 
 The HumHub core module *humhub/modules/file* provides a generic file management which can be used in custom modules to store and read files including access control.
 
-The file management is available for `humhub\components\ActiveRecord` classes.
+The file management is available for all `humhub\components\ActiveRecord` classes.
 
-Examples Usage
---------------
+Basic Usages
+------------
 
-### File Uploads
+### Create
 
 There are two typical variants for file upload implementations.
+
 
 #### Uploads via ActiveForm (Direct Mapping)
 
@@ -60,12 +61,12 @@ if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->sa
 }
 
 ```
-### Read Files
+
+### Find/Query
  
 To read mapped files of an ActiveRecord, use the `humhub\modules\file\components\FileManager` via `humhub\components\ActiveRecord::getFileManager`.
 
 ```php
-
 // Get all files
 $files = $record->fileManager->findAll();
 
@@ -74,9 +75,18 @@ $bannerFile = $record->fileManager->find()->andWhere(['title' => 'banner')->one(
 
 ```
 
-Javascript Uploads
-------------------
-TBD
+### Replace/Modify
+
+:::caution
+Since HumHub 1.10 a file versioning has been introduced. From this version, files are immutable.
+:::
+
+
+```php
+$currentFile = $record->fileManager->find()->one();
+$currentFile->replaceWithFile($newFile);
+```
+
 
 Converter & Variants
 --------------------
@@ -116,5 +126,9 @@ TBD
 
 Storage Manager
 ---------------
-
 TBD
+
+Versioning
+----------
+TBD
+
