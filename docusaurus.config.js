@@ -44,7 +44,7 @@ module.exports = {
             {label: 'Release Notes', to: 'docs/about/releasenotes/release_notes'},
             {label: 'Contribution', to: 'docs/about/contribution'},
             {label: 'Support', to: 'docs/about/support'},
-            {label: 'License', href: 'https://www.humhub.com/de/licences'},
+            {label: 'License', href: 'https://www.humhub.com/en/licences'},
           ]},
        // {to: 'docs/about/humhub', activeBasePath: 'docs/about',  label: 'About', position: 'left'},
         {to: 'docs/admin/introduction', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},

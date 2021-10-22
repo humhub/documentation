@@ -34,7 +34,7 @@ module.exports = {
         {
             type: 'link',
             label: 'License',
-            href: 'https://www.humhub.com/de/licences'
+            href: 'https://www.humhub.com/en/licences'
         },
 
        /* 'Release Notes': [

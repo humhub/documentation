@@ -113,7 +113,7 @@ php yii migrate/up --includeModuleMigrations=1
 
 - You may also need to also run a `composer install` after an update in order to update third party dependencies.
 
-> ⚠️ Note that the [HumHub Updater](https://www.humhub.com/de/marketplace/updater/) module won't work on git based installations, 
+> ⚠️ Note that the [HumHub Updater](https://www.humhub.com/en/marketplace/updater/) module won't work on git based installations, 
 >therefore you'll have to update and migrate your HumHub manually.
 
 ## Production Mode

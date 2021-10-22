@@ -29,7 +29,7 @@ projects and resources worth a visit:
  - [Translation Community](https://translate.humhub.org/user/auth/login)
  - [GitHub (HumHub)](https://github.com/humhub)
  - [GitHub (Contrib)](https://github.com/humhub-contrib)
- - [Marketplace](https://www.humhub.com/de/marketplace)
+ - [Marketplace](https://www.humhub.com/en/marketplace)
  
 ## Key benefits 
 
@@ -54,7 +54,7 @@ Some of the key benefits are listed below:
    - Direct contact to the core development team
    - Many eyes principle
  - Translated into more than 40 languages
- - [Marketplace](https://www.humhub.com/de/marketplace) for modules and themes
+ - [Marketplace](https://www.humhub.com/en/marketplace) for modules and themes
  - Intuitive user interface
 
 ## Requirements
@@ -166,7 +166,7 @@ not affect other spaces, unless a module is configured as default module.
 :::info
 Checkout the following links for more information:
  
- - The [Marketplace](https://www.humhub.com/de/marketplace) lists modules directly installable within your HumHub 
+ - The [Marketplace](https://www.humhub.com/en/marketplace) lists modules directly installable within your HumHub 
  backend
  - [GitHub (HumHub)](https://github.com/humhub) hosts all official open source modules as well as the core software
  - [GitHub (Contribution)](https://github.com/humhub-contrib) hosts many of the community driven modules
@@ -174,8 +174,8 @@ Checkout the following links for more information:
 
 ## Professional Edition
 
-The HumHub [Professional Edition](https://www.humhub.com/de/professional-edition) consists of a 
-suite of [additional modules](https://www.humhub.com/de/marketplace) especially useful in enterprise environments with
+The HumHub [Professional Edition](https://www.humhub.com/en/professional-edition) consists of a 
+suite of [additional modules](https://www.humhub.com/en/marketplace) especially useful in enterprise environments with
 features as [extended LDAP](../professional-edition/features.md#advanced-ldap) and [single sign on (SSO)](../professional-edition/features.md##feature-list) support
 as well as an additional [enterprise theme](../professional-edition/features.md#enterprise-theme).
 
