@@ -11,7 +11,7 @@ For small changes or documentation issues or straightforward fixes, you don't ne
 ** Core Repository (github.com/humhub/humhub) **
 
 - `master` For bugfixes and critical translation updates 
-- `develop` For all new features, fefactoring, complex non-critical bug fixes
+- `develop` For all new features, optimizations, refactoring, complex non-critical bug fixes
 
 ** Module Repositories (github.com/humhub and github.com/humhub-contrib) **
 
