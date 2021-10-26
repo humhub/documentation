@@ -154,7 +154,3 @@ Storage Manager
 ---------------
 TBD
 
-Versioning
-----------
-TBD
-
