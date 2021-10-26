@@ -24,7 +24,7 @@ Migrate from 1.9 to 1.10
 ------------------------
 
 - Removed `Followable` behavior methods `getFollowingCount()`, `getFollowingObjects($query)`, `getFollowers()`
-- File versioning support has been introduced. File contents are now immutable. See [File module documentation](files.md#replacemodify).
+- File versioning support has been introduced. Use `$file->setStoredFile()` instead of ~~`$file->store->set()`~~ See [File module documentation](files.md#replacemodify).
 - Removed user's name encoding in `UserPicker`
 
 
