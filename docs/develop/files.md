@@ -32,7 +32,7 @@ if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 	$humhubFile->mime_type = $this->image->type;
 	$humhubFile->size = $this->image->size;
 	if ($humhubFile->save()) {
-	    $humhubFile->store->set($this->image);
+	    $humhubFile->setStoredFile($this->image);
 	}
 }
 
@@ -75,15 +75,42 @@ $bannerFile = $record->fileManager->find()->andWhere(['title' => 'banner')->one(
 
 ```
 
-### Replace/Modify
+### Update File Content
 
-:::caution
-Draft API since 1.10
-:::
+
+The content of a file object can be easily updated using the following methods.
+If the file history is activated, a new history entry is created automatically.
+
 
 ```php
-$currentFile = $record->fileManager->find()->one();
-$currentFile->replaceWithFile($newFile);
+$file->setStoredFileContent('V1');
+$file->setStoredFile($UploadedFileObject);
+$file->setStoredFile($AnotherNewFileRecord);
+```
+
+File History
+------------
+
+By default, no history (versioning) of files is created. This must be activated by a flag `ActiveRecord::fileManagerEnableHistory`.
+
+### Access File History Versions
+
+```php 
+// get a latest history records
+$fileHistorys = $file->getHistoryFiles()->all();
+
+
+// get latest version file data
+$fileHistoryLatest = $file->getHistoryFiles()->one();
+$fileData = file_get_contents($previousVersion->getFileStorePath());
+```
+
+### Rollback File History Version
+
+```php 
+// get latest version file data
+$fileHistoryLatest = $file->getHistoryFiles()->one();
+$file->setStoredFile($previousVersion->getFileStorePath());
 ```
 
 
