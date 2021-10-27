@@ -19,6 +19,7 @@ TBD
 - User/Space blocking
 - Show available module updates directly in admin menu
 - Many Performance Approvements
+- People/Spaces: Endless Scrolling
 
 
 For a detailed list of all changes take a look into the Changelog.
