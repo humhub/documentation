@@ -16,6 +16,7 @@ module.exports = {
             label: 'Release Notes',
             items: [
                 'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_10',
                 'about/releasenotes/release_notes_1_9',
                 'about/releasenotes/release_notes_1_8',
                 'about/releasenotes/release_notes_1_7',
