@@ -15,7 +15,7 @@ TBD
 - RichText for User Approval E-Mails
 - Mentions: instant suggestions, no more search min character limit
 - Sign in back from impersonate mode
-- File Versioning
+- File Versioning (Module API)
 - User/Space blocking
 - Show available module updates directly in admin menu
 - Many Performance Approvements
