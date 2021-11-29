@@ -31,6 +31,12 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.10
+
+- On individual templates based on the `enterprise-themes` it may be necessary to disable the new lazy loading of the space chooser `views/layouts/main.php`.
+Change: `<?= Chooser::widget(); ?>` to `<?= Chooser::widget(['lazyLoad' => false]); ?>`
+
+
 ### 1.9
 
 - The "Directory" section has been removed and replaced with new "People" and "Spaces" pages. 
