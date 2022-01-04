@@ -104,7 +104,7 @@ return [
 ];
 ```
 
-### Directory Layout
+### Directory Layout (Legacy)
 
 Adding the following in your module's `config.php` file will enable the view of your snippet in your Directory.
 
