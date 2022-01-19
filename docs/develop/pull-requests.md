@@ -15,7 +15,7 @@ For small changes or documentation issues or straightforward fixes, you don't ne
 
 
 ** For new branches **
-Usually we use enh/<issue-id>-some-info or fix/<issue-id>-some-info
+Usually we use enh/[issue-id]-some-info or fix/[issue-id]-some-info
   
 ** Module Repositories (github.com/humhub and github.com/humhub-contrib) **
 
