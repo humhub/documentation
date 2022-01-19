@@ -13,6 +13,10 @@ For small changes or documentation issues or straightforward fixes, you don't ne
 - `master` For bugfixes and critical translation updates 
 - `develop` For all new features, optimizations, refactoring, complex non-critical bug fixes
 
+
+** For new branches **
+Usually we use enh/<issue-id>-some-info or fix/<issue-id>-some-info
+  
 ** Module Repositories (github.com/humhub and github.com/humhub-contrib) **
 
 Usually there is only one `master` or `main` branch in module repositories. If there is an active `develop` branch and it is a major change PR, please use this branch if necessary.
