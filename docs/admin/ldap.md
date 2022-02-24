@@ -90,12 +90,10 @@ Although the value of the ID attribute should not change, there are always commo
 - Re-create (delete & create) a LDAP user 
 - Changing the ID attribute field to another ID field
 
-**Update Mapping**
+If these values change, the mappings must be cleared via the command (`ldap/mapping-clear`) and rebuilt with the command (`ldap/mapping-rebuild`).
+Recreating the mappings works reliably based on the email addresses or usernames.
 
-Currently only the entire mapping table can be reset. 
-This means for all users the mapping must be rebuilt afterwards. 
-This process works very reliably because it can resolve existing users based on their email address and user name. 
-
+**Update Mapping for all users**
 
 Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
 
@@ -103,6 +101,19 @@ Using the HumHub system user, go to the root directory of the HumHub application
 cd protected
 
 php yii ldap/mapping-clear
+php yii ldap/mapping-rebuild
+
+php yii ldap/status
+```
+
+**Update Mapping for a certain account**
+
+Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
+
+``` 
+cd protected
+
+php yii ldap/mapping-clear ldap someUserName
 php yii ldap/mapping-rebuild
 
 php yii ldap/status
