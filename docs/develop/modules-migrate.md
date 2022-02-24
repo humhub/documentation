@@ -20,6 +20,21 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+
+Migrate from 1.10 to 1.11
+------------------------
+
+**The following deprecated classes have been permanently deleted.**
+- protected/humhub/compat/CActiveForm.php 
+- protected/humhub/compat/CHtml.php
+- protected/humhub/modules/space/models/Setting.php 
+- protected/humhub/modules/user/models/Setting.php
+- protected/humhub/modules/directory/*
+
+**New Deprecations: **
+- protected/humhub/modules/content/components/behaviors/CompatModuleManager.php
+
+
 Migrate from 1.9 to 1.10
 ------------------------
 
