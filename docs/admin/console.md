@@ -184,3 +184,10 @@ Management of uploaded files. (HumHub 1.7+)
 | `file/downscale-images`            | Scales down already uploaded images to the maximum dimensions and quality.           |
 | `file/index (default)`             | Overview of uploaded files and automatically generated variants.                     |
 
+### `translations`
+
+Generate and update existing translation files
+
+| Command | Description |    
+| -------- | ---------- |
+| `message/extract-module <module-id>`             | Generates and updates existing translation files.    |
