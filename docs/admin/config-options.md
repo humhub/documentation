@@ -376,6 +376,6 @@ Data type: `Array`<br/>
 Default: `[]]`<br/>
 
 **enableServiceWorker** - Disable Service Worker and PWA Support.<br/>
-Default: `false`<br/>
+Default: `true`<br/>
 Since: `1.8`<br/>
 Data Type: `Boolean`<br/>
