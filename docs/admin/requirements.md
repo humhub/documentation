@@ -32,11 +32,13 @@ All essential requirements will be tested during the web installation and can be
 `Administration -> Information -> Prerequisites`.
 :::
 
-- **PHP 8.0** (Recommended)
-- **PHP 7.4** (Recommended)
-- PHP 7.3
-- PHP 7.2 (Up to HumHub 1.8)
-- PHP 7.1 (Up to HumHub 1.8)
+| HumHub Version     | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
+| ------------------ |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:| 
+| 1.11               | Yes      | **Yes**  | **Yes**  | No       | No       | No       |
+| 1.10               | No       | **Yes**  | **Yes**  | Yes      | No       | No       |
+| 1.9                | No       | **Yes**  | **Yes**  | Yes      | No       | No       |
+| 1.8                | No       | Yes      | **Yes**  | **Yes**  | Yes      | No       |
+| 1.7                | No       | No       | **Yes**  | **Yes**  | **Yes**  | Yes       |
 
 ### Extensions
 
