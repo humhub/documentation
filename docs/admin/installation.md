@@ -26,7 +26,7 @@ wget https://www.humhub.com/download/package/humhub-<version>.tar.gz
 tar xvfz humhub-<version>.tar.gz
 mv /tmp/humhub-<version> /var/www/humhub
 ```
-> Please replace `<version>` with the desired HumHub version e.g. `1.6.3`.
+> Please replace `<version>` with the desired HumHub version e.g. `1.10.3`.
 
 ## File permissions
 

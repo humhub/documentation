@@ -4,11 +4,11 @@ title: Server Setup (Linux)
 ---
 
 This document covers a basic server configuration under Linux.
-The operating system used here is ``Linux`` with the distribution ``Debian Buster 10``.
+The operating system used here is ``Linux`` with the distribution ``Debian Bullseye 11``.
 
 HumHub is being installed into the ``/var/www/humhub`` directory in this case and runs with the user/group ``www-data``.
 
-The URL https://temp.humhub.dev is used in this example. Replace it with an URL of your choice.
+The URL https://humhub.example.com is used in this example. Replace it with an URL of your choice.
 
 
 :::important
@@ -89,15 +89,15 @@ max_execution_time = 120
 
 The ``php.ini`` file is located in one of the following folders depending on the runtime mode (FPM or Apache2 module):
 
-- /etc/php/7.3/apache2/php.ini
-- /etc/php/7.3/fpm/php.ini
+- /etc/php/7.4/apache2/php.ini
+- /etc/php/7.4/fpm/php.ini
 
 **Example for Apache2 module:** 
 
 ```bash
-sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.3/apache2/php.ini
-sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.3/apache2/php.ini
-sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.3/apache2/php.ini
+sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.4/apache2/php.ini
+sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.4/apache2/php.ini
+sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.4/apache2/php.ini
 
 systemctl restart apache2
 ```
@@ -105,11 +105,11 @@ systemctl restart apache2
 **Example for FPM:** 
 
 ```bash 
-sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.3/fpm/php.ini
-sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.3/fpm/php.ini
-sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.3/fpm/php.ini
+sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php/7.4/fpm/php.ini
+sed -i 's/post_max_size = 8M/post_max_size = 128M/g' /etc/php/7.4/fpm/php.ini
+sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 128M/g' /etc/php/7.4/fpm/php.ini
 
-systemctl restart php7.3-fpm
+systemctl restart php7.4-fpm
 ```
 
 
@@ -124,7 +124,7 @@ Install Certbot and obtain SSL certificates for the portal.
 
 ```bash
 apt install certbot
-certbot certonly --standalone -d temp.humhub.dev
+certbot certonly --standalone -d humhub.example.com
 ```
 
 ### Apache
@@ -143,13 +143,13 @@ Create configuration file ``/etc/apache2/sites-available/humhub.conf`` with the 
 
 ```apacheconf
 <VirtualHost *:443>
-  ServerName temp.humhub.dev
-  ServerAdmin root@temp.humhub.dev
+  ServerName humhub.example.com
+  ServerAdmin root@humhub.example.com
 
   SSLEngine on
-  SSLCertificateFile    	/etc/letsencrypt/live/temp.humhub.dev/cert.pem
-  SSLCertificateKeyFile 	/etc/letsencrypt/live/temp.humhub.dev/privkey.pem
-  SSLCertificateChainFile 	/etc/letsencrypt/live/temp.humhub.dev/fullchain.pem
+  SSLCertificateFile    	/etc/letsencrypt/live/humhub.example.com/cert.pem
+  SSLCertificateKeyFile 	/etc/letsencrypt/live/humhub.example.com/privkey.pem
+  SSLCertificateChainFile 	/etc/letsencrypt/live/humhub.example.com/fullchain.pem
 
   DocumentRoot /var/www/humhub
 
@@ -174,8 +174,8 @@ Create configuration file ``/etc/apache2/sites-available/humhub.conf`` with the 
 </VirtualHost>
 
 <VirtualHost *:80>
-   ServerName temp.humhub.dev
-   Redirect / https://temp.humhub.dev
+   ServerName humhub.example.com
+   Redirect / https://humhub.example.com
 </VirtualHost>
 ```
 
@@ -183,7 +183,7 @@ Enable the virtual host, additional Apache2 configurations and required modules.
 
 ```bash
 a2enmod ssl rewrite headers proxy_fcgi setenvif
-a2enconf php7.3-fpm
+a2enconf php7.4-fpm
 a2ensite humhub
 
 systemctl reload apache2
@@ -206,7 +206,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name temp.humhub.dev;
+    server_name humhub.example.com;
     return 301 https://$server_name:443$request_uri;
 }
 
@@ -216,11 +216,11 @@ server {
 	
 	root /var/www/humhub;
 
-	server_name temp.humhub.dev;
+	server_name humhub.example.com;
 	
 	#include snippets/letsencrypt.conf;
-	ssl_certificate /etc/letsencrypt/live/temp.humhub.dev/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/temp.humhub.dev/privkey.pem;
+	ssl_certificate /etc/letsencrypt/live/humhub.example.com/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/humhub.example.com/privkey.pem;
 
 	charset utf-8;
     client_max_body_size 256M;
@@ -248,7 +248,7 @@ server {
 				set $fsn $fastcgi_script_name;
 		}
 
-  		fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+  		fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 		include fastcgi_params;
 		fastcgi_param  SCRIPT_FILENAME  $document_root$fsn;
 	}
