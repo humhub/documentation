@@ -7,9 +7,9 @@ title: HumHub 1.11
 
 #### Introducing the new marketplace
 
-We have extensively redesigned the software's Marketplace by introducing a new "cards" design for the module overview. With this fresh look we want to give the individual modules more visibility and hope to draw the the users' attention to them. Of course, we hope not only increase the attention to our own modules, but also to the many modules of our partners and our Community.  
+We have extensively redesigned the software's Marketplace by introducing a new "cards" design for the module overview. With this fresh look we want to give the individual modules more visibility and hope to draw the users' attention to them. Of course, we hope to not only increase the attention to our own modules, but also to the many modules of our partners and our Community.  
 
-In addition to the extensive rework in terms of look & feel, we have of course also added new features to the Marketplace. For example, a new filters help you find the modules you are looking for faster, a prominent notice now appears when the core software needs an update and you are now able to install all pending module updates with just one click. 
+In addition to the extensive rework in terms of look & feel, we have of course also added new features to the Marketplace. For example, new filters help you find the modules you are looking for faster, a prominent notice now appears when the core software needs an update and you are now able to install all pending module updates with just one click. 
 
 #### Opt-in for embedded content and support for new oEmbed providers
 
@@ -19,13 +19,13 @@ In addition to that, we have also reworked the oEmbed settings giving administra
 
 #### Forbidden usernames and notifications about deleted content
 
-With this release we are also creating the possibility ban certain usernames. This can be done via the configuration and the new feature makes it possible to exclude unwanted or offensive usernames. We are implementing this because a big part of our vision at HumHub is to build a great communities and networks that connect people and thrive an environment where everyone is welcoming and respectful. 
+With this release we are also creating the possibility to ban certain usernames. This can be done via the configuration and the new feature makes it possible to exclude unwanted or offensive usernames. We are implementing this because a big part of our vision at HumHub is to build great communities and networks that connect people and thrive an environment where everyone is welcoming and respectful. 
 
 Another feature that comes with this version is the possibility for admins to leave a comment on why they are deleting certain posts/comments. This avoids confusion in case that content has to be deleted. This is intended to give users direct feedback, when necessary, on the content they create on the network and to encourage them to adopt more appropriate practices. 
 
 #### And more...
 
-- Added a single content view for posts Posts (Own URL, direct linking, expanded comment section)
+- Added a single content view for posts (Own URL, direct linking, expanded comment section)
 - Indication who invited users on the approval page
 - Implemented grouped actions for user approval
 - Profile fields can now be prefixes (for example 'tel://')
