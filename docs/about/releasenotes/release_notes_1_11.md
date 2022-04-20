@@ -23,7 +23,7 @@ With this release we are also creating the possibility to ban certain usernames.
 
 Another feature that comes with this version is the possibility for admins to leave a comment on why they are deleting certain posts/comments. This avoids confusion in case that content has to be deleted. This is intended to give users direct feedback, when necessary, on the content they create on the network and to encourage them to adopt more appropriate practices. 
 
-#### And more...
+#### And more..
 
 - Added a single content view for posts (Own URL, direct linking, expanded comment section)
 - Indication who invited users on the approval page
