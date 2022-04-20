@@ -11,9 +11,13 @@ We have extensively redesigned the software's Marketplace by introducing a new "
 
 In addition to the extensive rework in terms of look & feel, we have of course also added new features to the Marketplace. For example, new filters help you find the modules you are looking for faster, a prominent notice now appears when the core software needs an update and you are now able to install all pending module updates with just one click. 
 
+![Marketplace](./images/1_11/modules.png)
+
 #### Opt-in for embedded content and support for new oEmbed providers
 
 Before external embedded content (e.g. Youtube, Dailymotion) is displayed we now force an opt-in from the users. The embedded content is covered with a corresponding overlay, which allows users to give their consent directly and to save these settings for each provider individually. With the introduction of this feature we hope to make it easier for you to comply with the data protection regulations in your respective countries.
+
+![External Content](./images/1_11/ext_content.png)
 
 In addition to that, we have also reworked the oEmbed settings giving administrators new possibilities. In this case, too, we have not only revised the settings overview, but have also added new functions. For instance, providers that require an individual API key are now also supported. This is the case for Facebook or Twitter, for example. 
 
