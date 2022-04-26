@@ -15,6 +15,7 @@ or [**Development Migration Guide**](../develop/modules-migrate.md).
 ----
 
 - The minimum PHP Version is now **7.4**
+- The deprecated "Directory" module has now been removed. It must now also no longer be used in the custom configuration files. 
  
 
 1.9
