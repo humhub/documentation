@@ -159,6 +159,7 @@ module.exports = {
             'theme/module',
             'theme/assets',
             'theme/mail',
+            'theme/default-images',
         ]
     },
     Professional: {
