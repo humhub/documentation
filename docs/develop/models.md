@@ -61,7 +61,7 @@ Missing migrations are also executed when accessing `Administration -> Informati
 
 ## Uninstall Migration
 
-Your module should also privde an `uninstall.php` file.
+Your module should also provide an `uninstall.php` file.
 The uninstall migration is by default executed within your `Module::disable()` logic method and should look like:
 
 ```
