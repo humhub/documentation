@@ -21,8 +21,14 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 ```
 
 
-Migrate from 1.10 to 1.11
-------------------------
+Version 1.12
+------------
+
+- Added new parameter to `humhub\modules\user\models\fieldtype\BaseType::getFieldFormDefinition(User $user)`
+
+
+Version 1.11
+------------
 
 **The following deprecated classes have been permanently deleted.**
 - protected/humhub/compat/CActiveForm.php 
@@ -35,16 +41,16 @@ Migrate from 1.10 to 1.11
 - protected/humhub/modules/content/components/behaviors/CompatModuleManager.php
 
 
-Migrate from 1.9 to 1.10
-------------------------
+Version 1.10
+------------
 
 - Removed `Followable` behavior methods `getFollowingCount()`, `getFollowingObjects($query)`, `getFollowers()`
 - File versioning support has been introduced. Use `$file->setStoredFile()` instead of ~~`$file->store->set()`~~ See [File module documentation](files.md#replacemodify).
 - Removed user's name encoding in `UserPicker`
 
 
-Migrate from 1.8 to 1.9
------------------------
+Version 1.9
+-----------
 
 - New [Ajax Validator](https://github.com/humhub/humhub/pull/4814) for ControllerAccess to force Ajax requests.
 - New setting "Default Timezone" `Yii::$app->settings->get('defaultTimeZone')` instead of the deprecated setting "Server Timezone" `Yii::$app->settings->get('timeZone')`.
@@ -53,8 +59,8 @@ Migrate from 1.8 to 1.9
 - Added `EVENT_BEFORE_CHECKING_USER_STATUS` in `AuthController` 
 
 
-Migrate from 1.7 to 1.8
------------------------
+Version 1.8
+-----------
 
 - AdminMenu: A visibility must always be specified for custom menu entries. [See example code.](https://github.com/humhub/humhub/blob/2ff4053d66743755cecdd57cfb8b46dae78e1a3d/protected/humhub/modules/admin/widgets/AdminMenu.php#L40)
 - User Account "Security" page renamed to "Permissions". (Changed action id and views)
@@ -97,8 +103,8 @@ return [
 ];
 ```
 
-Migrate from 1.6 to 1.7
------------------------
+Version 1.7
+-----------
 
 ### New WallEnry Layouts
 
@@ -269,14 +275,14 @@ The following deprecations were added to the Stream class and moved to a `humhub
 - Removed class `humhub\widgets\RichtextField` which is deprecated since `v1.4`. 
 
 
-Migrate from 1.5 to 1.6
------------------------
+Version 1.6
+-----------
 
 No breaking changes.
 
 
-Migrate from 1.4 to 1.5
------------------------
+Version 1.5
+-----------
 
 ### Asset Management
 
@@ -514,8 +520,8 @@ in an upcoming release:
 
 - Removed `humhub\assets\SocketIoAsset` from AppAsset
 
-Migrate from 1.3 to 1.4
------------------------
+Version 1.4
+-----------
 
 ### CSP and Nonce support
 
@@ -576,8 +582,8 @@ The following deprecated method have been removed.
 
 - getSpace()
 
-Migrate from 1.2 to 1.3
------------------------
+Version 1.3
+-----------
 
 ### New Stream Javascript API
 
@@ -639,8 +645,8 @@ We moved most of the `humhub\widgets` into the new `ui` core module as:
  - `humhub\widgets\MultiSelectField`
  - `humhub\widgets\TimePicker`
 
-Migrate from 1.1 to 1.2
------------------------
+Version 1.2
+-----------
 
 ### Stream / Content Changes
 
@@ -681,8 +687,8 @@ public $topMenuRoute = '/dashboard/dashboard';
 within your controller for pjax topmenu support.
 
 
-Migrate from 1.0 to 1.1
------------------------
+Version 1.1
+-----------
 
 - Dropped unused space attribute "website"
 
@@ -708,8 +714,8 @@ Migrate from 1.0 to 1.1
 
 
 
-Migrate from 0.20 to 1.0
-------------------------
+Version 1.0
+-----------
 
 ## Migrate from 0.12 to 0.20
 
@@ -717,20 +723,3 @@ Migrate from 0.20 to 1.0
 
 This requires an extensive migration of all custom modules/themes.
 Find more details here: [HumHub 0.20 Migration](modules-migrate-0.20.md)
-
-
-
-Migrate from 0.11 to 0.12
--------------------------
-
-- Rewritten Search 
-
-
-
-Migrate from 0.10 to 0.11
--------------------------
-No breaking changes.
-
-- Now handle ContentContainerController layouts, new option showSidebar
-- New ContentAddonController Class
-- New Wiki Parser / Editor Widget
