@@ -31,7 +31,7 @@ humhub.module('example.MyComponent', function(module, require, $) {
         Component.call(this, node, options);
     }
 
-    object.inhertis(MyComponent, Component);
+    object.inherits(MyComponent, Component);
 
     MyComponent.prototype.hello = function(evt) {
         this.$.find('.message').text('Hi!');
@@ -87,7 +87,7 @@ humhub.module('example.mylist', function(module, require, $) {
         Component.call(this, node, options);
     }
 
-    object.inhertis(List, Component);
+    object.inherits(List, Component);
 
     ListEntry.prototype.listAction = function(evt) {
         /* ... */
@@ -98,7 +98,7 @@ humhub.module('example.mylist', function(module, require, $) {
         Component.call(this, node, options);
     }
 
-    object.inhertis(ListEntry, Component);
+    object.inherits(ListEntry, Component);
 
     List.prototype.someAction = function(evt) {
 
@@ -187,7 +187,7 @@ humhub.module('example.MyWidget', function(module, require, $) {
     }
 
     // Make sure this is called before your function definitions, otherwise they will be lost!
-    object.inhertis(MyWidget, Widget);
+    object.inherits(MyWidget, Widget);
     
     var MyWidget.prototype.getDefaultOptions = function() {
         return {
