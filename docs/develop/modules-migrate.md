@@ -25,6 +25,7 @@ Version 1.12
 ------------
 
 - Added new parameter to `humhub\modules\user\models\fieldtype\BaseType::getFieldFormDefinition(User $user)`
+- Renamed `WallStreamFilterNavigation::PANEL_POSITION_*` constants
 
 
 Version 1.11
