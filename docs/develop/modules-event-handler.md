@@ -511,7 +511,7 @@ The `humhub\modules\friendship\FriendshipEvent` class provides the following add
 
 ### Space Membership
 
-Space membership events are triggered by the `humhub\modules\space\model\Membership` model and can be used to trace the
+Space membership events are triggered by the `humhub\modules\space\models\Membership` model and can be used to trace the
 creation or removal of space membership relations.
 
 | Event | Class | Description |    
@@ -519,7 +519,7 @@ creation or removal of space membership relations.
 | `Membership::EVENT_MEMBER_ADDED` | `humhub\modules\space\MemberEvent` | Raised when a user joins a space or was added |
 | `Membership::EVENT_MEMBER_REMOVED` | `humhub\modules\space\MemberEvent` | Raised when a user leaves a space or was removed |
 
- The `humhub\modules\space\model\Membership` class provides the following additional properties: 
+ The `humhub\modules\space\models\Membership` class provides the following additional properties: 
  
  - `$space`: The `humhub\modules\space\models\Space` model of the space
   -`$user`: The respective user model of the membership relation
