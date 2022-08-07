@@ -114,4 +114,6 @@ This is also possible with SaaS hosting. To do this, an SFTP connection must be 
 
 The file ``localconfig.php`` is the equivalent of the file ``/protected/config/common.php`` if you run HumHub yourself.
 
+**New:** To adjust configurations which correspond to the file `protected/config/web.php`, the file `/localconfig-web.php` can now be modified.
+
 
