@@ -42,7 +42,7 @@ Please see ``Administration -> Cloud Hosting -> Export data`` for details
 
 2.) Download the provided data package and extract it to a temporary folder
 
-3.) Replace the folders `/uploads`, `/themes`, `/protected/modules`.
+3.) Replace the folder `/uploads`.
 
 4.) Replace the database (A full database dump is stored in the folder `runtime/dbbackup.sql.gz`)
 
@@ -50,7 +50,19 @@ Please see ``Administration -> Cloud Hosting -> Export data`` for details
 
 6.) Rebuild the [search index](../admin/search.md)
 
-7.) Restart the webserver and test the installation
+```
+cd protected
+php yii search/rebuild
+```
+
+7.) Reinstall [modules](../admin/console.md#module)
+
+```
+cd protected
+php yii module/update-all
+```
+
+8.) Restart the webserver and test the installation
 
 
 ## GDPR & Terms of use
