@@ -29,9 +29,9 @@ which resembles the following grunt command executed within the `root` of your i
 grunt migrate-create --name=mymodule_inital
 ```
 
-Just copy the resulting migration from the `protected/humhub/migrations` into your modules `migration` folder and add your scheme setup.
+Just copy the resulting migration from the `protected/humhub/migrations` folder into your module's `migrations` folder and add your schema setup.
 Please refer to the [Yii Migration Guide](https://www.yiiframework.com/doc/guide/2.0/en/db-migrations#creating-migrations) for more information about
-how to use the `Migration` guide.
+how to use migrations.
 
 Your table names should be prefixed with your unique module id like `mymodule_entry`.
 
