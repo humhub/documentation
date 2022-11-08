@@ -20,6 +20,14 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Version 1.13
+------------
+
+- New method `ContentContainerModule::getContentClasses()`
+- New `ContentActiveRecord::$createPermission`
+- New `WallStreamModuleEntryWidget::$createRoute` and `::$createFormSortOrder` and `::$createFormClass`
+- To check if a content can be created, please use now: `(new Post($container))->content->canEdit()`
+
 
 Version 1.12
 ------------
