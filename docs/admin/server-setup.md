@@ -199,7 +199,7 @@ apt install nginx \
 ```
 
 
-Create configuration file ``/etc/nginx/site-available/humhub.conf`` with the following content:
+Create configuration file ``/etc/nginx/sites-available/humhub.conf`` with the following content:
 
 ```conf
 server {
