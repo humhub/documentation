@@ -72,7 +72,7 @@ Do not forget to change the `change-me` placeholder!
 ```bash
 apt update
 apt install php php-cli \
-	php-imagick php-curl php-bz2 php-gd php-intl \
+	php-imagick php-curl php-bz2 php-gd php-intl php-mbstring \
 	php-mysql php-zip php-apcu-bc php-apcu php-xml php-ldap
 
 ```
