@@ -223,7 +223,7 @@ server {
 	ssl_certificate_key /etc/letsencrypt/live/humhub.example.com/privkey.pem;
 
 	charset utf-8;
-    client_max_body_size 256M;
+	client_max_body_size 256M;
 
 	location / {
 		index  index.php index.html ;
@@ -234,10 +234,10 @@ server {
 		deny all;
 	}
 
-    location ~ ^/(assets|static|themes|uploads) {
-        expires 10d;
-        add_header Cache-Control "public, no-transform";
-    }
+	location ~ ^/(assets|static|themes|uploads) {
+		expires 10d;
+		add_header Cache-Control "public, no-transform";
+	}
 
 	location ~ \.php {
 		fastcgi_split_path_info  ^(.+\.php)(.*)$;
