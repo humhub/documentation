@@ -27,6 +27,7 @@ Version 1.13
 - New `ContentActiveRecord::$createPermission`
 - New `WallStreamModuleEntryWidget::$createRoute` and `::$createFormSortOrder` and `::$createFormClass`
 - To check if a content can be created, please use now: `(new Post($container))->content->canEdit()`
+- Deprecated JS "Regular" checkboxes/options replaced with CSS
 
 
 Version 1.12
