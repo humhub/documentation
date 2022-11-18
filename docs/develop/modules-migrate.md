@@ -29,7 +29,18 @@ Version 1.13
 - To check if a content can be created, please use now: `(new Post($container))->content->canEdit()`
 - Deprecated JS "Regular" checkboxes/options replaced with CSS
 - Moved config param `tour.acceptableNames` to `humhub\modules\tour\Module::$acceptableNames`
-
+- Removed Deprecations
+  - components/validators/AbstractDateValidator
+  - components/validators/PastDateValidator
+  - CompatModuleManager (e.g. Module isEnabled on ContentContainer records, use ModuleManager instead)  
+  - SettingsBehavior (`getSetting` and `setSetting` on ContentContainer records)
+  - humhub/widgets/ActiveField (Renamed)
+  - humhub/widgets/BasePickerField (Renamed)
+  - humhub/widgets/BaseSidebarItem
+  - humhub/widgets/InputWidget (Renamed)
+  - humhub/widgets/MultiSelectField
+  - humhub/widgets/RichTextEditor
+ 
 
 Version 1.12
 ------------
