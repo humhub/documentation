@@ -118,3 +118,15 @@ php yii ldap/mapping-rebuild
 
 php yii ldap/status
 ```
+
+## LDAP Console Commands
+
+### View all LDAP users
+
+Using the following command, a list of all users returned by the LDAP server (`User Filter` Configuration )is displayed. HumHub LDAP users that do not appear in the list are automatically disabled.  
+
+```
+cd protected
+php yii ldap/list-users
+``` 
+

@@ -72,7 +72,7 @@ Do not forget to change the `change-me` placeholder!
 ```bash
 apt update
 apt install php php-cli \
-	php-imagick php-curl php-bz2 php-gd php-intl \
+	php-imagick php-curl php-bz2 php-gd php-intl php-mbstring \
 	php-mysql php-zip php-apcu-bc php-apcu php-xml php-ldap
 
 ```
@@ -199,7 +199,7 @@ apt install nginx \
 ```
 
 
-Create configuration file ``/etc/nginx/site-available/humhub.conf`` with the following content:
+Create configuration file ``/etc/nginx/sites-available/humhub.conf`` with the following content:
 
 ```conf
 server {
@@ -223,7 +223,7 @@ server {
 	ssl_certificate_key /etc/letsencrypt/live/humhub.example.com/privkey.pem;
 
 	charset utf-8;
-    client_max_body_size 256M;
+	client_max_body_size 256M;
 
 	location / {
 		index  index.php index.html ;
@@ -234,10 +234,10 @@ server {
 		deny all;
 	}
 
-    location ~ ^/(assets|static|themes|uploads) {
-        expires 10d;
-        add_header Cache-Control "public, no-transform";
-    }
+	location ~ ^/(assets|static|themes|uploads) {
+		expires 10d;
+		add_header Cache-Control "public, no-transform";
+	}
 
 	location ~ \.php {
 		fastcgi_split_path_info  ^(.+\.php)(.*)$;
