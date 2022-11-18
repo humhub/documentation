@@ -40,6 +40,7 @@ Version 1.13
   - humhub/widgets/InputWidget (Renamed)
   - humhub/widgets/MultiSelectField
   - humhub/widgets/RichTextEditor
+- `$space->isModuleEnabled($id)` will be removed soon! Use: `$space->moduleManager->isEnabled($id)` instead.
  
 
 Version 1.12
