@@ -31,7 +31,7 @@ public static function onSpaceSidebarInit($event)
     $space = $event->sender->space;
     $settings = SnippetModuleSettings::instantiate();
 
-    if ($space->isModuleEnabled('mymodule')) {
+    if ($space->moduleManager->isEnabled('mymodule')) {
         if ($settings->showUpcomingEventsSnippet()) {
             $event->sender->addWidget(MySnippet::class, ['contentContainer' => $space], ['sortOrder' => $settings->upcomingEventsSnippetSortOrder]);
         }
