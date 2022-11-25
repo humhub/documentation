@@ -100,8 +100,9 @@ Github - Bugtracker
 - Did this work in a previous version? If so, also provide the version that it worked in.
 - OS/PHP/MySQL version
 - Modules? Confirm that you've tested with Debug > Reload Without Extensions first (see below).
-- Any errors logged in Debug > Show Developer Tools - Console view
-- Try to reproduce the error on our Demo hosting
+- Any errors logged in Browser: Debug > Show Developer Tools - Console view
+- Try to reproduce the error on our HumHub Demo hosting
+- If the error occurred during an update, describe the method of the update and specify the previous version number.
 
 Direct Support (Professional Edition only)
 ----------------------------------------
