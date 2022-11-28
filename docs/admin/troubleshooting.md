@@ -85,10 +85,10 @@ Github - Bugtracker
 -------------------
 
 **How to file a bug**
+
 - Go to our issue tracker on GitHub: https://github.com/humhub/humhub/issues
 - Search for existing issues using the search field at the top of the page
 - File a new issue including the info listed below
-- Thanks a ton for helping make Brackets higher quality!
 
 **When filing a new bug, please include:**
 
@@ -100,9 +100,11 @@ Github - Bugtracker
 - Did this work in a previous version? If so, also provide the version that it worked in.
 - OS/PHP/MySQL version
 - Modules? Confirm that you've tested with Debug > Reload Without Extensions first (see below).
-- Any errors logged in Debug > Show Developer Tools - Console view
+- Any errors logged in Browser: Debug > Show Developer Tools - Console view
+- Try to reproduce the error on our HumHub Demo hosting
+- If the error occurred during an update, describe the method of the update and specify the previous version number.
 
-Direct Support (Enterprise Edition only)
+Direct Support (Professional Edition only)
 ----------------------------------------
 
 As Enterprise Edition user you can create direct support inquiries at: 
