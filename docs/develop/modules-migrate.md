@@ -41,7 +41,7 @@ Version 1.13
   - humhub/widgets/MultiSelectField
   - humhub/widgets/RichTextEditor
 - `$space->isModuleEnabled($id)` will be removed soon! Use: `$space->moduleManager->isEnabled($id)` instead.
- 
+- New CSS class `btn-icon-only` for Bootstrap buttons with icons without text.
 
 Version 1.12
 ------------
