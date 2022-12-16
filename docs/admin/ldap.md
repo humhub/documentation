@@ -130,3 +130,15 @@ cd protected
 php yii ldap/list-users
 ``` 
 
+## Active Directory
+
+### Restrict to enabled users
+
+- Login Filter:  `(&(sAMAccountName=%s)(!userAccountControl:1.2.840.113556.1.4.803:=2))`
+- User Filter:  `"(&(objectClass=person)(memberOf=CN=Workers,CN=Users,DC=myDomain,DC=com)(!userAccountControl:1.2.840.113556.1.4.803:=2))"`
+
+
+
+
+
+
