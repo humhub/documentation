@@ -192,7 +192,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onBeforeControllerAction(ActionEvent $event)
 {
     if(!static::checkSomeSpecialCondition($event)) {
@@ -260,14 +260,14 @@ return [
         [
             'class' => Invite::class, 
             'event' => Invite::EVENT_BEFORE_VALIDATE, 
-            'callback' => [Event::class, 'onInviteBeforeValidate']
+            'callback' => [Events::class, 'onInviteBeforeValidate']
         ]
     ]
 ]
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onInviteBeforeValidate($event)
 {
     $registrationForm = $event->sender;
@@ -343,7 +343,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onUserIsVisible(UserEvent $event)
 {
     if($event->user->username === 'secretUser') {
