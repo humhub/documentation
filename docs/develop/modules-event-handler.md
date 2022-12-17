@@ -34,7 +34,7 @@ return [
         [
             'class' => Example::class, 
             'event' => Example::EVENT_SOME_EVENT,  
-            'callback' => [Event::class, 'onSomeEvent']
+            'callback' => [Events::class, 'onSomeEvent']
         ],
         //...
     ]
@@ -137,14 +137,14 @@ return [
         [
             'class' => ModuleManager::class, 
             'event' => ModuleManager::EVENT_AFTER_MODULE_ENABLED, 
-            'callback' => [Event::class, 'onAfterModuleEnabled']
+            'callback' => [Events::class, 'onAfterModuleEnabled']
         ]
     ]
 ]
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onAfterModuleEnabled(ModuleEvent $event)
 {
     if($event->moduleId === 'specialModle') {
@@ -388,7 +388,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onUserQueryVisible(ActiveQueryEvent $event)
 {
      $event->query->andWhere(['user.is_visible_in_crm' => 1]);
@@ -423,7 +423,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onUserRegistration(UserEvent $event)
 {
      try {
@@ -474,7 +474,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onUserFollow(FollowEvent $event)
 {
     if($event->target instanceof User) {
@@ -558,7 +558,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onRichTextEditorFieldCreate(WidgetEvent $event)
 {
     $event->result .= '<div>Powered by example Module</div>';
@@ -586,7 +586,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onSpecialWidgetBeforeRun(WidgetEvent $event)
 {
     if(static::someSpecialCondition($event)) {
@@ -616,7 +616,7 @@ return [
 ```
 
 ```php
-// Event.php
+// Events.php
 public static function onSpecialWidgetBeforeRun(WidgetCreateEvent $event)
 {
     $event->config['class'] = MyCustomSpecialWidget::class;
