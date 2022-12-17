@@ -114,17 +114,18 @@ events of modules. This can be useful in order to listen and react to lifecycle 
 
 | Event | Class | Description |    
 | -------- | ---------- | ---------- |
-| `ModuleManager::EVENT_BEFORE_MODULE_ENABLED` | `humhub\components\ModuleEvent` | Raised before a module is enabled | 
-| `ModuleManager::EVENT_AFTER_MODULE_ENABLED` | `humhub\components\ModuleEvent` | Raised after a module is enabled | 
-| `ModuleManager::EVENT_BEFORE_MODULE_DISABLED` | `humhub\components\ModuleEvent` | Raised before a module is disabled | 
-| `ModuleManager::EVENT_AFTER_MODULE_DISABLED` | `humhub\components\ModuleEvent` | Raised after a module is disabled | 
+| `ModuleManager::EVENT_BEFORE_MODULE_ENABLE` | `humhub\components\ModuleEvent` | Raised before a module is enabled | 
+| `ModuleManager::EVENT_AFTER_MODULE_ENABLE` | `humhub\components\ModuleEvent` | Raised after a module is enabled | 
+| `ModuleManager::EVENT_BEFORE_MODULE_DISABLE` | `humhub\components\ModuleEvent` | Raised before a module is disabled | 
+| `ModuleManager::EVENT_AFTER_MODULE_DISABLE` | `humhub\components\ModuleEvent` | Raised after a module is disabled | 
+| `ModuleManager::EVENT_AFTER_FILTER_MODULES` | `humhub\components\ModuleEvent` | Raised after filter modules | 
 
 The `humhub\components\ModuleEvent` class provides the following additional properties and functions: 
 
 - `$moduleId`: The moduleId of the module
 -`getModule()`: Can be used to return a module instance
 
-In the following example we use the `ModuleManager::EVENT_AFTER_MODULE_ENABLED` to set a module setting of another module 
+In the following example we use the `ModuleManager::EVENT_AFTER_MODULE_ENABLE` to set a module setting of another module 
 right after the module is enabled.
 
 ```php
@@ -136,7 +137,7 @@ return [
     'events' => [
         [
             'class' => ModuleManager::class, 
-            'event' => ModuleManager::EVENT_AFTER_MODULE_ENABLED, 
+            'event' => ModuleManager::EVENT_BEFORE_MODULE_ENABLE, 
             'callback' => [Event::class, 'onAfterModuleEnabled']
         ]
     ]
