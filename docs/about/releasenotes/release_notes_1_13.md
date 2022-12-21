@@ -9,7 +9,7 @@ title: HumHub 1.13
 
 One of our goals for this version was to make the process of creating new content easier and to increase the use of modules. Modules can now be attached directly on top (right-hand side) of the stream editor and module content (e.g. polls, events, tasks) can now be created in various ways directly from the stream without changing to the module overview. The new feature facilitates the creation of different types of content, saves time and gives users an additional entry point for content creation.
 
-<img width="1169" alt="Bildschirmfoto 2022-12-21 um 17 30 10" src="https://user-images.githubusercontent.com/38326726/208966265-b90ba0b6-dccf-4b3e-8ef7-f92884f375b0.png">
+![Screen100](https://user-images.githubusercontent.com/38326726/208967012-d16c054f-5d90-45bd-8af1-c207f7258b1a.jpg)
 
 #### Advanced Space settings
 
