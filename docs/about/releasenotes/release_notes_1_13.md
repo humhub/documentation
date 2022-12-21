@@ -9,6 +9,8 @@ title: HumHub 1.13
 
 One of our goals for this version was to make the process of creating new content easier and to increase the use of modules. Modules can now be attached directly on top (right-hand side) of the stream editor and module content (e.g. polls, events, tasks) can now be created in various ways directly from the stream without changing to the module overview. The new feature facilitates the creation of different types of content, saves time and gives users an additional entry point for content creation.
 
+<img width="1169" alt="Bildschirmfoto 2022-12-21 um 17 30 10" src="https://user-images.githubusercontent.com/38326726/208966265-b90ba0b6-dccf-4b3e-8ef7-f92884f375b0.png">
+
 #### Advanced Space settings
 
 We are also introducing new possibilities with regards to individualizing Spaces. Administrators are now able to hide the ‘About’ page and the ‘Latest activities’ widget. The same goes for the ‘Follower’ and ‘Members’ overview.  To make it as easy as possible, all this is now possible via the Space settings.
