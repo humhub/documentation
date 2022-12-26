@@ -167,6 +167,11 @@ cp .htaccess.dist .htaccess
 Sometimes it is necessary to enable support for ``.htaccess`` files in the [Apache VirtualHost](server-setup.md#apache) via the ``AllowOverwrite all`` directive. 
 
 
+:::note
+**Plesk:** Some providers enable the option "Restrict the ability to follow symbolic links" by default. This should be turned off (Websites & Domains > Hosting & DNS > Apache & nginx Settings).
+:::
+
+
 Example VirtualHost configuration:
 
 ```
