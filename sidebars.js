@@ -174,9 +174,11 @@ module.exports = {
             'professional-edition/ee',
         ]
     },
+/*
     User: {
         'Overview': [
 //            'user/gettingstarted',
         ]
     }    
+*/
 };

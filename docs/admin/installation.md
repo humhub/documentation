@@ -3,7 +3,9 @@ id: installation
 title: HumHub Setup
 ---
 
-
+:::tip
+Check out our [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/overview/list-categories) for many more guides and tips on installing and running HumHub!
+:::
 
 ## Download and extract
 
@@ -231,7 +233,7 @@ You can see the current mode at ``Administration -> Information``.
     
  ## Staging/Test Environment
  
- :::tip
+:::tip
  You can find a guide to setup an additional staging environment in our [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/page/view?title=Staging+Environment).
 :::
 
