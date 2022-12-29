@@ -21,8 +21,6 @@ writing low level tests for specific classes or components. Implement unit tests
 
 HumHub uses [Codeception](http://codeception.com/) as testing framework.
 
-*ATTENTION: Some of the test libraries are developed for use with PHP 7 only*
-
 Information about how to write tests with codeception are available here:
 
  - [Codeception Introduction](http://codeception.com/docs/01-Introduction)
