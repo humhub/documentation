@@ -58,7 +58,7 @@ The [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) c
 
 **Option 2: Download Package**
 
-You can also download a prebuilt package at: https://www.humhub.org/en/download
+You can also download a prebuilt package at: https://download.humhub.com
 
 Please see the [Installation Guide](../admin/installation.md) for further information.
 

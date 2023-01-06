@@ -17,18 +17,18 @@ Make sure your server meets the [System Requirements](requirements.md) before yo
 If you intend to setup a development environment for HumHub, follow the [Development Environment](../develop/environment.md)
 guide instead.
 
-The packaged version of HumHub is available at [https://www.humhub.org/download](https://www.humhub.org/download).
+The packaged version of HumHub is available at [https://download.humhub.com](https://download.humhub.com).
 After the download, just place the package into the `htdocs` folder of your web server.
 
 Example
 
 ```
 cd /tmp
-wget https://www.humhub.com/download/package/humhub-<version>.tar.gz
+wget https://download.humhub.com/downloads/install/humhub-<version>.tar.gz
 tar xvfz humhub-<version>.tar.gz
 mv /tmp/humhub-<version> /var/www/humhub
 ```
-> Please replace `<version>` with the desired HumHub version e.g. `1.10.3`.
+> Please replace `<version>` with the desired HumHub version e.g. `1.13.0`.
 
 ## File permissions
 

@@ -71,13 +71,13 @@ mv /var/www/humhub /var/www/humhub.backup
 
 **Download and Extract**
 
-Download the latest HumHub package from [https://www.humhub.com/download](https://www.humhub.com/download) and extract the package to your `web-root`.
+Download the latest HumHub package from [https://download.humhub.com](https://download.humhub.com) and extract the package to your `web-root`.
 
 ``` 
 cd /var/www
-wget https://www.humhub.com/download/package/humhub-1.5.0-beta.1.tar.gz
-tar xvfz humhub-1.5.0-beta.1.tar.gz
-mv humhub-1.5.0-beta.1 humhub 
+wget https://download.humhub.com/downloads/install/humhub-1.13.0.tar.gz
+tar xvfz humhub-1.13.0.tar.gz
+mv humhub-1.13.0 humhub 
 ```
 
 **Restore individual files**
