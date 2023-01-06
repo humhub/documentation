@@ -89,7 +89,7 @@ Default: `false` <br/>
 Since: `1.3` <br/>
 Data Type: `Boolean`<br/>
 
-### Directory
+### Directory (Legacy)
 
 **active** - Defines if the directory is active, if not the directory is not visible and can't be accessed.<br/>
 Default: `true`<br/>
