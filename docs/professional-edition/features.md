@@ -9,7 +9,7 @@ Once your HumHub installation is activated as a Professional Edition, the module
 
 If the Professional Edition is cancelled, the modules are automatically deactivated and must also be uninstalled.
 
-You can also find an overview of all Professional Edition modules in our [Marketplace](https://www.humhub.com/en/marketplace). 
+You can also find an overview of all Professional Edition modules in our [Marketplace](https://marketplace.humhub.com). 
 
 :::tip
 More information about the features can be found in the respective module descriptions.  
@@ -19,7 +19,7 @@ More information about the features can be found in the respective module descri
 
 ### Advanced LDAP
 
-In addition to the basic LDAP functions included in the Community Edition, the [Advanced LDAP](https://www.humhub.com/en/marketplace/advanced-ldap/) module provides many other additional features.
+In addition to the basic LDAP functions included in the Community Edition, the [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap) module provides many other additional features.
 
 - Map LDAP users automatically to a Space or Group
 - Synchronize attached LDAP profile images
@@ -27,7 +27,7 @@ In addition to the basic LDAP functions included in the Community Edition, the [
 
 ### Enterprise Theme
 
-In addition, the Professional Edition offers the [Enterprise Theme](https://www.humhub.com/en/marketplace/enterprise-theme/) with a completely new theme layout.
+In addition, the Professional Edition offers the [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) with a completely new theme layout.
 
 ### Translation Manager
 
@@ -42,20 +42,22 @@ Easily modify and control used translation messages and available languages.
 
 Below you can see a complete overview of the currently available Professional Edition modules that are available in the Marketplace. 
 
-- [JWT SSO](https://www.humhub.com/en/marketplace/jwt-sso/)
+- [News](https://marketplace.humhub.com/module/news)
 
-- [Advanced LDAP](https://www.humhub.com/en/marketplace/advanced-ldap/) 
+- [JWT SSO](https://marketplace.humhub.com/module/jwt-sso)
 
-- [E-Mail Whitelist](https://www.humhub.com/en/marketplace/email-whitelist/)
+- [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap) 
 
-- [Enterprise Theme](https://www.humhub.com/en/marketplace/enterprise-theme/)
+- [E-Mail Whitelist](https://marketplace.humhub.com/module/email-whitelist)
 
-- [Apache SOLR](https://www.humhub.com/en/marketplace/solr/)
+- [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme)
 
-- [Whitelabel](https://www.humhub.com/en/marketplace/whitelabel/)
+- [Apache SOLR](https://marketplace.humhub.com/module/solr)
 
-- [Translation Manager](https://www.humhub.com/en/marketplace/translation-manager/)
+- [Whitelabel](https://marketplace.humhub.com/module/whitelabel)
 
-- [SAML SSO](https://www.humhub.com/en/marketplace/saml-sso/)
+- [Translation Manager](https://marketplace.humhub.com/module/translation-manager)
+
+- [SAML SSO](https://marketplace.humhub.com/module/saml-sso)
 
 
