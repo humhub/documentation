@@ -138,7 +138,7 @@ module.exports = {
             },
             {
               label: 'Marketplace',
-              href: 'https://www.humhub.com/marketplace',
+              href: 'https://marketplace.humhub.com',
             },
           ],
         },
