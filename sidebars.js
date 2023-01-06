@@ -138,7 +138,7 @@ module.exports = {
             {
                 type: 'link',
                 label: 'Documentation',
-                href: 'https://www.humhub.com/en/marketplace/rest/#Manual'
+                href: 'https://marketplace.humhub.com/module/rest/manual'
             },
             {
                 type: 'link',
