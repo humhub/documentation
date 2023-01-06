@@ -55,3 +55,30 @@ Note: Changes of this selection will only affect new users. It can either be set
 Pending users can either be approved by group managers under the _Dashboard/Account Dropdown -> User Approval_ or by administrators under _Administration -> User Approval_.
 
 > Note: The approval process is only required if the **Require group admin approval after registration** option within the user authentication settings is enabled.
+
+## Visibilities
+
+- **Registered users** only - 
+- **Visible for all** - Guests if enabled
+- **Hidden** - Not visible for regular users
+
+### Hidden users
+
+Hidden users are not be visible for regular users. e.g. at
+
+- People Directory
+- Space Memberslist / Sidebar Snippet
+- Activities sidebar
+- Space About Site
+- As Followers/Friends
+- Search
+- Mentioning
+
+
+They will still be displayed in the following places:
+
+- User Administration
+- In the group administration (members)
+- In the Space Members administration + Owner Change Form 
+- REST API
+

@@ -80,7 +80,7 @@ Overwrite translation messages
 ------------------------------
 
 :::tip
-The [Translation Manager](https://www.humhub.com/en/marketplace/translation-manager/) of the [Professional Edition](../professional-edition/intro.md) offers a very easy and convenient solution to overwrite all available texts in Humhub.
+The [Translation Manager](https://marketplace.humhub.com/module/translation-manager) of the [Professional Edition](../professional-edition/intro.md) offers a very easy and convenient solution to overwrite all available texts in Humhub.
 :::
 
 

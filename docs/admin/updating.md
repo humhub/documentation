@@ -16,7 +16,7 @@ We also recommend to create a complete **[backup](backup.md)** before each updat
 
 ## Updater Module
 
-The [HumHub Updater](https://www.humhub.org/en/marketplace/details?id=17) Module enables updates of your HumHub platform 
+The [HumHub Updater](https://marketplace.humhub.com/module/updater) Module enables updates of your HumHub platform 
 in just a few clicks and without any technical knowledge. 
 
 ** Installation of the ``Updater`` module **

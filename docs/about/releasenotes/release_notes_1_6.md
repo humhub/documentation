@@ -13,13 +13,13 @@ conversations. In this release we allow one level of sub-comments, which may inc
 
 ### Marketplace updates
 
-The [HumHub Marketplace](https://www.humhub.com/en/marketplace) has received several new features. 
+The [HumHub Marketplace](https://marketplace.humhub.com) has received several new features. 
 In order to increase transparency, modules independently developed by our [Community](https://community.humhub.com/) 
 are now marked accordingly. To make the publishing and optimization process more efficient, 
 beta versions can now be published in the marketplace for interested users to test. 
 To boost the development of custom modules, we have additionally added the possibility to purchase third-party modules 
 directly from the developer/publisher and install them via the marketplace. For this purpose users are now able to 
-contact the developers via the [HumHub Marketplace](https://www.humhub.com/en/marketplace).
+contact the developers via the [HumHub Marketplace](https://marketplace.humhub.com).
 
 ### Stream enhancements
 

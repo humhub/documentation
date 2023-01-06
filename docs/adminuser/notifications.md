@@ -25,7 +25,7 @@ The administrator has the possibility to define default settings for all users. 
 Push Notifications
 ------------
 
-Push Notifications for mobile phones can also be enabled. However, the function is not natively integrated into the software, but can be added via the module ['Firebase - Push Notifications'](https://www.humhub.com/en/marketplace/fcm-push/). 
+Push Notifications for mobile phones can also be enabled. However, the function is not natively integrated into the software, but can be added via the module ['Firebase - Push Notifications'](https://marketplace.humhub.com/module/fcm-push). 
 As the name suggests, Google's Firebase service is used. A Firebase account and know how to set up the push service in Firebase are mandatory prerequisites for the use of the Module and thus the Push Notifications. Currently Push Notifications are only supported for Android. 
 
 Notification Types
