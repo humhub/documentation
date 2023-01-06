@@ -24,15 +24,15 @@ If you follow these steps, you should get this done with ease:
 
 3. Switch to the default theme named **HumHub** (`Administration -> Settings -> Appearance`)
 
-4. If you're using any Enterprise Edition features, which require a config file entry e.g. [SOLR search](https://www.humhub.com/en/marketplace/solr/) or [JWT SSO](https://www.humhub.com/en/marketplace/jwt-sso/), either comment those parts out or remove them completely.
+4. If you're using any Enterprise Edition features, which require a config file entry e.g. [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso), either comment those parts out or remove them completely.
 
 5. Disable and _uninstall_ the module "Humhub Enterprise Edition"
 
-6. Use to HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use e.g. [Enterprise Theme](https://www.humhub.com/en/marketplace/enterprise-theme/) or [Advanced Ldap](https://www.humhub.com/en/marketplace/advanced-ldap/).
+6. Use to HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use e.g. [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) or [Advanced Ldap](https://marketplace.humhub.com/module/advanced-ldap).
 
 7. Revert to your usual Theme (`Administration -> Settings -> Appearance`)
 
-8. Some Professional Edition modules like [SOLR search](https://www.humhub.com/en/marketplace/solr/) or [JWT SSO](https://www.humhub.com/en/marketplace/jwt-sso/) may require updates to the configuration. You will find detailed instructions each module in our [Marketplace](https://www.humhub.com/en/marketplace)
+8. Some Professional Edition modules like [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso) may require updates to the configuration. You will find detailed instructions each module in our [Marketplace](https://marketplace.humhub.com)
 
 
 
@@ -54,7 +54,7 @@ If you have already installed the HumHub Community Edition, please follow the st
 
 Once installed, you can enter your licence key at: `Administration` -> `Enterprise Edition` .
 
-The [Enterprise Theme](https://www.humhub.com/en/marketplace/enterprise-theme/) can be selected under `Administration` -> `Settings` -> `Appearance`.
+The [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) can be selected under `Administration` -> `Settings` -> `Appearance`.
 
 **Option 2: Download Package**
 
