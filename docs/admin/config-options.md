@@ -89,29 +89,6 @@ Default: `false` <br/>
 Since: `1.3` <br/>
 Data Type: `Boolean`<br/>
 
-### Directory
-
-**active** - Defines if the directory is active, if not the directory is not visible and can't be accessed.<br/>
-Default: `true`<br/>
-Data Type: `Boolean`<br/>
-
-**pageSize** - Default page size for directory pages. <br/>
-Default: `25`<br/>
-Data Type: `Integer`<br/>
-
-**memberListSortField** - Sort field for members page.<br/>
-Default: `profile.lastname`<br/>
-Data Type: `String`<br/>
-
-**guestAccess** - Defines if the directory is available for guest users, this flag will only have effect if guest access is allowed and the module is active.<br/>
-Default: `true`<br/>
-Data Type: `Boolean`<br/>
-
-**showUserProfilePosts** - Show menu entry for user profile posts on directory.<br/>
-Default: `true`<br/>
-Data Type: `Boolean`<br/>
-
-
 ### File
 
 **$fileNameValidationPattern** - 
