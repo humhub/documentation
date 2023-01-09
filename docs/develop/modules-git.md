@@ -31,3 +31,9 @@ Steps to release a new module version:
 2. Add release date to `docs/CHANGELOG.md` and check version number in `module.json`.
 3. Create a Git tag for the new version e.g. ```git add -a "1.1.0" -m "Release 1.1.0"```
 
+## Translations
+
+For modules that are translated via our translation service on https://translate.humhub.org:
+
+- The `message` files MUST NOT be generated automatically using the `yii message` command.
+- Modifications to the `message` files may only be made via the translate.humhub.org site. 
