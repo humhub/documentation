@@ -131,7 +131,7 @@ return [
 Version 1.7
 -----------
 
-### New WallEnry Layouts
+### New WallEntry Layouts
 
 The new `humhub\modules\content\widgets\stream\StreamEntryWidget` classes replaces the old `humhub\modules\content\widgets\WallEntry`.  
 Beside the `StreamEntryWidget`, which is now the base class for all kinds of stream entries, there are two different widget types for 
