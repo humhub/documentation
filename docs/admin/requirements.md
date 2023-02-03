@@ -32,15 +32,16 @@ All essential requirements will be tested during the web installation and can be
 `Administration -> Information -> Prerequisites`.
 :::
 
-| HumHub Version     | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
-| ------------------ |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:| 
-| 1.13               | **Yes**  | **Yes**  | Yes      | No       | No       | No       |
-| 1.12               | Yes      | **Yes**  | **Yes**  | No       | No       | No       |
-| 1.11               | Yes      | **Yes**  | **Yes**  | No       | No       | No       |
-| 1.10               | No       | **Yes**  | **Yes**  | Yes      | No       | No       |
-| 1.9                | No       | **Yes**  | **Yes**  | **Yes**  | No       | No       |
-| 1.8                | No       | Yes      | **Yes**  | **Yes**  | Yes      | No       |
-| 1.7                | No       | No       | Yes      | **Yes**  | **Yes**  | Yes       |
+| HumHub Version     | PHP 8.2  | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
+| ------------------ |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:| 
+| 1.14 (Unreleased)  | **Yes**  | **Yes**  | **Yes**  | Yes      | No       | No       | No       |
+| 1.13               | Yes      | **Yes**  | **Yes**  | Yes      | No       | No       | No       |
+| 1.12               | No       | Yes      | **Yes**  | **Yes**  | No       | No       | No       |
+| 1.11               | No       | Yes      | **Yes**  | **Yes**  | No       | No       | No       |
+| 1.10               | No       | No       | **Yes**  | **Yes**  | Yes      | No       | No       |
+| 1.9                | No       | No       | **Yes**  | **Yes**  | **Yes**  | No       | No       |
+| 1.8                | No       | No       | Yes      | **Yes**  | **Yes**  | Yes      | No       |
+| 1.7                | No       | No       | No       | Yes      | **Yes**  | **Yes**  | Yes       |
 
 ### Extensions
 
