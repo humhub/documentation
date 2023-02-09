@@ -251,6 +251,17 @@ There are the following user related scopes available:
 - _USER_RELATED_SCOPE_FOLLOWED_USERS_: Content related to the users followed user profiles
 - _USER_RELATED_SCOPE_OWN_PROFILE_: Content related to the users own profile
 
+## Delete Content
+
+Content records should always deleted via the `Content::softDelete()` method.
+Soft deleted content are marked for deletion and are no longer accessible.
+
+```php
+$someContentRecord->content->softDelete();
+```
+
+The defintive deletion of the record then takes place as background job using the Queue component with a custom delay. With the Recycle-Bin module it would also be possible to restore such content.
+
 ## Move Content
 
 In case your content should be movable to other spaces you'll have to enable the `\humhub\modules\content\components\ContentActiveRecord::canMove|ContentActiveRecord::canMove` flag.
