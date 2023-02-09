@@ -20,6 +20,13 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Version 1.14
+------------
+
+- New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly.
+- New `Content::$state` feature (Drafts, Soft Delete)
+
+
 Version 1.13
 ------------
 
