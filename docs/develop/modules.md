@@ -140,6 +140,7 @@ Available attributes:
 | `screenshots` | Some screenshots file names for the marketplace, those should reside in the `Module::$resourcesPath` |
 | `homepage` | A URL to the website of the module |
 | `authors` | Author information as `name`, `email`, `homepage`, `role` |
+|`licence` | Licence identifier See (https://spdx.org/licenses/) or use `proprietary` |
 
 
 **Example:**
@@ -151,12 +152,11 @@ Available attributes:
     "name": "My Example Module",
     "description": "My testing module.",
     "humhub": {
-        "minVersion": "1.2",
-		"maxVersion": "2.0"
+	"minVersion": "1.2",
     },
     "keywords": ["my", "cool", "module"],
     "screenshots": ["assets/screen_1.jpg"],
-	"homepage": "https://www.example.com",
+    "homepage": "https://www.example.com",
     "authors": [
         {
             "name": "Tom Coder",
@@ -169,7 +169,8 @@ Available attributes:
             "homepage": "http://example.com",
             "role": "Translator"
         }
-    ]	
+    ],
+    "licence": "AGPL-3.0-or-later"
 }
 ```
 
