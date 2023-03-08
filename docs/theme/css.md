@@ -93,7 +93,7 @@ Here is a list of all imported default components and the corresponding variable
 - **popover.less** - Bootstrap Popovers - `@prev-popover`
 - **list-group.less** - List Gorups - `@prev-list-group`
 - **modal.less** - Bootstrap Modals - `@prev-modal`
-- **module.less** - Module component definition - `@prev-module`
+- **cards.less** and **modules.less** - Cards in Spaces, People and Modules Page - `@prev-directory`
 - **tooltip.less** - Jquery UI Tooltips - `@prev-tooltip`
 - **progress.less** - Progress bars - `@prev-progress`
 - **table.less** - Table definitions - `@prev-table`
