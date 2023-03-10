@@ -1,6 +1,6 @@
 ---
 id: release_notes_older
-title: Release Notes (Older Versions)
+title: Older Versions
 ---
 
 # Release Notes (Older Versions)
