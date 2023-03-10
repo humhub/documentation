@@ -20,11 +20,7 @@ module.exports = {
                 'about/releasenotes/release_notes_1_12',
                 'about/releasenotes/release_notes_1_11',
                 'about/releasenotes/release_notes_1_10',
-                'about/releasenotes/release_notes_1_9',
-                'about/releasenotes/release_notes_1_8',
-                'about/releasenotes/release_notes_1_7',
-                'about/releasenotes/release_notes_1_6',
-                'about/releasenotes/release_notes_1_5'
+                'about/releasenotes/release_notes_older'
             ]
         },
         {
