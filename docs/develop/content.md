@@ -251,6 +251,17 @@ There are the following user related scopes available:
 - _USER_RELATED_SCOPE_FOLLOWED_USERS_: Content related to the users followed user profiles
 - _USER_RELATED_SCOPE_OWN_PROFILE_: Content related to the users own profile
 
+## Delete Content
+
+Content records should always deleted via the `Content::softDelete()` method.
+Soft deleted content are marked for deletion and are no longer accessible.
+
+```php
+$someContentRecord->content->softDelete();
+```
+
+The defintive deletion of the record then takes place as background job using the Queue component with a custom delay. With the Recycle-Bin module it would also be possible to restore such content.
+
 ## Move Content
 
 In case your content should be movable to other spaces you'll have to enable the `\humhub\modules\content\components\ContentActiveRecord::canMove|ContentActiveRecord::canMove` flag.
@@ -334,7 +345,7 @@ By default a ContentContainerController will block requests without a given `cgu
 If you need to implement a controller which should be able to handle container related as well as global 
 requests you'll have to set the `ContentContainerController::requireContainer` field to `false`.
 
-In your controller logic you can access the related cotnainer by means of `$this->contentContainer`.
+In your controller logic you can access the related container by means of `$this->contentContainer`.
 
 You can even restrict the allowed container types by setting the `ContentContainerController::validContentContainerClasses` array. 
 This can be useful if your controller should only handle space or user related requests.

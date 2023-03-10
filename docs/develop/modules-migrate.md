@@ -20,6 +20,17 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Version 1.14
+------------
+
+- New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly.
+- New `Content::$state` feature (Drafts, Soft Delete)
+
+- New Deprecations:
+  - `protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php`
+  - `humhub/modules/user/authclient/AuthClientHelper`
+
+
 Version 1.13
 ------------
 
@@ -131,7 +142,7 @@ return [
 Version 1.7
 -----------
 
-### New WallEnry Layouts
+### New WallEntry Layouts
 
 The new `humhub\modules\content\widgets\stream\StreamEntryWidget` classes replaces the old `humhub\modules\content\widgets\WallEntry`.  
 Beside the `StreamEntryWidget`, which is now the base class for all kinds of stream entries, there are two different widget types for 

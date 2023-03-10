@@ -211,47 +211,43 @@ server {
 }
 
 server {
-	listen 443 ssl;
-	listen [::]:443 ssl;
-	
-	root /var/www/humhub;
+        listen 443 ssl;
+        listen [::]:443 ssl;
+        
+        root /var/www/humhub;
+        server_name humhub.example.com;
+        
+        #include snippets/letsencrypt.conf;
+        ssl_certificate /etc/letsencrypt/live/humhub.example.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/humhub.example.com/privkey.pem;
 
-	server_name humhub.example.com;
-	
-	#include snippets/letsencrypt.conf;
-	ssl_certificate /etc/letsencrypt/live/humhub.example.com/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/humhub.example.com/privkey.pem;
+        charset utf-8;
+        client_max_body_size 256M;
 
-	charset utf-8;
-	client_max_body_size 256M;
+        location / {
+                index index.php index.html;
+                try_files $uri $uri/ /index.php$is_args$args;
+        }
 
-	location / {
-		index  index.php index.html ;
-		try_files $uri $uri/ /index.php?$args;
-	}
+        location ~ ^/(protected|framework|themes/\w+/views|\.|uploads/file) {
+                deny all;
+        }
 
-	location ~ ^/(protected|framework|themes/\w+/views|\.|uploads/file) {
-		deny all;
-	}
+        location ~ ^/assets/.*\.php$ {
+                deny all;
+        }
 
-	location ~ ^/(assets|static|themes|uploads) {
-		expires 10d;
-		add_header Cache-Control "public, no-transform";
-	}
+        location ~ ^/(assets|static|themes|uploads) {
+                expires 10d;
+                add_header Cache-Control "public, no-transform";
+        }
 
-	location ~ \.php {
-		fastcgi_split_path_info  ^(.+\.php)(.*)$;
-
-		#let yii catch the calls to unexisting PHP files
-		set $fsn /index.php;
-		if (-f $document_root$fastcgi_script_name){
-				set $fsn $fastcgi_script_name;
-		}
-
-  		fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-		include fastcgi_params;
-		fastcgi_param  SCRIPT_FILENAME  $document_root$fsn;
-	}
+        location ~ \.php {
+                include fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+                try_files $uri =404;
+        }
 }
 ```
 

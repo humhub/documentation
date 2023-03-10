@@ -7,7 +7,7 @@ Permissions in HumHub are used to grant users access to specific areas or functi
 
 ![Notification Class Diagram](images/permissions.jpg)
 
-##Use Cases
+## Use Cases
 
  - Group A needs permission to manage the users of the network.
  - Moderators of Space A need write permissions for Module X.
