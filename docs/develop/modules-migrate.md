@@ -26,6 +26,9 @@ Version 1.14
 - New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly.
 - New `Content::$state` feature (Drafts, Soft Delete)
 
+- Bundled third party auth clients are  not deprecated, use Modules instead `protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php`
+- Deprecated: `humhub/modules/user/authclient/AuthClientHelper`
+
 
 Version 1.13
 ------------
