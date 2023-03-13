@@ -29,7 +29,8 @@ Version 1.14
 - New Deprecations:
   - `protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php`
   - `humhub/modules/user/authclient/AuthClientHelper`
-  - `humhub/modules/user/components/User::canChangePassword()`
+  - `humhub/modules/user/components/User::canDeleteAccount()`
+  - `humhub/modules/user/components/User::canChangePassword()` (deleted)
   - `humhub/modules/user/components/User::canChangeEmail()` (deleted)
   - `humhub/modules/user/components/User::canChangeUsername()` (deleted)
   - `humhub/modules/user/components/User::getAuthClients()` (deleted)
