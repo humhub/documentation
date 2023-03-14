@@ -113,3 +113,4 @@ Here is a list of all imported default components and the corresponding variable
 - **datepicker.less** - Datepicker definitions - `@prev-datepicker`
 - **user-feedback.less** - User Feedback as Status bar etc. - `@prev-user-feedback`
 - **tags.less** - Bootstrap tags - `@prev-tags`
+- **../css/select2Theme/build.less** - Select2 Theme - `@prev-select2`
