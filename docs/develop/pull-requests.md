@@ -30,7 +30,7 @@ Bug #999: a description of the bug fix (Your Name)
 Enh #999: a description of the enhancement (Your Name)
 ```
 
-#999 is the issue number that the Bug or Enh is referring to.
+`#999` is the GitHub issue number. If there is no GitHub issue, or the GitHub issue is in a different repository, please use the GitHub PR number.
 
 The changelog files are located in the following locations:
 
