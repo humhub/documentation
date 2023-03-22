@@ -28,7 +28,7 @@ Before starting with the development of your custom module, first consider the f
 - Does my module create any [notifications](notifications.md) or [activities](activities.md)?
 - Should [guest users](permissions.md#guest-access) have access to some parts of my module?
 
-Furthermore you may have to consider the following issues:
+Furthermore, you may have to consider the following issues:
 
 - [Module settings and configuration](modules-settings.md)
 - [Append a module to a specific navigation](module-change-behavior.md#extend-menus)
