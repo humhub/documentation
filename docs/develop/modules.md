@@ -230,7 +230,9 @@ Each module should also provide an icon image.
 
 The icon must be provided in PNG format, squared and with a minimum size of 128x128 pixels.
 
-The image must be stored in the following location: 'resources/module_image.png' 
+By default, the image must be stored as `module_image.png` in your module's ressource directory
+(see [`Module::$resourcesPath`](modules-base-class#resourcespath)), hence defaulting to `assets/module_image.png`. You
+can also override the `getImage()` method of your module, if you need to return a different URL.
 
 ## Module Lifecycle
 
