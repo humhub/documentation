@@ -28,7 +28,7 @@ Before starting with the development of your custom module, first consider the f
 - Does my module create any [notifications](notifications.md) or [activities](activities.md)?
 - Should [guest users](permissions.md#guest-access) have access to some parts of my module?
 
-Furthermore you may have to consider the following issues:
+Furthermore, you may have to consider the following issues:
 
 - [Module settings and configuration](modules-settings.md)
 - [Append a module to a specific navigation](module-change-behavior.md#extend-menus)
@@ -152,7 +152,7 @@ Available attributes:
     "name": "My Example Module",
     "description": "My testing module.",
     "humhub": {
-	"minVersion": "1.2",
+        "minVersion": "1.2"
     },
     "keywords": ["my", "cool", "module"],
     "screenshots": ["assets/screen_1.jpg"],
@@ -230,7 +230,9 @@ Each module should also provide an icon image.
 
 The icon must be provided in PNG format, squared and with a minimum size of 128x128 pixels.
 
-The image must be stored in the following location: 'resources/module_image.png' 
+By default, the image must be stored as `module_image.png` in your module's ressource directory
+(see [`Module::$resourcesPath`](modules-base-class#resourcespath)), hence defaulting to `assets/module_image.png`. You
+can also override the `getImage()` method of your module, if you need to return a different URL.
 
 ## Module Lifecycle
 
