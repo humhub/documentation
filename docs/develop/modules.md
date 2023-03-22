@@ -152,7 +152,7 @@ Available attributes:
     "name": "My Example Module",
     "description": "My testing module.",
     "humhub": {
-	"minVersion": "1.2",
+        "minVersion": "1.2"
     },
     "keywords": ["my", "cool", "module"],
     "screenshots": ["assets/screen_1.jpg"],
