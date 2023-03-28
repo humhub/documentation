@@ -20,6 +20,11 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Version 1.15
+------------
+
+- Nuw method signature of `\humhub\modules\user\models\Group::getAdminGroupId()` now requires the return type to be `int`
+
 Version 1.14
 ------------
 
