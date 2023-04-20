@@ -8,25 +8,25 @@ title: HumHub 1.14
 
 ### Content Drafts and Scheduling
 
-TBD
+One of the main enhancements of this new version includes the addition of two new features that are designed to improve workflow and enhance user experience. The draft mode enables users to save their work in progress and resume at a later time, facilitating the management of multiple Spaces concurrently. Furthermore, the scheduled posts feature allows for the planning and scheduling of content in advance, enabling greater control over content distribution.
 
 ### Hide Content in Stream
 
-TBD
+With this release, we are also laying the groundwork for better, more targeted structuring of the streams. For this purpose, we have implemented the prerequisites for hidden content. Building upon this, we will be releasing an extension to the software that will allow admins to define what content is really meant to be seen within an individual stream and content is meant to be only visible within the relevant module views. 
 
-### New "Recycle Bin" Module (Professional)
+### "Recycle Bin" (Professional Edition)
 
-TBD
+Another feature for which we have laid the necessary groundwork with this release is the upcoming “Recycle Bin” module. The module will provide administrators with a way to recover deleted posts and module content, helping to prevent accidental data loss and providing a safety net for users. The module will be particularly useful for organizations and communities that rely heavily on user-generated content, as it provides a way to recover valuable contributions that may have been accidentally or maliciously deleted. Besides the release of the basic functionality, there will also be an extended version for users of the HumHub Professional Edition.
 
 #### And much more..
 
 Of course, we have also included many other improvements, just to name a few:
 
-- It is now possible to hide content in the stream 
+
 - Dynamic font size for posts based on text length is now optional
 - Self-test was extended (Pretty URL, `proc_open` were added) 
 - PHP 8.2 is now supported as the maximum PHP version
-- Always show new "Content Tabs" above the post form
+- "Content Tabs" above the post form are now always visible
 
 
-For a detailed list of all changes take a look into the [Changelog](https://github.com/humhub/humhub/blob/develop/CHANGELOG.md).
+For a detailed list of all improvements take a look into the [Changelog](https://github.com/humhub/humhub/blob/develop/CHANGELOG.md).
