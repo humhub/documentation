@@ -24,6 +24,8 @@ Of course, we have also included many other improvements, just to name a few:
 
 
 - Dynamic font size for posts based on text length is now optional
+- Allow users to invite other users by link
+- Changing the visibility of a space to private will also change the visibility of all its content to private
 - Self-test was extended (Pretty URL, `proc_open` were added) 
 - PHP 8.2 is now supported as the maximum PHP version
 - "Content Tabs" above the post form are now always visible
