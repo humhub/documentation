@@ -61,7 +61,7 @@ The view of the example above should therefore be located in `mymodule/notificat
 use yii\helpers\Html;
 
 echo Yii::t('SomethingHappend.views_notifications_somethingHappened', "%someUser% did something cool.", [
-    '%someUser%' => '<strong>' . Html::encode($originator->displayName) . '</strong>'
+    '%someUser%' => '<strong>' . Html::encode($this->originator->displayName) . '</strong>'
 ]);
 ```
 
