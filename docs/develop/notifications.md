@@ -58,9 +58,12 @@ class SomethingHappend extends BaseNotification
 }
 ```
 
-#### Mail View
+#### Notification View (optional)
 
-If you require a different notification view for mails, you have to add an extra view file to `notifications/views/mail`. 
+By default, the view of a notification should be located inside `notifications/views`.
+The view of the example above should therefore be located in `mymodule/notifications/views/somethingHappened.php`.
+
+> Info: If you require a different notification view for mails, you have to add an extra view file to `notifications/views/mail`. 
 
 ## Send Notifications
 
