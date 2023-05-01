@@ -24,6 +24,8 @@ Version 1.14
 ------------
 
 - New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly.
+  - Make sure to hard delete module content on module disable (e.g. [Example](https://github.com/humhub/tasks/pull/230/files))
+ 
 - New `Content::$state` feature (Drafts, Soft Delete)
 
 - New Deprecations:
