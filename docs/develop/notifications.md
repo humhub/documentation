@@ -37,6 +37,8 @@ namespace johndoe\example\notifications;
 
 use humhub\modules\notification\components\BaseNotification;
 
+use yii\helpers\Html;
+
 /**
  * Notifies a user about something happend
  */
