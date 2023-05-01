@@ -44,10 +44,11 @@ class SomethingHappend extends BaseNotification
 {
     // Module Id (required)
     public $moduleId = "example";
-    
+
     // Viewname (optional)
-    public $viewName = 'newLike';
+    public $viewName = "somethingHappend";
     
+    // Content
     public function html()
     {
         return Yii::t('SomethingHappend.views_notifications_somethingHappened', "%someUser% did something cool.", [
