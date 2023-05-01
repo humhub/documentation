@@ -44,28 +44,22 @@ class SomethingHappend extends BaseNotification
 {
     // Module Id (required)
     public $moduleId = "example";
-
-    // Viewname (required)
-    public $viewName = "somethingHappend";
+    
+    // Viewname (optional)
+    public $viewName = 'newLike';
+    
+    public function html()
+    {
+        return Yii::t('SomethingHappend.views_notifications_somethingHappened', "%someUser% did something cool.", [
+            '%someUser%' => '<strong>' . Html::encode($originator->displayName) . '</strong>'
+        ]);
+    }
 }
 ```
 
-#### Notification View
+#### Mail View
 
-By default, the view of a notification should be located inside `notifications/views`.
-The view of the example above should therefore be located in `mymodule/notifications/views/somethingHappened.php`.
-
-```php
-<?php
-
-use yii\helpers\Html;
-
-echo Yii::t('SomethingHappend.views_notifications_somethingHappened', "%someUser% did something cool.", [
-    '%someUser%' => '<strong>' . Html::encode($originator->displayName) . '</strong>'
-]);
-```
-
-> Info: If you require a different notification view for mails, you have to add an extra view file to `notifications/views/mail`. 
+If you require a different notification view for mails, you have to add an extra view file to `notifications/views/mail`. 
 
 ## Send Notifications
 
