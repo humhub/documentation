@@ -23,7 +23,10 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 Version 1.14
 ------------
 
-- New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly.
+- New [content soft delete](content.md#delete-content) mechanism. Do not use ~~`ContentActiveRecord::delete()`~~ directly. Exceptions:
+  - Make sure to hard delete module content on module disable (e.g. [Example](https://github.com/humhub/tasks/pull/230/files))
+  - Hard Delete should be also used in Integrity Checker callbacks
+ 
 - New `Content::$state` feature (Drafts, Soft Delete)
 
 - New Deprecations:
