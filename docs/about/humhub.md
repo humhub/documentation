@@ -142,10 +142,13 @@ By default, the dashboard is the starting point for all of your users. The dashb
 all recent contents and activities of all spaces and profiles a user is following and may contains additional sidebar
 elements as for example a task or calendar overview snippet.
 
-### Directory
+### Spaces Page
 
-The directory serves as an overview of the whole network and provides a list of groups, users, spaces as well as a wall
-stream with all public user profile posts.
+The spaces page provides an overview of all spaces that are visible for you. You can filter them by your status (member, following) and search for specific spaces.
+
+### People Page
+
+The people page provides an overview of all users. You can filter them by user group and your relation to them (following, friendship) and also search for specific users.
 
 ### Topics
 
