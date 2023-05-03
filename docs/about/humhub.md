@@ -219,9 +219,6 @@ release plan. If you want to push forward the development of this feature [let u
 
 - The **guest mode is limited**, there is currently no way for guests to create, comment or like any kind of content.
 
-- There is currently no payment integration available. If you want to offer community services behind a payment wall,
-you will have to implement a custom integration of your payment backend.
-
 ## How do I get started?
 
 Get started testing HumHub by
