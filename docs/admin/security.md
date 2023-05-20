@@ -49,8 +49,11 @@ return [
     'modules' => [
         'user' => [
             'passwordStrength' => [
-                '/^(.*?[A-Z]){2,}.*$/' => 'Password has to contain two uppercase letters.',
                 '/^.{8,}$/' => 'Password needs to be at least 8 characters long.',
+                '/^(.*?[A-Z]){2,}.*$/' => 'Password has to contain two uppercase letters.',
+               	'/^(.*?[a-z]){1,}.*$/' => 'Password has to contain one lower case letter.',
+               	'/^(.*?=.*[!@#$&*]).*$/' => 'Password has to contain one special case letter.',
+               	'/^(.*?[0-9]){1,}.*$/' => 'Password has to contain one digit.',
             ]
         ]
     ]
