@@ -51,10 +51,9 @@ return [
             'passwordStrength' => [
                 '/^.{8,}$/' => 'Password needs to be at least 8 characters long.',
                 '/^(.*?[A-Z]){2,}.*$/' => 'Password has to contain two uppercase letters.',
-               	'/^(.*?[a-z]){1,}.*$/' => 'Password has to contain has one lower case letter.',
+               	'/^(.*?[a-z]){1,}.*$/' => 'Password has to contain one lower case letter.',
                	'/^(.*?=.*[!@#$&*]).*$/' => 'Password has to contain one special case letter.',
-               	'/^(.*?[0-9]){1,}.*$/' => 'Password has to contain has one digits.',
-            	   // '/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/' => 'Password has to contain 8-100 letters and at least one uppercase, lowercase, special case letter AND a number.'
+               	'/^(.*?[0-9]){1,}.*$/' => 'Password has to contain one digit.',
             ]
         ]
     ]
