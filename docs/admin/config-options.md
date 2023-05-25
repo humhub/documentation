@@ -171,7 +171,7 @@ Default: `true`<br/>
 Data type: `Boolean`<br/>
 Since: `1.2.5`<br/>
 
-**queriedAttributes** - Mark this core module as enabled.<br/>
+**isEnabled** - Mark this core module as enabled.<br/>
 Default: `true`<br/>
 Since: `1.4`<br/>
 Data type: `Boolean`<br/>
