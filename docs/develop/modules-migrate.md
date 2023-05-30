@@ -20,6 +20,11 @@ if (version_compare(Yii::$app->version, '1.3', '=>')) {
 }
 ```
 
+Version 1.15
+------------
+
+- New `PolymorphicRelation::getObjectModel()`: should replace `get_class()`
+
 Version 1.14
 ------------
 
