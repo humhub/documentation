@@ -246,6 +246,10 @@ Data type: `Array`<br/>
 Default: `[]`<br/>
 Data type: `Array`<br/>
 
+**streamSuppressLimit** - Number of contents from which "Show more" appears in the stream.<br/>
+Default: `2`<br/>
+Data type: `Integer`<br/>
+
 **showDeactivatedUserContent** - Show contents of deactivated users in stream. <br/>
 Default: `true`<br/>
 Data type: `Boolean`<br/>
