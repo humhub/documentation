@@ -54,6 +54,11 @@ TBD
 
 Unit tests are always welcome. Tested and well covered code greatly simplifies the task of checking your contributions. 
 
+## CLA
+
+To have your contribution accepted, you, as the author of the pull request, need to accept our Contributor License Agreement (CLA). A CLA is an agreement that ensures you have the necessary rights and permissions to contribute the code or changes you submit to our open-source project. You can review and accept the CLA at this link: https://cla-assistant.io/humhub/humhub
+
+
 ## Documentation
 
 - **Core Changes** Should always be briefly described in the documentation in the [Migration Guide](modules-migrate.md).
