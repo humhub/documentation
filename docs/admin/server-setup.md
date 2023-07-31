@@ -4,11 +4,13 @@ title: Server Setup (Linux)
 ---
 
 This document covers a basic server configuration under Linux.
-The operating system used here is ``Linux`` with the distribution ``Debian Bullseye 11``.
+The operating system used here is ``Linux`` with the distribution ``Debian 12 (Bookworm)``.
 
 HumHub is being installed into the ``/var/www/humhub`` directory in this case and runs with the user/group ``www-data``.
 
-The URL https://humhub.example.com is used in this example. Replace it with an URL of your choice.
+:::warning
+Please note that throughout this guide, we will use `humhub.example.com` as a sample hostname. It is essential to customize this with your individual hostname.
+::
 
 
 :::important
@@ -73,7 +75,7 @@ Do not forget to change the `change-me` placeholder!
 apt update
 apt install php php-cli \
 	php-imagick php-curl php-bz2 php-gd php-intl php-mbstring \
-	php-mysql php-zip php-apcu-bc php-apcu php-xml php-ldap
+	php-mysql php-zip php-apcu php-xml php-ldap
 
 ```
 
@@ -183,7 +185,7 @@ Enable the virtual host, additional Apache2 configurations and required modules.
 
 ```bash
 a2enmod ssl rewrite headers proxy_fcgi setenvif
-a2enconf php7.4-fpm
+a2enconf php8.2-fpm
 a2ensite humhub
 
 systemctl reload apache2
@@ -191,6 +193,8 @@ systemctl reload apache2
 
 
 ### NGINX
+
+You may skip this NGINX section if Apache has already been configured in the previous steps.
 
 ```
 apt update
