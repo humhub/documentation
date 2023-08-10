@@ -101,7 +101,8 @@ Using [Schtasks](https://docs.microsoft.com/en-us/windows-server/administration/
 
 Refer to this [post](https://stackoverflow.com/questions/16700749/setting-up-cron-task-in-plesk-11)
 
-![](http://i.imgur.com/TbWEsjC.png)
+![](https://i.imgur.com/b0y2Y2q.png)
+
 
 ### OVH
 
