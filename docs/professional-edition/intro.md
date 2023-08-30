@@ -26,7 +26,7 @@ Congratulations on subscribing to your HumHub Professional Edition! We are delig
 <br>
 
 **Step 1: Access your Administration panel**
-Open your Administration panel by clicking on the “Administration” button on the top-right hand side of your network. Once there, proceed to the "Information" section, where you will find the activation menu. This is where the magic happens.
+Open your Administration panel by clicking on the "Administration" button on the top-right hand side of your network. Once there, proceed to the "Information" section, where you will find the activation menu. This is where the magic happens.
 <br>
 
 **Step 2: Entering Your License Key**
