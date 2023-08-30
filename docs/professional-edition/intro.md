@@ -38,7 +38,7 @@ The key is activated and verified within seconds. When this is done, the HumHub 
 
 <br>
 
-**IMPORTANT INFORMATION FOR ALL CLIENTS OF OUR SAAS PACKAGE**<br>
+**IMPORTANT INFORMATION FOR ALL CLIENTS OF OUR SAAS PACKAGE**
 
 If you have opted for our “Software as a Service” (SaaS) package you do not have to activate your Professional Edition. In this case the activation and setup is done by our experienced HumHub developers. We take care of the activation process as soon as our new clients have confirmed their individual offer.
 
