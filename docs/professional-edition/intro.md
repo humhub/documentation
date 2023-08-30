@@ -5,7 +5,7 @@ title: Introduction
 
 
 ## The HumHub Professional Edition | Elevate your Social Network Experience
-<br>Built upon the robust foundation of the Community Edition, the Professional Edition comes with a bunch of exclusive features that redefine your Social Network experience.
+Built upon the robust foundation of the Community Edition, the Professional Edition comes with a bunch of exclusive features that redefine your Social Network experience.
 
 - All standard Modules + [advanced features and exclusive Modules](features.md)
 | The Professional Edition comes with Modules that are only included in this Edition. Including: Enterprise Theme, SAML - SSO, JWT SOO, Advanced LDAP, News Module, Email Whitelist, Apache SOLR, Whitelabel, Translation Manager.
@@ -21,21 +21,15 @@ With the Commercial License, you get all the rights and permissions you need to 
 
 
 ## How to activate the HumHub Professional Edition
-<br>
-Congratulations on subscribing to your HumHub Professional Edition! We are delighted that you have chosen to use our Social Network software. Activating your network is an effortless process that unleashes all advanced features. This 2-step guide will walk you through the activation process:<br>
-<br>
+Congratulations on subscribing to your HumHub Professional Edition! We are delighted that you have chosen to use our Social Network software. Activating your network is an effortless process that unleashes all advanced features. This 2-step guide will walk you through the activation process:
 
 **Step 1: Access your Administration panel**
 Open your Administration panel by clicking on the "Administration" button on the top-right hand side of your network. Once there, proceed to the "Information" section, where you will find the activation menu. This is where the magic happens.
-<br>
 
 **Step 2: Entering Your License Key**
 In this section you will notice a designated field to enter your unique license key. As soon as the key is entered and saved the full potential of the HumHub Professional Edition is unleashed.
-<br>
 
 The key is activated and verified within seconds. When this is done, the HumHub Professional Edition reveals its full array of modules and features within the marketplace.
-
-<br>
 
 **IMPORTANT INFORMATION FOR ALL CLIENTS OF OUR SAAS PACKAGE**
 
