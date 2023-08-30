@@ -4,7 +4,7 @@ title: Introduction
 ---
 
 
-## The HumHub Professional Edition | Elevate your Social Network Experience<br>
+## The HumHub Professional Edition | Elevate your Social Network Experience
 <br>Built upon the robust foundation of the Community Edition, the Professional Edition comes with a bunch of exclusive features that redefine your Social Network experience.
 
 - All standard Modules + [advanced features and exclusive Modules](features.md)
@@ -21,7 +21,7 @@ With the Commercial License, you get all the rights and permissions you need to 
 
 <br>
 
-## How to activate the HumHub Professional Edition<br>
+## How to activate the HumHub Professional Edition
 <br>
 Congratulations on subscribing to your HumHub Professional Edition! We are delighted that you have chosen to use our Social Network software. Activating your network is an effortless process that unleashes all advanced features. This 2-step guide will walk you through the activation process:<br>
 <br>
