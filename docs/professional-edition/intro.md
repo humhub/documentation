@@ -19,7 +19,6 @@ With the Commercial License, you get all the rights and permissions you need to 
 - [SaaS option](saas.md)
 | Our "Software as a Service" option eliminates the need for installations, backups and maintenance, allowing you to focus on what truly matters: Creating content and interacting with all people in your network.
 
-<br>
 
 ## How to activate the HumHub Professional Edition
 <br>
@@ -28,7 +27,7 @@ Congratulations on subscribing to your HumHub Professional Edition! We are delig
 
 **Step 1: Access your Administration panel**
 Open your Administration panel by clicking on the “Administration” button on the top-right hand side of your network. Once there, proceed to the "Information" section, where you will find the activation menu. This is where the magic happens.
-</p>
+<br>
 
 **Step 2: Entering Your License Key**
 In this section you will notice a designated field to enter your unique license key. As soon as the key is entered and saved the full potential of the HumHub Professional Edition is unleashed.
