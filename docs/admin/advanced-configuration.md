@@ -119,8 +119,8 @@ Those configurations can be overwritten within your `common.php` file as follows
 ```php
 return [
     'modules' => [
-        'directory' => [
-            'guestAccess' => false 
+        'activity' => [
+            'weeklySummaryDay' => 0
         ]
     ]
 ]
