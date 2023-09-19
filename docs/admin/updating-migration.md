@@ -10,6 +10,10 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 In addition to this guide, you may also check the [**Theme Migration Guide**](../theme/migrate.md) 
 or [**Development Migration Guide**](../develop/modules-migrate.md).
 
+1.15
+----
+- HumHub now employs JavaScript nonces for enhanced security, which may necessitate manual adjustments for inserted scripts, such as statistics codes, to ensure compatibility.
+
 1.14
 ----
 - Make sure that you don't use any third-party auth clients in your configuration. Use available Modules instead!    protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php
