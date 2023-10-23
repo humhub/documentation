@@ -137,8 +137,12 @@ php yii ldap/list-users
 - Login Filter:  `(&(sAMAccountName=%s)(!userAccountControl:1.2.840.113556.1.4.803:=2))`
 - User Filter:  `"(&(objectClass=person)(memberOf=CN=Workers,CN=Users,DC=myDomain,DC=com)(!userAccountControl:1.2.840.113556.1.4.803:=2))"`
 
+## Troubleshooting
 
+### LDAP attributes and profile pictures are not updated
 
+- The automatic LDAP synchronisation of all users is interrupted with a fatal error and a part of the users is not updated (e.g. database integrity error).
+- The changes to the user profile cannot be saved due to failed validations. (e.g. missing mandatory profile field, invalid email address or username too short).
 
-
+The above mentioned errors are always saved in the error log (Administration -> Information).
 
