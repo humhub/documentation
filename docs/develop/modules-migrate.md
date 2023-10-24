@@ -13,7 +13,7 @@ modules against new HumHub version. Also keep in mind to align the `minVersion` 
 You can execute code for specific versions by using the `version_compare` function as:
 
 ```php
-if (version_compare(Yii::$app->version, '1.3', '=>')) {
+if (version_compare(Yii::$app->version, '1.3', '>=')) {
     // Use some 1.3+ features here
 } else {
      // Compatibility code for older versions
