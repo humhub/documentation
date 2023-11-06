@@ -13,6 +13,8 @@ or [**Development Migration Guide**](../develop/modules-migrate.md).
 1.15
 ----
 - HumHub now employs JavaScript nonces for enhanced security, which may necessitate manual adjustments for inserted scripts, such as statistics codes, to ensure compatibility.
+  Your custom statistic code may need to be modified under `Administration` -> `Settings` -> `Advanced`.  If Javascript is being used in the [Custom Pages](https://marketplace.humhub.com/module/custom_pages/manual) module or [Custom Modules](https://marketplace.humhub.com/module/custom_pages/manual), please refer to the respective documentation.
+
 
 1.14
 ----
