@@ -3,12 +3,14 @@ id: live
 title: Live Updates
 ---
 
-Allows Browser Notifications, only when HumHub tab is open.
+The HumHub "Live" component updates the user interface without the need for user interaction.
 
-In the user "Notification Settings", "Receive desktop notifications when you are online." must be checked.
+These are currently e.g.
 
-Notifications are triggered by the HumHub live component, which per default uses the **poll driver**.
+- Number of unread notifications
+- Notification of new posts or comments in the stream
+- Display of desktop notifications
 
-To have instant notifications, you must use a websocket by [configuring the **push driver**](https://docs.humhub.org/docs/admin/push-updates/).
+By default, this is realized via a polling mechanism. A experimental [push driver](https://docs.humhub.org/docs/admin/push-updates/) via WebSockets is also available. 
 
-For a service worker allowing to receive them even when the tab or browser is closed, install the [Push Notifications (Firebase) module](https://marketplace.humhub.com/module/fcm-push/description).
+For Mobile & Browser "Push Notifications" the [Firebase module](https://marketplace.humhub.com/module/fcm-push) must be installed. 
