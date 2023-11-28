@@ -580,7 +580,7 @@ return [
     'events' => [
         [
             'class' => 'some\module\widget\SpecialWidget', 
-            'event' => Widget::EVENT_ON_BEVORE_RUN, 
+            'event' => Widget::EVENT_BEFORE_RUN, 
             'callback' => [Events::class, 'onSpecialWidgetBeforeRun']]
     ]
 ]
