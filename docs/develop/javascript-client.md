@@ -125,9 +125,9 @@ In case of an error (**catch**) the response furthermore contains
 
 The [Pjax](http://pjax.herokuapp.com/) library is used by HumHub to enable partial page loads while maintaining the browser history. The use of Pjax provides major performance benefits in contrast to full page loads, since assets as stylesheets and javascript files only have to be loaded once. Furthermore only a part of the layout has to be rendered on the serverside and transfered over the network.
 
-As of HumHub Version 1.2 [Pjax](http://pjax.herokuapp.com/) is enabled by default and modules and themes should be held compatible with the single page approach. 
+As of HumHub Version 1.2 [Pjax](http://pjax.herokuapp.com/) is enabled by default and modules and themes should be held compatible with the single page approach.
 
-##### Disable Pjax
+#### Disable Pjax
 
 You can disable Pjax by setting the following parameter in your `protected/config/common.php`
 
@@ -139,7 +139,7 @@ return [
 ]
 ```
 
-##### Disable Pjax for specific links
+#### Disable Pjax for specific links
 
 If Pjax is enabled, all regular links on your site will be attached with a pjax handler by default.
 The Pjax behaviour is not attached to links with the following attributes:
@@ -148,7 +148,7 @@ The Pjax behaviour is not attached to links with the following attributes:
  - *target* - links with html target attributes
  - *data-target*/*data-toggle* - bootstrap helper attributes
 
-##### Events
+#### Events
 
 Beside using the `initOnPjaxLoad` flag and `unload` function mentioned in the [Module Guide](javascript-index.md) you can also listen to the following global events:
 
@@ -156,6 +156,11 @@ Beside using the `initOnPjaxLoad` flag and `unload` function mentioned in the [M
  - `humhub:modules:client:pjax:success` - is triggered after a pjax page load
 
 > Note: Since javascript files in Yii are only loaded and executed once per full page load, some modules may have to be reinitialized after a pjax request. As mentioned in the [Module Guide](javascript-index.md) the modules `init` function is called in case of a pjax request only if the modules `initOnPjaxLoad` setting is set to `true`.
+
+#### Running your own Pjax calls
+
+Custom Pjax calls are not officially supported for now.
+However, some information and examples can be found on the [community wiki](https://community.humhub.com/s/contribution-core-development/wiki/PJAX).
 
 ## Reload the current page
 
