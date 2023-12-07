@@ -159,66 +159,8 @@ Beside using the `initOnPjaxLoad` flag and `unload` function mentioned in the [M
 
 #### Running your own Pjax calls
 
-> Note: the current implementation of the `\humhub\widgets\Pjax` widget is intended for use in the core only. Additionally, it limits the functionality of Yii2's `\yii\widgets\Pjax`.
-
-The following example is meant as an indication of how you may still use Pjax to update the content of an inline-element.
-It is, however, are not officially supported.
-
-When using the `\yii\widgets\Pjax` widget, it is important to
-- set the `timeout: 0` or to use a `type: 'post'` request (which will automatically set the `timeout: 0`), and to
-- set `'data-pjax-prevent' => true` on the link, to prevent the humhub customization from overwriting the container setting.
-
-The following code uses the `Pjax::widget()` method to create a html element
-(`<pre>` in this example) where the result will be put.
-The link to trigger the call is outside of this element and referred to by the `linkSelector`:
-
-```php
-<?php
-/* @var $this \humhub\modules\ui\view\components\View */
-?>
-<div>
-    <?= \yii\widgets\Pjax::widget([
-        // Optional id for the created element
-        'id' => 'pjaxResult',
-        // The jQuery selector for the link that will initiate the pjax call
-        'linkSelector' => '#pjaxRun',
-        'enablePushState' => false,
-        'options'         => [
-            'tag' => 'pre',
-        ],
-        'clientOptions'   => [
-            //               container - String selector for the element where to place the response body.
-            //                    push - Whether to pushState the URL. Defaults to true (of course).
-            //                 replace - Want to use replaceState instead? That's cool.
-            //                 history - Work with window.history. Defaults to true
-            //                   cache - Whether to cache pages HTML. Defaults to true
-            //            pushRedirect - Whether to add a browser history entry upon redirect. Defaults to false.
-            //         replaceRedirect - Whether to replace URL without adding a browser history entry upon redirect. Defaults to true.
-            //     skipOuterContainers - When pjax containers are nested and this option is true,
-            //                           the closest pjax block will handle the event. Otherwise, the top
-            //                           container will handle the event. Defaults to false.
-            // ieRedirectCompatibility - Whether to add `X-Ie-Redirect-Compatibility` header for the request on IE.
-            //                           See https://github.com/yiisoft/jquery-pjax/issues/37
-            'cache' => false,
-            'history' => false,
-            // This sets the request type to POST (and implies timeout=0). Delete, if you want to make a GET request.
-            'type' => 'post',
-        ],
-        // uncomment if you use GET requests (see clientOptions->type)
-        // 'timeout' => 0,
-    ]) ?>
-    <?= \humhub\libs\Html::a(
-        'Link or Button text',
-        ['/module/controler/pjax_action'],
-        [
-            'id' => 'pjaxRun',
-            'class' => 'btn btn-primary',
-            // this is to prevent humhub from messing with this Pjax construct
-            'data-pjax-prevent' => true,
-        ]
-    ) ?>
-</div>
-```
+Custom Pjax calls are not officially supported for now.
+However, some information and examples can be found on the [community wiki](https://community.humhub.com/s/contribution-core-development/wiki/PJAX).
 
 ## Reload the current page
 
