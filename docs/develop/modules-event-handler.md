@@ -611,14 +611,14 @@ return [
         [
             'class' => 'some\module\widget\SpecialWidget', 
             'event' => Widget::EVENT_CREATE, 
-            'callback' => [Events::class, 'onSpecialWidgetBeforeRun']]
+            'callback' => [Events::class, 'onSpecialWidgetCreate']]
     ]
 ]
 ```
 
 ```php
 // Events.php
-public static function onSpecialWidgetBeforeRun(WidgetCreateEvent $event)
+public static function onSpecialWidgetCreate(WidgetCreateEvent $event)
 {
     $event->config['class'] = MyCustomSpecialWidget::class;
 }
