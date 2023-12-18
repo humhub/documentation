@@ -149,6 +149,10 @@ the underlying content will adapt the default content visibility of its `Content
 - `Private` content will only be visible for `Space Members` (Space) and `Friend Users` (Profile).
 - `Public` content will be visible for everyone including `guests` if the guest mode is active.
 
+For global content (since 1.16):
+- `Private` content will be visible only to logged in users
+- `Public` content will be visible for everyone except `guests` if "Guest Access" is disabled
+
 The content visibility can be checked by calling `isPublic()` and `isPrivate()` on the `Content` instance.
 
 ```php
@@ -163,7 +167,7 @@ $model->save();
 
 The visibility of a content for a user can be validated by the `Content::canView()` method and behaves by default as follows:
 
-- Guests can only access public content of visible spaces/users
+- Guests can only access public content of visible spaces/users or global content if "Guest Access" is enabled
 - Other users can access all public content within the network
 - System admins can access all content if the `adminCanViewAllContent` setting of the `content` modules is enabled (default)
 - All space members can read private space content
