@@ -106,7 +106,8 @@ return [
 
 | Parameter | Description |    
 | -------- | ---------- |
-| `allowedLanguages`  | see the [Translations Section](translations.md) | 
+| `allowedLanguages`  | see the [Translations Section](translations.md) |
+| `dailyCronExecutionTime`  | When to execute the daily cron job (default 18:00) |
 | `enablePjax`  | used to disable/enable pjax support (default true) | 
 
 ### Module Configurations
