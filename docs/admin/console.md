@@ -59,6 +59,7 @@ Performs data integrity checks.
 | Command | Description |    
 | -------- | ---------- |
 | `integrity/run`  |  Starts integrity checker |
+| `integrity/run --interactive=0`  |  Starts integrity checker with automatic acceptance |
 
 ### `ldap`
 
