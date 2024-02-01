@@ -8,6 +8,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'humhub', // Usually your GitHub org/user name.
   projectName: 'humhub', // Usually your repo name.
+  onBrokenLinks: 'warn',  
   themeConfig: {
     prism: {
       additionalLanguages: ['php'],
