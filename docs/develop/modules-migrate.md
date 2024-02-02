@@ -530,7 +530,7 @@ return [
 ### Default lazy javascript module loading
 
 In HumHub 1.5 modules required by `humhub.require()` will be fetched lazily by default, which means a module will be
-initialized by `require()` in case it has not been loaded yet. In HumHub <1.5 a lazy flag was required to be set in `require`
+initialized by `require()` in case it has not been loaded yet. In HumHub < 1.5 a lazy flag was required to be set in `require`
 e.g. `require('moduleId', true)`. This behavior was introduced in order to be more tolerant regarding script loading order
 due to the core asset loading change. Since lazy loaded modules are rarely used on purpose a warning is logged to the console
 once a module was loaded lazily for troubleshooting. 
