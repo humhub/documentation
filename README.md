@@ -50,6 +50,28 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+If you encounter errors:
+```
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: error:0308010C:digital envelope routines::unsupported
+    at String.replace (<anonymous>)
+```
+
+try running the command to enable the legacy OpenSSL provider:
+
+On Unix-like (Linux, macOS, Git bash, etc.):
+```
+$ export NODE_OPTIONS=--openssl-legacy-provider
+```
+On Windows command prompt:
+```
+set NODE_OPTIONS=--openssl-legacy-provider
+```
+On PowerShell:
+```
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
 ### Deployment
 
 ```
