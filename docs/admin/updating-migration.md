@@ -18,7 +18,7 @@ or [**Development Migration Guide**](../develop/modules-migrate.md).
 
 1.14
 ----
-- Make sure that you don't use any third-party auth clients in your configuration. Use available Modules instead!    protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php
+- Make sure that you don't use any third-party auth clients in your configuration. Use available Modules instead!    protected/humhub/modules/user/authclient/[Facebook,GitHub,Google,LinkedIn,Live,Twitter].php
 
 
 1.11

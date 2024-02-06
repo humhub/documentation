@@ -3,13 +3,13 @@ id: authentication
 title: Authentication
 ---
 
-HumHub is using <http://www.yiiframework.com/doc-2.0/ext-authclient-index.html> to provide an interface to pluggable authentication providers.
+HumHub is using http://www.yiiframework.com/doc-2.0/ext-authclient-index.html to provide an interface to pluggable authentication providers.
 
 
 Implementing own AuthClients
 ----------------------------
 
-Please see <https://github.com/yiisoft/yii2-authclient/blob/master/docs/guide/README.md> for more details.
+Please see https://github.com/yiisoft/yii2-authclient/blob/master/docs/guide/README.md for more details.
 
 
 HumHub Specific Extensions
