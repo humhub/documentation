@@ -71,12 +71,13 @@ can be configured within `@humhub/protected/config/common.php` as follows:
 // @humhub/protected/config/common.php
 return [
     'params' => [
-        'moduleAutoloadPaths' => ['/some/folder/modules'],        
+        'moduleAutoloadPaths' => ['/some/folder/modules'],
     ],
 ]
 ```
-This separation can be useful in your development environment in order to define a central module directory for different
-test installations and prevent interference with marketplace modules.
+This separation should be done for custom modules which are not in [the marketplace](https://marketplace.humhub.com/)
+(e.g, `@app/custom-modules`) or for your development environment in order to define a central module directory
+for different test installations and prevent interference with marketplace modules.
 
 ### Yii Debug Module
 

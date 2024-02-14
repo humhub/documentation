@@ -239,8 +239,8 @@ can also override the `getImage()` method of your module, if you need to return 
 ### Install a Module
 
 A module is considered as installed once it resides in one of the [module autoloader paths](environment.md#module-loader-path). 
-By default non-core modules reside in `@humhub/protected/modules`. You can install modules either by adding them 
-manually to an autoload path or by loading them from the marketplace. 
+By default modules from [the marketplace]([url](https://marketplace.humhub.com/)) reside in `@humhub/protected/modules`. Custom modules should be installed by adding them 
+manually to an autoload path such as `@app/custom-modules` or by loading them from the marketplace.
 
 :::info
 You can add additional module paths by means of the `moduleAutoloadPaths` parameter. 
