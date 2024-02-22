@@ -8,7 +8,7 @@ help you to decide whether HumHub fits your needs.
 
 ## What is HumHub?
 
-HumHub is an open source social network platform with a wide variety of use cases as **social intranet**, **community** or
+HumHub is an open source social network platform with a wide variety of use cases such as **social intranet**, **community** or
 **collaboration** platform. HumHub consists of a core application, which can be extended through additional modules 
 and adjusted to your needs by many configuration options. 
 
@@ -34,14 +34,14 @@ projects and resources worth a visit:
 ## Key benefits 
 
 The HumHub platform aims to provide a flexible core platform and some official modules for others to build their 
-own social network with many customization options as a module system, marketplace and theming mechanism as well as 
+own social network with many customization options, such as a module system, marketplace, and theming mechanism as well as 
 an intuitive user interface also suitable for non technical users.
 
 Some of the key benefits are listed below:
 
  - Free to use
  - Self hosted or hosted on our [cloud hosting](https://www.humhub.com/en/professional-edition/step1)
-   - Keep your data save, without the need to share it with any external services
+   - Keep your data safe, without the need to share it with any external services
  - Simple [installation](../admin/installation.md) and maintenance
    - Only requires a [simple web server environment](../admin/installation.md)
  - Highly customizable
@@ -118,10 +118,10 @@ to keep them up-to-date with recent network activities.
 In HumHub, posts are the simplest form of content and are included in the core platform. Users can create posts directly within
 the start page of a space or on their user profile wall. HumHub provides a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG)
 editor for most text based contents in order to add simple formatting as headlines or bold text as well as [oEmbed](https://oembed.com/)
-or file uploads. As in most social network platforms, posts can be commented and liked or archived.
+or file uploads. As in most social network platforms, posts can be commented on, liked, or archived.
 
 While posts are the only content type included in the core software, there are many modules available supporting further
-kinds of content as meetings, calendar events or wiki pages.
+kinds of content, such as meetings, calendar events, or wiki pages.
 
 ### Search
 
