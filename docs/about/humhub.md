@@ -22,7 +22,7 @@ Common use cases for HumHub are:
  - Associations
  
 Besides this documentation site and the core software, the HumHub platform consists of further HumHub related 
-projects and resources worth a visit:
+projects and resources worth visiting:
 
  - [HumHub Website](https://www.humhub.com)
  - [HumHub Community](https://community.humhub.com/dashboard)
@@ -182,7 +182,7 @@ suite of [additional modules](https://www.humhub.com/en/marketplace) especially 
 features as [extended LDAP](../professional-edition/features.md#advanced-ldap) and [single sign on (SSO)](../professional-edition/features.md##feature-list) support
 as well as an additional [enterprise theme](../professional-edition/features.md#enterprise-theme).
 
-Further information are available at:
+Further information is available at:
 
  - [Professional Edition Guide](../professional-edition/intro.md)
  - [Enterprise Edition Homepage](https://www.humhub.com/en/professional-edition)
