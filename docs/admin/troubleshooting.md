@@ -160,7 +160,6 @@ See also:
 
 ### E-Mail SMTP: Unable to connect with STARTTLS: stream_socket_enable_crypto(): SSL operation failed...
 
-
 The TLS connection to the specified e-mail server cannot be verified.
 
 You can also reproduce this behavior also via the command line:
@@ -169,7 +168,7 @@ You can also reproduce this behavior also via the command line:
 openssl s_client -starttls smtp -connect smtp.example.com:25
 ``` 
 
-To disable the peer verification, the transport type can be set to `DSN` with the following DSN syntax:
+To disable the peer verification, in the E-Mail Settings (`Administration` -> `Settings` -> `Advanced` -> `E-Mail`) the transport type can be set to `DSN` with the following DSN syntax:
 
 ```
 smtp://user:pass@smtp.example.com?verify_peer=0
