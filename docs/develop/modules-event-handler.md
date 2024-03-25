@@ -317,7 +317,7 @@ usage of ActiveRecord events.
 
 ### User Model
 
-The `humhub\modules\user\model\User` model provides the following additional events:
+The `humhub\modules\user\models\User` model provides the following additional events:
 
 | Event | Class | Description |    
 | -------- | ---------- | ---------- |
