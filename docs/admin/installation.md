@@ -122,11 +122,11 @@ Each registered user can also set its own primary time zone in the profile setti
 ## Pretty URLs 
 
 By default, the HumHub URL includes a index.php file part and looks like https://example.com/index.php?r=dashboard%2Fdashboard. 
-Using the Pretty URL or URL Rewriting feature, shorter and more meaningful URLs can be created such as https://temp.humhub.dev/dashboard.
+Using the Pretty URL or URL Rewriting feature, shorter and more meaningful URLs can be created such as https://example.com/dashboard.
 
 To enable this feature, both the HumHub configuration and, possibly, the WebServer configuration must be modified.
 
-Modify the HumHub [Configuration File](advanced-configuration.md) and add following block:
+Modify the HumHub [Configuration File](advanced-configuration.md) file `protected/config/common.php` and add following block:
 
 ```php
     'components' => [
