@@ -27,13 +27,16 @@ Modules available in the integrated marketplace can also be sourced from the [Hu
 
 > **Note:** It is recommended to use a separate path for custom/unofficial modules. Refer to [Module Loader Path](https://docs.humhub.org/docs/develop/environment/#module-loader-path).
 
-After unpacking the custom module into the directory, navigate to **Administration > Information > Database** to perform database migrations.
-
-<img src="images/hh-docs-perform-migrations.png" alt="Perform DB Migrations" height="256px">
-
-After successful migration, navigate to **Administration > Modules** and activate the module.
+After unpacking the custom module into the directory, navigate to **Administration > Modules** and activate the module.
 
 <img src="images/hh-docs-activate-module.png" alt="Activate Module" height="256px">
+
+For future updates:
+1. overwrite the custom module files with the new ones
+2. navigate to **Administration > Information > Database** to perform possible database migrations.
+3. navigate to **Administration > Settings > Advanced** and click the "Save and flush cache" button.
+
+<img src="images/hh-docs-perform-migrations.png" alt="Perform DB Migrations" height="256px">
 
 
 ## Firewall / Whitelist
