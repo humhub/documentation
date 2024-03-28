@@ -33,7 +33,7 @@ After unpacking the custom module into the directory, navigate to **Administrati
 
 After successful migration, navigate to **Administration > Modules** and activate the module.
 
-<img src="images/hh-docs-activate-module.png" alt="Perform DB Migrations" height="256px">
+<img src="images/hh-docs-activate-module.png" alt="Activate Module" height="256px">
 
 
 ## Firewall / Whitelist
