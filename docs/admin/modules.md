@@ -18,12 +18,12 @@ To activate a license for individually purchased modules, navigate to **Marketpl
 <img src="images/hh-docs-add-license-key.png" alt="Add License Key" height="256px">
 
 ### Activating & Installing Modules of the HumHub Professional Edition
-To activate HumHub Professional Edition, navigate to **Administration > Information > Upgrade to Professional Edition**. After activation, all professional modules will be available for installation on the Marketplace.
+To activate HumHub Professional Edition, navigate to **Administration > Information > Upgrade to Professional Edition**. After activation, all Professional Edition modules will be available for installation on the Marketplace.
 
 <img src="images/hh-docs-activate-pe.png" alt="Activate Professional Edition" height="256px">
 
 ### Installing Modules manually
-Modules available in the integrated marketplace can also be sourced from the [HumHub Marketplace](https://marketplace.humhub.com/). This includes both paid professional editions and free modules. These modules, including custom modules or those not available in the official Marketplace, can be manually installed by uploading the module `module_name.zip` and unpacking it into the `protected/modules` directory.
+Modules available in the integrated marketplace can also be sourced from the [HumHub Marketplace](https://marketplace.humhub.com/). This includes both paid Professional Edition modules and free modules. These modules, including custom modules or those not available in the official Marketplace, can be manually installed by uploading the module `module_name.zip` and unpacking it into the `protected/modules` directory.
 
 > **Note:** It is recommended to use a separate path for custom/unofficial modules. Refer to [Module Loader Path](https://docs.humhub.org/docs/develop/environment/#module-loader-path).
 
