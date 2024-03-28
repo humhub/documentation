@@ -6,20 +6,17 @@ title: Modules & Marketplace
 
 ## Module Installation
 
-Modules can be easily installed and updated via the integrated Marketplace.
+Modules can be easily installed and updated via the integrated Marketplace: top right "User account menu" -> `Marketplace`
 
-`Administration` -> `Modules` -> `Browse Online`
-
-Own custom modules or modules that are not available in the official Marketplace can also be unpacked directly into the `protected/modules` folder. 
+Own custom modules or modules that are not available in the official Marketplace can also be unpacked directly into the `protected/modules` folder, but it is recommended to use a separated path ([see Module Loader Path](https://docs.humhub.org/docs/develop/environment#module-loader-path)).
 In this case, however, the database migrations at the page `Administration` -> `Information` -> `Database` page must also be performed. 
 
 
 ## Purchased Modules
 
+Purchased modules can be activated via the `Marketplace` page -> top right "Gear" button -> "Add licence Key".
 
-Purchased modules can be activated via the `Administration` -> `Modules` -> `Purchase` page.
-
-They are then available for installation in the `Browse Online` tab.
+They are then available for installation.
 
 
 ## Firewall / Whitelist
