@@ -3,22 +3,23 @@ id: modules-migrate
 title: Migration Guide
 ---
 
-Module Migration Guide
-======================
+Module Migration Guide (Outdated)
+=================================
 
-This guide provides useful information about migrating your custom modules in order to keep them compatible with new HumHub versions.
-You should keep your modules up-to-date by removing deprecations and align code breaking changes of the platform and ideally test your
-modules against new HumHub version. Also keep in mind to align the `minVersion` of your module when using new features.
 
-You can execute code for specific versions by using the `version_compare` function as:
+<br />
+:::warning
+Starting with version 1.16, the migration instructions are available in the Git repository at: https://github.com/humhub/humhub/blob/develop/MIGRATE-DEV.md.
+:::
 
-```php
-if (version_compare(Yii::$app->version, '1.3', '>=')) {
-    // Use some 1.3+ features here
-} else {
-     // Compatibility code for older versions
-}
-```
+<br />
+<br />
+<br />
+<br />
+
+
+Migration Notes for Older Versions
+==================================
 
 Version 1.15
 ------------

@@ -10,6 +10,13 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 In addition to this guide, you may also check the [**Theme Migration Guide**](../theme/migrate.md) 
 or [**Development Migration Guide**](../develop/modules-migrate.md).
 
+1.16
+----
+
+- The minimum PHP Version is now **8.0**
+-  The search has been reworked and the search index is automatically rebuilt after the update. This can take some time depending on the size.
+- If you are using the *Professional Edition - Solr Module*, the configuration must be changed. See Module Configuration for details.
+
 1.15
 ----
 - HumHub now employs JavaScript nonces for enhanced security, which may necessitate manual adjustments for inserted scripts, such as statistics codes, to ensure compatibility.

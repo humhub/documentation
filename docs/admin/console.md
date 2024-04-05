@@ -117,7 +117,11 @@ HumHub Queue Management
 | `queue/remove`| Removes a job by id. |
 | `queue/run`| Runs all jobs from db-queue |
 
-### `search`
+### ~~`search`~~
+
+:::warning
+Removed with HumHub v.16
+:::
 
 HumHub Search Tools
 
@@ -127,6 +131,17 @@ HumHub Search Tools
 | `search/optimize`| Optimizes the search index |
 | `search/queue-rebuild` |  Queue search index rebuild |
 | `search/rebuild`| Rebuilds the search index |     
+
+### `content-search`
+
+Content Fulltext Search (HumHub v1.16+)
+
+| Command | Description |    
+| -------- | ---------- |
+| `search/find` |  Search the index |
+| `search/queue-rebuild` |  Queue search index rebuild |
+| `search/rebuild`| Rebuilds the search index |     
+
 
 ### `settings`
 

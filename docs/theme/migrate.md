@@ -31,6 +31,10 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.16
+
+- New Meta Search Overlay 
+
 ### 1.10
 
 - On individual templates based on the `enterprise-themes` it may be necessary to disable the new lazy loading of the space chooser `views/layouts/main.php`.

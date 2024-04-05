@@ -84,10 +84,6 @@ non-authenticated users will have access to certain areas and see public content
 Private networks, on the other hand, can only be accessed by existing users and either allow new users to register 
 manually or solely by invite and may also require a group administrator to approve users registrations.
 
-:::info
-Learn more about different [authentication options](../admin/authentication.md) supported by HumHub.
-:::
-
 ### Spaces
 
 HumHub networks are usually separated into multiple spaces. A space serves as an independent area within your network with

@@ -10,8 +10,8 @@ title: Search
 - User/Space Picker Widgets
 
 
-Index Rebuilding
-----------------
+Content Search - Index Rebuilding
+--------------------------------
 
 If you want to rebuild the search index (e.g. after updating/restore backup), you have two methods:
 
@@ -27,7 +27,7 @@ To start the rebuild job, you need to run following command:
 
 ```
 cd /path/to/humhub/protected
-php yii search/rebuild
+php yii content-search/rebuild
 ```
 
 File Content Indexing
@@ -64,27 +64,5 @@ Example configuration:
             ],
             
         ],
-    ];
-```
-
-
-Zend Lucence Engine
---------------------
-
-By default, HumHub is using a *Lucence* Index (Zend Lucence) to store search data.
-
-Default database folder: `/protected/runtime/searchdb/`
-
-You can modify the default search directory in the [configuration](advanced-configuration.md):
-
-```php
-    return [
-        // ...
-        'params' => [
-            'search' => [
-                'zendLucenceDataDir' => '/some/other/path',
-            ]
-        ]
-        // ...
     ];
 ```
