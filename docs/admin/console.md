@@ -138,9 +138,10 @@ Content Fulltext Search (HumHub v1.16+)
 
 | Command | Description |    
 | -------- | ---------- |
-| `search/find` |  Search the index |
-| `search/queue-rebuild` |  Queue search index rebuild |
-| `search/rebuild`| Rebuilds the search index |     
+| `content-search/find` |  Search the index |
+| `content-search/optimize`| Optimizes the search index |
+| `content-search/queue-rebuild` |  Queue search index rebuild |
+| `content-search/rebuild`| Rebuilds the search index |     
 
 
 ### `settings`
