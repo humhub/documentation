@@ -11,7 +11,7 @@ In regards to own themes and individual modules, the corresponding guides at htt
 ## Release Notes
 
 - [Release Notes 1.16](release_notes_1_16.md)
-- [Release Notes 1.15](release_notes_1_13.md)
+- [Release Notes 1.15](release_notes_1_15.md)
 - [Release Notes 1.14](release_notes_1_14.md)
 - [Release Notes 1.13](release_notes_1_13.md)
 - [Release Notes 1.12](release_notes_1_12.md)
