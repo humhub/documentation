@@ -134,29 +134,7 @@ module.export({
 [...]
 ```
 
-> Warning: Once registered, your modules `init` function may be called even if you are not currently in your desired modules view. This occurs especially if [Pjax](javascript-client.md) is enabled and `initOnPjaxLoad` is set to `true`. Therefore, if your modules initialization logic only makes sense in a specific context, make sure you reside in the desired view before running your actual initialization code e.g: `if(!$('#mySpecialElement').length) {return;}`.
-
-
-It's also possible to call a module `init` function after each `ajax` request. The module `initOnAjaxLoad` has to be set to `true`:
-
-```javascript
-module.initOnAjaxLoad = true;
-```
-
-You will also need to specify the list of URLs for which the ajax page must call the `init` function. In your Asset class, add something like this:
-
-```php
-    public static function register($view)
-    {
-        $view->registerJsConfig('myModule.moduleId', [
-            'initOnAjaxUrls' => [ // Requires `module.initOnAjaxLoad = true;` in the JS file
-                Url::to(['/path']), // Don't add any params to the URL
-            ],
-        ]);
-        
-        return parent::register($view);
-    }
-```
+> Warning: Once registered, your modules `init` function may be called even if you are not currently in your desired modules view. This occures especially if [Pjax](javascript-client.md) is enabled and `initOnPjaxLoad` is set to `true`. Therfore, if your modules initialization logic only makes sense in a specific context, make sure you reside in the desired view before running your actual initialization code e.g: `if(!$('#mySpecialElement').length) {return;}`.
 
 ### Module Unload
 

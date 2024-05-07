@@ -155,7 +155,7 @@ Beside using the `initOnPjaxLoad` flag and `unload` function mentioned in the [M
  - `humhub:modules:client:pjax:beforeSend` - is triggered before pjax page loads
  - `humhub:modules:client:pjax:success` - is triggered after a pjax page load
 
-> Note: Since javascript files in Yii are only loaded and executed once per full page load, some modules may have to be reinitialized after a pjax or ajax request. As mentioned in the [Module Guide](javascript-index.md) the modules `init` function is called in case of a pjax request only if the modules `initOnPjaxLoad` setting is set to `true`, and ajax request only if the modules `initOnAjaxLoad` setting is set to `true`.
+> Note: Since javascript files in Yii are only loaded and executed once per full page load, some modules may have to be reinitialized after a pjax request. As mentioned in the [Module Guide](javascript-index.md) the modules `init` function is called in case of a pjax request only if the modules `initOnPjaxLoad` setting is set to `true`.
 
 #### Running your own Pjax calls
 

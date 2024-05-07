@@ -111,7 +111,6 @@ humhub.module('example', function(module, require, $) {
     });
 });
 ```
-
 ##### Module Initialization
 
 Your module's initialization logic can be implemented by exporting an `init` function. This function will automatically be called after the page is loaded. 
@@ -133,27 +132,6 @@ var init = function($pjax) {
 module.export({
 	init: init
 });
-```
-
-It's also possible to call a module `init` function after each `ajax` request. The module `initOnAjaxLoad` has to be set to `true`:
-
-```javascript
-module.initOnAjaxLoad = true;
-```
-
-You will also need to specify the list of URLs for which the ajax page must call the `init` function. In your Asset class, add something like this:
-
-```php
-    public static function register($view)
-    {
-        $view->registerJsConfig('myModule.moduleId', [
-            'initOnAjaxUrls' => [ // Requires `module.initOnAjaxLoad = true;` in the JS file
-                Url::to(['/path']), // Don't add any params to the URL
-            ],
-        ]);
-        
-        return parent::register($view);
-    }
 ```
 
 ##### Module Unload
