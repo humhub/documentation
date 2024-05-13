@@ -35,7 +35,7 @@ how to use migrations.
 
 Your table names should be prefixed with your unique module id like `mymodule_entry`.
 
-> Info: The `humhub\components\Migration` class provides some additional helper functions.
+> Info: The `humhub\components\Migration` class provides some additional helper methods like  `safeCreateTable()`, `safeAddColumn()`, etc. which check if the table or column exists before creating or adding it.
 
 > Tip: Since a `Migration::safeUp()` uses transactions you should consider splitting your migration files into multiple migrations.
 
