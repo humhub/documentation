@@ -75,7 +75,7 @@ module.exports = {
         ],
         'Updating': [
             'admin/updating',
-            'admin/updating-migration2',
+            'admin/updating-migration',
         ],        
     },
     Developement: {
