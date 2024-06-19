@@ -1,5 +1,5 @@
 ---
-id: updating-migration2
+id: updating-migration
 title: Migration Guide for Administrators
 sidebar_label: Migration Guide
 ---
@@ -230,4 +230,3 @@ extract it to your webroot or install it via [GitHub/Composer](../develop/enviro
 ```
 php yii search/rebuild
 ```
-
