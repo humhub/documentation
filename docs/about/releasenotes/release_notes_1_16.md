@@ -3,7 +3,7 @@ id: release_notes_1_16
 title: HumHub 1.16
 ---
 
-## Release April 2024
+## Release June 2024
 
 TBD
 
