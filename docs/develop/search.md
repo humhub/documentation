@@ -6,10 +6,7 @@ title: Search
 >⚠️ Under construction.
 
 
-See `\humhub\modules\search\interfaces\Searchable` interface for more details.
-
 Example:
-
 
 ```php
 use humhub\modules\content\components\ContentActiveRecord;
