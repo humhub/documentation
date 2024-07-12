@@ -49,6 +49,8 @@ Below you can see a complete overview of the currently available Professional Ed
 - [E-Mail Whitelist](https://marketplace.humhub.com/module/email-whitelist)
 
 - [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme)
+- 
+- [Advanced Search](https://marketplace.humhub.com/module/advanced-search) 
 
 - [Apache SOLR](https://marketplace.humhub.com/module/solr)
 
