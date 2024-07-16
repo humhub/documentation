@@ -3,27 +3,29 @@ id: modules-migrate
 title: Migration Guide
 ---
 
-Module Migration Guide
-======================
+Module Migration Guide (Outdated)
+=================================
 
-This guide provides useful information about migrating your custom modules in order to keep them compatible with new HumHub versions.
-You should keep your modules up-to-date by removing deprecations and align code breaking changes of the platform and ideally test your
-modules against new HumHub version. Also keep in mind to align the `minVersion` of your module when using new features.
 
-You can execute code for specific versions by using the `version_compare` function as:
+<br />
+:::warning
+Starting with version 1.16, the migration instructions are available in the Git repository at: https://github.com/humhub/humhub/blob/develop/MIGRATE-DEV.md.
+:::
 
-```php
-if (version_compare(Yii::$app->version, '1.3', '=>')) {
-    // Use some 1.3+ features here
-} else {
-     // Compatibility code for older versions
-}
-```
+<br />
+<br />
+<br />
+<br />
+
+
+Migration Notes for Older Versions
+==================================
 
 Version 1.15
 ------------
 
 - New `PolymorphicRelation::getObjectModel()`: should replace `get_class()`
+- This version enables Javascript nonces by default for advanced CSRF protection. Make sure that all inserted javascript contains the current nonce. This is done automatically e.g. via the `Html` helper. 
 
 Version 1.14
 ------------
@@ -529,7 +531,7 @@ return [
 ### Default lazy javascript module loading
 
 In HumHub 1.5 modules required by `humhub.require()` will be fetched lazily by default, which means a module will be
-initialized by `require()` in case it has not been loaded yet. In HumHub <1.5 a lazy flag was required to be set in `require`
+initialized by `require()` in case it has not been loaded yet. In HumHub < 1.5 a lazy flag was required to be set in `require`
 e.g. `require('moduleId', true)`. This behavior was introduced in order to be more tolerant regarding script loading order
 due to the core asset loading change. Since lazy loaded modules are rarely used on purpose a warning is logged to the console
 once a module was loaded lazily for troubleshooting. 

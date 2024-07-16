@@ -44,13 +44,13 @@ Below you can see a complete overview of the currently available Professional Ed
 
 - [News](https://marketplace.humhub.com/module/news)
 
-- [JWT SSO](https://marketplace.humhub.com/module/jwt-sso)
-
 - [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap) 
 
 - [E-Mail Whitelist](https://marketplace.humhub.com/module/email-whitelist)
 
 - [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme)
+- 
+- [Advanced Search](https://marketplace.humhub.com/module/advanced-search) 
 
 - [Apache SOLR](https://marketplace.humhub.com/module/solr)
 

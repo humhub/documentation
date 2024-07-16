@@ -89,7 +89,7 @@ This can be done e.g. by a file search for the desired text passage.
 
 To overwrite you have to define a new message file using the following file/path pattern:
 
-- protected/config/messages/`LanguageCode`>/`ModuleID`.`MessageFile`.php
+- protected/config/messages/`LanguageCode`>/`{moduleId}Module`.`MessageFile`.php
 
 To overwrite the post placeholder in the German language, for example, you have to create the following file:
 

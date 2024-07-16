@@ -1,5 +1,5 @@
 ---
-id: updating-migration2
+id: updating-migration
 title: Migration Guide for Administrators
 sidebar_label: Migration Guide
 ---
@@ -10,9 +10,22 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 In addition to this guide, you may also check the [**Theme Migration Guide**](../theme/migrate.md) 
 or [**Development Migration Guide**](../develop/modules-migrate.md).
 
+1.16
+----
+
+- The minimum PHP Version is now **8.0**
+-  The search has been reworked and the search index is automatically rebuilt after the update. This can take some time depending on the size.
+- If you are using the *Professional Edition - Solr Module*, the configuration must be changed. See Module Configuration for details.
+
+1.15
+----
+- HumHub now employs JavaScript nonces for enhanced security, which may necessitate manual adjustments for inserted scripts, such as statistics codes, to ensure compatibility.
+  Your custom statistic code may need to be modified under `Administration` -> `Settings` -> `Advanced`.  If Javascript is being used in the [Custom Pages](https://marketplace.humhub.com/module/custom_pages/manual) module or [Custom Modules](https://marketplace.humhub.com/module/custom_pages/manual), please refer to the respective documentation.
+
+
 1.14
 ----
-- Make sure that you don't use any third-party auth clients in your configuration. Use available Modules instead!    protected/humhub/modules/user/authclient/{Facebook,GitHub,Google,LinkedIn,Live,Twitter}.php
+- Make sure that you don't use any third-party auth clients in your configuration. Use available Modules instead!    protected/humhub/modules/user/authclient/[Facebook,GitHub,Google,LinkedIn,Live,Twitter].php
 
 
 1.11
@@ -217,4 +230,3 @@ extract it to your webroot or install it via [GitHub/Composer](../develop/enviro
 ```
 php yii search/rebuild
 ```
-

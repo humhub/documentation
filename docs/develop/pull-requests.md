@@ -34,18 +34,17 @@ Enh #999: a description of the enhancement (Your Name)
 
 The changelog files are located in the following locations:
 
-** Core Repostory **
+** Core Repository **
 
-- `/CHANGELOG.md` In the `master` branch
-- `/CHANGELOG_DEV.md` In the `develop` branch
+- `/CHANGELOG.md`
 
 ** Module Repositories ** 
 
 - `/docs/CHANGELOG.md` 
 
-For modules it can be the case that no "Under Development" version exists in the changelog file yet. In this case please create a new version section and also adjust the file `module.json`. 
+For modules, it can be the case that no "Under Development" version exists in the changelog file yet. In this case please create a new version section and also adjust the file `module.json`. 
 
-For minor enhancements and bugfixes only the minor version has to be changed. e.g. 1.0.**1** If a newer HumHub core version is required (`minVersion` adjustment in `module.json`) or a major module feature was implemented, the major version should be changed. e.g. 1.**1**.0
+For minor enhancements and bugfixes, only the minor version has to be changed. e.g. 1.0.**1** If a newer HumHub core version is required (`minVersion` adjustment in `module.json`) or a major module feature was implemented, the major version should be changed. e.g. 1.**1**.0
 
 
 ## Tests
@@ -64,4 +63,3 @@ To have your contribution accepted, you, as the author of the pull request, need
 - **Core Changes** Should always be briefly described in the documentation in the [Migration Guide](modules-migrate.md).
 
 - **Module Features** New features should also be added in the Readme files if necessary.  
-

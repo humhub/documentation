@@ -59,6 +59,7 @@ Performs data integrity checks.
 | Command | Description |    
 | -------- | ---------- |
 | `integrity/run`  |  Starts integrity checker |
+| `integrity/run --interactive=0`  |  Starts integrity checker with automatic acceptance |
 
 ### `ldap`
 
@@ -116,7 +117,11 @@ HumHub Queue Management
 | `queue/remove`| Removes a job by id. |
 | `queue/run`| Runs all jobs from db-queue |
 
-### `search`
+### ~~`search`~~
+
+:::warning
+Removed with HumHub v.16
+:::
 
 HumHub Search Tools
 
@@ -126,6 +131,18 @@ HumHub Search Tools
 | `search/optimize`| Optimizes the search index |
 | `search/queue-rebuild` |  Queue search index rebuild |
 | `search/rebuild`| Rebuilds the search index |     
+
+### `content-search`
+
+Content Fulltext Search (HumHub v1.16+)
+
+| Command | Description |    
+| -------- | ---------- |
+| `content-search/find` |  Search the index |
+| `content-search/optimize`| Optimizes the search index |
+| `content-search/queue-rebuild` |  Queue search index rebuild |
+| `content-search/rebuild`| Rebuilds the search index |     
+
 
 ### `settings`
 

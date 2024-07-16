@@ -106,7 +106,8 @@ return [
 
 | Parameter | Description |    
 | -------- | ---------- |
-| `allowedLanguages`  | see the [Translations Section](translations.md) | 
+| `allowedLanguages`  | see the [Translations Section](translations.md) |
+| `dailyCronExecutionTime`  | When to execute the daily cron job (default 18:00) |
 | `enablePjax`  | used to disable/enable pjax support (default true) | 
 
 ### Module Configurations
@@ -119,8 +120,8 @@ Those configurations can be overwritten within your `common.php` file as follows
 ```php
 return [
     'modules' => [
-        'directory' => [
-            'guestAccess' => false 
+        'activity' => [
+            'weeklySummaryDay' => 0
         ]
     ]
 ]

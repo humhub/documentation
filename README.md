@@ -33,7 +33,11 @@ $ yarn start
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
-
+May need to execute the command:
+```
+$ npx update-browserslist-db@latest
+```
+After this command run:
 ```
 $ npm run build
 ```
@@ -45,6 +49,29 @@ $ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Troubleshooting
+If you encounter errors:
+```
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: error:0308010C:digital envelope routines::unsupported
+    at String.replace (<anonymous>)
+```
+
+try running the command to enable the legacy OpenSSL provider:
+
+On Unix-like (Linux, macOS, Git bash, etc.):
+```
+$ export NODE_OPTIONS=--openssl-legacy-provider
+```
+On Windows command prompt:
+```
+set NODE_OPTIONS=--openssl-legacy-provider
+```
+On PowerShell:
+```
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
 
 ### Deployment
 

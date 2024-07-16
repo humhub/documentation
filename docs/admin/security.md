@@ -50,10 +50,10 @@ return [
         'user' => [
             'passwordStrength' => [
                 '/^.{8,}$/' => 'Password needs to be at least 8 characters long.',
-                '/^(.*?[A-Z]){2,}.*$/' => 'Password has to contain two uppercase letters.',
-               	'/^(.*?[a-z]){1,}.*$/' => 'Password has to contain one lower case letter.',
-               	'/^(.*?[\W]){1,}.*$/' => 'Password has to contain one special case letter.',
-               	'/^(.*?[0-9]){1,}.*$/' => 'Password has to contain one digit.',
+                '/^(.*?[A-Z]){2,}.*$/' => 'Password has to contain at least two uppercase letters.',
+               	'/^(.*?[a-z]){1,}.*$/' => 'Password has to contain at least one lower case letter.',
+               	'/^(.*?[\W]){1,}.*$/' => 'Password has to contain at least one special case letter.',
+               	'/^(.*?[0-9]){1,}.*$/' => 'Password has to contain at least one digit.',
             ]
         ]
     ]
@@ -68,10 +68,31 @@ To localize error message you have to define a new message file with the followi
 Web Security Configuration
 ---------------------
 
-HumHub 1.4 comes with a build in web security configuration used to set security headers and csp rules. The default security
+HumHub comes with a build in web security configuration used to set security headers and csp rules. The default security
 configuration can be found at `protected/humhub/config/web.php`.
 
-Since the default security settings are rather loose, you may want to align those settings to your own requirements. 
+### Disable Javascript Nonce
+
+Since HumHub 1.15, Javascript CSP Nonce is required and enabled by default. To disable this, please add following lines to your configuration.
+
+**protected/config/web.php:**
+
+```php
+return [
+    'modules' => [
+        'web' => [
+            'security' =>  [
+                'csp' => [
+                    'nonce' => false
+                ]
+            ]
+        ]
+    ]
+]
+```
+
+### Strict CSP Settings
+
 The strictest CSP settings for your installation highly depend on the used features as installed modules, configured oembed provider or
 custom iframe pages etc. 
 
@@ -174,10 +195,7 @@ while enforcing the csp rule.
 **CSP Nonce:**
 
 The csp also supports a [nonce](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 
-settings for your `script-src`.  This can be enabled by setting `nonce => true` within your custom security configuration.
-If enabled modern browsers will only execute scripts containing a generated nonce token.
-
-> Note: Since this feature is rather new, some modules may do not support this feature.
+settings for your `script-src`. Modern browsers will only execute scripts containing a generated nonce token.
 
 > Note: Some settings as the nonce configuration, may not be supported by some modules. In case you notice modules not working
 properly with your security configuration, please contact the module owner or refer to the module description. Also check the 

@@ -317,7 +317,7 @@ usage of ActiveRecord events.
 
 ### User Model
 
-The `humhub\modules\user\model\User` model provides the following additional events:
+The `humhub\modules\user\models\User` model provides the following additional events:
 
 | Event | Class | Description |    
 | -------- | ---------- | ---------- |
@@ -580,7 +580,7 @@ return [
     'events' => [
         [
             'class' => 'some\module\widget\SpecialWidget', 
-            'event' => Widget::EVENT_ON_BEVORE_RUN, 
+            'event' => Widget::EVENT_BEFORE_RUN, 
             'callback' => [Events::class, 'onSpecialWidgetBeforeRun']]
     ]
 ]
@@ -611,14 +611,14 @@ return [
         [
             'class' => 'some\module\widget\SpecialWidget', 
             'event' => Widget::EVENT_CREATE, 
-            'callback' => [Events::class, 'onSpecialWidgetBeforeRun']]
+            'callback' => [Events::class, 'onSpecialWidgetCreate']]
     ]
 ]
 ```
 
 ```php
 // Events.php
-public static function onSpecialWidgetBeforeRun(WidgetCreateEvent $event)
+public static function onSpecialWidgetCreate(WidgetCreateEvent $event)
 {
     $event->config['class'] = MyCustomSpecialWidget::class;
 }
