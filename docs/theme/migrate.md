@@ -31,6 +31,10 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.17
+
+- When building CSS from LESS, the `-x` compression option shouldn't be used anymore. Install "Clean CSS" LESS plugin with `npm install less-plugin-clean-css -g` and use the `--clean-css` option instead. Or use the `grunt build-theme --name=MyTheme` command.
+
 ### 1.16
 
 - New Meta Search Overlay 

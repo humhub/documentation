@@ -37,7 +37,7 @@ See: https://nodejs.org/en/download/
 Open the command console and execute:
 
 ```
-npm install less -g
+npm install less less-plugin-clean-css -g
 ```
 
 ### Modify theme colors
@@ -62,7 +62,7 @@ cd /path/to/HumHub/themes/Example/less
 Build the CSS package
 
 ```
-lessc build.less ../css/theme.css
+lessc --clean-css build.less ../css/theme.css
 ```
 
 ### Test the result
@@ -100,8 +100,3 @@ Text Example:
 
 ### Result
 ![Result](images/modify-template-result.png)
- 
-
-
-
-
