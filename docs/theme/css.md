@@ -20,7 +20,8 @@ The `build.less` will automatically import all required **.less** files of your 
 
 If you wish to overwrite default theme variables as text and background colors, just copy and edit your variables from `humhub/static/less/variables.less` into your themes `variables.less` file. 
 
-> Info: All variables defined in `variables.less` can also be accessed in your views by calling `Yii::$app->view->theme->variable('myVariable');`, and are used in the mail views by default.
+> Info: All variables defined in `variables.less` can also be accessed in your views by calling `Yii::$app->view->theme->variable('my-variable');`, and are used in the mail views by default.
+> For styling HTML elements, since all LESS variables values from `variables.less` are copied to CSS variables, it is recommended to use pure CSS variables `var(--my-variable)` to allow dynamic color changes such as dark theme.
 
 ## Parent themes
 
