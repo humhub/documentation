@@ -9,14 +9,17 @@ module.exports = {
   organizationName: 'humhub', // Usually your GitHub org/user name.
   projectName: 'humhub', // Usually your repo name.
   onBrokenLinks: 'warn',
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+      }),
+    ],
+  ],
   themeConfig: {
     prism: {
       additionalLanguages: ['php'],
-    },
-    algolia: {
-      apiKey: '0000hidden0000',
-      appId: 'humhub',
-      indexName: 'humhub',
     },
     navbar: {
       title: 'HumHub Documentation',
