@@ -56,7 +56,7 @@ The views will be automatically loaded from the base theme.
 If you are using the command line tool [lessc](http://lesscss.org/), you can build your theme as follows:
 
 ```
-lessc -x themes/Example/less/build.less themes/Example/css/theme.css
+lessc --clean-css themes/Example/less/build.less themes/Example/css/theme.css
 ```
 
 or respectively by using [grunt](../develop/build.md):

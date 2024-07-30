@@ -61,7 +61,7 @@ to build the community theme or other themes residing in the `@humhub/themes` di
 install [Less](http://lesscss.org/usage/):
 
 ```console
-npm install less -g
+npm install less less-plugin-clean-css -g
 ```
 
 ### Build community theme
@@ -89,7 +89,7 @@ Refer to the [Theming Guide](../theme/css.md) for more information about custom 
 To build a theme without grunt, run the following command:
 
 ```console
-lessc -x themes/HumHub/less/build.less themes/HumHub/css/theme.css
+lessc --clean-css themes/HumHub/less/build.less themes/HumHub/css/theme.css
 ```
 
 ## Search index rebuild
