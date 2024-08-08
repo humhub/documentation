@@ -27,6 +27,11 @@ Version 1.15
 - New `PolymorphicRelation::getObjectModel()`: should replace `get_class()`
 - This version enables Javascript nonces by default for advanced CSRF protection. Make sure that all inserted javascript contains the current nonce. This is done automatically e.g. via the `Html` helper. 
 
+Version 1.15
+------------
+
+- Nuw method signature of `\humhub\modules\user\models\Group::getAdminGroupId()` now requires the return type to be `int`
+
 Version 1.14
 ------------
 
