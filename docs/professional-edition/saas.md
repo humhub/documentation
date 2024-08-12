@@ -50,11 +50,6 @@ Please see ``Administration -> Cloud Hosting -> Export data`` for details
 
 6.) Rebuild the [search index](../admin/search.md)
 
-```
-cd protected
-php yii search/rebuild
-```
-
 7.) Reinstall [modules](../admin/console.md#module)
 
 ```
