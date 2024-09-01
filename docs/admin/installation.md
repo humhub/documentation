@@ -192,20 +192,18 @@ The [virtual server](server-setup.md#nginx) configuration for NGINX is already p
 
 ## Enable production mode
 
-By default HumHub is shipped in debug mode. This means that error messages are shown with maximum details directly to the users. In addition, the performance is reduced because no caching or compressed assets are used.
+By default, HumHub is shipped in debug mode. After successful installation it's automatically switches to production mode.
 
-To activate Production Mode, edit the index.php file  and comment out the following lines.
-To comment out lines, the line must begin with: //
+You can see the current mode at `Administration -> Information`.
 
-Example (/var/www/humhub/index.php):
+## Enable debug mode
 
-```php
-// comment out the following two lines when deployed to production
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
-// defined('YII_ENV') or define('YII_ENV', 'dev');
-``` 
+To activate Debug Mode:
+1. create new file called `.env` in project root
+2. copy contents of `.env.example` to `.env`
+3. make sure that value of `HUMHUB_DEBUG` is `1`
 
-You can see the current mode at ``Administration -> Information``.
+You can see the current mode at `Administration -> Information`.
 
 ## Verify 
 

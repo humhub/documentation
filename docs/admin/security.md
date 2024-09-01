@@ -8,21 +8,11 @@ This guide describes recommended configurations and practices in order to keep y
  Enable Production Mode
 --------------------------
 
-By default HumHub is operating in _DEBUG_ mode, which besides others uses a different error handling and non combined
-assets. Before opening your installation to the public you should enable the production mode first by commenting out the
-following lines of the `index.php` file within your HumHub root directory:
+1. By default, HumHub is shipped in debug mode. After successful installation it's automatically switches to production mode.
+If you enabled `DEBUG` mode earlier via `.env`, before opening your installation to the public make sure that `DEBUG=0`.
+> If you do not have file `.env` in project root just skip this
 
-```php
-[...]
-// comment out the following two lines when deployed to production
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
-// defined('YII_ENV') or define('YII_ENV', 'dev');
-[...]
-```
-
-> Note: In this example the lines are already commented out.
-
-You should also delete the `index-test.php` file in your HumHub root directory if existing.
+2. You should also delete the `index-test.php` file in your HumHub root directory if existing.
 
 Protected Directories
 ---------------------
