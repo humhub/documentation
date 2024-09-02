@@ -11,55 +11,7 @@ Available translations
 
 Our [translation community](https://translate.humhub.org) is responsible for maintaining the translation of HumHub and its modules into more than 40 languages. If you want to be part of this community effort, just register to the translation community and join the space dedicated to your language. Since the translation activity highly depends on the dissemination of a language we are always in need of contributors especially for rather rare languages. Before starting with the actual translation, please make yourself familiar with the current wording and terms already in use and if needed first discuss changes of such terms with your fellow contributors if possible.
 
-| Language code (ISO)    | Language                                                                  |
-| ---------------------- | --------------------------------------------------------------------------|
-| en-US                  | English (American)                                                        |
-| en-UK                  | English (British)                                                         |
-| de                     | German                                                                    |
-| fr                     | French                                                                    |
-| nl                     | Dutch                                                                     |
-| pt                     | Portuguese                                                                |
-| pt-BR                  | Portuguese (Brazil)                                                       |
-| pl                     | Polish                                                                    |
-| es                     | Spanish                                                                   |
-| it                     | Italian                                                                   |
-| tr                     | Turkish                                                                   |
-| ru                     | Russian                                                                   |
-| th                     | Thai                                                                      |
-| uk                     | Ukrainian                                                                 |
-| el                     | Greek                                                                     |
-| hu                     | Hungarian                                                                 |
-| ja                     | Japanese                                                                  |
-| nb-NO                       | Norwegian (Norway)                                                   |
-| zh-CN                       | 	Chinese (S)                                                        |
-| ca                       | Catalan                                                                 |
-| an                       | Aragonese                                                               |
-| cs                       | Czech                                                                   |
-| vi                       | Vietnamese                                                              |
-| sv                       | Swedish                                                                 |
-| da                       | Danish                                                                  |
-| uz                       | Uzbek (Latin)                                                           |
-| fa-IR                    | Farsi (Iran)                                                            |
-| bg                       | Bulgarian                                                               |
-| sk                       | Slovak                                                                  |
-| zh-TW                       | Chinese (T)                                                          |
-| ro                       | Romanian                                                                |
-| ar                       | Arabic                                                                  |
-| id                       | Indonesian                                                              |
-| ko                      | Korean                                                                   |
-| lt                       | Lithuanian                                                              |
-| hr                       | Croatian                                                                |
-| ht                       | Haitian, Haitian Kreol                                                  |
-| lv                        | Latvian                                                                |
-| sl                       | Slovenian                                                               |
-| nn-NO                       | Norwegian (Nynorsk) (Norway)                                         |
-| am                       | Amharic                                                                 |
-| fi                       | Finnish                                                                 |
-| br                       | Breton                                                                  |
-| he                       | Hebrew                                                                  |
-
-
-
+The current list of available translation codes can be found [on this page](https://github.com/humhub/humhub/blob/master/protected/humhub/config/common.php), in `availableLanguages`.
 
 Limit available languages
 -------------------------
@@ -130,4 +82,3 @@ In some cases, such as the profile fields, it may be necessary to add your own t
   ```
    
   Always use the format: 'Original text` => 'Translated text',   
-   
