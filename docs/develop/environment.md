@@ -52,7 +52,7 @@ Please refer to the [Installation Guide](../admin/installation.md) for further i
 ### Quick Notes
 
 - Copy contents of `.env.example` to `.env`
-- Make sure the `debug` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
+- Make sure the `DEBUG` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
 - Disable caching under `Administration -> Settings -> Advanced -> Caching -> None`
 - Use file based mailing `Administration -> Settings -> Advanced -> E-Mail`
 
