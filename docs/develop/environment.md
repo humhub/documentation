@@ -51,10 +51,10 @@ Please refer to the [Installation Guide](../admin/installation.md) for further i
 
 ### Quick Notes
 
-- Copy contents of `.env.example` to `.env`
-- Make sure the `DEBUG` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
-- Disable caching under `Administration -> Settings -> Advanced -> Caching -> None`
-- Use file based mailing `Administration -> Settings -> Advanced -> E-Mail`
+- Copy the contents of ``.env.example`` into the newly created ``.env`` file.
+- Make sure the ``DEBUG`` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
+- Disable caching under ``Administration > Settings > Advanced > Caching > None``
+- Use file based mailing ``Administration > Settings > Advanced > E-Mail``
 
 ### Queue configuration
 
@@ -65,8 +65,7 @@ have to run `queue/run` command manually in order to execute queued tasks as not
 
 ### Module Loader Path
 
-The default path under which HumHub searches for installed modules is `@humhub/protected/modules`. Additional search paths
-can be configured within with `.env` as follows: 
+The default path where HumHub searches for installed modules is ``@humhub/protected/modules``. Additional search paths can be configured in the ``.env`` file as follows:
 
 ```env
 // @humhub/.env
@@ -78,8 +77,7 @@ for different test installations and prevent interference with marketplace modul
 
 ### Yii Debug Module
 
-You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed
-request and query debugging. Just add the following block to your local web configuration:
+You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
 
 in `.env`
 ```env
