@@ -80,6 +80,9 @@ Support Community
 
 There is also an active support community at: http://community.humhub.com
 
+Debug Mode
+-----------------
+For instructions on how to enable debug mode, refer to the [Enable Debug Mode](../admin/installation.md#enable-debug-mode) guide.
 
 Github - Bugtracker
 -------------------
