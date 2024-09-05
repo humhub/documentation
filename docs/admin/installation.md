@@ -196,14 +196,6 @@ By default, HumHub is shipped in debug mode. After a successful installation, it
 
 You can see the current mode at ``Administration > Information``.
 
-## Enable debug mode
-
-Activating Debug Mode:
-1. Create a new file called ``.env`` in the project root.
-2. Copy the contents of ``.env.example`` into the newly created ``.env`` file.
-3. Ensure that the value of ``HUMHUB_DEBUG`` is set to ``1``.
-
-You can see the current mode at ``Administration > Information``.
 
 ## Verify 
 

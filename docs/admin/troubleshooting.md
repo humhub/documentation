@@ -82,7 +82,13 @@ There is also an active support community at: http://community.humhub.com
 
 Debug Mode
 -----------------
-For instructions on how to enable debug mode, refer to the [Enable Debug Mode](../admin/installation.md#enable-debug-mode) guide.
+
+Enabling Debug Mode:
+1. Create a new file called ``.env`` in the project root.
+2. Copy the contents of ``.env.example`` into the newly created ``.env`` file.
+3. Ensure that the value of ``HUMHUB_DEBUG`` is set to ``1``.
+
+To see which mode HumHub is currently operating in, navigate to ``Administration > Information``. To access log entries, go to  ``Administration > Information > Logging``
 
 Github - Bugtracker
 -------------------
