@@ -2,11 +2,12 @@
 id: saas
 title: Managed Hosting (SaaS)
 ---
+The HumHub Professional Edition can also be upgraded to include optional Software-as-a-Service (SaaS) hosting.
 
-It is possible to subscribe to the HumHub Professional Edition with a SaaS option. Our team will take care of the operation, maintenance and backup of your HumHub installation.
+With our SaaS offering, you get a fully hosted solution to run your social networking platform without any technical worries. We take care of everything — server management, software updates, security, and backups—so you can focus entirely on growing and engaging your community. It’s the ideal choice if you’re looking for a secure, customizable, and scalable platform without the hassle of managing the infrastructure yourself.
 
 :::note
-You can always migrate to an OnPremise installation later on. But we are also happy to import your existing installation into our infrastructure. Just contact our helpdesk for this.
+Data sovereignty is very important to us. In our SaaS solution, a complete data export, and thus the switch to on-premises, is possible at any time. Naturally, switching from on-premises to our infrastructure is also possible, though with certain limitations. If you would like to migrate your installation to our infrastructure, please contact our helpdesk for more information.
 :::
 
 
@@ -101,7 +102,7 @@ Make sure to replace "example.com" with your domain name. After this modificatio
 
 
 
-## Custom modules & themes (SFTP)
+## Custom Modules & Themes (SFTP)
 
 It is possible to upload own modules or themes to your server instance via SFTP.
 HumHub core files cannot be modified.
