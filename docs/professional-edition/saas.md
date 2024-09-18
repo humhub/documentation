@@ -4,24 +4,19 @@ title: Managed Hosting (SaaS)
 ---
 The HumHub Professional Edition can also be upgraded to include optional Software-as-a-Service (SaaS) hosting.
 
-With our SaaS offering, you get a fully hosted solution to run your social networking platform without any technical worries. We take care of everything — server management, software updates, security, and backups—so you can focus entirely on growing and engaging your community. It’s the ideal choice if you’re looking for a secure, customizable, and scalable platform without the hassle of managing the infrastructure yourself.
+With our SaaS offering, you get a fully hosted solution to run your HumHub platform without any technical worries. We take care of everything - server management, software updates, security, and backups — so you can focus entirely on growing and engaging your community. It’s the ideal choice if you’re looking for a secure, customizable, and scalable platform without the hassle of managing the infrastructure yourself.
 
 :::note
-Data sovereignty is very important to us. In our SaaS solution, a complete data export, and thus the switch to on-premises, is possible at any time. Naturally, switching from on-premises to our infrastructure is also possible, though with certain limitations. If you would like to migrate your installation to our infrastructure, please contact our helpdesk for more information.
+Data sovereignty is very important to us. In our SaaS solution, a complete data export, and thus the switch to on-premise, is possible at any time. Naturally, switching from on-premise to our infrastructure is also possible, though with certain limitations. If you would like to migrate your installation to our infrastructure, please contact our Helpdesk for more information.
 :::
 
+## Installation & Setup
 
-## Installation
+The only thing you need to do in terms of installation is to create a personal demo on our [website](https://www.humhub.com/en/professional-edition/demo). Our administrators will then migrate your demo to a Professional Edition server and you can start building your platform immediately. Migration is usually completed within one business day. 
 
-To create a hosted HumHub with us, simply create an installation at our [Demo Hosting](https://www.humhub.com/en/professional-edition/demo).
+If you have already created a demo installation of the HumHub Professional Edition, you don't have to start from scratch, of course. We will not only migrate all content you have created but also the accounts, sturctre, files and so on. In this case, simply provide our Sales Team with the name of your demo and we will take care of everything else.  
 
-Each installation starts here with the free Demo Plan (maximum 5 users) and can be upgraded to Professional Edition Hosting at any time later.  
- 
-:::note
-The name of your hosting cannot be changed after the installation is complete.
-:::
-
- ## Humhub version updates 
+## Humhub version updates 
 
 While demo installations are automatically updated to the latest stable HumHub version, an update of Professional Edition SaaS installations must be requested from our helpdesk. 
 
@@ -35,7 +30,9 @@ A Humhub update is free of charge.
 
 ## Backup & Export Data
 
-Please see ``Administration -> Cloud Hosting -> Export data`` for details
+Not only data sovereignty, but also data security and recoverability are very important to us. That's why we create daily, weekly and monthly snapshots of your installation. Your installation and the backups created are, of course, stored in different data centres.
+
+You can also create your own backups if you wish. Simply go to ``Administration -> Cloud Hosting -> Export Data'' and create a backup package that is a full copy of your installation.
 
 ### Migrate to On Premise 
 
