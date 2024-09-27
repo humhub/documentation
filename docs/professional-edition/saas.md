@@ -14,23 +14,23 @@ Data sovereignty is very important to us. In our SaaS solution, a complete data 
 
 The only thing you need to do in terms of installation is to create a personal demo on our [website](https://www.humhub.com/en/professional-edition/demo). Our administrators will then migrate your demo to a Professional Edition server and you can start building your platform immediately. Migration is usually completed within one business day. 
 
-If you have already created a demo installation of the HumHub Professional Edition, you don't have to start from scratch, of course. We will not only migrate all content you have created but also the accounts, sturctre, files and so on. In this case, simply provide our Sales Team with the name of your demo and we will take care of everything else.  
+If you have already created a demo installation of the HumHub Professional Edition, you don't have to start from scratch, of course. We will not only migrate all content you have created but also the accounts, structure, files, and so on. In this case, simply provide our Sales Team with the name of your demo and we will take care of everything else.  
 
 ## Updates
 
 Your installation of the HumHub Professional Edition is automatically updated without any action required from you. For security reasons, updates are applied 2-3 weeks after their release. We summarize the most important new features and improvements in our [Release Notes](https://docs.humhub.org/docs/about/releasenotes/release_notes), a detailed list of all changes can be found in the [Changelog](https://github.com/humhub/humhub/blob/master/CHANGELOG.md).
 
 :::note
-If you are using custom modules and themes, we recommend disabling automatic updates to avoid any potential compatibility issues. You can manage this setting by navigating to Administration --> Cloud Hosting --> Updates. 
+If you are using custom modules and themes, we recommend disabling automatic updates to avoid any potential compatibility issues. You can manage this setting by navigating to `Administration > Cloud Hosting > Updates`. 
 :::
 
 The updates are of course provided and installed free of charge as part of our SaaS offering. 
 
 ## Backup & Export Data
 
-Not only data sovereignty, but also data security and recoverability are very important to us. That's why we create daily, weekly and monthly snapshots of your installation. Your installation and the backups created are, of course, stored in different data centres.
+Not only data sovereignty, but also data security and recoverability are very important to us. That's why we create daily, weekly, and monthly snapshots of your installation. Your installation and the backups created are, of course, stored in different data centres.
 
-You can also create your own backups if you wish. Simply go to ``Administration -> Cloud Hosting -> Export Data'' and create a backup package that is a full copy of your installation.
+You can also create your own backups if you wish. Simply go to `Administration > Cloud Hosting > Export Data` and create a backup package that is a full copy of your installation.
 
 ### Migrate to On-Premise 
 
@@ -38,7 +38,7 @@ If you change your mind and decide you would rather host the HumHub Professional
 
 A detailed step-by-step installation guide can be found in this documentation. Once your server is up and running, follow these simple instructions to import the data from your backup: 
 
-1.) [Install and configure](../admin/installation.md) a Humhub system. Use the same version that you have used in our infrasturcture.
+1.) [Install and configure](../admin/installation.md) a Humhub system. Use the same version that you have used in our infrastructure.
 
 2.) Download the provided backup package and extract it to a temporary folder
 
@@ -62,7 +62,7 @@ php yii module/update-all
 
 ## GDPR
 
-To download the data processing agreement go to ``Administration -> Cloud Hosting -> Data privacy``.
+To download the data processing agreement go to `Administration > Cloud Hosting > Data privacy`.
 
 ## Custom Domain
 
@@ -72,7 +72,7 @@ Using your own domain is possible if we host your installation for you. All you 
 - saas-edge-ca1.humhub.zone. (North America / Canada)
 - saas-edge-sgp1.humhub.zone. (Asia / Singapore)
 
-Once this is set up, all you need to do is add the custom domain in ``Admin --> Cloud Hosting --> Custom Domain``. Please note that it may take up to 15 minutes for our systems to process and apply the changes.
+Once this is set up, all you need to do is add the custom domain in `Admin > Cloud Hosting > Custom Domain`. Please note that it may take up to 15 minutes for our systems to process and apply the changes.
 
 A Let's Encrypt SSL certificate is automatically created within 2 hours.
 
@@ -97,14 +97,14 @@ if (!empty($_SERVER['REQUEST_URI']) && (empty($forwardedHost) || $forwardedHost 
 ``` 
 
 :::note
-Make sure to replace "example.com" with your domain name. After this modification your default URL e.g. community.example.com is not longer available.
+Make sure to replace "example.com" with your domain name. After this modification, your default URL e.g. community.example.com is no longer available.
 :::
 
 ## Custom Modules & Themes (SFTP)
 
-If you would like to use own modules and themes, you can enable SFTP acces for your instance.
+If you would like to use your own modules and themes, you can enable SFTP access for your instance.
 
-Please go to ``Administration -> Cloud Hosting -> SFTP`` for more details.
+Please go to `Administration > Cloud Hosting > SFTP` for more details.
 
 **HumHub core files cannot be modified.**
 
