@@ -77,7 +77,7 @@ Once this is set up, all you need to do is add the custom domain in `Admin > Clo
 A Let's Encrypt SSL certificate is automatically created within 2 hours.
 
 :::note
-Since CNAME records are only possible for subdomains, only custom domains like **community.example.com** or **www.example.community.com** are possible. 
+Since CNAME records are only possible for subdomains, only custom domains like **community.example.com** or **www.examplecommunity.com** are possible. 
 :::
 
 ### Force Custom Domain
