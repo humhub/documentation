@@ -92,7 +92,7 @@ The following configuration settings can be made directly in HumHub via the brow
 
 HumHub sends emails to the users e.g. during the registration, password recovery, notifications or for daily summaries.
 
-A valid transport and a sender e-mail address must be provided for this purpose. This can be configured in the web interface under ``Administration -> Settings -> Advanced -> E-Mail`.
+A valid transport and a sender e-mail address must be provided for this purpose. This can be configured in the web interface under ``Administration > Settings > Advanced > E-Mail`.
 
 :::note
 You should use a `noreply` sender e-mail address sice reply by mail is currently not supported.
@@ -106,7 +106,7 @@ You can use external SMTP services like SendGrid, Postmark, Amazon SES, Mailgun 
 
 By default HumHub uses the time zone of the web server. However, the time zone of the database server (MariaDB) is the relevant one. If these time zones differs or the server was moved to another location, you need to change this time zone.  
 
-You can switch the time zone at: ``Administration -> Settings -> General -> Server timezone``
+You can switch the time zone at: ``Administration > Settings > General > Server timezone``
 
 If you are not sure which time zone is configured on your Maria DB server, you can query the time zone with the following SQL statement.
 
@@ -192,30 +192,20 @@ The [virtual server](server-setup.md#nginx) configuration for NGINX is already p
 
 ## Enable production mode
 
-By default HumHub is shipped in debug mode. This means that error messages are shown with maximum details directly to the users. In addition, the performance is reduced because no caching or compressed assets are used.
+By default, HumHub is shipped in debug mode. After a successful installation, it automatically switches to production mode.
 
-To activate Production Mode, edit the index.php file  and comment out the following lines.
-To comment out lines, the line must begin with: //
+You can see the current mode at ``Administration > Information``.
 
-Example (/var/www/humhub/index.php):
-
-```php
-// comment out the following two lines when deployed to production
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
-// defined('YII_ENV') or define('YII_ENV', 'dev');
-``` 
-
-You can see the current mode at ``Administration -> Information``.
 
 ## Verify 
 
 - **Cronjobs**
 
-    You can find the last execution and number of open background jobs at: ``Administration -> Information -> Background jobs``
+    You can find the last execution and number of open background jobs at: ``Administration > Information > Background jobs``
 
 - **Error log**
 
-    Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration -> Information -> Logging``
+    Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration > Information > Logging``
 
 - **Protected folders**
 
@@ -229,7 +219,7 @@ You can see the current mode at ``Administration -> Information``.
 
 - **Production Mode**
 
-    Make sure that no warning about the ``Debug mode`` appears under ``Administration -> Information -> About HumHub``.
+    Make sure that no warning about the ``Debug mode`` appears under ``Administration > Information > About HumHub``.
     
  ## Staging/Test Environment
  
