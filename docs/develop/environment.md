@@ -69,7 +69,7 @@ The default path where HumHub searches for installed modules is ``@humhub/protec
 
 ```env
 // @humhub/.env
-HUMHUB_CONFIG.PARAMS.MODULE_AUTOLOAD_PATHS=['/some/folder/modules', '/some/other-folder/modules']
+HUMHUB_CONFIG__PARAMS__MODULE_AUTOLOAD_PATHS=['/some/folder/modules', '/some/other-folder/modules']
 ```
 This separation should be done for custom modules which are not in [the marketplace](https://marketplace.humhub.com/)
 (e.g, `@app/custom-modules`) or for your development environment in order to define a central module directory
@@ -82,8 +82,8 @@ You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.
 in `.env`
 ```env
 // @humhub/.env
-HUMHUB_CONFIG.BOOSTRAP=['debug']
-HUMHUB_CONFIG.MODULES.DEBUG='{"class":"yii\\\debug\\\Module", "allowedIPs": ["127.0.0.1", "::1"]}'
+HUMHUB_CONFIG__BOOSTRAP=['debug']
+HUMHUB_CONFIG__MODULES__DEBUG='{"class":"yii\\\debug\\\Module", "allowedIPs": ["127.0.0.1", "::1"]}'
 ```
 
 or in `protected/config/web.php`
