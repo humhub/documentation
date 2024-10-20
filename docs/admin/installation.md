@@ -102,23 +102,6 @@ If you installed a local SMTP server e.g. [Postfix](server-setup.md#postfix), yo
 
 You can use external SMTP services like SendGrid, Postmark, Amazon SES, Mailgun or any other SMTP server with the ``SMTP`` as ``Mail Transport Type`` option. 
 
-### Time Zone
-
-By default HumHub uses the time zone of the web server. However, the time zone of the database server (MariaDB) is the relevant one. If these time zones differs or the server was moved to another location, you need to change this time zone.  
-
-You can switch the time zone at: ``Administration > Settings > General > Server timezone``
-
-If you are not sure which time zone is configured on your Maria DB server, you can query the time zone with the following SQL statement.
-
-```sql
-mysql> SELECT @@global.time_zone, @@session.time_zone;
-``` 
-
-
-:::note
-Each registered user can also set its own primary time zone in the profile settings.
-:::
-
 ## Pretty URLs 
 
 By default, the HumHub URL includes a index.php file part and looks like https://example.com/index.php?r=dashboard%2Fdashboard. 
