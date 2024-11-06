@@ -1,3 +1,4 @@
+ps aux | grep cron
 ---
 id: cron-jobs
 title: Cron Jobs
