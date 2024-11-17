@@ -12,6 +12,10 @@ The PushService requires following additional installed software:
 - NodeJS 
 - Redis
 
+Some browsers or browser extensions require the service URL to be:
+
+- on the same domain as the HumHub instance (it can be a subdomain of it)
+- configured with a valid SSL certificate (https)
 
 PushService Installation
 ------------------------
