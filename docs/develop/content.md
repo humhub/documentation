@@ -169,10 +169,10 @@ The visibility of a content for a user can be validated by the `Content::canView
 
 - Guests can only access public content of visible spaces/users or global content if "Guest Access" is enabled
 - Other users can access all public content within the network
-- System admins can access all content if the `adminCanViewAllContent` setting of the `content` modules is enabled (default)
 - All space members can read private space content
 - Non space members can only access public space content
 - Only friend users can access private profile content of a user.
+- If the "Manage All Content" Group Permission is enabled ([see configuration options](https://docs.humhub.org/docs/admin/config-options#admin)), it is possible to allow the members of certain Groups to manage all content (view, edit, move, archive, pin, etc.), even private content.
 
 ```php
 if(!$model->content->canView()) {
