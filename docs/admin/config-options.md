@@ -40,6 +40,10 @@ Data Type: `Array`<br/>
 Default: `60 * 60 * 24 * 90`<br/>
 Data Type: `Integer`<br/>
 
+**enableManageAllContentPermission** - Enable the "Manage All Content" Group Permission to manage all content (view, edit, move, archive, pin, etc.), even private content.<br/>
+Default: `false`<br/>
+Data Type: `Boolean`<br/>
+
 
 ### Comment
 
@@ -52,14 +56,6 @@ Default: `2`<br/>
 Data Type: `Integer`<br/>
 
 ### Content
-
-**adminCanViewAllContent** - Global admin can see all content.<br/>
-Default: `false`<br/>
-Data Type: `Boolean`<br/>
-
-**adminCanEditAllContent** - Global admin can edit/delete all content.<br/>
-Default: `true`<br/>
-Data Type: `Boolean`<br/>
 
 **emailSubjectHourlyUpdate** - Custom e-mail subject for hourly update mails.<br/>
 Default: `empty`<br/>
