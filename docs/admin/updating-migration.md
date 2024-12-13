@@ -10,6 +10,12 @@ For example, this could be a new PHP dependency or a changed setting in the conf
 In addition to this guide, you may also check the [**Theme Migration Guide**](../theme/migrate.md) 
 or [**Development Migration Guide**](../develop/modules-migrate.md).
 
+
+1.17
+----
+
+- The minimum PHP Version is now **8.1**
+
 1.16
 ----
 
