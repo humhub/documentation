@@ -34,6 +34,7 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 ### 1.17
 
 - When building CSS from LESS, the `-x` compression option shouldn't be used anymore. Install "Clean CSS" LESS plugin with `npm install less-plugin-clean-css -g` and use the `--clean-css` option instead. Or use the `grunt build-theme --name=MyTheme` command.
+- Add the device classes to the `body` tag using `<?= Html::beginTag('body', ['class' => DeviceDetectorHelper::getBodyClasses()]) ?>` and `<?= Html::endTag('body') ?>`, which can now be used to know the current device type for your CSS or JS (e.g. `body.device-mobile`).
 
 ### 1.16
 
