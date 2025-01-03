@@ -82,6 +82,7 @@ module.exports = {
         'Introduction': [
             'develop/overview',
             'develop/environment',
+            'develop/dot-env',
             'develop/coding-standards',
             'develop/build',
             'develop/modules-migrate',
