@@ -155,7 +155,7 @@ The `HUMHUB_DEBUG` environment variable controls Yii's debugging and environment
 
 ### Sample `.env` File
 ```env
-HUMHUB_FIXED_SETTINGS__APP__NAME=MyApp
+HUMHUB_FIXED_SETTINGS__EXAMPLE1__EXAMPLE2=Something
 HUMHUB_CONFIG__COMPONENTS__URL_MANAGER__ENABLE_PRETTY_URL=true
 HUMHUB_WEB_CONFIG__COMPONENTS__ASSET_MANAGER__FORCE_COPY=true
 HUMHUB_CLI_CONFIG__COMPONENTS__CACHE__CLASS=FileCache
@@ -167,8 +167,8 @@ HUMHUB_ALIASES__WEBROOT=/var/www/app
 $config = [
     'params' => [
         'fixed-settings' => [
-            'app' => [
-                'name' => 'MyApp',
+            'example1' => [
+                'example2' => 'Something',
             ],
         ],
     ],
