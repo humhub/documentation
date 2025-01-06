@@ -85,6 +85,7 @@ mv humhub-1.13.0 humhub
 Restore the following files from backup:
 
 - ``.htaccess`` (if used)
+- ``.env`` (if used)
 - ``/uploads/*``
 - ``/protected/config/*``
 - ``/protected/modules/*``

@@ -87,6 +87,15 @@ This file will be used for the web as well as the console application.
 Do not edit the core configuration files under `@humhub/protected/humhub/config/` directly. 
 :::
 
+### Advanced Configuration with .env
+
+For advanced users, HumHub also supports environment-based configuration using a `.env` file.
+This approach provides greater flexibility and separation of sensitive or dynamic configuration values.
+
+Refer to the [Dot Env (.env) documentation](../develop/dot-env) for details on setting up and using .env files.
+
+**Important**: Make sure the `.env` file is not accessible to the web to protect sensitive data. Use appropriate file permissions or web server rules to secure it.
+
 ### Application Parameters
 
 Some application behaviours can be adjusted by configuring application parameters within one of the configuration files:
