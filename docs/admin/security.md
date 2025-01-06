@@ -8,21 +8,11 @@ This guide describes recommended configurations and practices in order to keep y
  Enable Production Mode
 --------------------------
 
-By default HumHub is operating in _DEBUG_ mode, which besides others uses a different error handling and non combined
-assets. Before opening your installation to the public you should enable the production mode first by commenting out the
-following lines of the `index.php` file within your HumHub root directory:
+1. By default, HumHub is shipped in debug mode. After a successful installation, it automatically switches to production mode.
+If you previously enabled ``DEBUG`` mode via the ``.env`` file, make sure that ``HUMHUB_DEBUG=0`` before opening your installation to the public.
+> If you do not have a ``.env`` file in the project root, you can skip this step.
 
-```php
-[...]
-// comment out the following two lines when deployed to production
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
-// defined('YII_ENV') or define('YII_ENV', 'dev');
-[...]
-```
-
-> Note: In this example the lines are already commented out.
-
-You should also delete the `index-test.php` file in your HumHub root directory if existing.
+2. Delete the ``index-test.php`` file in your HumHub root directory if it exists.
 
 Protected Directories
 ---------------------
@@ -34,9 +24,9 @@ Limit User Access
 
 If you're running a private social network, make sure the user registration has been disabled or the approval system for new users has been enabled.
 
-- Disable user registration: `Administration -> Users -> Settings -> Anonymous users can register`
-- Enable user approvals: `Administration -> Users -> Settings -> Require group admin approval after registration`
-- Make sure guest access is disabled: `Administration -> Users -> Settings -> Allow limited access for non-authenticated users (guests)`
+- Disable user registration: `Administration > Users > Settings > Anonymous users can register`
+- Enable user approvals: `Administration > Users > Settings > Require group admin approval after registration`
+- Make sure guest access is disabled: `Administration > Users > Settings > Allow limited access for non-authenticated users (guests)`
 
 Password Strength Configuration
 -------------------------------
@@ -180,7 +170,7 @@ Please refer to the following links for more information about the CSP and the c
 
 `csp-report-only`:
 
-This section can be used to define a csp rule, which will only log violations to `Administration -> Information -> Logging`
+This section can be used to define a csp rule, which will only log violations to `Administration > Information > Logging`
 rather than blocking the resources on the client. This can be used to test csp rules on your installation.
 
 **CSP Reporting:**
@@ -207,7 +197,7 @@ properly with your security configuration, please contact the module owner or re
 
 This section assembles some guidelines and restrictions regarding custom CSP settings in HumHub.
 
-- The HumHub core currently requires `img-src data:` for page icon and image upload `Administration -> Settings -> Appearance`
+- The HumHub core currently requires `img-src data:` for page icon and image upload `Administration > Settings > Appearance`
 - When using the enterprise edition you should allow `https://www.humhub.org` for `frame-src`
 - When noticing any issues with external modules, please inform the module owner.
 - When developing custom modules, try to test against the strictest csp rules (see default acceptance test csp rules) and provide
@@ -220,6 +210,6 @@ As an admin you'll receive notifications about new HumHub releases. We strongly 
 stable version if possible.
 Check the [update guide](updating.md) for more information about updating your HumHub installation.
 
-Furthermore, you should regularly check the `Administration -> Modules -> Available Updates` section for module updates. 
+Furthermore, you should regularly check the `Administration > Modules > Available Updates` section for module updates. 
 
 We take security very seriously, and we're continuously improving the security features of HumHub. 

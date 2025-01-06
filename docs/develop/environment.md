@@ -51,9 +51,10 @@ Please refer to the [Installation Guide](../admin/installation.md) for further i
 
 ### Quick Notes
 
-- Make sure the `debug` mode is enabled (default), see [Enable Production Mode](../admin/security.md#enable-production-mode)
-- Disable caching under `Administration -> Settings -> Advanced -> Caching -> None`
-- Use file based mailing `Administration -> Settings -> Advanced -> E-Mail`
+- Copy the contents of ``.env.example`` into the newly created ``.env`` file.
+- Make sure the ``DEBUG`` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
+- Disable caching under ``Administration > Settings > Advanced > Caching > None``
+- Use file based mailing ``Administration > Settings > Advanced > E-Mail``
 
 ### Queue configuration
 
@@ -64,16 +65,11 @@ have to run `queue/run` command manually in order to execute queued tasks as not
 
 ### Module Loader Path
 
-The default path under which HumHub searches for installed modules is `@humhub/protected/modules`. Additional search paths
-can be configured within `@humhub/protected/config/common.php` as follows: 
+The default path where HumHub searches for installed modules is ``@humhub/protected/modules``. Additional search paths can be configured in the ``.env`` file as follows:
 
-```php
-// @humhub/protected/config/common.php
-return [
-    'params' => [
-        'moduleAutoloadPaths' => ['/some/folder/modules'],
-    ],
-]
+```env
+// @humhub/.env
+HUMHUB_CONFIG__PARAMS__MODULE_AUTOLOAD_PATHS=['/some/folder/modules', '/some/other-folder/modules']
 ```
 This separation should be done for custom modules which are not in [the marketplace](https://marketplace.humhub.com/)
 (e.g, `@app/custom-modules`) or for your development environment in order to define a central module directory
@@ -81,9 +77,16 @@ for different test installations and prevent interference with marketplace modul
 
 ### Yii Debug Module
 
-You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed
-request and query debugging. Just add the following block to your local web configuration `protected/config/web.php`:
+You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
 
+in `.env`
+```env
+// @humhub/.env
+HUMHUB_CONFIG__BOOSTRAP=['debug']
+HUMHUB_CONFIG__MODULES__DEBUG='{"class":"yii\\\debug\\\Module", "allowedIPs": ["127.0.0.1", "::1"]}'
+```
+
+or in `protected/config/web.php`
 ```php
 return [
     'bootstrap' => ['debug'],
