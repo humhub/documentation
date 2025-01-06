@@ -87,7 +87,7 @@ This file will be used for the web as well as the console application.
 Do not edit the core configuration files under `@humhub/protected/humhub/config/` directly. 
 :::
 
-### Advanced Configuration with .env
+### Advanced Configuration with .env (v1.17+)
 
 For advanced users, HumHub also supports environment-based configuration using a `.env` file.
 This approach provides greater flexibility and separation of sensitive or dynamic configuration values.
