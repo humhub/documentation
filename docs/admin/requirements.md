@@ -34,7 +34,7 @@ All essential requirements will be tested during the web installation and can be
 
 | HumHub Version | PHP 8.3  | PHP 8.2  | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
 |----------------|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| 1.17 (upcoming) | **Yes**  | **Yes** | Yes      | No       | No       | No       | No       | No       |
+| 1.17           | **Yes**  | **Yes**  | Yes      | No       | No       | No       | No       | No       |
 | 1.16           | **Yes**  | **Yes**  | **Yes**  | Yes      | No       | No       | No       | No       |
 | 1.15           | Yes      | **Yes**  | **Yes**  | Yes      | Yes      | No       | No       | No       |
 | 1.14           | No       | **Yes**  | **Yes**  | Yes      | Yes      | No       | No       | No       |
