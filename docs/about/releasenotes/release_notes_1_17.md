@@ -3,7 +3,7 @@ id: release_notes_1_17
 title: HumHub 1.17
 ---
 
-## Release TBD
+## January 2025
 
 ### Connect Content Across Your Network with Global Topics
 
