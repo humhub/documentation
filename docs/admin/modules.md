@@ -23,7 +23,7 @@ To activate HumHub Professional Edition, navigate to **Administration > Informat
 ![Activate Professional Edition](images/hh-docs-activate-pe.png)
 
 ### Installing Modules manually
-Modules available in the integrated marketplace can also be sourced from the [HumHub Marketplace](https://marketplace.humhub.com/). This includes both paid Professional Edition modules and free modules. These modules, including custom modules or those not available in the official Marketplace, can be manually installed by uploading the module `module_name.zip` and unpacking it into the `protected/modules` directory.
+Modules available in the integrated marketplace can also be sourced from the [HumHub Marketplace](https://marketplace.humhub.com/). This includes both paid Professional Edition modules and free modules. These modules, including custom modules or those not available in the official Marketplace, can be manually installed by uploading the module `module_name.zip` and unpacking it into the `protected/modules` directory (or even better in a separated path, [see Module Loader Path](https://docs.humhub.org/docs/develop/environment#module-loader-path)).
 
 > **Note:** It is recommended to use a separate path for custom/unofficial modules. Refer to [Module Loader Path](https://docs.humhub.org/docs/develop/environment/#module-loader-path).
 
