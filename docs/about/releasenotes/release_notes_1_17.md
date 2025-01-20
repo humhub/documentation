@@ -20,14 +20,17 @@ Users can now access their notification settings directly from the main navigati
 
 ### And much more..
 
-- Add virtual profile field "Template"
+- Added virtual profile field "Template"
+- Added configuration options via environment variables
 - Improved iOS mobile app detection for iPad devices
+- Moved 'About' from Space navigation to Space options
 - Added Twig string extension
 - Enabled all file handlers on RichText editor toolbar
-- New CSS variables: --hh-fixed-header-height and --hh-fixed-footer-height
+- Added LatAm Spanish
 - Increased default Upload Max File Size to 64MB
-- DEBUG mode is now automatically disabled after successful HumHub installation
 - Added Space creation notification for users allowed to manage spaces
 - Restricted user content visibility on Dashboard for guests
+- Minimal PHP version is now 8.1
+- DEBUG mode is now automatically disabled after successful HumHub installation
 
 For a detailed list of all improvements take a look into the [Changelog](https://github.com/humhub/humhub/blob/develop/CHANGELOG.md#1170-beta1-october-28-2024).
