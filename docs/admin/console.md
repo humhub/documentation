@@ -184,12 +184,12 @@ Theme CLI Tools
 
 User management tools. (HumHub 1.7+)
 
-| Command | Description |    
-| -------- | ---------- |
-| `user/create`             | Creates a new user account.                  |
-| `user/make-admin`         | Add user to the admin group.                 |
-| `user/set-password`       | Sets the password for a user account.        |
-
+| Command             | Description                                                                                    |    
+|---------------------|------------------------------------------------------------------------------------------------|
+| `user/create`       | Creates a new user account.                                                                    |
+| `user/make-admin`   | Add user to the admin group.                                                                   |
+| `user/set-password` | Sets the password for a user account.                                                          |
+| `user/delete`       | Deletes a user account (`--full` to delete contributions and `--force` to delete owned Spaces) |
 
 ### `file`
 
@@ -200,4 +200,3 @@ Management of uploaded files. (HumHub 1.7+)
 | `file/delete-variants`             | Deletes all automatically generated file variants (previews, converted versions).    |
 | `file/downscale-images`            | Scales down already uploaded images to the maximum dimensions and quality.           |
 | `file/index (default)`             | Overview of uploaded files and automatically generated variants.                     |
-
