@@ -34,13 +34,13 @@ HumHub's configuration is built from multiple files, and the `.env` file has the
 - `protected/humhub/config/web.php` (for Web application)
 - `protected/humhub/config/console.php` (for Console application)
 
-2. **Custom Configurations**:
+2. **Dynamic Configurations**:
+- `protected/config/dynamic.php`
+
+3. **Custom Configurations**:
 - `protected/config/common.php`
 - `protected/config/web.php` (for Web application)
 - `protected/config/console.php` (for Console application)
-
-3. **Dynamic Configurations**:
-- `protected/config/dynamic.php`
 
 4. **Environment Variables**:
 - `.env`
