@@ -5,10 +5,11 @@ title: Search
 
 **The built in search system is used for:**
 
-- Directory
-- People/Space Search
-- Content Search
-- User/Space Picker Widgets
+- Content
+- People
+- Spaces
+- Marketplace
+- Third-party resources ("[Advanced Search](https://marketplace.humhub.com/module/advanced-search/description)" - [HumHub Professional Edition](../professional-edition/intro.md) module)
 
 ## Content Search - Index Rebuilding
 
