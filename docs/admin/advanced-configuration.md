@@ -101,7 +101,7 @@ Refer to the [Dot Env (.env) documentation](../develop/dot-env) for details on s
 Some application behaviours can be adjusted by configuring application parameters within one of the configuration files:
 
 ```php
-// protected/config/web.php
+// protected/config/common.php
 return [
     'params' => [
         'enablePjax' => false
