@@ -66,7 +66,7 @@ Example configuration:
     ];
 ```
 
-# Search Syntax Reference Cheat Sheet
+## Search Syntax Reference Cheat Sheet
 
 This cheat sheet lists search operators and explains what they do. It helps you build search queries so you can filter, combine, or adjust your searches with more control.
 
@@ -150,7 +150,7 @@ Find results that contain `Annual Report` exactly as-is. Will not match: "Report
 
 ## Example Combinations & What They Mean
 
-### Combination:
+#### Combination:
 
 ```
 "Home Policy" "Remote Work"
@@ -161,7 +161,7 @@ Find results that contain both exact phrases `Home Policy` and `Remote Work`.
 
 ---
 
-### Combination:
+#### Combination:
 
 ```
 +report -draft
@@ -172,7 +172,7 @@ Find results that contain `report` and must **not** contain `draft`.
 
 ---
 
-### Combination:
+#### Combination:
 
 ```
 +Annual +Report -Draft
@@ -183,7 +183,7 @@ Find results that contain **both** `Annual` and `Report`, and must **not** conta
 
 ---
 
-### Combination:
+#### Combination:
 
 ```
 update +2025 -deprecated
