@@ -4,34 +4,28 @@ title: Performance
 ---
 
 
-HTTP Caching
-------------
-
-HTTP caching for assets (e.g. images, stylesheets or Javascript components) must be defined in the configuration of the web server.
-
-If you are using the configuration for Apache2 or NGINX described in the [Server Setup](server-setup.md#webserver) section, the recommended configuration is already in place and no further adjustment is necessary. 
-
-If not, all files of the following directories that are delivered directly by the web server should be delivered with a Cache HTTP Header.
-
-- /static
-- /uploads
-- /themes
-- /assets
-
-:::tip
-The expiration time can be set very high, because HumHub automatically changes the URL in case of an update.
-:::
-
 Application Caching
 -------------------
 
-HumHub supports different caching systems which can be configured at: `Administration -> Settings -> Advanced -> Caching`.
+Starting with version 1.18, caching can no longer be configured via the Admin interface. 
+Instead, it must be defined through the configuration file or environment variables. 
+By default, HumHub now uses the `FileCache`. 
 
-In addition to those listed caching systems, you can use any Yii2 compatible caching driver.
+The following are examples of caching [configurations](advanced-configuration.md).
 
-**[Configuration file](advanced-configuration.md) examples:**
+**Redis**
 
-Redis Cache Example:
+Environment Variables:
+
+```env 
+HUMHUB_CONFIG__COMPONENTS__REDIS__CLASS="yii\\redis\\Connection"
+HUMHUB_CONFIG__COMPONENTS__REDIS__HOSTNAME="localhost"
+HUMHUB_CONFIG__COMPONENTS__REDIS__PORT=6379
+HUMHUB_CONFIG__COMPONENTS__REDIS__DATABASE=0
+HUMHUB_CONFIG__COMPONENTS__CACHE__CLASS="yii\\redis\\Cache"
+```
+
+Configuration File:
 
 ```php
 [
@@ -46,9 +40,31 @@ Redis Cache Example:
         ],
     ],
 ]
+```
+
+**PHP APC**
+
+Environment Variables:
+
+```env
+HUMHUB_CONFIG__COMPONENTS__CACHE__CLASS="yii\\caching\\ApcCache"
+```
+
+Configuration File:
+
+```php
+[
+    'components' => [
+        'cache' => [
+            'class' => 'yii\caching\ApcCache',
+        ],
+    ],
+]
 ``` 
 
-Memcached Configuration Example:
+**Memcached**
+
+Configuration File:
 
 ```php
 [
@@ -71,6 +87,24 @@ Memcached Configuration Example:
     ],
 ]
 ```
+
+HTTP Caching
+------------
+
+HTTP caching for assets (e.g. images, stylesheets or Javascript components) must be defined in the configuration of the web server.
+
+If you are using the configuration for Apache2 or NGINX described in the [Server Setup](server-setup.md#webserver) section, the recommended configuration is already in place and no further adjustment is necessary. 
+
+If not, all files of the following directories that are delivered directly by the web server should be delivered with a Cache HTTP Header.
+
+- /static
+- /uploads
+- /themes
+- /assets
+
+:::tip
+The expiration time can be set very high, because HumHub automatically changes the URL in case of an update.
+:::
 
 X-Sendfile
 ----------
