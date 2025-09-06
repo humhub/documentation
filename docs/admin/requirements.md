@@ -32,7 +32,7 @@ All essential requirements will be tested during the web installation and can be
 `Administration -> Information -> Prerequisites`.
 :::
 
-| HumHub Version | PHP 8.3  | PHP 8.3  | PHP 8.2  | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
+| HumHub Version | PHP 8.4  | PHP 8.3  | PHP 8.2  | PHP 8.1  | PHP 8.0  | PHP 7.4  | PHP 7.3  | PHP 7.2  | PHP 7.1  | 
 |----------------|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | 1.18           | Yes      | **Yes**  | **Yes**  | No       | No       | No       | No       | No       | No       |
 | 1.17           | No       | **Yes**  | **Yes**  | Yes      | No       | No       | No       | No       | No       |
@@ -106,4 +106,3 @@ The command line interface provides important features, which are used to mainta
  - **Google Chrome** (Recommended)
  - **Microsoft Edge** (Recommended)
  - Apple Safari
-
