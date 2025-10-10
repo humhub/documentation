@@ -65,7 +65,7 @@ This is just a short overview. See the [PHP Manual](https://www.php.net/manual/e
 | ImageMagick   | No            | Better image processing, Recommended |
 | GraphicsMagick| No            | Better image processing (alternative to ImageMagick)|
 | LDAP          | No            | |
-| APC           | No            | |
+| APCu          | No            | |
 | Memcached     | No            | |
 
 
