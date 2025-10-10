@@ -62,6 +62,7 @@ This is just a short overview. See the [PHP Manual](https://www.php.net/manual/e
 | INTL          | Yes           | min ICU v49 see [Yii2 Internationalization](https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n#setup-environment)         |
 | FileInfo      | Yes           | |
 | JSON          | Yes           | |
+| iconv         | Yes           | |
 | ImageMagick   | No            | Better image processing, Recommended |
 | GraphicsMagick| No            | Better image processing (alternative to ImageMagick)|
 | LDAP          | No            | |
