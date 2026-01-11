@@ -209,7 +209,7 @@ Data type: `Boolean`<br/>
 Since: `1.2`<br/>
 
 **disableFollow** - Defines if the Space following is disabled or not.<br/>
-Default: `true`<br/>
+Default: `false`<br/>
 Data type: `Boolean`<br/>
 Since: `1.2`<br/>
 
