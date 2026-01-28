@@ -39,11 +39,17 @@ Below you find an example configuration part (protected/config/common.php) to se
 
 ```php
 'components' => [
+    'logMailer' => [
+        'class' => \yii\symfonymailer\Mailer::class,
+        'transport' => [
+            'dsn' => 'smtp://login:password@host:587',
+        ],
+    ],
     'log' => [
         'traceLevel' => YII_DEBUG ? 3 : 0,
         'targets' => [
             [
-                'class' => 'yii\log\EmailTarget',
+                'class' => \yii\log\EmailTarget::class,
                 'levels' => ['error', 'warning'],
                 'except' => ['yii\web\HttpException:404', 'yii\web\HttpException:403', 'yii\web\HttpException:401', 'yii\web\HttpException:400', 'yii\web\HttpException:416'],
                 'message' => [
@@ -51,6 +57,7 @@ Below you find an example configuration part (protected/config/common.php) to se
                     'to' => ['admin@example.com'],
                     'subject' => 'HumHub - Log - Event',
                 ],
+                'mailer' => 'logMailer',
             ],
         ],
     ],
