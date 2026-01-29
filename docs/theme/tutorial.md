@@ -8,12 +8,12 @@ Foreword
 This quick tutorial shows you all necessary steps to create a custom **HumHub** theme.
 
 - Step 1: Create a theme folder ([Theme Folder Structure](structure.md))
-- Step 2: Adjust colors and build CSS ([Custom Stylesheets](css.md))
+- Step 2: Adjust styling ([Custom Stylesheets](css.md))
 - Step 3: Modify login template ([View Files](views.md))
 
 
 :::caution
-If you have installed HumHub via Git, make sure you have done the following steps first: [Git Installation](develop/environment.md#gitcomposer-installation)
+If you have installed HumHub via Git, make sure you have done the following steps first: [Git Installation](../develop/environment.md#gitcomposer-installation)
 :::
 
 Step 1: Create an own theme folder
@@ -21,56 +21,20 @@ Step 1: Create an own theme folder
 - Go to the HumHub installation directory
 - Switch to the directory `themes`
 - Copy the folder `HumHub` and rename it to `Example`
+- Edit the `scss/variables.scss` file and add this line: `$baseTheme: "HumHub";`
 - Enable the new `Example` theme under `Administration -> Settings -> Appearance`
 
-Step 2: Adjust colors and build CSS 
+Step 2: Adjust styling 
 -----------------------------------
 
-### Installing prerequisites 
-
-**Install NodeJS** 
-
-See: https://nodejs.org/en/download/
-
-**Install LESS**
-
-Open the command console and execute:
+Add modified variables to the file `/themes/Example/scss/variables.scss`.
 
 ```
-npm install less less-plugin-clean-css -g
+$link-color: #FFAA00 !default;
+$font-size-root: 15px !default;
 ```
 
-### Modify theme colors
-Add modifed color variables to the file `/themes/Example/less/variables.less`.
-
-```
-@default: #ededed;
-@primary: #A66F00;
-@info: #FFAA00;
-@success: #97d271;
-@warning: #fdd198;
-@danger: #FFD073;
-```
-
-### Compile LESS file
-Open the command console and change to the themes `less` directory
-
-``` 
-cd /path/to/HumHub/themes/Example/less
-```
-
-Build the CSS package
-
-```
-lessc --clean-css build.less ../css/theme.css
-```
-
-### Test the result
-- Flush your browsers cache
-- Flush the HumHub cache (if enabled): `Administration -> Settings -> Advanced -> Cache -> Flush`
-- Fully reload the page
-
-![Example](images/color-example.png)
+Test the result: `Administration -> Settings -> Flush Caches`
 
 Step 3: Modify login template
 ------------------------------

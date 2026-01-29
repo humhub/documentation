@@ -21,6 +21,13 @@ Starting with version 1.16, the migration instructions are available in the Git 
 Migration Notes for Older Versions
 ==================================
 
+Version 1.18
+------------
+
+- Bootstrap 3 has been migrated to [Bootstrap 5.3](https://getbootstrap.com/docs/5.3)
+- Less compiler has been replaced with [Sass](https://sass-lang.com/) (`.less` files moved to `.scss`)
+- See [Bootstrap 5](https://github.com/humhub/humhub/blob/master/MIGRATE-BS5.md) Migration Guide to migrate to Bootstrap 5.3 and Sass compiler
+
 Version 1.15
 ------------
 
@@ -586,7 +593,7 @@ description.
 
 In order to support [CSP nonces](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 
 you should either completely avoid using inline scripts or use one of the techniques described 
-in the [Javascript Guide](javascript.md). Its furthermore recommended to avoid inline styles, as they may be restricted
+in the [JavaScript Guide](javascript-index.md). Its furthermore recommended to avoid inline styles, as they may be restricted
 in the strict CSP rule in a future version as well.
 
 ### Menus
@@ -601,16 +608,16 @@ Following language codes has been changed.
 
 If you're using any custom modules, please change the message directories accordingly.
 
-| Old language code| New language code |
-|----------|-------------|
-| en | en-US |
-| en_gb | en-GB |
-| pt_br | pt-BR |
-| nb_no | nb-NO |
-| nn_no | nn-NO |
-| zh_cn | zh-CN |
-| zh_tw | zh-TW |
-| fa_ir | fa-IR |
+| Old language code | New language code |
+|-------------------|-------------------|
+| en                | en-US             |
+| en_gb             | en-GB             |
+| pt_br             | pt-BR             |
+| nb_no             | nb-NO             |
+| nn_no             | nn-NO             |
+| zh_cn             | zh-CN             |
+| zh_tw             | zh-TW             |
+| fa_ir             | fa-IR             |
 
 
 ### Removed deprecated methods

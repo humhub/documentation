@@ -102,7 +102,7 @@ Example `module.json` file:
         {
             "name": "Sarah Mustermann",
             "email": "sm@example.com",
-            "homepage": "http://example.com",
+            "homepage": "https://example.com",
             "role": "Translator"
         }
     ]	
@@ -117,13 +117,13 @@ The documentation files of the module must be located in the folder 'docs'.
 
 The following table shows the default files.
 
-| File | Required | Description |
-| --- | --- | --- |
-| README.md | Yes | A description and overview of the features |
-| MANUAL.md | No | Information on how to use this module |
-| CHANGELOG.md | Yes | A file which contains a curated, chronologically ordered list of changes for each version |
-| LICENCE.md | No | Licencing information including the licence |
-| DEVELOPER.md | No | Additional information for developers |
+| File         | Required | Description                                                                               |
+|--------------|----------|-------------------------------------------------------------------------------------------|
+| README.md    | Yes      | A description and overview of the features                                                |
+| MANUAL.md    | No       | Information on how to use this module                                                     |
+| CHANGELOG.md | Yes      | A file which contains a curated, chronologically ordered list of changes for each version |
+| LICENCE.md   | No       | Licencing information including the licence                                               |
+| DEVELOPER.md | No       | Additional information for developers                                                     |
 
 
 ## Extended structure example

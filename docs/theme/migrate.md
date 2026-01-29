@@ -31,6 +31,13 @@ This [Community Wiki Guide](https://community.humhub.com/content/perma?id=237199
 
 ## Required changes
 
+### 1.18
+
+- All view files needs to be reviewed (see [Bootstrap 5](https://github.com/humhub/humhub/blob/master/MIGRATE-BS5.md) Migration Guide)
+- As Less compiler has been replaced by Sass, you will have to migrate all `.less` files to `.scss` (see [Style Sheets](css.md))
+- You don't need to compile CSS anymore, it is done automatically when flushing the cache or saving the "Appearance" Settings form
+- See also (../admin/updating-migration#118)
+
 ### 1.17
 
 - When building CSS from LESS, the `-x` compression option shouldn't be used anymore. Install "Clean CSS" LESS plugin with `npm install less-plugin-clean-css -g` and use the `--clean-css` option instead. Or use the `grunt build-theme --name=MyTheme` command.

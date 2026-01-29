@@ -7,7 +7,7 @@ sidebar_label: Overview
 The following **Migration Guides** will additionally be available for each new version release (except maintenance releases):
 - [Migration Guide: **Administrative Changes**](../admin/updating-migration.md) (Server Environment and System Requirements)
 - [Migration Guide: **Theming Related Changes**](../theme/migrate.md) (If you are using your own theme.)
-- [Migration Guide: **Module Development**](../develop/modules-migrate.md) (If you are using any custom modules.)
+- [Migration Guide: **Module Development**](https://github.com/humhub/humhub/blob/develop/MIGRATE-DEV.md) (If you are using any custom modules.)
 
 Please follow these guides - if necessary - before you start the update process.
 
@@ -22,10 +22,10 @@ in just a few clicks and without any technical knowledge.
 ** Installation of the ``Updater`` module **
 
 1. Open your HumHub installation as Administrator
-1. Go to: Administration -> Modules -> Browse online
-2. Choose **HumHub Updater** and click 'Install'
-3. Switch to 'Installed' Tab
-4. Choose **HumHub Updater** and click 'Enable'
+2. Go to: Administration -> Modules -> Browse online
+3. Choose **HumHub Updater** and click 'Install'
+4. Switch to 'Installed' Tab
+5. Choose **HumHub Updater** and click 'Enable'
 
 
 :::note 

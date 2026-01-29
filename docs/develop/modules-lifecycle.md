@@ -12,7 +12,7 @@ A module is considered as `installed` once it resides in one of the `moduleAutol
 You can install modules either by adding them manually to an autoload path or by loading them from the marketplace. 
 
 > Info: You can add additional module paths by means of the `moduleAutoloadPaths` parameter. 
-Please see the [Developement Environment Section](environment.md#external-modules-directory) for more information.
+Please see the [Developement Environment Section](environment.md#module-loader-path) for more information.
 
 ## Enabled Module
 
@@ -43,7 +43,7 @@ The `ModuleManager` responsible for disabling modules will trigger the following
 - `ModuleManager::EVENT_BEFORE_MODULE_DISABLE`
 - `ModuleManager::EVENT_AFTER_MODULE_DISABLE`
 
-> Note: [ContentContainerModules](modules-base-class.md#use-of-contentcontainermodule) also have to be enabled within a space or user profile by means of the space management
+> Note: [ContentContainerModules](modules-base-class.md#contentcontainermodule) also have to be enabled within a space or user profile by means of the space management
 section.
 
 ## Uninstall Module

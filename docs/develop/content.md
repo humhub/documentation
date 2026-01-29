@@ -396,8 +396,7 @@ Content addons can be used to extend the content concept with further features. 
 
 ## ContentContainerModule
 
-See the [Use of ContentContainerModule](modules-base-class.md#use-of-contentcontainermodule) section.
-See the [Use of ContentContainerModule](modules.md#use-of-container-module) section.
+See the [Use of ContentContainerModule](modules-base-class.md#contentcontainermodule) section.
 
 ## Content Streams
 

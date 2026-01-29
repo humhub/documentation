@@ -12,16 +12,14 @@ Mail Colors
 
 Since the CSS support in mail templates is very limited, you may need to access the current color scheme manually.
 
-You can access all CSS variables defined in `variables.less` by calling `Yii::$app->view->theme->variable('variableName');`.
+You can access all CSS variables defined in `variables.scss` by calling `Yii::$app->view->theme->variable('variableName');`.
 
 Example:
 
 ```html
-<html> 
     ...
     <body style="background-color:<?= Yii::$app->view->theme->variable('background-color-page') ?>; ">
         ...
     </body>
     ...
-</html>
 ```

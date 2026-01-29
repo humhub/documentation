@@ -20,19 +20,19 @@ If you follow these steps, you should get this done with ease:
 
 2. Update to the latest HumHub and "Enterprise Edition" module available (`Administration -> Modules`) 
 
-2. Active your **Professional Edition** license key (`Administration -> Information -> "Upgrade to Professional Edition"`)
+3. Active your **Professional Edition** license key (`Administration -> Information -> "Upgrade to Professional Edition"`)
 
-3. Switch to the default theme named **HumHub** (`Administration -> Settings -> Appearance`)
+4. Switch to the default theme named **HumHub** (`Administration -> Settings -> Appearance`)
 
-4. If you're using any Enterprise Edition features, which require a config file entry e.g. [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso), either comment those parts out or remove them completely.
+5. If you're using any Enterprise Edition features, which require a config file entry e.g. [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso), either comment those parts out or remove them completely.
 
-5. Disable and _uninstall_ the module "Humhub Enterprise Edition"
+6. Disable and _uninstall_ the module "Humhub Enterprise Edition"
 
-6. Use to HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use e.g. [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) or [Advanced Ldap](https://marketplace.humhub.com/module/advanced-ldap).
+7. Use to HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use e.g. [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) or [Advanced Ldap](https://marketplace.humhub.com/module/advanced-ldap).
 
-7. Revert to your usual Theme (`Administration -> Settings -> Appearance`)
+8. Revert to your usual Theme (`Administration -> Settings -> Appearance`)
 
-8. Some Professional Edition modules like [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso) may require updates to the configuration. You will find detailed instructions each module in our [Marketplace](https://marketplace.humhub.com)
+9. Some Professional Edition modules like [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso) may require updates to the configuration. You will find detailed instructions each module in our [Marketplace](https://marketplace.humhub.com)
 
 
 
@@ -93,21 +93,18 @@ You can enable the **HumHub** Enterprise Edition - Theme by following steps:
 
 The original enterprise theme is typically located at: `protected/modules/enterprise/themes/enterprise`
 
-You can simply copy this folder to e.g. `themes/MyEnterprise` and activate it in the administration menu.
+Steps:
+1. Copy this folder to e.g. `themes/MyEnterprise`.
+2. Make sure to set `$baseTheme: "enterprise";` or `$baseTheme: "enterprise-white";` in the `scss/variables.scss` file.
+3. Activate it in `Administration -> Settings -> Appearance`
 
-** Before LESS compilation **
+** Additional Sass variables **
 
-To (re-)build your themes less files, make sure to modify the path variables `@HUMHUB` and `@ENTERPRISE` in the file e.g. `themes/MyEnterprise/less/build.less` before.
+Variables starting with `$hh-et-` are specific to the Enterprise Theme.
 
-- `@HUMHUB` - the absolute system path to the directory e.g. `/var/www/humhub/static/less`
-- `@ENTERPRISE` - the absolute system path to the enterprise edition directory e.g. `/var/www/humhub/protected/modules/enterprise`
-
-** Additional LESS variables **
-
-- `@ee-sidebar-width` - the width of the left sidebar (defaults to: 250px)
-- '@ee-sidebar-elements-color' - the secondary color which is used for icons and space type titles
+See file `themes/enterprise/scss/variables.scss` to get the list of these variables.
   
-> Note: Your theme might need to be migrated if a new HumHub or enterprise version comes out. This will not affect your custom themes thus your theme views might overwrite essential changes made in the HumHub views. To migrate your theme check the differences between your custom theme files (views, js, less) and the enterprise default theme files and adopt necessary changes.
+> Note: Your theme might need to be migrated if a new HumHub or enterprise version comes out. This will not affect your custom themes thus your theme views might overwrite essential changes made in the HumHub views. To migrate your theme check the differences between your custom theme files (views, js, scss) and the enterprise default theme files and adopt necessary changes.
 
 
 ### Space Types
@@ -238,7 +235,7 @@ Example with all possible configuration options:
 ```php
 'jwt' => [
     'class' => 'humhub\modules\enterprise\modules\jwt\authclient\JWT',
-    'url' => 'http://ntlm.example.com/jwtclient/index.php',
+    'url' => 'https://ntlm.example.com/jwtclient/index.php',
     'sharedKey' => 'XKqSoxWRcLVDtveMbhQ3oxgvogWT2ef3KpKLOF_gZgwTJyznr6UDi2SCWgSeaEUo5T1_bBYbR_blojv94Sr523zDQ_CzTETN4gMYyx6xU4hsF6HGnCdoFwmd9rOTY5MiIdGX1wdwP3FvpyS0bbmG17xfTtU87gySiQaJjQWq9J2SdLOu73xPej5l1k5BA2ab-taXogZi-STi1q30w0T0kU3SGJ-fYSZO5lGNI3pws313oh83Wby8IJxhS9GZjLjOHpMO7rveoUHE6cGOXm8SjuxsJTfChPl3sGhiA2Wc-cJ-uKaN37T7qQxKeZNjXFtNGTbXwOhXbtELP_ZUy66zPg',
     // Other configuration options
     // Title of JWT Button (if autologin is disabled)

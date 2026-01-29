@@ -52,7 +52,7 @@ Please refer to the [Installation Guide](../admin/installation.md) for further i
 ### Quick Notes
 
 - Copy the contents of ``.env.example`` into the newly created ``.env`` file.
-- Make sure the ``DEBUG`` mode is enabled (default), see [Enable Debug Mode](../admin/installation.md#enable-debug-mode)
+- Make sure the ``DEBUG`` mode is enabled (default), see [Enable Debug Mode](../admin/troubleshooting#debug-mode)
 - Disable caching under ``Administration > Settings > Advanced > Caching > None``
 - Use file based mailing ``Administration > Settings > Advanced > E-Mail``
 
@@ -122,7 +122,7 @@ php yii migrate/up --includeModuleMigrations=1
 
 ## Production Mode
 
-A git based installation won't run in production mode without [building the production assets](build.md#build-assets)
+A git based installation won't run in production mode without [building the production assets](build.md#build-production-assets)
 manually. This is also required in order to run [acceptance tests](testing.md#run-acceptance-tests).
 
 ## Test Environment
