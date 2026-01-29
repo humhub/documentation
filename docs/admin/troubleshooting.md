@@ -139,7 +139,7 @@ To fix this, the following variable must be increased in the file 'php.ini':
 
 ```ini
 ; Maximum execution time of each script, in seconds
-; http://php.net/max-execution-time
+; https://php.net/max-execution-time
 ; Note: This directive is hardcoded to 0 for the CLI SAPI
 max_execution_time = 300
 ``` 

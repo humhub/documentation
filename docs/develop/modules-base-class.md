@@ -118,7 +118,7 @@ By default the `disable()` function will clear the following data:
  - Clear all `ContentContainerSettings` and global `Settings` related with this module
  - Clear the `module_enabled` entry
 
-See the [Container Module](#container-module) section for information about disabling your module on `ContentContainer` level.
+See the [Container Module](#contentcontainermodule) section for information about disabling your module on `ContentContainer` level.
 
 ### `getPermissions()`
 

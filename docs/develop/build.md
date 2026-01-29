@@ -54,44 +54,6 @@ Refer to the [Yii Asset Guide](http://www.yiiframework.com/doc-2.0/guide-structu
 for more information.
 :::
 
-## Build themes
-
-HumHub themes consist of many less files within the `/less` directory of a theme. The `grunt build-theme` task can be used
-to build the community theme or other themes residing in the `@humhub/themes` directory. For this command you'll need to
-install [Less](http://lesscss.org/usage/):
-
-```console
-npm install less less-plugin-clean-css -g
-```
-
-### Build community theme
-
-To rebuild the community theme run:
-
-```console
-grunt build-theme
-```
-
-### Build custom themes
-
-To build another theme residing in the `@humhub/themes` directory run:
-
-```console
-grunt build-theme --name=MyTheme
-```
-
-:::info
-Refer to the [Theming Guide](../theme/css.md) for more information about custom themes.
-:::
-
-### Manual theme build
-
-To build a theme without grunt, run the following command:
-
-```console
-lessc --clean-css themes/HumHub/less/build.less themes/HumHub/css/theme.css
-```
-
 ## Search index rebuild
 
 Grunt task for rebuilding your [Search Index](../admin/search.md)

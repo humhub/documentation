@@ -56,7 +56,7 @@ configuration options to the HumHub file (protected/config/common.php):
         'live' => [
             'driver' => [
                 'class' => \humhub\modules\live\driver\Push::class,
-                'pushServiceUrl' => 'http://example.com:3000/',
+                'pushServiceUrl' => 'https://example.com:3000/',
                 'jwtKey' => '---EnteraSuperSecretKeyToSignAuthorizationHere---'
             ]
         ],

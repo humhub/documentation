@@ -6,9 +6,9 @@ title: Theme Structure
 ## Overview
 
 Here are a few important tidbits:
-- All themes have their files located in the /themes root or module folder.
-- Each theme has its own sub-folder, in the main themes folder.
-- Each theme is made of template files, image files, one or more LESS/CSS files, and sometimes even JavaScript files (.js).
+- All themes have their files located in the `/themes` root or module folder.
+- Each theme has its own sub-folder, in the main `themes` folder.
+- Each theme is made of template files, image files, SCSS files, and sometimes even JavaScript files (.js).
 
 ## Create Own Theme Folder
 
@@ -16,7 +16,7 @@ Here are a few important tidbits:
 
 The best way to start is to copy the default theme folder `HumHub`.
 
-Select a preferably unqiue theme name (e.g. MyCompanyName) for your new theme folder.
+Select a preferably unique theme name (e.g. MyCompanyName) for your new theme folder.
 
 ** Example: Copy theme folder (Linux)**
 
@@ -33,21 +33,20 @@ Once you created an own theme folder, you need to enable it in the administratio
 
 ## Folder Structure Example
 
-This overview shows a complete theme folder structure including own less and view files.
+This overview shows a complete theme folder structure including own scss and view files.
 
 ```
     /themes/
         /mytheme/                       - My Theme Name
-            /css/                       - Your theme css files (optional)
-                theme.css               - Your actual theme css file
-            /less/                      - Contains less files used to build your theme.css (optional)
-                build.less              - Used to build your theme.css
-                variables.less          - Contains theme variables as text and background colors
-                mixins.less             - Used to define own mixins
-                theme.less              - Contains your own theme definitions
+            /scss/                      - Contains SCSS files used to build your styling
+                variables.scss          - Contains the `$baseTheme` variable to define the parent theme, and other variables
+                build.scss              - Used to build the CSS when Flushing the Cache
+                _theme.scss             - Contains your own theme definitions
+                _mixins.scss            - Used to define or overwrite Sass mixins
+                _root.scss              - To define or overwrite CSS root variables
             /js/                        - Additional javascript files (optional)
             /font/                      - Additional fonts (optional)
-            /img/                       - Images (optional)         
+            /img/                       - Images (optional)
             /views/                     - Overwritten Views
                 /moduleId/              - Id of Module (module_core Id, module Id, or base controller id)
                     /controllerId/      - Id of Controller

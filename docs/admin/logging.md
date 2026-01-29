@@ -119,5 +119,5 @@ for more information about google analytics configuration in single page applica
 
 :::note
 Since HumHub 1.4 you should add the `nonce="{{ nonce }}` attribute to your script tag in order to be 
-compatible with [csp nonces](security.md#security-configuration)
+compatible with [csp nonces](security.md#disable-javascript-nonce)
 :::

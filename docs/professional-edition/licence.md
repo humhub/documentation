@@ -10,11 +10,10 @@ This license is granted during the period of validity of the Professional Editio
 Overview of the most important differences:
 
 
-|                                                  | Community Edition | Professional Edition  |
-|--------------------------------------------------|:-----------------:|:---------------------:|
-| **Commercial use**                                   | Yes               | Yes                   |
-| **Modify**                                           | Yes               | Yes                   |
-| **Must disclose source**                             | Yes               | No                    |
-| **Must state changes**                              | Yes               | No                    |
-| **Whitelabel option**                                | No                | Yes                   |
-
+|                          | Community Edition | Professional Edition |
+|--------------------------|:-----------------:|:--------------------:|
+| **Commercial use**       |        Yes        |         Yes          |
+| **Modify**               |        Yes        |         Yes          |
+| **Must disclose source** |        Yes        |          No          |
+| **Must state changes**   |        Yes        |          No          |
+| **Whitelabel option**    |        No         |         Yes          |

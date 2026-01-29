@@ -17,12 +17,12 @@ It is also possible to downscale image files with a very high resolution (e.g. 8
 
 The `Files` module provides the following options:
 
-| Variable                             | Description                                                        |
-| ------------------------------------ | -------------------------------------------------------------------| 
-| imageMaxResolution                   | The maximum image resolution before downscaling. (e.g. 1920x1080)  |
-| imageJpegQuality                     | The JPEG quality for uploaded JPEG images. From 0 to 100.          |
-| imagePngCompressionLevel             | The compression level for uploaded PNG images. From 0 to 9.        |
-| imageWebpQuality                     | The quality for uploaded WebP files. From 0 to 100.                |
+| Variable                 | Description                                                       |
+|--------------------------|-------------------------------------------------------------------| 
+| imageMaxResolution       | The maximum image resolution before downscaling. (e.g. 1920x1080) |
+| imageJpegQuality         | The JPEG quality for uploaded JPEG images. From 0 to 100.         |
+| imagePngCompressionLevel | The compression level for uploaded PNG images. From 0 to 9.       |
+| imageWebpQuality         | The quality for uploaded WebP files. From 0 to 100.               |
 
 You can adjust these variables, by changing applications parameters within the configuration **(protected/config/common.php)**.
 

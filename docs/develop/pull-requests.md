@@ -60,6 +60,6 @@ To have your contribution accepted, you, as the author of the pull request, need
 
 ## Documentation
 
-- **Core Changes** Should always be briefly described in the documentation in the [Migration Guide](modules-migrate.md).
+- **Core Changes** Should always be briefly described in the documentation in the [Migration Guide](https://github.com/humhub/humhub/blob/develop/MIGRATE-DEV.md).
 
 - **Module Features** New features should also be added in the Readme files if necessary.  
