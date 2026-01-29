@@ -92,7 +92,7 @@ Do not edit the core configuration files under `@humhub/protected/humhub/config/
 For advanced users, HumHub also supports environment-based configuration using a `.env` file.
 This approach provides greater flexibility and separation of sensitive or dynamic configuration values.
 
-Refer to the [Dot Env (.env) documentation](../develop/dot-env) for details on setting up and using .env files.
+Refer to the [Dot Env (.env) documentation](../admin/dot-env) for details on setting up and using .env files.
 
 **Important**: Make sure the `.env` file is not accessible to the web to protect sensitive data. Use appropriate file permissions or web server rules to secure it.
 
@@ -135,4 +135,3 @@ return [
     ]
 ]
 ```
-

@@ -54,6 +54,7 @@ module.exports = {
         ],
         'Configuration': [
             'admin/advanced-configuration',
+            'admin/dot-env',
             'admin/config-options',
             'admin/ldap',
             'admin/performance',
@@ -83,7 +84,6 @@ module.exports = {
         'Introduction': [
             'develop/overview',
             'develop/environment',
-            'develop/dot-env',
             'develop/coding-standards',
             'develop/build',
             'develop/modules-migrate',
