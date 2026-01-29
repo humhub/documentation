@@ -16,10 +16,10 @@ module.exports = {
             label: 'Release Notes',
             items: [
                 'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_18',
                 'about/releasenotes/release_notes_1_17',
                 'about/releasenotes/release_notes_1_16',
-                'about/releasenotes/release_notes_1_15',
-                'about/releasenotes/release_notes_1_14',
+                'about/releasenotes/release_notes_1_15'
             ]
         },
         {
