@@ -82,22 +82,25 @@ You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.
 in `.env`
 ```env
 // @humhub/.env
-HUMHUB_CONFIG__BOOSTRAP=['debug']
-HUMHUB_CONFIG__MODULES__DEBUG='{"class":"yii\\\debug\\\Module", "allowedIPs": ["127.0.0.1", "::1"]}'
+HUMHUB_CONFIG__BOOTSTRAP=["debug"]
+HUMHUB_CONFIG__MODULES__DEBUG='{"class":"humhub\\components\\DebugModule", "allowedIPs": ["127.0.0.1", "::1"]}'
 ```
 
 or in `protected/config/web.php`
 ```php
 return [
     'bootstrap' => ['debug'],
-	'modules' => [
-	    'debug' => [
-	        'class' => 'yii\debug\Module',
-	        'allowedIPs' => ['127.0.0.1', '::1'],
-	    ],
-	]
+    'modules' => [
+        'debug' => [
+            'class' => 'humhub\components\DebugModule',
+            'allowedIPs' => ['127.0.0.1', '::1'],
+        ],
+    ]
 ];
 ```
+
+Note: Class `humhub\components\DebugModule` is available since HumHub 1.18.3, use `yii\debug\Module` for older versions.
+
 
 ## Update your installation
 
