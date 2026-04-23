@@ -134,13 +134,13 @@ Files not in the sidebar but reachable via a valid relative `.md` cross-link fro
 
 | # | Status | Severity | File:Line | Absolute URL | Suggested Relative Path |
 |---|--------|----------|-----------|-------------|------------------------|
-| L-1 | [ ] | Minor | `develop/live.md:14` | `https://docs.humhub.org/docs/admin/push-updates/` | `../admin/push-updates.md` |
-| L-2 | [ ] | Minor | `professional-edition/saas.md:21` | `https://docs.humhub.org/docs/about/releasenotes/release_notes` | `../about/releasenotes/release_notes.md` |
-| L-3 | [ ] | Minor | `develop/content.md:175` | `https://docs.humhub.org/docs/admin/config-options#admin` | `../admin/config-options.md#admin` |
-| L-4 | [ ] | Minor | `about/releasenotes/release_notes_1_5.md:66` | `https://docs.humhub.org/docs/admin/performance#http-caching` | `../../admin/performance.md#http-caching` |
-| L-5 | [ ] | Minor | `admin/modules.md:26` | `https://docs.humhub.org/docs/develop/environment#module-loader-path` | `../develop/environment.md#module-loader-path` |
-| L-6 | [ ] | Minor | `admin/modules.md:28` | `https://docs.humhub.org/docs/develop/environment/#module-loader-path` | `../develop/environment.md#module-loader-path` |
-| L-7 | [ ] | Minor | `admin/updating-migration.md:103` | `https://docs.humhub.org/docs/admin/performance#http-caching` | `performance.md#http-caching` |
+| L-1 | [x] | Minor | `develop/live.md:14` | `https://docs.humhub.org/docs/admin/push-updates/` | `../admin/push-updates.md` |
+| L-2 | [x] | Minor | `professional-edition/saas.md:21` | `https://docs.humhub.org/docs/about/releasenotes/release_notes` | `../about/releasenotes/release_notes.md` |
+| L-3 | [x] | Minor | `develop/content.md:175` | `https://docs.humhub.org/docs/admin/config-options#admin` | `../admin/config-options.md#admin` |
+| L-4 | [x] | Minor | `about/releasenotes/release_notes_1_5.md:66` | `https://docs.humhub.org/docs/admin/performance#http-caching` | `../../admin/performance.md#http-caching` |
+| L-5 | [x] | Minor | `admin/modules.md:26` | `https://docs.humhub.org/docs/develop/environment#module-loader-path` | `../develop/environment.md#module-loader-path` |
+| L-6 | [x] | Minor | `admin/modules.md:28` | `https://docs.humhub.org/docs/develop/environment/#module-loader-path` | `../develop/environment.md#module-loader-path` |
+| L-7 | [x] | Minor | `admin/updating-migration.md:103` | `https://docs.humhub.org/docs/admin/performance#http-caching` | `performance.md#http-caching` |
 
 **Non-TLS `http://` links** — should be `https://` where the target domain supports it:
 

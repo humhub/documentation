@@ -18,7 +18,7 @@ If you have already created a demo installation of the HumHub Professional Editi
 
 ## Updates
 
-Your installation of the HumHub Professional Edition is automatically updated without any action required from you. For security reasons, updates are applied 2-3 weeks after their release. We summarize the most important new features and improvements in our [Release Notes](https://docs.humhub.org/docs/about/releasenotes/release_notes), a detailed list of all changes can be found in the [Changelog](https://github.com/humhub/humhub/blob/master/CHANGELOG.md).
+Your installation of the HumHub Professional Edition is automatically updated without any action required from you. For security reasons, updates are applied 2-3 weeks after their release. We summarize the most important new features and improvements in our [Release Notes](../about/releasenotes/release_notes.md), a detailed list of all changes can be found in the [Changelog](https://github.com/humhub/humhub/blob/master/CHANGELOG.md).
 
 :::note
 If you are using custom modules and themes, we recommend disabling automatic updates to avoid any potential compatibility issues. You can manage this setting by navigating to `Administration > Cloud Hosting > Updates`. 

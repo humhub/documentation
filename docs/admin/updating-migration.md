@@ -100,7 +100,7 @@ No changes necessary.
 
 **Caching and ``.htaccess`` changes**
 
-Removed caching section from `.htaccess` file. See [Documentation](https://docs.humhub.org/docs/admin/performance#http-caching) for more details.
+Removed caching section from `.htaccess` file. See [Documentation](performance.md#http-caching) for more details.
 
 **Image Handling**
 
