@@ -133,7 +133,7 @@ This will result in the following output:
 </ul>
 ```
 
-Fore more complex cases you may want to use a custom view as follows:
+For more complex cases you may want to use a custom view as follows:
 
 ```php
 public function run()

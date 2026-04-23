@@ -24,7 +24,7 @@ Create a MySQL/MariaDB database:
 ```sql
  CREATE DATABASE `humhub` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-Fore more infos check the [Database Setup Section](../admin/server-setup.md#database).
+For more information check the [Database Setup Section](../admin/server-setup.md#database).
 
 ### Clone HumHub
 
