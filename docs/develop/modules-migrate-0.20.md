@@ -5,7 +5,7 @@ This document briefly describes the module api changes in HumHub 0.20.
 Since HumHub 0.20 is now based on Yii 2 you also need to migrate your modules to it.
 
 See more information about Yii 2.0 here: 
-- [Yii: Upgrading from Version 1.1](http://www.yiiframework.com/doc-2.0/guide-intro-upgrade-from-v1.html)
+- [Yii: Upgrading from Version 1.1](https://www.yiiframework.com/doc-2.0/guide-intro-upgrade-from-v1.html)
 
 ## Migration
 
@@ -77,7 +77,7 @@ TBD
 
 `\humhub\modules\content\components\activerecords\ContentContainer::createUrl` (Space/User) still provides the method createUrl to build URLs in container context (sguid/uguid).
 
-Use [http://www.yiiframework.com/doc-2.0/yii-helpers-url.html](http://www.yiiframework.com/doc-2.0/yii-helpers-url.html) for other URLs.
+Use [https://www.yiiframework.com/doc-2.0/yii-helpers-url.html](https://www.yiiframework.com/doc-2.0/yii-helpers-url.html) for other URLs.
 
 ### Activities
 
@@ -106,7 +106,7 @@ $this->update('activity', ['class' => 'humhub\modules\content\activities\Content
 The asset/resources folder will not longer automatically published.
 
 Find more details about assets here:
-http://www.yiiframework.com/doc-2.0/guide-structure-assets.html
+https://www.yiiframework.com/doc-2.0/guide-structure-assets.html
 
 The default path for module resources (javascripts, images, css, ...) was changed from asset to resources. ('/modules/example/resources').
 Also all HumHub module related files like Module Image or Screenshots should be located there.

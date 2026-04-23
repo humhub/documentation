@@ -126,7 +126,7 @@ Full example of the configuration file: ``/protected/config/common.php``
 <?php
 /**
  * This file provides to overwrite the default HumHub / Yii configuration by your local common (Console and Web) environments
- * @see http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
+ * @see https://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
  * @see https://docs.humhub.org/docs/admin/advanced-configuration
  */
 return [

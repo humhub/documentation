@@ -50,7 +50,7 @@ php yii asset humhub/config/assets.php humhub/config/assets-prod.php
 ```
 
 :::info
-Refer to the [Yii Asset Guide](http://www.yiiframework.com/doc-2.0/guide-structure-assets.html#combining-compressing-assets)
+Refer to the [Yii Asset Guide](https://www.yiiframework.com/doc-2.0/guide-structure-assets.html#combining-compressing-assets)
 for more information.
 :::
 

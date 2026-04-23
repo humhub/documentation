@@ -4,7 +4,7 @@ title: Widgets
 ---
 
 
-Widgets are used to provide reusable view parts by means of a view class. Please refer to the [Yii-Guide](http://www.yiiframework.com/doc-2.0/guide-structure-widgets.html)
+Widgets are used to provide reusable view parts by means of a view class. Please refer to the [Yii-Guide](https://www.yiiframework.com/doc-2.0/guide-structure-widgets.html)
 for more information about widgets.
 
 This guide describes the usage of some HumHubs base widget types.

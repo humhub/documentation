@@ -1,7 +1,7 @@
 Module Structure
 ================
 
-Basically HumHub modules are identical to [Yii2 modules](http://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
+Basically HumHub modules are identical to [Yii2 modules](https://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
 
 A very basic module consists of the following elements:
 
@@ -27,7 +27,7 @@ The `config.php` should contain the following attributes:
 - **class** - Namespaced classname of the module class (required)
 - **namespace** - The namespace of your module (required)
 - **events** - Array containing the modules event configuration (optional)
-- **urlManagerRules** - Array of [URL Manager Rules](http://www.yiiframework.com/doc-2.0/yii-web-urlmanager.html#addRules()-detail) (optional)
+- **urlManagerRules** - Array of [URL Manager Rules](https://www.yiiframework.com/doc-2.0/yii-web-urlmanager.html#addRules()-detail) (optional)
 - **modules** - Submodules (optional)
 
 Example:

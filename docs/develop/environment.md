@@ -77,7 +77,7 @@ for different test installations and prevent interference with marketplace modul
 
 ### Yii Debug Module
 
-You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
+You may want to enable the [Yii Debug Module](https://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
 
 in `.env`
 ```env

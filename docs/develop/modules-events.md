@@ -3,7 +3,7 @@ Events
 
 TBD
 
-[http://www.yiiframework.com/doc-2.0/guide-concept-events.html](http://www.yiiframework.com/doc-2.0/guide-concept-events.html)
+[https://www.yiiframework.com/doc-2.0/guide-concept-events.html](https://www.yiiframework.com/doc-2.0/guide-concept-events.html)
 
 
 

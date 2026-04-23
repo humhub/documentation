@@ -111,4 +111,4 @@ public static function onIntegrityCheck($event)
 
 ## ActiveRecord
 
-HumHub uses Yii's [ActiveRecords](http://www.yiiframework.com/doc-2.0/guide-db-active-record.html) as database access layer.
+HumHub uses Yii's [ActiveRecords](https://www.yiiframework.com/doc-2.0/guide-db-active-record.html) as database access layer.

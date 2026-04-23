@@ -146,14 +146,14 @@ Files not in the sidebar but reachable via a valid relative `.md` cross-link fro
 
 | # | Status | Severity | Finding |
 |---|--------|----------|---------|
-| L-8 | [ ] | Minor | `http://www.yiiframework.com` — 29 occurrences across 17 files (`admin/logging.md`, `develop/authentication.md`, `develop/build.md`, `develop/environment.md`, `develop/events.md`, `develop/files.md`, `develop/i18n.md`, `develop/javascript-index.md`, `develop/models.md`, `develop/modules-db.md`, `develop/modules-events.md`, `develop/modules-i18n.md`, `develop/modules-migrate-0.20.md`, `develop/modules-structure.md`, `develop/modules.md`, `develop/overview.md`, `develop/widgets.md`). Replace with `https://www.yiiframework.com`. |
-| L-9 | [ ] | Minor | `http://codeception.com` — 3 occurrences in `develop/testing.md:22,26,31`. Replace with `https://codeception.com`. |
-| L-10 | [ ] | Minor | `http://community.humhub.com` — `admin/troubleshooting.md:81`. Replace with `https://community.humhub.com`. |
-| L-11 | [ ] | Minor | `http://php.net` — `admin/cron-jobs.md:65`. Replace with `https://www.php.net`. |
-| L-12 | [ ] | Minor | `http://supervisord.org` — `admin/cron-jobs.md:32`. Replace with `https://supervisord.org`. |
-| L-13 | [ ] | Minor | `http://chromedriver.chromium.org` — `develop/testing.md:256`. Replace with `https://chromedriver.chromium.org`. |
-| L-14 | [ ] | Minor | `http://pjax.herokuapp.com` — 2 occurrences in `develop/javascript-client.md:126,128`. Verify whether HTTPS is available; if not, consider linking to the GitHub repository instead. |
-| L-15 | [ ] | Minor | Various `http://` links in `admin/performance.md:132–136` (`tn123.org`, `redmine.lighttpd.net`, `wiki.nginx.org`, `www.cherokee-project.com`). Verify HTTPS availability and update. |
+| L-8 | [x]    | Minor | `http://www.yiiframework.com` — 29 occurrences across 17 files (`admin/logging.md`, `develop/authentication.md`, `develop/build.md`, `develop/environment.md`, `develop/events.md`, `develop/files.md`, `develop/i18n.md`, `develop/javascript-index.md`, `develop/models.md`, `develop/modules-db.md`, `develop/modules-events.md`, `develop/modules-i18n.md`, `develop/modules-migrate-0.20.md`, `develop/modules-structure.md`, `develop/modules.md`, `develop/overview.md`, `develop/widgets.md`). Replace with `https://www.yiiframework.com`. |
+| L-9 | [x]    | Minor | `http://codeception.com` — 3 occurrences in `develop/testing.md:22,26,31`. Replace with `https://codeception.com`. |
+| L-10 | [x]    | Minor | `http://community.humhub.com` — `admin/troubleshooting.md:81`. Replace with `https://community.humhub.com`. |
+| L-11 | [x]    | Minor | `http://php.net` — `admin/cron-jobs.md:65`. Replace with `https://www.php.net`. |
+| L-12 | [x]    | Minor | `http://supervisord.org` — `admin/cron-jobs.md:32`. Replace with `https://supervisord.org`. |
+| L-13 | [x]    | Minor | `http://chromedriver.chromium.org` — `develop/testing.md:256`. Replace with `https://chromedriver.chromium.org`. |
+| L-14 | [ ]    | Minor | `http://pjax.herokuapp.com` — 2 occurrences in `develop/javascript-client.md:126,128`. Verify whether HTTPS is available; if not, consider linking to the GitHub repository instead. |
+| L-15 | [x]    | Minor | Various `http://` links in `admin/performance.md:132–136` (`tn123.org`, `redmine.lighttpd.net`, `wiki.nginx.org`, `www.cherokee-project.com`). Verify HTTPS availability and update. |
 
 ---
 
