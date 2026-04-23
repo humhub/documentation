@@ -1,3 +1,7 @@
+---
+id: modules-lifecycle
+---
+
 Module Life Cycle
 =================
 

@@ -1,3 +1,7 @@
+---
+id: javascript-modals
+---
+
 Modals
 =======
 
@@ -104,7 +108,7 @@ By using the `modal.confirm()` function, you can request a user confirmation as 
 
 ```javascript
 var options = {
-    header: 'Please confirm this action!'
+    header: 'Please confirm this action!',
     body: 'Do you really want to execute this action?',
     confirmText: 'Yes',
     cancelText: 'No'

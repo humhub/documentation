@@ -1,3 +1,7 @@
+---
+id: javascript-stream
+---
+
 Stream
 =======
 

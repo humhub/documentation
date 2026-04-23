@@ -28,17 +28,15 @@ The documentation site is built on Docusaurus 3.9 and covers five major areas: A
 
 ### Structure & Navigation
 
-| # | Status | Severity | Finding |
-|---|--------|----------|---------|
-| S-1 | [x]    | Minor | `develop/modules-settings.md` — Filename `modules-settings` does not match frontmatter `id: module-settings`. Sidebar correctly uses the id; rename file to `module-settings.md` or align the id to `modules-settings`. |
-| S-2 | [ ]    | **Major** | `sidebars.js:17–23` — Release Notes sidebar lists only 1.15–1.18. Files 1.5–1.14 exist and are linked from the index page but are unreachable via sidebar. |
-| S-3 | [x]    | Minor | `sidebars.js:83` — Category label reads `Developement` → `Development`. |
-| S-4 | [ ]    | Minor | `sidebars.js` — The entire `adminuser` section (activities, email summaries, permissions, user management) has files on disk but is not registered in the sidebar. |
-| S-5 | [ ]    | Minor | `professional-edition/intro.md` — Filename `intro` does not match frontmatter `id: pe-intro`. Sidebar correctly uses the id; rename file to `pe-intro.md` or align the id to `intro`. |
-| S-6 | [ ]    | Minor | `adminuser/user.md` — Filename `user` does not match frontmatter `id: adminusers`. Docusaurus doc ID resolves to `adminuser/adminusers`; any sidebar reference to `adminuser/user` would silently fail. Rename file to `adminusers.md` or change id to `user`. |
-
-Files with no `id` in frontmatter (Docusaurus auto-derives id from filename — technically fine, but inconsistent with the rest of the docs):
-`admin/push-updates.md`, `admin/README.md`, `admin/uploads.md`, `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/javascript-modals.md`, `develop/javascript-stream.md`, `develop/modules-content.md`, `develop/modules-db.md`, `develop/modules-events.md`, `develop/modules-git.md`, `develop/modules-i18n.md`, `develop/modules-lifecycle.md`, `develop/modules-migrate-0.20.md`, `develop/modules-migrate-yii1.md`, `develop/modules-structure.md`, `develop/pull-requests.md`, `user/emoji-cheatsheet.md`, `user/md-cheatsheet.md`, `user/user-management.md`
+| #       | Status | Severity      | Finding                                                                                                                                                                                                                                                        |
+|---------|--------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| S-1     | [x]    | Minor         | `develop/modules-settings.md` — Filename `modules-settings` does not match frontmatter `id: module-settings`. Sidebar correctly uses the id; rename file to `module-settings.md` or align the id to `modules-settings`.                                        |
+| ~~S-2~~ |        | ~~**Major**~~ | ~~`sidebars.js:17–23` — Release Notes sidebar lists only 1.15–1.18. Files 1.5–1.14 exist and are linked from the index page but are unreachable via sidebar.~~ (discard)                                                                                       |
+| S-3     | [x]    | Minor         | `sidebars.js:83` — Category label reads `Developement` → `Development`.                                                                                                                                                                                        |
+| S-4     | [ ]    | Minor         | `sidebars.js` — The entire `adminuser` section (activities, email summaries, permissions, user management) has files on disk but is not registered in the sidebar.                                                                                             |
+| S-5     | [ ]    | Minor         | `professional-edition/intro.md` — Filename `intro` does not match frontmatter `id: pe-intro`. Sidebar correctly uses the id; rename file to `pe-intro.md` or align the id to `intro`.                                                                          |
+| S-6     | [ ]    | Minor         | `adminuser/user.md` — Filename `user` does not match frontmatter `id: adminusers`. Docusaurus doc ID resolves to `adminuser/adminusers`; any sidebar reference to `adminuser/user` would silently fail. Rename file to `adminusers.md` or change id to `user`. |
+| S-7     | [x]    | Minor         | 20 files have no `id` in frontmatter (Docusaurus auto-derives id from filename — technically fine, but inconsistent with the rest of the docs): `admin/push-updates.md`, `admin/uploads.md`, `develop/javascript-modals.md`, `develop/javascript-stream.md`, `develop/modules-content.md`, `develop/modules-db.md`, `develop/modules-events.md`, `develop/modules-git.md`, `develop/modules-i18n.md`, `develop/modules-lifecycle.md`, `develop/modules-migrate-0.20.md`, `develop/modules-structure.md`, `develop/pull-requests.md`, `user/emoji-cheatsheet.md`, `user/md-cheatsheet.md`, `user/user-management.md` |
 
 ---
 
@@ -55,12 +53,12 @@ Files with no `id` in frontmatter (Docusaurus auto-derives id from filename — 
 
 ### Completeness
 
-| # | Status | Severity | Finding |
-|---|--------|----------|---------|
-| C-1 | [x]    | **Major** | `admin/installation.md:191` — Live placeholder `YXZ` never replaced: `These can be viewed directly in Humhub under YXZ.` |
-| C-2 | [ ]    | **Major** | `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/modules-migrate-yii1.md` — Completely empty files (0 bytes). |
-| C-3 | [ ]    | **Major** | `adminuser/permissions.md` (6 lines), `adminuser/user.md` (9 lines) — Frontmatter/heading only, no actual content. |
-| C-4 | [ ]    | Minor | `develop/embedded-themes.md` — Entire body is `>⚠️ Under construction.` Listed in sidebar under Advanced Topics. |
+| # | Status | Severity | Finding                                                                                                                                            |
+|---|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| C-1 | [x]    | **Major** | `admin/installation.md:191` — Live placeholder `YXZ` never replaced: `These can be viewed directly in Humhub under YXZ.`                           |
+| C-2 | [ ]    | **Major** | `admin/README.md`, `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/modules-migrate-yii1.md` — Completely empty files (0 bytes). |
+| C-3 | [ ]    | **Major** | `adminuser/permissions.md` (6 lines), `adminuser/user.md` (9 lines) — Frontmatter/heading only, no actual content.                                 |
+| C-4 | [ ]    | Minor | `develop/embedded-themes.md` — Entire body is `>⚠️ Under construction.` Listed in sidebar under Advanced Topics.                                   |
 
 ---
 

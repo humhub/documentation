@@ -1,3 +1,7 @@
+---
+id: modules-migrate-0.20
+---
+
 # Module Migration Guide to HumHub 0.20
 
 This document briefly describes the module api changes in HumHub 0.20.

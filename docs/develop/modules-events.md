@@ -1,3 +1,7 @@
+---
+id: modules-events
+---
+
 Events
 ======
 

@@ -1,3 +1,7 @@
+---
+id: modules-i18n
+---
+
 Internationalization (I18N)
 ===========================
 
