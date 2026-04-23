@@ -30,12 +30,12 @@ The documentation site is built on Docusaurus 3.9 and covers five major areas: A
 
 | # | Status | Severity | Finding |
 |---|--------|----------|---------|
-| S-1 | [ ] | Minor | `develop/modules-settings.md` — Filename `modules-settings` does not match frontmatter `id: module-settings`. Sidebar correctly uses the id; rename file to `module-settings.md` or align the id to `modules-settings`. |
-| S-2 | [ ] | **Major** | `sidebars.js:17–23` — Release Notes sidebar lists only 1.15–1.18. Files 1.5–1.14 exist and are linked from the index page but are unreachable via sidebar. |
-| S-3 | [ ] | Minor | `sidebars.js:83` — Category label reads `Developement` → `Development`. |
-| S-4 | [ ] | Minor | `sidebars.js` — The entire `adminuser` section (activities, email summaries, permissions, user management) has files on disk but is not registered in the sidebar. |
-| S-5 | [ ] | Minor | `professional-edition/intro.md` — Filename `intro` does not match frontmatter `id: pe-intro`. Sidebar correctly uses the id; rename file to `pe-intro.md` or align the id to `intro`. |
-| S-6 | [ ] | Minor | `adminuser/user.md` — Filename `user` does not match frontmatter `id: adminusers`. Docusaurus doc ID resolves to `adminuser/adminusers`; any sidebar reference to `adminuser/user` would silently fail. Rename file to `adminusers.md` or change id to `user`. |
+| S-1 | [x]    | Minor | `develop/modules-settings.md` — Filename `modules-settings` does not match frontmatter `id: module-settings`. Sidebar correctly uses the id; rename file to `module-settings.md` or align the id to `modules-settings`. |
+| S-2 | [ ]    | **Major** | `sidebars.js:17–23` — Release Notes sidebar lists only 1.15–1.18. Files 1.5–1.14 exist and are linked from the index page but are unreachable via sidebar. |
+| S-3 | [x]    | Minor | `sidebars.js:83` — Category label reads `Developement` → `Development`. |
+| S-4 | [ ]    | Minor | `sidebars.js` — The entire `adminuser` section (activities, email summaries, permissions, user management) has files on disk but is not registered in the sidebar. |
+| S-5 | [ ]    | Minor | `professional-edition/intro.md` — Filename `intro` does not match frontmatter `id: pe-intro`. Sidebar correctly uses the id; rename file to `pe-intro.md` or align the id to `intro`. |
+| S-6 | [ ]    | Minor | `adminuser/user.md` — Filename `user` does not match frontmatter `id: adminusers`. Docusaurus doc ID resolves to `adminuser/adminusers`; any sidebar reference to `adminuser/user` would silently fail. Rename file to `adminusers.md` or change id to `user`. |
 
 Files with no `id` in frontmatter (Docusaurus auto-derives id from filename — technically fine, but inconsistent with the rest of the docs):
 `admin/push-updates.md`, `admin/README.md`, `admin/uploads.md`, `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/javascript-modals.md`, `develop/javascript-stream.md`, `develop/modules-content.md`, `develop/modules-db.md`, `develop/modules-events.md`, `develop/modules-git.md`, `develop/modules-i18n.md`, `develop/modules-lifecycle.md`, `develop/modules-migrate-0.20.md`, `develop/modules-migrate-yii1.md`, `develop/modules-structure.md`, `develop/pull-requests.md`, `user/emoji-cheatsheet.md`, `user/md-cheatsheet.md`, `user/user-management.md`
@@ -46,10 +46,10 @@ Files with no `id` in frontmatter (Docusaurus auto-derives id from filename — 
 
 | # | Status | Severity | Finding |
 |---|--------|----------|---------|
-| A-1 | [ ] | **Major** | `about/releasenotes/release_notes.md:24–25` — Links are swapped: "Release Notes 1.7" points to `release_notes_1_6.md` and "Release Notes 1.6" points to `release_notes_1_7.md`. |
-| A-2 | [ ] | Minor | `about/releasenotes/release_notes.md:9` — Uses `https://docs.humhub.com/` but the canonical URL used everywhere else is `https://docs.humhub.org/`. Reconcile. |
-| A-3 | [ ] | Minor | `develop/overview.md:27` — Links to FontAwesome v4.7.0 (2016). Verify current version shipped with HumHub and update. |
-| A-4 | [ ] | Minor | `admin/installation.md:130`, `admin/reverse-proxy.md:28–29` — `@see` comments use old Docusaurus v1 URL format (e.g. `admin-installation-configuration.html`). These URLs 404. |
+| A-1 | [x]    | **Major** | `about/releasenotes/release_notes.md:24–25` — Links are swapped: "Release Notes 1.7" points to `release_notes_1_6.md` and "Release Notes 1.6" points to `release_notes_1_7.md`. |
+| A-2 | [x]    | Minor | `about/releasenotes/release_notes.md:9` — Uses `https://docs.humhub.com/` but the canonical URL used everywhere else is `https://docs.humhub.org/`. Reconcile. |
+| A-3 | [ ]    | Minor | `develop/overview.md:27` — Links to FontAwesome v4.7.0 (2016). Verify current version shipped with HumHub and update. |
+| A-4 | [x]    | Minor | `admin/installation.md:130`, `admin/reverse-proxy.md:28–29` — `@see` comments use old Docusaurus v1 URL format (e.g. `admin-installation-configuration.html`). These URLs 404. |
 
 ---
 
@@ -57,10 +57,10 @@ Files with no `id` in frontmatter (Docusaurus auto-derives id from filename — 
 
 | # | Status | Severity | Finding |
 |---|--------|----------|---------|
-| C-1 | [ ] | **Major** | `admin/installation.md:191` — Live placeholder `YXZ` never replaced: `These can be viewed directly in Humhub under YXZ.` |
-| C-2 | [ ] | **Major** | `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/modules-migrate-yii1.md` — Completely empty files (0 bytes). |
-| C-3 | [ ] | **Major** | `adminuser/permissions.md` (6 lines), `adminuser/user.md` (9 lines) — Frontmatter/heading only, no actual content. |
-| C-4 | [ ] | Minor | `develop/embedded-themes.md` — Entire body is `>⚠️ Under construction.` Listed in sidebar under Advanced Topics. |
+| C-1 | [x]    | **Major** | `admin/installation.md:191` — Live placeholder `YXZ` never replaced: `These can be viewed directly in Humhub under YXZ.` |
+| C-2 | [ ]    | **Major** | `adminuser/activities.md`, `adminuser/emailsummaries.md`, `develop/modules-migrate-yii1.md` — Completely empty files (0 bytes). |
+| C-3 | [ ]    | **Major** | `adminuser/permissions.md` (6 lines), `adminuser/user.md` (9 lines) — Frontmatter/heading only, no actual content. |
+| C-4 | [ ]    | Minor | `develop/embedded-themes.md` — Entire body is `>⚠️ Under construction.` Listed in sidebar under Advanced Topics. |
 
 ---
 

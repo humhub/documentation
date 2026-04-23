@@ -126,9 +126,8 @@ Full example of the configuration file: ``/protected/config/common.php``
 <?php
 /**
  * This file provides to overwrite the default HumHub / Yii configuration by your local common (Console and Web) environments
- * @see https://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
- * @see https://docs.humhub.org/admin-installation-configuration.html
- * @see https://docs.humhub.org/dev-environment.html
+ * @see http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
+ * @see https://docs.humhub.org/docs/admin/advanced-configuration
  */
 return [
     'components' => [
@@ -188,7 +187,7 @@ You can see the current mode at ``Administration > Information``.
 
 - **Error log**
 
-    Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration > Information > Logging``
+    Check the log for error messages and warnings. These can be viewed directly in Humhub under ``Administration > Information > Logging``.
 
 - **Protected folders**
 

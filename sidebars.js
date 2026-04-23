@@ -80,7 +80,7 @@ module.exports = {
             'admin/updating-migration',
         ],        
     },
-    Developement: {
+    Development: {
         'Introduction': [
             'develop/overview',
             'develop/environment',
@@ -103,7 +103,7 @@ module.exports = {
             'develop/content',
             'develop/stream',
             'develop/events',
-            'develop/module-settings',
+            'develop/modules-settings',
             'develop/permissions',
             'develop/notifications',
             'develop/activities',
