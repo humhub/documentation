@@ -28,7 +28,7 @@ cp -rfa themes/HumHub themes/MyCompany
 ** Enable the theme **
 
 Once you created an own theme folder, you need to enable it in the administration section of HumHub: 
-`Administration -> Settings -> Appeareance` 
+`Administration -> Settings -> Appearance` 
 
 
 ## Folder Structure Example

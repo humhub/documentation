@@ -22,7 +22,7 @@ HumHub can of course also be run on an **existing server setup** or **shared hos
 
 In this section we will create a database with the following values: 
 
-- **Datebase:** humhub_prod_db
+- **Database:** humhub_prod_db
 - **User:** humhub_prod
 - **Password:** change-me
 

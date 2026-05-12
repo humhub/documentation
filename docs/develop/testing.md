@@ -19,16 +19,16 @@ as specific settings for a test. Write functional tests in order to test your co
 **Unit tests** are ideal for [white box testing](https://en.wikipedia.org/wiki/White-box_testing) and is the fastest way of
 writing low level tests for specific classes or components. Implement unit tests for testing single components and classes.
 
-HumHub uses [Codeception](http://codeception.com/) as testing framework.
+HumHub uses [Codeception](https://codeception.com/) as testing framework.
 
 Information about how to write tests with codeception are available here:
 
- - [Codeception Introduction](http://codeception.com/docs/01-Introduction)
+ - [Codeception Introduction](https://codeception.com/docs/01-Introduction)
  - [Yii Testing Guide](https://www.yiiframework.com/doc/guide/2.0/en/test-overview)
 
 ## Test Environment Setup
 
--  Install codeception ([http://codeception.com/install](http://codeception.com/install))
+-  Install codeception ([https://codeception.com/install](https://codeception.com/install))
 -  Composer codeception:
 
 ```
@@ -253,7 +253,7 @@ phantomjs --webdriver=4444
 
 Download 
 
- - [chromedriver](http://chromedriver.chromium.org/downloads) 
+ - [chromedriver](https://chromedriver.chromium.org/downloads) 
  - [selenium standalone](https://www.seleniumhq.org/download/)
   
 and copy them in the same directory.

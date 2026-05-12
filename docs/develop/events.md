@@ -17,7 +17,7 @@ itself.
 
 See [Event Handler](modules-event-handler.md) for an overview of core events.
 
-[http://www.yiiframework.com/doc-2.0/guide-concept-events.html](http://www.yiiframework.com/doc-2.0/guide-concept-events.html)
+[https://www.yiiframework.com/doc-2.0/guide-concept-events.html](https://www.yiiframework.com/doc-2.0/guide-concept-events.html)
 
 ### Register event listener
 

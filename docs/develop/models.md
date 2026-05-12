@@ -11,7 +11,7 @@ your modules `migration` directory.
 
 - **prefix** your tables with the module id. e.g. `example_foo`
 - **singular** table names
-- use **underscorce** in fieldnames andattributes e.g. `user_id`
+- use **underscore** in field names and attributes e.g. `user_id`
 
 ## Initial Migration
 
@@ -111,4 +111,4 @@ public static function onIntegrityCheck($event)
 
 ## ActiveRecord
 
-HumHub uses Yii's [ActiveRecords](http://www.yiiframework.com/doc-2.0/guide-db-active-record.html) as database access layer.
+HumHub uses Yii's [ActiveRecords](https://www.yiiframework.com/doc-2.0/guide-db-active-record.html) as database access layer.

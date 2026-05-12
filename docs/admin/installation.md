@@ -95,7 +95,7 @@ HumHub sends emails to the users e.g. during the registration, password recovery
 A valid transport and a sender e-mail address must be provided for this purpose. This can be configured in the web interface under ``Administration > Settings > Advanced > E-Mail`.
 
 :::note
-You should use a `noreply` sender e-mail address sice reply by mail is currently not supported.
+You should use a `noreply` sender e-mail address since reply by mail is currently not supported.
 :::
 
 If you installed a local SMTP server e.g. [Postfix](server-setup.md#postfix), you can use ``PHP`` as ``Mail Transport Type`` option.
@@ -127,8 +127,7 @@ Full example of the configuration file: ``/protected/config/common.php``
 /**
  * This file provides to overwrite the default HumHub / Yii configuration by your local common (Console and Web) environments
  * @see https://www.yiiframework.com/doc-2.0/guide-concept-configurations.html
- * @see https://docs.humhub.org/admin-installation-configuration.html
- * @see https://docs.humhub.org/dev-environment.html
+ * @see https://docs.humhub.org/docs/admin/advanced-configuration
  */
 return [
     'components' => [
@@ -188,7 +187,7 @@ You can see the current mode at ``Administration > Information``.
 
 - **Error log**
 
-    Check the log for error messages and warnings. These can be viewed directly in Humhub under YXZ.  ``Administration > Information > Logging``
+    Check the log for error messages and warnings. These can be viewed directly in Humhub under ``Administration > Information > Logging``.
 
 - **Protected folders**
 

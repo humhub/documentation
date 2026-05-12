@@ -18,7 +18,7 @@ There are two typical variants for file upload implementations.
 
 #### Uploads via ActiveForm (Direct Mapping)
 
-For direct File Uploads via ActiveForm, see [Yii2 Guide - Uploading files](http://www.yiiframework.com/doc-2.0/guide-input-file-upload.html).
+For direct File Uploads via ActiveForm, see [Yii2 Guide - Uploading files](https://www.yiiframework.com/doc-2.0/guide-input-file-upload.html).
 
 Example to add an uploaded file to HumHub file storage:
 
@@ -143,7 +143,7 @@ Image Manipulation
 
 HumHub bundles **Imagine **as Yii 2 Extension.
 
-Please see the [Imagine Extension for Yii 2](http://www.yiiframework.com/doc-2.0/ext-imagine-index.html) documentation for more details.
+Please see the [Imagine Extension for Yii 2](https://www.yiiframework.com/doc-2.0/ext-imagine-index.html) documentation for more details.
 
 
 Access Control

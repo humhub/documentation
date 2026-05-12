@@ -24,7 +24,7 @@ Create a MySQL/MariaDB database:
 ```sql
  CREATE DATABASE `humhub` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-Fore more infos check the [Database Setup Section](../admin/server-setup.md#database).
+For more information check the [Database Setup Section](../admin/server-setup.md#database).
 
 ### Clone HumHub
 
@@ -77,7 +77,7 @@ for different test installations and prevent interference with marketplace modul
 
 ### Yii Debug Module
 
-You may want to enable the [Yii Debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
+You may want to enable the [Yii Debug Module](https://www.yiiframework.com/doc-2.0/ext-debug-index.html) for detailed request and query debugging. Just add the following block to your local web configuration::
 
 in `.env`
 ```env

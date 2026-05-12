@@ -29,7 +29,7 @@ php /path/to/humhub/protected/yii cron/run
 
 The queue command is used to run **asynchronous jobs** which are potentially long running and therefore need to
 be executed in the background. The queue can either be scheduled as CronJob (see below) or with the help of another job-runner like 
-for example [Supervisor](http://supervisord.org/) or [Systemd](https://www.freedesktop.org/wiki/Software/systemd/). 
+for example [Supervisor](https://supervisord.org/) or [Systemd](https://www.freedesktop.org/wiki/Software/systemd/). 
 Please refer to the [Asynchronous Tasks](asynchronous-tasks.md) section for more details about queuing and job processing.
 
 The queue command can be executed manually as follows:
@@ -62,7 +62,7 @@ command e.g. `/usr/bin/php /path/to/humhub/protected/yii queue/run --isolate=0`.
 :::
 
 :::caution
-Make sure to use the right [php cli executable](http://php.net/manual/en/features.commandline.introduction.php) for your jobs!
+Make sure to use the right [php cli executable](https://www.php.net/manual/en/features.commandline.introduction.php) for your jobs!
 :::
 
 You can find configuration examples for various environments in the ["Cron Job Setup" Wiki](https://community.humhub.com/content/perma?id=111873) in our [HumHub Community](https://community.humhub.com/).

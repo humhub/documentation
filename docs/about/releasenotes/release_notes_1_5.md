@@ -63,7 +63,7 @@ general loading performance of the network. More information is available in the
 **Administrative notes:**
 
 - `SameSite` Cookie Support
-- Removed caching section from `.htaccess` file. See [Documentation](https://docs.humhub.org/docs/admin/performance#http-caching) for more details. 
+- Removed caching section from `.htaccess` file. See [Documentation](../../admin/performance.md#http-caching) for more details. 
 - Removed `ImageConverter` class, switched to **Imagine library**
     - ImageMagick "convert" command not longer exists
     - New optional PHP extensions: ImageMagicks (recommended) or GraphicsMagick

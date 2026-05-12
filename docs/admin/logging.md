@@ -30,7 +30,7 @@ This file is automatically rotated by the HumHub CronJob.
 All log targets provided by Yii2 can be used. Furthermore, it is possible to develop individual log targets. These targets must be provided by a module.
 
 You can find detailed information here:
-[Yii Framework - Logging Documentation](http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html)
+[Yii Framework - Logging Documentation](https://www.yiiframework.com/doc-2.0/guide-runtime-logging.html)
 
 
 ### E-Mail

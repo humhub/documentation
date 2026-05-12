@@ -3,7 +3,7 @@ id: modules
 title: Getting Started
 ---
 
-The following guide describes the basic module structure and extended module features as well as important considerations regarding your own custom modules. Since HumHub is based on the [Yii Application Framework](http://www.yiiframework.com/doc-2.0) you should at least be familiar with the basic concepts of this framework before writing your own code as:
+The following guide describes the basic module structure and extended module features as well as important considerations regarding your own custom modules. Since HumHub is based on the [Yii Application Framework](https://www.yiiframework.com/doc-2.0) you should at least be familiar with the basic concepts of this framework before writing your own code as:
 
 - [Basic Application Structure](https://www.yiiframework.com/doc/guide/2.0/en/structure-overview)
 - [Controllers](https://www.yiiframework.com/doc/guide/2.0/en/structure-controllers)
@@ -53,7 +53,7 @@ Alternatively, you can take a look at the following GitHub template project: [Ex
 
 ## Module Structure
 
-Basically HumHub modules are identical to [Yii2 modules](http://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
+Basically HumHub modules are identical to [Yii2 modules](https://www.yiiframework.com/doc-2.0/guide-structure-modules.html).
 
 A minimal HumHub module at least has to define the following files and metadata:
 

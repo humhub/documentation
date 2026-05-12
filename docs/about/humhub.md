@@ -180,7 +180,7 @@ as well as an additional [enterprise theme](../professional-edition/features.md#
 
 Further information is available at:
 
- - [Professional Edition Guide](../professional-edition/intro.md)
+ - [Professional Edition Guide](../professional-edition/pe-intro.md)
  - [Enterprise Edition Homepage](https://www.humhub.com/en/professional-edition)
 
 ## Limitations

@@ -1,5 +1,5 @@
 ---
-id: module-settings
+id: modules-settings
 title: Settings
 ---
 

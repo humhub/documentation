@@ -172,7 +172,7 @@ The visibility of a content for a user can be validated by the `Content::canView
 - All space members can read private space content
 - Non space members can only access public space content
 - Only friend users can access private profile content of a user.
-- If the "Manage All Content" Group Permission is enabled ([see configuration options](https://docs.humhub.org/docs/admin/config-options#admin)), it is possible to allow the members of certain Groups to manage all content (view, edit, move, archive, pin, etc.), even private content.
+- If the "Manage All Content" Group Permission is enabled ([see configuration options](../admin/config-options.md#admin)), it is possible to allow the members of certain Groups to manage all content (view, edit, move, archive, pin, etc.), even private content.
 
 ```php
 if(!$model->content->canView()) {

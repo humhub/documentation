@@ -6,7 +6,7 @@ sidebar_label: Application Overview
 
 ## The HumHub platform
 
-HumHub provides a powerful modular platform based on the [Yii2 Framework](http://www.yiiframework.com).
+HumHub provides a powerful modular platform based on the [Yii2 Framework](https://www.yiiframework.com).
 The modular nature of HumHub allows developers to add new features or change the behavior of existing core 
 features by means of custom modules.
 
@@ -27,9 +27,9 @@ pattern and uses frontend frameworks such as:
 - [Fontawesome](https://fontawesome.com/v4.7.0/).
 
 In this guide you will find all the necessary information in order to customize your HumHub installation and implement your own modules.
-Since HumHub is based on the [Yii 2.0 PHP Framework](http://www.yiiframework.com/) make sure you're also familiar with the basic concepts of Yii2:
+Since HumHub is based on the [Yii 2.0 PHP Framework](https://www.yiiframework.com/) make sure you're also familiar with the basic concepts of Yii2:
 
-- [The Definitive Guide to Yii 2.0](http://www.yiiframework.com/doc-2.0/guide-index.html) 
+- [The Definitive Guide to Yii 2.0](https://www.yiiframework.com/doc-2.0/guide-index.html) 
 
 ## Core modules and components
 
