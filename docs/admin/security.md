@@ -189,7 +189,7 @@ settings for your `script-src`. Modern browsers will only execute scripts contai
 
 > Note: Some settings as the nonce configuration, may not be supported by some modules. In case you notice modules not working
 properly with your security configuration, please contact the module owner or refer to the module description. Also check the 
-[Developer Javascript Guide](../develop/javascript-index.md) for assuring nonce support of your custom modules.
+[Developer Javascript Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/ui-js-overview.md) for assuring nonce support of your custom modules.
 
 > Note: The security rules are cached, you may have to clear the cache in order to update the active rule configuration.
 

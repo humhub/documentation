@@ -14,7 +14,7 @@ This guide describes the installation of the packaged version of HumHub. The pac
 production ready version of HumHub with all required third party dependencies and production assets. 
 Make sure your server meets the [System Requirements](requirements.md) before you install HumHub.
 
-If you intend to setup a development environment for HumHub, follow the [Development Environment](../develop/environment.md)
+If you intend to setup a development environment for HumHub, follow the [Development Environment](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md)
 guide instead.
 
 The packaged version of HumHub is available at [https://download.humhub.com](https://download.humhub.com).

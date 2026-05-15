@@ -30,17 +30,6 @@ const features = [
         ),
     },
     {
-        title: <>Theming Guide</>,
-        imageUrl: 'img/undraw_flowers.svg',
-        href:'/docs/theme/overview',
-        description: (
-            <>
-                HumHub brings the tools to customize the look and feel of your platform. Learn more about the
-                available theming techniques of HumHub.
-            </>
-        ),
-    },
-    {
         title: <>Development Guide</>,
         imageUrl: 'img/undraw_code_review.svg',
         href:'/docs/develop/overview',

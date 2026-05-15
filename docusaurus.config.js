@@ -53,7 +53,6 @@ module.exports = {
           ]},
        // {to: 'docs/about/humhub', activeBasePath: 'docs/about',  label: 'About', position: 'left'},
         {to: 'docs/admin/introduction', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
-        {to: 'docs/theme/overview', activeBasePath: 'docs/theme',  label: 'Theming', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
         {to: 'docs/professional-edition/pe-intro', activeBasePath: 'docs/professional', label: 'Professional Edition', position: 'left'},
         //{to: 'blog', label: 'Blog', position: 'left'},
@@ -77,10 +76,6 @@ module.exports = {
             {
               label: 'Administration',
               to: 'docs/admin/introduction',
-            },
-            {
-              label: 'Theming',
-              to: 'docs/theme/overview',
             },
             {
               label: 'Development',

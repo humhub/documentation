@@ -53,7 +53,7 @@ The administration log `Administration -> Information -> Logging` now can be fil
 
 We've optimized the asset loading by adding deferred script loading for some core assets. This improves the
 general loading performance of the network. More information is available in the 
-[Development Migration Guide](../../develop/modules-migrate.md#migrate-from-14-to-15)
+[Development Migration Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/module-migrate.md)
 
 ### Other notable changes
 

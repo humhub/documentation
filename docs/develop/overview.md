@@ -1,118 +1,43 @@
 ---
 id: overview
-title: Overview
-sidebar_label: Application Overview
+title: Development
+displayed_sidebar: null
+hide_table_of_contents: true
+pagination_prev: null
+pagination_next: null
 ---
 
-## The HumHub platform
+HumHub is built to be extended. There are three main ways to plug in:
 
-HumHub provides a powerful modular platform based on the [Yii2 Framework](http://www.yiiframework.com).
-The modular nature of HumHub allows developers to add new features or change the behavior of existing core 
-features by means of custom modules.
+## REST API
 
-Languages used throughout the platform are: 
+For integrating HumHub with external systems — single sign-on flows, dashboards, automation, mobile apps — use the REST module. It exposes users, spaces, content, files, notifications and more over HTTP.
 
-- **PHP**
-- **JavaScript**
-- **SQL (MySQL/MariaDB)**
-- **HTML**
-- **CSS/Sass**
+- **[REST API documentation](https://marketplace.humhub.com/module/rest/manual)**
+- **[REST module on GitHub](https://github.com/humhub/humhub-modules-rest)**
 
-HumHub is based on the [Model-View-Controller (MVC)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) 
-pattern and uses frontend frameworks such as: 
+## Custom modules
 
-- [jQuery](https://jquery.com/)
-- [Bootstrap 5.3](https://getbootstrap.com/docs/5.3)
-- [Sass](https://sass-lang.com/)
-- [Fontawesome](https://fontawesome.com/v4.7.0/).
+Most extension happens through **modules** — self-contained packages that add features, content types, integrations or background jobs. A module can:
 
-In this guide you will find all the necessary information in order to customize your HumHub installation and implement your own modules.
-Since HumHub is based on the [Yii 2.0 PHP Framework](http://www.yiiframework.com/) make sure you're also familiar with the basic concepts of Yii2:
+- ship its own controllers, models, views and migrations
+- hook into core events (after a user is created, before content is saved, when a stream is rendered, …)
+- add menu entries, sidebar snippets, dashboard widgets and notifications
+- define its own permissions and settings
+- be installed per space, per user, or globally
 
-- [The Definitive Guide to Yii 2.0](http://www.yiiframework.com/doc-2.0/guide-index.html) 
+The developer documentation, including module structure, core APIs and platform concepts, lives in the core repository:
 
-## Core modules and components
+→ **[Developer documentation on GitHub](https://github.com/humhub/humhub/tree/develop/docs/develop)**
 
-The HumHub core consists of a set of core modules, components, widgets, helpers and views, which can be used within your
-custom modules and are described in more detail within the [Module Development](modules.md) section.
+Start with [Module Development](https://github.com/humhub/humhub/blob/develop/docs/develop/module-development.md).
 
-HumHub extends several Yii components such as:
+## Theming
 
- - `humhub\components\ActiveRecord`
- - `humhub\components\Application`
- - `humhub\components\AssetManager`
- - `humhub\components\Controller`
- - `humhub\components\Event`
- - `humhub\components\ActiveRecord`
- - `humhub\components\Migration`
- - `humhub\components\Module`
- - `humhub\components\Request`
- - `humhub\components\Response`
- - `humhub\components\Theme`
- - `humhub\components\UrlManager`
- - `humhub\components\View`
- - `humhub\components\Widget`
- - and more...
+The look and feel can be adjusted directly in *Administration → Settings → Appearance* — logo, colours, login background, custom SCSS. A dedicated theme module is only needed when you want to override view templates or ship a coordinated style as a package.
 
-and consists of the following core modules:
+→ **[Theming overview](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md)**
 
-| Module         | Description                                                 |    
-|----------------|-------------------------------------------------------------|
-| `activity`     | Social network [activities](activities.md)                  | 
-| `admin`        | Administration backend                                      |
-| `comment`      | Content add-on for commenting                               |
-| `content`      | Base module for all content types (Post,Wiki,...)           |
-| `dashboard`    | HumHub Dashboard overview                                   |
-| `directory`    | HumHub Directory platform overview (User/Spaces/Groups)     |
-| `file`         | Base file module for managing uploaded files                |
-| `friendship`   | Enables user friendship relations                           |
-| `installer`    | HumHub platform installer                                   |
-| `like`         | Content add-on for likes                                    |
-| `live`         | Enables live updates in the frontend                        |
-| `marketplace`  | Marketplace interface                                       |
-| `notification` | Enables notification over different targets                 |
-| `post`         | Simple post content type                                    |
-| `queue`        | Queue module for asynchronous jobs                          |
-| `search`       | HumHub search abstraction + default implementation          |
-| `space`        | User Spaces                                                 |
-| `stream`       | Content Streams                                             |
-| `topic`        | Content topics used to categorize content entries           |
-| `tour`         | Introduction tour (user-guide)                              |
-| `ui`           | Base user interface components like widgets and theme logic |
-| `user`         | HumHub user and authentication                              |
-| `web`          | Web standard related classes                                |
- 
-## Application structure
+## Community
 
-The following structure lists the main directories of a HumHub installation, whereas the `humhub` directory will be referred as
- `web-root` throughout this guide.
-
-```
-humhub
-├── assets
-├── protected
-│   ├── config
-│   ├── humhub
-│   ├── modules
-│   ├── runtime
-│   └── vendor
-├── static
-├── themes
-└── uploads
-```
-
-- `assets` - Contains published assets as scripts and stylesheets managed by [AssetBundles](https://www.yiiframework.com/doc/guide/2.0/en/structure-assets#asset-bundles).
-- `protected` - Contains files as core and module sources and configuration files. The access to this directory needs to be protected 
-in an production environment.
-  - `config` - Contains user configuration files.
-  - `humhub` - Contains all HumHub core files'
-  - `modules` - This is the default directory used for searching for external modules.
-  - `runtime` - Contains runtime related files as **cache**, **search index** and **logs**
-  - `vendor` - Contains third party libraries
-- `static` - Static asset files as production assets, core javascript/scss files etc.
-- `uploads` - File uploads, profile images etc.
-
-:::info
-See [Yii2 - Application Structure](https://www.yiiframework.com/doc/guide/2.0/en/structure-overview) for an in depth description
-of a Yii2 application.
-:::
+Questions, ideas, or showcases of what you built — the [HumHub Community](https://community.humhub.com/) is the place. For bug reports and pull requests, use the [core repository](https://github.com/humhub/humhub).

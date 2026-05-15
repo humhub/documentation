@@ -87,7 +87,7 @@ You can enable the **HumHub** Enterprise Edition - Theme by following steps:
 
 #### Theme Customization
 
-> Note: This chapter only describes the differences between the [standard theming](../theme/overview.md) and the `Enterprise Edition`.
+> Note: This chapter only describes the differences between the [standard theming](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) and the `Enterprise Edition`.
 
 ** Create custom Enterprise theme copy **
 

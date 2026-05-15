@@ -67,7 +67,7 @@ at the bottom of each guide, this requires a GitHub account.
 You are a frontend developer or webdesigner, and you want to enhance the usability or overall appearance of the 
 HumHub community theme? Feel free to suggest your changes or concepts in the main [HumHub repository](https://github.com/humhub/humhub),
 or even [create and share your own theme](#create-your-own-modules-and-themes). In case you are not already familiar with 
-the theming mechanism of HumHub, take a look at our [Theming Guide](../theme/overview.md).
+the theming mechanism of HumHub, take a look at our [Theming Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md).
 
 ## Contribute to the core development
 
@@ -88,6 +88,6 @@ bug fixes should be directed to the [master](https://github.com/humhub/humhub/tr
 
 Anyone with development experiences can extend the HumHub universe with his own ideas by implementing and 
 sharing custom modules or themes. Please have a look at the [Development Guide](../develop/overview.md) or
-[Theming Guide](../theme/overview.md) for more information about how to create custom modules and themes. 
+[Theming Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) for more information about how to create custom modules and themes. 
 Note, that we can not integrate all community driven modules into our marketplace, but if you are confident your 
 module will be a good fit for our marketplace, let us know at [info@humhub.com](mailto:info@humhub.com)
