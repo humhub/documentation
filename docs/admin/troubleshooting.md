@@ -78,7 +78,7 @@ Error after update
 Support Community
 -----------------
 
-There is also an active support community at: http://community.humhub.com
+There is also an active support community at: [https://community.humhub.com](https://community.humhub.com)
 
 Debug Mode
 -----------------

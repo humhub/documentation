@@ -1,3 +1,7 @@
+---
+id: emoji-cheatsheet
+---
+
 # Emoji Cheatsheet
 
 The following is a cheatsheet for the Emoji feature of HumHub

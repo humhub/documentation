@@ -1,3 +1,7 @@
+---
+id: md-cheatsheet
+---
+
 # Markdown Cheatsheet
 
 The following are supported Markdown syntax for the Social Networking Kit [HumHub](https://www.humhub.org)

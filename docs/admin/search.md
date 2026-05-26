@@ -9,7 +9,7 @@ title: Search
 - People
 - Spaces
 - Marketplace
-- Third-party resources ("[Advanced Search](https://marketplace.humhub.com/module/advanced-search/description)" - [HumHub Professional Edition](../professional-edition/intro.md) module)
+- Third-party resources ("[Advanced Search](https://marketplace.humhub.com/module/advanced-search/description)" - [HumHub Professional Edition](../professional-edition/pe-intro.md) module)
 
 ## Content Search - Index Rebuilding
 
