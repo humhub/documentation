@@ -62,7 +62,7 @@ command e.g. `/usr/bin/php /path/to/humhub/protected/yii queue/run --isolate=0`.
 :::
 
 :::caution
-Make sure to use the right [php cli executable](https://www.php.net/manual/en/features.commandline.introduction.php) for your jobs!
+Make sure to use the right [php cli executable](https://www.php.net/manual/en/features.commandline.php) for your jobs!
 :::
 
 You can find configuration examples for various environments in the ["Cron Job Setup" Wiki](https://community.humhub.com/content/perma?id=111873) in our [HumHub Community](https://community.humhub.com/).
