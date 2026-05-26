@@ -70,7 +70,7 @@ Error after update
 
 - Check the version and compatibility of installed modules
 - Check the compatibility of your module
-- Check the [Theming Migration](../theme/migrate.md) guide.
+- Check the [Theming Migration](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) guide.
 - Check `Administration -> Information -> Database` or run `php yii migrate/up --includeModuleMigrations=1` to check for faulty migrations
 
 > Note: Please always backup your installation prior to an update

@@ -6,7 +6,7 @@ sidebar_label: Migration Guide
 
 Besides the normal Humhub update, major version upgrades may also require changes to the server system or configuration files. For example, this could be a new PHP dependency or a changed setting in the configuration file.
 
-In addition to this guide, you may also check the [**Theme Migration**](../theme/migrate.md)
+In addition to this guide, you may also check the [**Theme Migration**](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md)
 and [**Development Migration**](https://github.com/humhub/humhub/blob/develop/docs/develop/module-migrate.md) guides.
 
 
@@ -20,7 +20,7 @@ and [**Development Migration**](https://github.com/humhub/humhub/blob/develop/do
     - Custom themes are disabled and renamed by appending `.bs3.old`
     - "Theme Builder" module is disabled, and part of the configuration is migrated to the "Appearance" settings.
 - Some modules might not be compatible with 1.18 anymore: check your custom modules and compatibility on [the Marketplace](https://marketplace.humhub.com/)
-- See [Bootstrap 5](https://github.com/humhub/humhub/blob/master/MIGRATE-BS5.md) and [Theme](../theme/migrate.md) Migration Guides to migrate modules and themes to Bootstrap 5.3 and Sass compiler
+- See [Bootstrap 5](https://github.com/humhub/humhub/blob/master/MIGRATE-BS5.md) and [Theme](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) Migration Guides to migrate modules and themes to Bootstrap 5.3 and Sass compiler
 - Check new options in `Administration -> Settings -> Appearance`
 
 1.17
@@ -183,7 +183,7 @@ return [
 
 
 1.) Please check following guides if you're using custom modules or themes:
-- [Theme Migration Guide](../theme/migrate.md)
+- [Theme Migration Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md)
 - [Module Migration Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/module-migrate.md)
 
 2.) This release changes the existing cron jobs. Please see the chapter [Installation: Configuration](cron-jobs.md) for the new cronjob configuration!
@@ -217,7 +217,7 @@ No changes required.
 
 > NOTE: This guide only affects updates from HumHub 0.11.2 or lower to HumHub 0.20
 
-1. Before you run an update please check, if your installed modules and themes are compatible with your targeted version. If not, you can follow the [Theme Migration Guide](../theme/migrate.md)
+1. Before you run an update please check, if your installed modules and themes are compatible with your targeted version. If not, you can follow the [Theme Migration Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md)
    and [Module Migration Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/module-migrate.md) to make everything ready for the new version.
 
 2. Backup your data:
