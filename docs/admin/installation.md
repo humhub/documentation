@@ -148,7 +148,7 @@ cd /var/www/humhub
 cp .htaccess.dist .htaccess
 ```
 
-Sometimes it is necessary to enable support for ``.htaccess`` files in the [Apache VirtualHost](server-setup.md#apache) via the ``AllowOverwrite all`` directive. 
+Sometimes it is necessary to enable support for ``.htaccess`` files in the [Apache VirtualHost](server-setup.md#apache) via the ``AllowOverride all`` directive. 
 
 
 Example VirtualHost configuration:
