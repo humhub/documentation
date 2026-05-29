@@ -55,6 +55,11 @@ Data Type: `Integer`<br/>
 Default: `2`<br/>
 Data Type: `Integer`<br/>
 
+**guestHideComments** - Hide the comment panel for guest users. When enabled, the Comment and Like buttons remain visible in the post footer and redirect to the login/registration page on click.<br/>
+Default: `false`<br/>
+Since: `1.17`<br/>
+Data Type: `Boolean`<br/>
+
 ### Content
 
 **emailSubjectHourlyUpdate** - Custom e-mail subject for hourly update mails.<br/>
@@ -196,6 +201,18 @@ Data type: `Boolean`<br/>
 Default: `[]]`<br/>
 Since: `1.7`<br/>
 Data type: `Array`<br/>
+
+### Post
+
+**collapsedPostHeight** - Pixel height at which posts are collapsed in the stream. Set to `0` to disable collapsing.<br/>
+Default: `300`<br/>
+Since: `1.15`<br/>
+Data type: `Integer`<br/>
+
+**guestExpandPosts** - Always display posts fully expanded for guest users, disabling the collapse/show-more behaviour.<br/>
+Default: `false`<br/>
+Since: `1.17`<br/>
+Data Type: `Boolean`<br/>
 
 ### Space
 
