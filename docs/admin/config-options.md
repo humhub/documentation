@@ -57,7 +57,7 @@ Data Type: `Integer`<br/>
 
 **guestHideComments** - Hide the comment panel for guest users. When enabled, the Comment and Like buttons remain visible in the post footer and redirect to the login/registration page on click.<br/>
 Default: `false`<br/>
-Since: `1.17`<br/>
+Since: `1.18`<br/>
 Data Type: `Boolean`<br/>
 
 ### Content
@@ -211,7 +211,7 @@ Data type: `Integer`<br/>
 
 **guestExpandPosts** - Always display posts fully expanded for guest users, disabling the collapse/show-more behaviour.<br/>
 Default: `false`<br/>
-Since: `1.17`<br/>
+Since: `1.18`<br/>
 Data Type: `Boolean`<br/>
 
 ### Space
