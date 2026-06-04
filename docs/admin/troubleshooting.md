@@ -124,6 +124,28 @@ If you have problems related to the installation, please contact us at: info@hum
 Common issues and problems
 --------------------------
 
+### HumHub loads without styling or scripts
+
+If HumHub opens but the layout looks broken, styling or scripts are missing, or the browser network log shows `404` responses for CSS, JavaScript, or asset files, check the HumHub installation and routing configuration before assuming the application files are broken.
+
+Common browser console or network symptoms include:
+
+```text
+Failed to load resource: the server responded with a status of 404 (Not Found)
+humhub is not defined
+jQuery is not defined
+```
+
+Check the following points:
+
+- Confirm that the web server is configured for the HumHub installation directory and that the requested URL reaches the correct `index.php`.
+- Confirm that the configured base URL and [Pretty URLs](installation.md#pretty-urls) setup match the URL used to open HumHub.
+- Confirm that generated asset URLs, usually under `/assets`, are reachable by the browser and are not routed to a `404` page.
+- Use the browser developer tools Network tab to identify which CSS, JavaScript, or asset request returns `404`.
+- If routing, base URL, or asset settings were changed, [clear the cache](#clear-cache) so HumHub can refresh generated asset references.
+
+There is not one universal fix for every asset `404`. Use the failing asset URL and the server response to confirm which part of the setup is serving the wrong path.
+
 ### Unable to write cache file '/var/www/humhub/protected/runtime/cache/hu/humhub119...f.bin':
 
 This problem is often caused when the HumHub application is used by different system users.  
