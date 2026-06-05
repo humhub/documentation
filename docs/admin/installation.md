@@ -17,8 +17,10 @@ Make sure your server meets the [System Requirements](requirements.md) before yo
 If you intend to setup a development environment for HumHub, follow the [Development Environment](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md)
 guide instead.
 
-The packaged version of HumHub is available at [https://download.humhub.com](https://download.humhub.com).
-After the download, just place the package into the `htdocs` folder of your web server.
+The packaged version of HumHub is available at [https://download.humhub.com](https://download.humhub.com). Extract the
+downloaded package into a directory on your server (e.g. `/var/www/humhub`). This directory is your HumHub root,
+containing `index.php`, and must be used as the document root in your web server configuration (see
+[Web Server Configuration](server-setup.md#webserver)).
 
 Example
 
