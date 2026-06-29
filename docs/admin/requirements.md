@@ -71,8 +71,15 @@ This is just a short overview. See the [PHP Manual](https://www.php.net/manual/e
 
 ## Database
 
-- **MariaDB 10.1+**
-- **MySQL 5.7+**
+Minimum supported versions:
+
+- **MariaDB 10.11+**
+- **MySQL 8.0+**
+
+Recommended versions:
+
+- **MariaDB 11.8+**
+- **MySQL 8.4+**
 
 **Utf8mb4** character set and **InnoDB** storage engine are required.
 
