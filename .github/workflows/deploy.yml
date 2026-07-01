@@ -45,9 +45,8 @@ name: Deploy documentation
 # in build/, so keep unrelated files (e.g. /.well-known) out of that directory.
 
 on:
-  # Enable automatic deploys on push once the server-side deploy setup is done.
-  # push:
-  #   branches: [master]
+  push:
+    branches: [master]
   workflow_dispatch:
 
 # Never let two deploys run at once; if a newer push arrives, drop the older run.
