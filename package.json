@@ -11,21 +11,22 @@
     "serve": "docusaurus serve"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.9",
-    "@docusaurus/preset-classic": "^3.9",
+    "@docusaurus/core": "^3.10",
+    "@docusaurus/preset-classic": "^3.10",
     "@easyops-cn/docusaurus-search-local": "^0.44.4",
     "@mdx-js/react": "^3.0.0",
     "caniuse-lite": "^1.0.30001583",
     "classnames": "^2.2.6",
-    "clsx": "^2.0.0",
-    "color": "^3.1.2",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.1.1",
-    "@docusaurus/types": "3.1.1"
+    "@docusaurus/module-type-aliases": "^3.10",
+    "@docusaurus/types": "^3.10"
+  },
+  "engines": {
+    "node": ">=18.0"
   },
   "browserslist": {
     "production": [
