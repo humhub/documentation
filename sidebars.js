@@ -53,21 +53,39 @@ module.exports = {
             'admin/installation',
         ],
         'Configuration': [
-            'admin/advanced-configuration',
-            'admin/dot-env',
-            'admin/config-options',
-            'admin/ldap',
-            'admin/performance',
-            'admin/search',
-            'admin/uploads',
-            'admin/cron-jobs',
-            'admin/asynchronous-tasks',
-            'admin/permissions',
-            'admin/redis',
-            'admin/reverse-proxy',
-            'admin/logging',
-            'admin/translations',
-            'admin/security',
+            {
+                type: 'category',
+                label: 'Core configuration',
+                items: [
+                    'admin/advanced-configuration',
+                    'admin/dot-env',
+                    'admin/config-options',
+                    'admin/logging',
+                    'admin/translations',
+                ],
+            },
+            {
+                type: 'category',
+                label: 'Infrastructure',
+                items: [
+                    'admin/performance',
+                    'admin/search',
+                    'admin/uploads',
+                    'admin/cron-jobs',
+                    'admin/asynchronous-tasks',
+                    'admin/redis',
+                    'admin/reverse-proxy',
+                ],
+            },
+            {
+                type: 'category',
+                label: 'Access & Security',
+                items: [
+                    'admin/ldap',
+                    'admin/permissions',
+                    'admin/security',
+                ],
+            },
         ],
         'Maintenance': [
             'admin/backup',
@@ -78,7 +96,34 @@ module.exports = {
         'Updating': [
             'admin/updating',
             'admin/updating-migration',
-        ],        
+        ],
+        'HIDDEN': [
+            'admin/push-updates',
+            'admin/images',
+            {
+                type: 'category',
+                label: 'User & space administration',
+                items: [
+                    'adminuser/spaces',
+                    'adminuser/adminusers',
+                    'adminuser/permissions',
+                    'adminuser/modules',
+                    'adminuser/notifications',
+                    'adminuser/activities',
+                    'adminuser/emailsummaries',
+                ],
+            },
+            {
+                type: 'category',
+                label: 'User guide (draft)',
+                items: [
+                    'user/spaces',
+                    'user/user-management',
+                    'user/md-cheatsheet',
+                    'user/emoji-cheatsheet',
+                ],
+            },
+        ],
     },
     Professional: {
         'Overview': [

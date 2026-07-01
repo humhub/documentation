@@ -42,18 +42,7 @@ module.exports = {
             textDecoration: 'underline',
           },
         },*/
-        {
-          label: 'About',
-          position: 'left',
-          activeBasePath: 'docs/about',
-          items: [
-            {label: 'HumHub', to: 'docs/about/humhub'},
-            {label: 'Release Notes', to: 'docs/about/releasenotes/release_notes'},
-            {label: 'Contribution', to: 'docs/about/contribution'},
-            {label: 'Support', to: 'docs/about/support'},
-            {label: 'License', href: 'https://www.humhub.com/en/licences'},
-          ]},
-       // {to: 'docs/about/humhub', activeBasePath: 'docs/about',  label: 'About', position: 'left'},
+        {to: 'docs/about/humhub', activeBasePath: 'docs/about', label: 'About', position: 'left'},
         {to: 'docs/admin/introduction', activeBasePath: 'docs/admin',  label: 'Administration', position: 'left'},
         {to: 'docs/develop/overview', activeBasePath: 'docs/develop', label: 'Development', position: 'left'},
         {to: 'docs/professional-edition/pe-intro', activeBasePath: 'docs/professional', label: 'Professional Edition', position: 'left'},
