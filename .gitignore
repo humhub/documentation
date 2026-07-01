@@ -1,6 +1,11 @@
 # Dependencies
 /node_modules
 
+# Lockfiles are not tracked: builds resolve dependencies fresh from package.json
+# on every run (mirrors the production build server).
+package-lock.json
+yarn.lock
+
 # Production
 /build
 
