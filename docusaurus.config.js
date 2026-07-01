@@ -14,6 +14,8 @@ module.exports = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       ({
         hashed: true,
+        // No blog on this site; don't scan for a blog/ dir to index.
+        indexBlog: false,
       }),
     ],
   ],
@@ -155,6 +157,7 @@ module.exports = {
           editUrl:
             'https://github.com/humhub/documentation/edit/master/',
         },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

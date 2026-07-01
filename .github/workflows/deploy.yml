@@ -9,17 +9,40 @@ name: Deploy documentation
 #   DEPLOY_SSH_KEY     Private SSH key (ed25519) for the deploy user. The matching
 #                      public key goes into the deploy user's ~/.ssh/authorized_keys
 #                      on the server, ideally locked to rrsync, e.g.:
-#                        command="rrsync -wo /var/www/docu/htdocs",restrict ssh-ed25519 AAAA...
-#   DEPLOY_HOST        Server hostname or IP (e.g. docs.humhub.org)
+#                        command="rrsync -wo <RRSYNC_ROOT>",restrict ssh-ed25519 AAAA...
+#   DEPLOY_HOST        Server hostname or IP
 #   DEPLOY_USER        Deploy user name on the server
 #   DEPLOY_KNOWN_HOSTS Output of `ssh-keyscan -H <host>` — pins the server key so
 #                      the connection cannot be MITM'd.
 # Optional:
 #   DEPLOY_PORT        SSH port (defaults to 22)
-#   DEPLOY_PATH        Destination path. Use "." when the key is locked to rrsync
-#                      (the path is relative to the rrsync root); use an absolute
-#                      path like "/var/www/docu/htdocs" if the key is unrestricted.
-#                      Defaults to ".".
+#   DEPLOY_PATH        Destination directory for the built site (defaults to ".").
+#                      See "How rrsync root and DEPLOY_PATH combine" below.
+#
+# How rrsync root and DEPLOY_PATH combine
+# ---------------------------------------
+# When the deploy key is locked to rrsync (recommended), rrsync confines rsync to
+# one directory — the "rrsync root", the path given in the authorized_keys line:
+#     command="rrsync -wo <RRSYNC_ROOT>",restrict ssh-ed25519 AAAA...
+# rrsync then interprets DEPLOY_PATH *relative to that root* and joins the two.
+# The site is written to:  <RRSYNC_ROOT>/<DEPLOY_PATH>
+#
+# IMPORTANT: DEPLOY_PATH must be relative. An absolute path (one starting with "/")
+# gets re-rooted under RRSYNC_ROOT and points nowhere, so rsync fails with
+# 'mkdir "..." failed: No such file or directory'. Use "." to write into the root
+# itself, or a sub-directory name to write one level below it.
+#
+#   RRSYNC_ROOT (authorized_keys)   DEPLOY_PATH   writes to
+#   -----------------------------   -----------   -----------------------------
+#   <root>/webroot                  .             <root>/webroot   (tightest)
+#   <root>                          webroot       <root>/webroot
+#   <root>                          staging       <root>/staging
+#
+# The RRSYNC_ROOT must already exist and be writable by the deploy user; rsync
+# only creates the final DEPLOY_PATH sub-directory, not missing parents. Prefer
+# jailing rrsync directly to the target dir (DEPLOY_PATH=".") so the key can
+# write nowhere else. Note: --delete removes anything in the target not present
+# in build/, so keep unrelated files (e.g. /.well-known) out of that directory.
 
 on:
   # Enable automatic deploys on push once the server-side deploy setup is done.
@@ -53,6 +76,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Refresh browser data
+        run: npx update-browserslist-db@latest
 
       - name: Build
         run: npm run build
