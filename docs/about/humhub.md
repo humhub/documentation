@@ -186,7 +186,7 @@ Further information is available at:
 ## Limitations
 
 This section gives you some insights about current limitations of the HumHub platform. The following issues
-are listed here, since they are frequently requested and may are part of your platform requirements. 
+are listed here, since they are frequently requested and may be part of your platform requirements. 
 The revision of below issues may be part of a future release, but are not planned in near future and some of them would require 
 major changes in the core software.
 

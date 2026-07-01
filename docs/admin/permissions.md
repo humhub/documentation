@@ -7,7 +7,7 @@ sidebar_label: Permissions
 Default permissions
 ----------------
 
-Permission defaults can be overwritten within the file `humhub/config/common.php` ([Advanced Configuration](advanced-configuration.md)) by means of the `defaultPermissions` params array.
+Permission defaults can be overwritten within the file `protected/config/common.php` ([Advanced Configuration](advanced-configuration.md)) by means of the `defaultPermissions` params array.
 
 The following example overwrites the default permission of `humhub\modules\mymodule\permissions\MyPermission` for the given groups.
 

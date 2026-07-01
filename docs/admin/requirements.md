@@ -4,7 +4,7 @@ title: System Requirements
 sidebar_label: Requirements
 ---
 
-This sections lists all required and recommended server settings.
+This section lists all required and recommended server settings.
 
 ## Webserver
 

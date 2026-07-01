@@ -26,7 +26,7 @@ You can start workers using cron by executing the queue/run command. It works as
 CronTab Example:
 
 ```
-* * * * * /usr/bin/php <INSERT HUMHUB PATH HERE>/yii queue/run
+* * * * * /usr/bin/php <INSERT HUMHUB PATH HERE>/protected/yii queue/run
 ```
 
 In this case the cron will start the command every minute and execute scheduled tasks.

@@ -192,7 +192,7 @@ Follow [the module installation guide](https://marketplace.humhub.com/module/sol
 
 ### JWT
 
-JWT SSO provides a single sign own mechanism to automatically log in your users by a JWT Token.
+JWT SSO provides a single sign-on mechanism to automatically log in your users by a JWT Token.
 
 More information:
 - https://jwt.io/
