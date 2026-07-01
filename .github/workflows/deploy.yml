@@ -1,0 +1,80 @@
+name: Deploy documentation
+
+# Builds the Docusaurus site and deploys the static output to the web server
+# via rsync over SSH. Replaces the cron-based build.sh on the server: this runs
+# only when master actually changes (plus a manual trigger), instead of every
+# 15 minutes.
+#
+# Required repository secrets (Settings > Secrets and variables > Actions):
+#   DEPLOY_SSH_KEY     Private SSH key (ed25519) for the deploy user. The matching
+#                      public key goes into the deploy user's ~/.ssh/authorized_keys
+#                      on the server, ideally locked to rrsync, e.g.:
+#                        command="rrsync -wo /var/www/docu/htdocs",restrict ssh-ed25519 AAAA...
+#   DEPLOY_HOST        Server hostname or IP (e.g. docs.humhub.org)
+#   DEPLOY_USER        Deploy user name on the server
+#   DEPLOY_KNOWN_HOSTS Output of `ssh-keyscan -H <host>` — pins the server key so
+#                      the connection cannot be MITM'd.
+# Optional:
+#   DEPLOY_PORT        SSH port (defaults to 22)
+#   DEPLOY_PATH        Destination path. Use "." when the key is locked to rrsync
+#                      (the path is relative to the rrsync root); use an absolute
+#                      path like "/var/www/docu/htdocs" if the key is unrestricted.
+#                      Defaults to ".".
+
+on:
+  # Enable automatic deploys on push once the server-side deploy setup is done.
+  # push:
+  #   branches: [master]
+  workflow_dispatch:
+
+# Never let two deploys run at once; if a newer push arrives, drop the older run.
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Bind the deploy secrets to a protected environment so only this workflow,
+    # running on master, can read them. Configure protection rules on the
+    # "production" environment in the repo settings.
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy via rsync
+        env:
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT || '22' }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '.' }}
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key -p ${DEPLOY_PORT}" \
+            build/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${DEPLOY_PATH}/"
+
+      - name: Clean up SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
