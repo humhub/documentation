@@ -4,6 +4,9 @@ title: Asynchronous Task Processing
 sidebar_label: Asynchronous Task Processing
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Introduction
 ------------
 
@@ -18,6 +21,27 @@ Some examples for such background processes are:
 
 Workers / Job Processing
 ------------------------
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+The [Docker installation](installation-docker.md) runs the queue worker **inside the image** - no Supervisor, systemd or cron setup is required. Control it via environment variables:
+
+```yaml
+environment:
+  - HUMHUB_DOCKER__AUTOSTART_WORKER=true   # run the queue worker (default)
+  - HUMHUB_DOCKER__NUMPROCS_WORKER=1       # number of worker processes
+```
+
+To scale workers independently, run them as a dedicated, replicated service - see the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml). The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables. The remaining sections apply to **manual / server installations**.
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+On a manual installation you run the worker yourself via cron, Supervisor or systemd, as described below.
+
+</TabItem>
+</Tabs>
 
 ### Cronjob (Default)
 

@@ -27,6 +27,10 @@ Modules available in the integrated marketplace can also be sourced from the [Hu
 
 > **Note:** It is recommended to use a separate path for custom/unofficial modules. Refer to [Module Loader Path](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md#module-loader-path).
 
+:::tip Docker
+On the [Docker installation](installation-docker.md), marketplace modules are installed automatically on container start. Place **custom** modules in the `/data/modules-custom` directory of your data volume - there is no need to copy marketplace modules manually. See [Custom Themes and Modules](https://github.com/humhub/docker/blob/main/docs/custom-themes-modules.md).
+:::
+
 After unpacking the custom module into the directory, navigate to **Administration > Modules** and activate the module.
 
 ![Activate Module](images/hh-docs-activate-module.png)

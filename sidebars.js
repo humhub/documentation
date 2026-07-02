@@ -48,9 +48,16 @@ module.exports = {
             'admin/introduction',
         ],
         'Installation': [
-            'admin/requirements',
-            'admin/server-setup',
-            'admin/installation',
+            'admin/installation-docker',
+            {
+                type: 'category',
+                label: 'Manual installation',
+                items: [
+                    'admin/requirements',
+                    'admin/server-setup',
+                    'admin/installation',
+                ],
+            },
         ],
         'Configuration': [
             'admin/advanced-configuration',
@@ -78,6 +85,7 @@ module.exports = {
         'Updating': [
             'admin/updating',
             'admin/updating-migration',
+            'admin/migrate-to-docker',
         ],
         /* 'HIDDEN': [
             'admin/push-updates',

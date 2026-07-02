@@ -3,11 +3,35 @@ id: cron-jobs
 title: Cron Jobs
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Asynchronous jobs in HumHub are used to run potentially heavy or scheduled tasks such as sending out summary mails,
 notifications or search index optimization. The following section describes how to setup automatic job execution 
 required to handle such jobs. Since those settings are highly dependent on your server environment we can't assure 
 those setting will work for your. If you have trouble setting up the job scheduling described in this guide, please
 contact your provider to ask for support.
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+With the [Docker installation](installation-docker.md) the scheduler runs **inside the image** - you don't need to configure any cron jobs on the host. It is controlled via environment variables:
+
+```yaml
+environment:
+  - HUMHUB_DOCKER__AUTOSTART_SCHEDULER=true   # cron/run (enabled by default)
+  - HUMHUB_DOCKER__AUTOSTART_WORKER=true      # queue/run (enabled by default)
+```
+
+For larger setups you can move the scheduler and workers into dedicated, scalable services - see the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml). The rest of this page applies to **manual / server installations**.
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+On a manual installation you schedule the jobs yourself, as described in the sections below.
+
+</TabItem>
+</Tabs>
 
 ## Overview
 

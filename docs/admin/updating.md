@@ -4,6 +4,9 @@ title: Updating HumHub
 sidebar_label: Overview
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 The following **Migration Guides** will additionally be available for each new version release (except maintenance releases):
 - [Migration Guide: **Administrative Changes**](../admin/updating-migration.md) (Server Environment and System Requirements)
 - [Migration Guide: **Theming Related Changes**](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) (If you are using your own theme.)
@@ -13,6 +16,28 @@ Please follow these guides - if necessary - before you start the update process.
 
 We also recommend to create a complete **[backup](backup.md)** before each update (also for maintenance updates).
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+With the [Docker installation](installation-docker.md) you upgrade by switching the image tag and pulling the new image. Database and module migrations run automatically when the container starts.
+
+1. Create a [backup](backup.md).
+2. Set the desired image tag in your `compose.yml` (e.g. `humhub/humhub:stable-nightly` or a pinned version).
+3. Pull and restart:
+   ```bash
+   docker compose pull
+   docker compose up -d
+   ```
+
+The `Updater` module and the manual upgrade steps below are **not** used with Docker. For details and version pinning see the [Docker upgrade guide](https://github.com/humhub/docker/blob/main/docs/upgrading.md).
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+For a manual / server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure - both described below.
+
+</TabItem>
+</Tabs>
 
 ## Updater Module
 

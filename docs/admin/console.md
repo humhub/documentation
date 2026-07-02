@@ -3,23 +3,49 @@ id: console
 title: Command Line Interface
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Some administrative tasks can also or exclusively be executed by console. This guide lists the most
 important console commands used to administer HumHub. All available console commands can be displayed 
-by running `php yii` within the `protected` directory of your HumHub installation.
+by running the `yii` command with no arguments.
+
+The command routes listed below (e.g. `cache/flush-all`) are identical for both installation methods - only the way you invoke `yii` differs:
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+Run the console inside the running `humhub` container:
+
+```bash
+docker exec -it $(docker compose ps -q humhub) /app/yii cache/flush-all
+```
+
+To list all available commands, run the same command without a route:
+
+```bash
+docker exec -it $(docker compose ps -q humhub) /app/yii
+```
+
+See the [Docker CLI guide](https://github.com/humhub/docker/blob/main/docs/cli.md) for details.
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+Run the commands within the `protected` directory of your HumHub installation:
+
+```console
+cd protected
+php yii cache/flush-all
+```
 
 :::important
 Make sure that you are working with the proper system user to prevent permission problems.
 To change the system user use e.g. ``su -s /bin/bash -l www-data``
 :::
 
-All of the following commands can be executed within the `@humhub/protected` directory.
-
-**Example**
-
-```console
-cd protected
-php yii cache/flush-all
-```
+</TabItem>
+</Tabs>
 
 ## Commands
 
