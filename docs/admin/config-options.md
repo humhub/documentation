@@ -55,7 +55,7 @@ Data Type: `Integer`<br/>
 Default: `2`<br/>
 Data Type: `Integer`<br/>
 
-{/* Pending release — added by https://github.com/humhub/humhub/pull/8190 (open, targets develop / 1.19). Uncomment once merged and released.
+{/* Pending release - added by https://github.com/humhub/humhub/pull/8190 (open, targets develop / 1.19). Uncomment once merged and released.
 **guestHideComments** - Hide the comment panel for guest users. When enabled, the Comment and Like buttons remain visible in the post footer and redirect to the login/registration page on click.<br/>
 Default: `false`<br/>
 Since: `1.19`<br/>
@@ -211,7 +211,7 @@ Default: `300`<br/>
 Since: `1.15`<br/>
 Data type: `Integer`<br/>
 
-{/* Pending release — added by https://github.com/humhub/humhub/pull/8190 (open, targets develop / 1.19). Uncomment once merged and released.
+{/* Pending release - added by https://github.com/humhub/humhub/pull/8190 (open, targets develop / 1.19). Uncomment once merged and released.
 **guestExpandPosts** - Always display posts fully expanded for guest users, disabling the collapse/show-more behaviour.<br/>
 Default: `false`<br/>
 Since: `1.19`<br/>
