@@ -48,4 +48,4 @@ There are two new profile fields available which can be added to your user profi
 #### Other features at a glance
 
 - New command line tools for console `User` and `File` management
-- New optional [image downscaling](../../admin/uploads.md#downscaling-of-existing-files) for user uploads
+- New optional [image downscaling](../../admin/uploads.md#image-compression--downscaling) for user uploads
