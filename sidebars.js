@@ -97,7 +97,7 @@ module.exports = {
             'admin/updating',
             'admin/updating-migration',
         ],
-        'HIDDEN': [
+        /* 'HIDDEN': [
             'admin/push-updates',
             'admin/images',
             {
@@ -123,7 +123,7 @@ module.exports = {
                     'user/emoji-cheatsheet',
                 ],
             },
-        ],
+        ], */
     },
     Professional: {
         'Overview': [
