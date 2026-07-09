@@ -52,7 +52,7 @@ If you have already installed the HumHub Community Edition, please follow the st
  
 ** Activate Enterprise Edition: **
 
-Once installed, you can enter your licence key at: `Administration` -> `Enterprise Edition` .
+Once installed, you can enter your license key at: `Administration` -> `Enterprise Edition` .
 
 The [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) can be selected under `Administration` -> `Settings` -> `Appearance`.
 

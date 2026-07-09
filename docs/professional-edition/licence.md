@@ -1,9 +1,9 @@
 ---
 id: licence
-title: Licence
+title: License
 ---
 
-The Professional Edition (and Enterprise Edition) is also available in the [Commercial Licence](https://www.humhub.com/en/licences) as a difference to the Community Edition which is licensed with [AGPL V3](https://www.humhub.com/en/licences). 
+The Professional Edition (and Enterprise Edition) is also available in the [Commercial License](https://www.humhub.com/licenses/) as a difference to the Community Edition which is licensed with [AGPL V3](https://www.humhub.com/licenses/). 
 
 This license is granted during the period of validity of the Professional Edition.
 

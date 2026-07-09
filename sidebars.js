@@ -30,11 +30,11 @@ module.exports = {
             type: 'doc',
             id: 'about/support'
         },
-        {
+        /* {
             type: 'link',
             label: 'License',
-            href: 'https://www.humhub.com/en/licences'
-        },
+            href: 'https://www.humhub.com/licenses/'
+        }, */
 
        /* 'Release Notes': [
             'about/spaces',
@@ -112,7 +112,6 @@ module.exports = {
             'professional-edition/pe-intro',
             'professional-edition/features',
             'professional-edition/support',
-            'professional-edition/licence',
             'professional-edition/saas',
             'professional-edition/ee',
         ]

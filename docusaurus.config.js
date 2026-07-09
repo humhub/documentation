@@ -128,6 +128,10 @@ module.exports = {
               href: 'https://www.humhub.com',
             },
             {
+              label: 'Licenses',
+              href: 'https://www.humhub.com/licenses/',
+            },
+            {
               label: 'Marketplace',
               href: 'https://marketplace.humhub.com',
             },

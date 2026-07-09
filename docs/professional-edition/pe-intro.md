@@ -16,7 +16,7 @@ Built upon the robust foundation of the Community Edition, the Professional Edit
 - [HumHub Premium Support](support.md)  
   Our dedicated HumHub Support team is committed to ensuring your experience is seamless and your questions are answered promptly. We are here for you during your whole contract period to support you every step of the way.
 
-- [Commercial Licence](licence.md)  
+- [Commercial License](https://www.humhub.com/licenses/)  
   With the Commercial License, you get all the rights and permissions you need to use HumHub to its full potential.
 
 - [SaaS option](saas.md)  
