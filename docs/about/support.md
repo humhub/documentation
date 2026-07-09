@@ -25,7 +25,7 @@ the GitHub issue tracker.
 
 ### Professional Edition Support
 
-Users of the [Professional Edition](https://www.humhub.com/en/professional-edition) can request support directly
+Users of the [Professional Edition](https://www.humhub.com/professional-edition/) can request support directly
 within the [administration section](../professional-edition/support.md) of their HumHub installation.
 
 ## How to get support

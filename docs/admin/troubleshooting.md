@@ -164,7 +164,7 @@ curl.cainfo="C:/certs/certs.pem"
 - Restart Webserver or PHP 
 
 See also:
-- https://thisinterestsme.com/php-curl-ssl-certificate-error/
+- https://web.archive.org/https://thisinterestsme.com/php-curl-ssl-certificate-error/
 - https://webdev-training.de/tutorials/xampp/anleitung-fuer-das-ssl-zertifikatsproblem-unter-xampp-ssl-certificate-error-unable-to-get-local-issuer-certificate
 
 ### E-Mail SMTP: Unable to connect with STARTTLS: stream_socket_enable_crypto(): SSL operation failed...

@@ -12,7 +12,7 @@ Data sovereignty is very important to us. In our SaaS solution, a complete data 
 
 ## Installation & Setup
 
-The only thing you need to do in terms of installation is to create a personal demo on our [website](https://www.humhub.com/en/professional-edition/demo). Our administrators will then migrate your demo to a Professional Edition server and you can start building your platform immediately. Migration is usually completed within one business day. 
+The only thing you need to do in terms of installation is to create a personal demo on our [website](https://saas.humhub.com/en/create). Our administrators will then migrate your demo to a Professional Edition server and you can start building your platform immediately. Migration is usually completed within one business day. 
 
 If you have already created a demo installation of the HumHub Professional Edition, you don't have to start from scratch, of course. We will not only migrate all content you have created but also the accounts, structure, files, and so on. In this case, simply provide our Sales Team with the name of your demo and we will take care of everything else.  
 

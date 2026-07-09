@@ -40,7 +40,7 @@ an intuitive user interface also suitable for non technical users.
 Some of the key benefits are listed below:
 
  - Free to use
- - Self hosted or hosted on our [cloud hosting](https://www.humhub.com/en/professional-edition/step1)
+ - Self hosted or hosted on our [cloud hosting](https://www.humhub.com/hosting/)
    - Keep your data safe, without the need to share it with any external services
  - Simple [installation](../admin/installation.md) and maintenance
    - Only requires a [simple web server environment](../admin/installation.md)
@@ -173,15 +173,15 @@ Checkout the following links for more information:
 
 ## Professional Edition
 
-The HumHub [Professional Edition](https://www.humhub.com/en/professional-edition) consists of a 
-suite of [additional modules](https://www.humhub.com/en/marketplace) especially useful in enterprise environments with
+The HumHub [Professional Edition](https://www.humhub.com/professional-edition/) consists of a 
+suite of [additional modules](https://www.humhub.com/modules/) especially useful in enterprise environments with
 features as [extended LDAP](../professional-edition/features.md#advanced-ldap) and [single sign on (SSO)](../professional-edition/features.md#feature-list) support
 as well as an additional [enterprise theme](../professional-edition/features.md#enterprise-theme).
 
 Further information is available at:
 
  - [Professional Edition Guide](../professional-edition/pe-intro.md)
- - [Enterprise Edition Homepage](https://www.humhub.com/en/professional-edition)
+ - [Enterprise Edition Homepage](https://www.humhub.com/professional-edition/)
 
 ## Limitations
 
