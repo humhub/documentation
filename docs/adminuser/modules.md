@@ -21,7 +21,7 @@ Please follow the steps below:
 
 - Open Marketplace section: `Administration` -> `Modules`
 - Click on tab `Purchases`
-- Now enter the license key without any white spaces into the field `Licence key` and click `Register`
+- Now enter the license key without any white spaces into the field `License key` and click `Register`
 - The module is now available for installation
 
 :::warning

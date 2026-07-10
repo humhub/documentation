@@ -10,7 +10,7 @@ HumHub is being installed into the ``/var/www/humhub`` directory in this case an
 
 :::warning
 Please note that throughout this guide, we will use `humhub.example.com` as a sample hostname. It is essential to customize this with your individual hostname.
-::
+:::
 
 
 :::important

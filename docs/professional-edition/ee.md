@@ -52,7 +52,7 @@ If you have already installed the HumHub Community Edition, please follow the st
  
 ** Activate Enterprise Edition: **
 
-Once installed, you can enter your licence key at: `Administration` -> `Enterprise Edition` .
+Once installed, you can enter your license key at: `Administration` -> `Enterprise Edition` .
 
 The [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) can be selected under `Administration` -> `Settings` -> `Appearance`.
 
@@ -192,7 +192,7 @@ Follow [the module installation guide](https://marketplace.humhub.com/module/sol
 
 ### JWT
 
-JWT SSO provides a single sign own mechanism to automatically log in your users by a JWT Token.
+JWT SSO provides a single sign-on mechanism to automatically log in your users by a JWT Token.
 
 More information:
 - https://jwt.io/

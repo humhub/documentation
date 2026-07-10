@@ -30,11 +30,11 @@ module.exports = {
             type: 'doc',
             id: 'about/support'
         },
-        {
+        /* {
             type: 'link',
             label: 'License',
-            href: 'https://www.humhub.com/en/licences'
-        },
+            href: 'https://www.humhub.com/licenses/'
+        }, */
 
        /* 'Release Notes': [
             'about/spaces',
@@ -78,14 +78,40 @@ module.exports = {
         'Updating': [
             'admin/updating',
             'admin/updating-migration',
-        ],        
+        ],
+        /* 'HIDDEN': [
+            'admin/push-updates',
+            'admin/images',
+            {
+                type: 'category',
+                label: 'User & space administration',
+                items: [
+                    'adminuser/spaces',
+                    'adminuser/adminusers',
+                    'adminuser/permissions',
+                    'adminuser/modules',
+                    'adminuser/notifications',
+                    'adminuser/activities',
+                    'adminuser/emailsummaries',
+                ],
+            },
+            {
+                type: 'category',
+                label: 'User guide (draft)',
+                items: [
+                    'user/spaces',
+                    'user/user-management',
+                    'user/md-cheatsheet',
+                    'user/emoji-cheatsheet',
+                ],
+            },
+        ], */
     },
     Professional: {
         'Overview': [
             'professional-edition/pe-intro',
             'professional-edition/features',
             'professional-edition/support',
-            'professional-edition/licence',
             'professional-edition/saas',
             'professional-edition/ee',
         ]

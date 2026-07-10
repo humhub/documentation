@@ -39,12 +39,6 @@ That said, feel free to open issues within the respective repository:
  - [HumHub Documentation](https://github.com/humhub/documentation)
  - [Professional Edition](https://github.com/humhub/enterprise/issues)
  
-
-You can keep track of active and planned development here:
-
- - [Active Developments](https://github.com/orgs/humhub/projects/2)
- - [Planned Developments](https://github.com/orgs/humhub/projects/3)
-
 ## Be part of the translation community
 
 Our [translation community](https://translate.humhub.org) is responsible for maintaining the translation of HumHub and
@@ -72,10 +66,9 @@ the theming mechanism of HumHub, take a look at our [Theming Guide](https://gith
 ## Contribute to the core development
 
 You can contribute to the core software by creating pull requests to the main [HumHub repository](https://github.com/humhub/humhub).
-Either choose issues from our [planned development](https://github.com/orgs/humhub/projects/3) project, or search for
-issues with the [Require:Contribution](https://github.com/humhub/humhub/issues?q=is%3Aopen+is%3Aissue+label%3ARequire%3AContribution)
-label. Furthermore, you can have a look at open [bug reports](https://github.com/humhub/humhub/issues?q=is%3Aopen+is%3Aissue+label%3AKind%3ABUG).
-In any case, please let us know before you are working on an issues in order to assign you to the issues, discuss possible
+A good starting point is our list of open [bug reports](https://github.com/humhub/humhub/issues?q=is%3Aopen+is%3Aissue+label%3AKind%3ABUG),
+or any other [open issue](https://github.com/humhub/humhub/issues) you would like to tackle.
+In any case, please let us know before you start working on an issue so we can assign it to you, discuss possible
 solutions and avoid others working on the same issue.
 
 Of course you can also suggest your own features, which usually should be discussed beforehand, especially in case of

@@ -63,9 +63,11 @@ The original files are overwritten and therefore this process cannot be undone.
 Upload Folder
 --------------
 
-:::note These option are only available in HumHub 1.7 and later. :::
+:::note
+These options are only available in HumHub 1.7 and later.
+:::
 
-By default, uploaded files are stored in the folder 'uploads/files'. This folder should not be reachable via the web server.
+By default, uploaded files are stored in the folder 'uploads/file'. This folder should not be reachable via the web server.
 
 The path can be changed with the following configuration option:
 

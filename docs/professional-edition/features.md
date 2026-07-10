@@ -49,7 +49,7 @@ Below you can see a complete overview of the currently available Professional Ed
 - [E-Mail Whitelist](https://marketplace.humhub.com/module/email-whitelist)
 
 - [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme)
-- 
+
 - [Advanced Search](https://marketplace.humhub.com/module/advanced-search) 
 
 - [Apache SOLR](https://marketplace.humhub.com/module/solr)
@@ -59,5 +59,7 @@ Below you can see a complete overview of the currently available Professional Ed
 - [Translation Manager](https://marketplace.humhub.com/module/translation-manager)
 
 - [SAML SSO](https://marketplace.humhub.com/module/saml-sso)
+
+- [Limited User Admin](https://marketplace.humhub.com/module/limited-user-admin)
 
 

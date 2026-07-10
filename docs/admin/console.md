@@ -12,7 +12,7 @@ Make sure that you are working with the proper system user to prevent permission
 To change the system user use e.g. ``su -s /bin/bash -l www-data``
 :::
 
-All of the following commands can be executed withine the `@humhub/protected` directory.
+All of the following commands can be executed within the `@humhub/protected` directory.
 
 **Example**
 
@@ -28,7 +28,7 @@ php yii cache/flush-all
 | Command                 | Description                                                                  |    
 |-------------------------|------------------------------------------------------------------------------|
 | `cache/flush`           | Allows you to flush cache                                                    | 
-| `cache/flush-all`       | Combines and compresses the asset files according to the given configuration |
+| `cache/flush-all`       | Flushes all caches registered in the system                                  |
 | `cache/flush-schema`    | Clears DB schema cache for a given connection component                      |
 | `cache/index (default)` | Lists the caches that can be flushed                                         |
 
@@ -71,6 +71,7 @@ Console tools for manage Ldap
 | `ldap/list-users`      | Lists all users found in the LDAP server                              |
 | `ldap/mapping-clear`   | Clears the `authclient_id` entries in the user table.                 |
 | `ldap/mapping-rebuild` | Rebuilds the `authclient_id` and auth_mode mappings in the user table |
+| `ldap/show-user`       | Shows all returned user attributes provided by the LDAP connection   |
 | `ldap/status`          | Returns status information                                            |
 | `ldap/sync`            | Synchronizes all ldap users (if `autoRefresh` is enabled)             |
 
@@ -97,9 +98,11 @@ HumHub Module Management
 |----------------------|-----------------------------------------------------|
 | `module/disable`     | Disables an enabled module                          |
 | `module/enable`      | Enables an installed module                         |
+| `module/info`        | Displays module info                                |
 | `module/install`     | Installs a given module                             |
 | `module/list`        | Lists all installed and enabled modules             |
 | `module/list-online` | Lists all online available modules                  |
+| `module/register`    | Registers a given module                            |
 | `module/remove`      | Uninstalls a given module                           |
 | `module/update`      | Updates a given module                              |
 | `module/update-all`  | Updates all modules to the latest available version |
@@ -167,9 +170,10 @@ Console tools for manage spaces
 
 Provides some console tests
 
-| Command      | Description                                     |    
-|--------------|-------------------------------------------------|
-| `test/email` | Sends a test e-mail to the given e-mail address |
+| Command             | Description                                     |    
+|---------------------|-------------------------------------------------|
+| `test/db-connection`| Tests the database connection                   |
+| `test/email`        | Sends a test e-mail to the given e-mail address |
 
 ### `theme`
 
