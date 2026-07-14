@@ -57,6 +57,7 @@ module.exports = {
             'admin/dot-env',
             'admin/config-options',
             'admin/ldap',
+            'admin/oauth',
             'admin/performance',
             'admin/search',
             'admin/uploads',
