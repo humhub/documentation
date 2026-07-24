@@ -1,7 +1,3 @@
-Draft for the 1.19 release notes in the documentation repo (`docs/about/releasenotes/release_notes_1_19.md`), following the style of the [1.18 release notes](https://github.com/humhub/documentation/blob/master/docs/about/releasenotes/release_notes_1_18.md). Written for non-technical readers: the big topics as text blocks, smaller items as a list. Based on the current state of the `develop` changelog — to be updated as the release approaches.
-
----
-
 ## TBD
 
 ### New Sign-In & Sign-Up Experience
