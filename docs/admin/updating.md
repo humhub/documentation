@@ -22,7 +22,7 @@ We also recommend to create a complete **[backup](backup.md)** before each updat
 With the [Docker installation](installation-docker.md) you upgrade by switching the image tag and pulling the new image. Database and module migrations run automatically when the container starts.
 
 1. Create a [backup](backup.md).
-2. Set the desired image tag in your `compose.yml` (e.g. `humhub/humhub:stable-nightly` or a pinned version).
+2. Set the desired image tag in your `compose.yml` (e.g. `humhub/humhub:stable` or a pinned version).
 3. Pull and restart:
    ```bash
    docker compose pull

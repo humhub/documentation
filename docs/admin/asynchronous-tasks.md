@@ -30,10 +30,10 @@ The [Docker installation](installation-docker.md) runs the queue worker **inside
 ```yaml
 environment:
   - HUMHUB_DOCKER__AUTOSTART_WORKER=true   # run the queue worker (default)
-  - HUMHUB_DOCKER__NUMPROCS_WORKER=1       # number of worker processes
+  - HUMHUB_DOCKER__NUMPROCS_WORKER=2       # number of worker processes (default)
 ```
 
-To scale workers independently, run them as a dedicated, replicated service - see the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml). The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables. The remaining sections apply to **manual / server installations**.
+To scale workers independently, run them as a dedicated, replicated service - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables. The remaining sections apply to **manual / server installations**.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">

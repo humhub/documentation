@@ -23,7 +23,7 @@ environment:
   - HUMHUB_DOCKER__AUTOSTART_WORKER=true      # queue/run (enabled by default)
 ```
 
-For larger setups you can move the scheduler and workers into dedicated, scalable services - see the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml). The rest of this page applies to **manual / server installations**.
+For larger setups you can move the scheduler and workers into dedicated, scalable services - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The rest of this page applies to **manual / server installations**.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">

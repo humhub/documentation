@@ -20,19 +20,21 @@ The [Docker image](installation-docker.md) includes a built-in backup functional
 
 ```yaml
 backup:
-  image: humhub/humhub:stable-nightly   # same image/tag as your humhub service
+  extends:
+    service: humhub
   profiles: ["manual"]
   restart: "no"
   command: /app/bin/humhub-backup.sh
   user: root
   volumes:
-    - ./humhub-data:/data
     - ./humhub-backup:/backup
   environment:
-    - HUMHUB_CONFIG__COMPONENTS__DB__DSN=mysql:host=db;dbname=humhub
-    - HUMHUB_CONFIG__COMPONENTS__DB__USERNAME=root
-    - HUMHUB_CONFIG__COMPONENTS__DB__PASSWORD=changeMe
+    - HUMHUB_DOCKER__BACKUP_MERGE_ARCHIVES=true
 ```
+
+:::note
+The service uses `extends` to inherit image, environment (including the database credentials) and volumes from your `humhub` service, so both always stay in sync. You only add the backup volume and the backup-specific settings on top.
+:::
 
 Run a backup manually:
 
@@ -40,7 +42,7 @@ Run a backup manually:
 docker compose run --rm backup
 ```
 
-This produces a single `humhub_backup_<TIMESTAMP>.tar` archive in the `humhub-backup` volume, containing the database dump and the storage archive.
+This produces a single `humhub_backup_<TIMESTAMP>.tar` archive in the `humhub-backup` volume, containing the database dump and the storage archive. Set `HUMHUB_DOCKER__BACKUP_MERGE_ARCHIVES` to `false` to keep both parts as separate files and reduce the temporary space needed on the backup volume.
 
 :::note
 Store the backup volume **outside** the data volume (ideally on a separate partition or remote storage). Rotating and cleaning up old backups is your responsibility.

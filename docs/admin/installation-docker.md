@@ -31,7 +31,7 @@ A minimal, production-ready stack consists of the `humhub` service and a `db` (M
 ```yaml
 services:
   humhub:
-    image: humhub/humhub:stable-nightly
+    image: humhub/humhub:stable
     restart: unless-stopped
     ports:
       - "80:80"
@@ -89,8 +89,6 @@ The image runs these for you, so the corresponding manual guides are only releva
 | [Queue / async tasks](asynchronous-tasks.md) | Worker - `HUMHUB_DOCKER__AUTOSTART_WORKER` (on by default) |
 | Real-time push | Mercure - `HUMHUB_DOCKER__MERCURE_ENABLE` (on by default) |
 | [Pretty URLs](installation.md#pretty-urls) | Enabled by default |
-
-For larger installations you can run the scheduler and queue workers as separate, scalable services instead of inside the main container - see the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml).
 
 ## Configuration
 
