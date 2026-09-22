@@ -33,7 +33,7 @@ environment:
   - HUMHUB_DOCKER__NUMPROCS_WORKER=2       # number of worker processes (default)
 ```
 
-To scale workers independently, run them as a dedicated, replicated service - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables. The remaining sections apply to **manual / server installations**.
+To scale workers independently, run them as a dedicated, replicated service - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">
@@ -42,6 +42,10 @@ On a manual installation you run the worker yourself via cron, Supervisor or sys
 
 </TabItem>
 </Tabs>
+
+:::note Manual / server installation
+The following sections apply to a **manual / server installation**. With the [Docker installation](installation-docker.md) the queue worker already runs inside the image.
+:::
 
 ### Cronjob (Default)
 

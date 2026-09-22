@@ -23,7 +23,7 @@ environment:
   - HUMHUB_DOCKER__AUTOSTART_WORKER=true      # queue/run (enabled by default)
 ```
 
-For larger setups you can move the scheduler and workers into dedicated, scalable services - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The rest of this page applies to **manual / server installations**.
+For larger setups you can move the scheduler and workers into dedicated, scalable services - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">
@@ -32,6 +32,10 @@ On a manual installation you schedule the jobs yourself, as described in the sec
 
 </TabItem>
 </Tabs>
+
+:::note Manual / server installation
+The following sections apply to a **manual / server installation**. With the [Docker installation](installation-docker.md) the scheduler and workers run inside the image, so no host cron setup is needed.
+:::
 
 ## Overview
 

@@ -39,6 +39,10 @@ For a manual / server installation, use either the **Updater module** (recommend
 </TabItem>
 </Tabs>
 
+:::note Manual / server installation
+The following sections apply to a **manual / server installation**. The [Docker installation](installation-docker.md) is upgraded by switching the image tag, as shown in the Docker tab above.
+:::
+
 ## Updater Module
 
 The [HumHub Updater](https://marketplace.humhub.com/module/updater) Module enables updates of your HumHub platform 

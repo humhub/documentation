@@ -23,7 +23,7 @@ environment:
   - HUMHUB_CONFIG__COMPONENTS__QUEUE__CLASS=humhub\modules\queue\driver\Redis
 ```
 
-See the [HumHub Docker repository](https://github.com/humhub/docker) for a full example. The configuration reference below applies to **manual / server installations**.
+See the [HumHub Docker repository](https://github.com/humhub/docker) for a full example.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">
@@ -32,6 +32,10 @@ The following sections describe the configuration for a manual / server installa
 
 </TabItem>
 </Tabs>
+
+:::note Manual / server installation
+The following configuration reference applies to a **manual / server installation**. On the [Docker installation](installation-docker.md) the same options are supplied as `HUMHUB_CONFIG__...` environment variables.
+:::
 
 Basic Configuration
 ------------------

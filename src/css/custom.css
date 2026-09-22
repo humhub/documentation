@@ -32,3 +32,24 @@
   font-weight: bold;
 }
 
+
+/* Installation-method tabs (Docker / Manual): render the tabbed region as a
+   bounded card so it is obvious where the tab content starts and ends. */
+.theme-tabs-container {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.theme-tabs-container > ul[role="tablist"] {
+  margin-bottom: 0;
+  padding: 0.4rem 0.6rem 0;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.theme-tabs-container > div {
+  margin-top: 0 !important;
+  padding: 1.1rem 1.25rem 0.1rem;
+}

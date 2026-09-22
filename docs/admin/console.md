@@ -47,6 +47,10 @@ To change the system user use e.g. ``su -s /bin/bash -l www-data``
 </TabItem>
 </Tabs>
 
+:::note
+The command reference below applies to **both installation methods**.
+:::
+
 ## Commands
 
 ### `cache`
