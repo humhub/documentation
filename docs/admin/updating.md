@@ -44,7 +44,7 @@ For a manual / server installation, use either the **Updater module** (recommend
 The [HumHub Updater](https://marketplace.humhub.com/module/updater) Module enables updates of your HumHub platform 
 in just a few clicks and without any technical knowledge. 
 
-** Installation of the ``Updater`` module **
+**Installation of the** ``Updater`` **module**
 
 1. Open your HumHub installation as Administrator
 2. Go to: Administration -> Modules -> Browse online
@@ -57,7 +57,7 @@ in just a few clicks and without any technical knowledge.
 In the configuration of the module you can select the release channel for the available updates. This is set to "Stable" by default. Use the "Beta" channel here to try out new versions or verify compatibility with your own modules/themes.  
 :::
 
-** Perform a update **
+**Perform an update**
 
 1. Select in left navigation: Administration -> Update HumHub
 2. Follow the updater steps

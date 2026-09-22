@@ -68,7 +68,7 @@ In the section below, only the most common method (also based on the installatio
 
 On the page [Cron Jobs](cron-jobs.md) we will go into this topic in more detail. 
 
-** Cron job setup steps: **
+**Cron job setup steps:**
 
 Open the crontab of HumHub/PHP process user e.g. ``www-data``.
 

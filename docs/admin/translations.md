@@ -62,7 +62,7 @@ Add new translations
 
 In some cases, such as the profile fields, it may be necessary to add your own translations.
 
-** Example to create a profile field translation: **
+**Example to create a profile field translation:**
 
 - In your custom profile field configuration, use an own `Translation Category ID` value like `UserModule.custom`.
 

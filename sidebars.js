@@ -16,6 +16,7 @@ module.exports = {
             label: 'Release Notes',
             items: [
                 'about/releasenotes/release_notes',
+                'about/releasenotes/release_notes_1_19',
                 'about/releasenotes/release_notes_1_18',
                 'about/releasenotes/release_notes_1_17',
                 'about/releasenotes/release_notes_1_16',
@@ -64,6 +65,7 @@ module.exports = {
             'admin/dot-env',
             'admin/config-options',
             'admin/ldap',
+            'admin/oauth',
             'admin/performance',
             'admin/search',
             'admin/uploads',

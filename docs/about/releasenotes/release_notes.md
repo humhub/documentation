@@ -10,6 +10,7 @@ In regards to own themes and individual modules, the corresponding guides at [ht
 
 ## Release Notes
 
+- [Release Notes 1.19](release_notes_1_19.md)
 - [Release Notes 1.18](release_notes_1_18.md)
 - [Release Notes 1.17](release_notes_1_17.md)
 - [Release Notes 1.16](release_notes_1_16.md)

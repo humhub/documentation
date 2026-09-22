@@ -97,26 +97,9 @@ module.exports = {
               label: 'HumHub Translation',
               href: 'https://translate.humhub.org',
             },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-           /* {
-              label: 'Blog',
-              to: 'blog',
-            },*/
             {
               label: 'GitHub',
               href: 'https://github.com/humhub/humhub',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/humhub',
-            },
-            {
-              label: 'Facebook',
-              href: 'https://www.facebook.com/thehumhub'
             },
           ],
         },
@@ -128,8 +111,8 @@ module.exports = {
               href: 'https://www.humhub.com',
             },
             {
-              label: 'Licenses',
-              href: 'https://www.humhub.com/licenses/',
+              label: 'News',
+              href: 'https://community.humhub.com/s/announcements/',
             },
             {
               label: 'Marketplace',
@@ -137,8 +120,33 @@ module.exports = {
             },
           ],
         },
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Privacy Policy',
+              href: 'https://www.humhub.com/legal/privacy/',
+            },
+            {
+              label: 'Cookie Policy',
+              href: 'https://www.humhub.com/legal/cookies/',
+            },
+            {
+              label: 'Terms of Service',
+              href: 'https://www.humhub.com/legal/terms/',
+            },
+            {
+              label: 'Licenses',
+              href: 'https://www.humhub.com/licenses/',
+            },
+            {
+              label: 'Imprint',
+              href: 'https://www.humhub.com/legal/imprint/',
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} HumHub. All rights reserved.  `,
+      copyright: `Copyright © ${new Date().getFullYear()} HumHub GmbH &amp; Co. KG`,
     },
   },
   presets: [
