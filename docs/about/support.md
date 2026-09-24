@@ -14,8 +14,8 @@ Also have a look at our [Troubleshooting Guide](../admin/troubleshooting.md) for
 
 ### General questions and troubleshooting
 
-For general questions and troubleshooting the best place to open an issue is our [community](https://community.humhub.com/dashboard)
-If you are not sure where to ask, we will guide you to the right resources or forward you to other issue tracker in the community. 
+For general questions and troubleshooting, the best place to open an issue is our [community](https://community.humhub.com/dashboard).
+If you are not sure where to ask, we will guide you to the right resources or forward you to other issue trackers in the community. 
 
 ### Bug reports and feature requests
 
@@ -30,7 +30,7 @@ within the [administration section](../professional-edition/support.md) of their
 
 ## How to get support
 
-No matter where you post your issue, please make sure to add as many information as possible,
+No matter where you post your issue, please make sure to add as much information as possible,
 in order for us to reproduce your issue.
 
 ### Information about your environment
@@ -38,7 +38,7 @@ in order for us to reproduce your issue.
  - **HumHub version**: See `Administration -> Information` or `protected/humhub/config/common.php` 
  - **Module version**: In case the problem is module related check `Administration -> Modules` or `protected/modules/<moduleId>/module.json`
  - **PHP version**
- - Is the issue potentially related with any kind of customization as of yours?
+ - Is the issue potentially related to any kind of customization of yours?
    - Non official modules
    - Custom theme
    - Manual changes in core or module files
@@ -49,18 +49,18 @@ in order for us to reproduce your issue.
  - Where does it occur?
  - Does it only occur for specific users?
  - How can you reproduce the problem?
- - Is there any recent action, which may have introduced the problem as:
+ - Is there any recent action that may have introduced the problem, such as:
    - HumHub Update
    - Module Update
    - Installed a new Module
    - Changed server environment
    - Changed a HumHub Setting
- - May add a screenshot
+ - Please add a screenshot if possible
  
 ### Errors and logs
 
- - Always add the backend logs  `Administration -> Information -> Logs` or under `protected/runtime/logs`
- - Check the Javascript console of your browser for errors: 
+ - Always add the backend logs from `Administration -> Information -> Logs` or from `protected/runtime/logs`
+ - Check the JavaScript console of your browser for errors: 
      - [Chrome](https://developers.google.com/web/tools/chrome-devtools/console/)
      - [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
      - [Safari](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/EnableWebInspector/EnableWebInspector.html)
