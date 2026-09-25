@@ -7,6 +7,10 @@ title: HumHub Setup
 Check out our [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/overview/list-categories) for many more guides and tips on installing and running HumHub!
 :::
 
+:::tip
+Want a one-click deployment instead? [Easypanel](https://easypanel.io) is a self-hosted Docker deployment platform, and HumHub has a one-click deployment template there: https://easypanel.io/templates/humhub
+:::
+
 ## Download and extract
 
 
