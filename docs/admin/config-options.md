@@ -80,6 +80,32 @@ Data type: `Integer`<br/>
 Default: `5`<br/>
 Data type: `Integer`<br/>
 
+:::note
+The stream options below were configured on the `stream` module before HumHub 1.20. That module was
+dissolved into `content`. A `stream` section left in a configuration file is ignored without an
+error, and the defaults apply again.
+:::
+
+**streamExcludes** - Content classes to exclude from streams. <br/>
+Default: `[]`<br/>
+Data type: `Array`<br/>
+
+**streamSuppressQueryIgnore** - Content classes which are not suppressed when in a row.<br/>
+Default: `[]`<br/>
+Data type: `Array`<br/>
+
+**defaultStreamSuppressQueryIgnore** - Default content classes which are not suppressed when in a row.<br/>
+Default: `[humhub\modules\post\models\Post::class, humhub\modules\activity\models\Activity::class]`<br/>
+Data type: `Array`<br/>
+
+**streamSuppressLimit** - Number of contents from which "Show more" appears in the stream.<br/>
+Default: `2`<br/>
+Data type: `Integer`<br/>
+
+**showDeactivatedUserContent** - Show contents of deactivated users in stream. <br/>
+Default: `true`<br/>
+Data type: `Boolean`<br/>
+
 ### Dashboard
 
 **autoIncludeProfilePosts** - Possible options to include profile posts into the dashboard stream. <br/>
@@ -249,44 +275,6 @@ Default: `false`<br/>
 Data type: `Boolean`<br/>
 Since: `1.7`<br/>
 
-### Stream
-
-**streamExcludes** - Content classes to excludes from streams. <br/>
-Default: `[]`<br/>
-Data type: `Array`<br/>
-
-**streamSuppressQueryIgnore** - Content classes which are not suppressed when in a row.<br/>
-Default: `[]`<br/>
-Data type: `Array`<br/>
-
-**defaultStreamSuppressQueryIgnore** - Default content classes which are not suppressed when in a row.<br/>
-Default: `[]`<br/>
-Data type: `Array`<br/>
-
-**showDeactivatedUserContent** - Show contents of deactivated users in stream. <br/>
-Default: `true`<br/>
-Data type: `Boolean`<br/>
-
-### UI
-
-**iconAlias** - Contains all available icon aliases. <br/>
-Default: `[
-        'dropdownToggle' => 'angle-down',
-        'edit' => 'pencil',
-        'delete' => 'trash',
-        'dashboard' => 'tachometer',
-        'directory' => 'book',
-        'back' => 'arrow-left',
-        'add' => 'plus',
-        'invite' => 'paper-plane',
-        'remove' => 'times',
-        'controls' => 'cog',
-        'about' => 'info-circle',
-        'stream' => 'bars'
-    ]`<br/>
-Data type: `Array`<br/>
-
-
 ### User
 
 **sendInviteMailsInGlobalLanguage** - Option to translate all invite mails except self invites to the default language (true) or user language(false).<br/>
@@ -364,12 +352,51 @@ Data Type: `Boolean`<br/>
 Default: `[2 => 10, 6 => 20]`<br/>
 Data type: `Array`<br/>
 
-### Web
+## Application Parameters
 
-**security** - Web Security Settings.<br/>
-Default: `[]`<br/>
+Configured under the `params` key instead of `modules`.
 
-**enableServiceWorker** - Enable Service Worker and PWA Support.<br/>
+**icon.alias** - Semantic icon names, mapped to the icon they are rendered as. A name the map does not cover is used as given.<br/>
+Default: the map shipped in `protected/humhub/config/common.php`<br/>
+Data type: `Array`<br/>
+Since: `1.20`<br/>
+
+```php
+'params' => ['icon' => ['alias' => ['edit' => 'pen']]],
+```
+
+Before 1.20 this was the `iconAlias` option of the `ui` module, which no longer exists.
+
+**pwa.enabled** - Progressive Web App support: the web app manifest and the service worker.<br/>
 Default: `true`<br/>
-Since: `1.8`<br/>
-Data Type: `Boolean`<br/>
+Data type: `Boolean`<br/>
+Since: `1.20`<br/>
+
+Before 1.20 this was the `enableServiceWorker` option of the `web` module, which no longer exists.
+
+## Components
+
+**response.defaultHeaders** - Headers sent with every response, as header name to value. Any header can be configured here, not only security related ones. Entries are applied as defaults, so a header an action set itself is left alone.<br/>
+Default: the headers shipped in `protected/humhub/config/web.php`<br/>
+Data type: `Array`<br/>
+Since: `1.20`<br/>
+
+```php
+'components' => [
+    'response' => [
+        'defaultHeaders' => [
+            'X-Frame-Options' => 'sameorigin',
+            'Content-Security-Policy' => "… script-src {{ nonce }} 'self' …",
+        ],
+    ],
+],
+```
+
+A value may contain `{{ nonce }}`, replaced with the nonce of the current session, and
+`{{ reportUri }}`, replaced with the URL of the report endpoint. A header containing `{{ nonce }}`
+is what turns nonce support on. For report-only mode, add `Content-Security-Policy-Report-Only` to
+the same map.
+
+Before 1.20 this was the `security` option of the `web` module, which no longer exists. Its `csp`
+and `csp-report-only` sections and its separate `nonce` switch were not renamed but removed - a
+policy expressed that way has to be rewritten as a header string.
