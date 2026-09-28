@@ -12,27 +12,27 @@ This page contains the documentation of the legacy Enterprise Edition.
 
 ## Migrate to Professional Edition 
 
-Upgrading from the **Enterprise Edition** to the **Professional Edition** is unproblematic. However due to many changes from version 1.3.X to version 1.4, it requires some effort. 
+Upgrading from the **Enterprise Edition** to the **Professional Edition** is straightforward. However, due to many changes from version 1.3.X to version 1.4, it requires some effort. 
 If you follow these steps, you should get this done with ease:
 
  
-1. Create a **BACKUP** of you installation an your database **IN EVERY CASE**
+1. Create a **BACKUP** of your installation and your database **IN EVERY CASE**
 
 2. Update to the latest HumHub and "Enterprise Edition" module available (`Administration -> Modules`) 
 
-3. Active your **Professional Edition** license key (`Administration -> Information -> "Upgrade to Professional Edition"`)
+3. Activate your **Professional Edition** license key (`Administration -> Information -> "Upgrade to Professional Edition"`)
 
 4. Switch to the default theme named **HumHub** (`Administration -> Settings -> Appearance`)
 
-5. If you're using any Enterprise Edition features, which require a config file entry e.g. [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso), either comment those parts out or remove them completely.
+5. If you're using any Enterprise Edition features that require a config file entry, e.g. [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso), either comment those parts out or remove them completely.
 
-6. Disable and _uninstall_ the module "Humhub Enterprise Edition"
+6. Disable and _uninstall_ the module "HumHub Enterprise Edition"
 
-7. Use to HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use e.g. [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) or [Advanced Ldap](https://marketplace.humhub.com/module/advanced-ldap).
+7. Use the HumHub Marketplace (`Administration -> Modules -> Browse online`) to install and activate the **HumHub - Professional Edition** features you want to use, e.g. [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) or [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap).
 
-8. Revert to your usual Theme (`Administration -> Settings -> Appearance`)
+8. Revert to your usual theme (`Administration -> Settings -> Appearance`)
 
-9. Some Professional Edition modules like [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso) may require updates to the configuration. You will find detailed instructions each module in our [Marketplace](https://marketplace.humhub.com)
+9. Some Professional Edition modules like [SOLR search](https://marketplace.humhub.com/module/solr) or [JWT SSO](https://marketplace.humhub.com/module/jwt-sso) may require updates to the configuration. You will find detailed instructions for each module in our [Marketplace](https://marketplace.humhub.com).
 
 
 
@@ -44,15 +44,15 @@ There are two options to obtain the **HumHub** Enterprise Edition.
 
 If you have already installed the HumHub Community Edition, please follow the steps below to enable the Enterprise Edition.
 
-- Login as Administrator
-- Click to: `Administration` -> `Modules` -> `Browse Online`
+- Log in as Administrator
+- Navigate to: `Administration` -> `Modules` -> `Browse Online`
 - Select Enterprise Edition: `Install` 
-- Switch to the `Installed modules` tab on the `Modules directory` site
+- Switch to the `Installed modules` tab on the `Modules directory` page
 - Select Enterprise Edition: `Enable` 
  
-** Activate Enterprise Edition: **
+**Activate Enterprise Edition:**
 
-Once installed, you can enter your license key at: `Administration` -> `Enterprise Edition` .
+Once installed, you can enter your license key at: `Administration` -> `Enterprise Edition`.
 
 The [Enterprise Theme](https://marketplace.humhub.com/module/enterprise-theme) can be selected under `Administration` -> `Settings` -> `Appearance`.
 
@@ -65,11 +65,11 @@ Please see the [Installation Guide](../admin/installation.md) for further inform
 ## Updating
 
 
-The HumHub Enterprise Edition is delivered as module package in addition to the standard community edition.
+The HumHub Enterprise Edition is delivered as a module package in addition to the standard Community Edition.
 
 Like any other module, available updates are displayed at: `Administration` -> `Modules` -> `Available updates`. 
 
-> Info: You also need to keep the **HumHub** core platform up to date - More information: [Updating HumHub](../admin/updating.md)
+> Info: You also need to keep the **HumHub** core platform up to date. More information: [Updating HumHub](../admin/updating.md)
 
 
 ## Features
@@ -77,7 +77,7 @@ Like any other module, available updates are displayed at: `Administration` -> `
 
 ### Enterprise Theme
 
-You can enable the **HumHub** Enterprise Edition - Theme by following steps:
+You can enable the **HumHub** Enterprise Edition theme by following these steps:
 - Navigate to: `Administration` -> `Settings` -> `Appearance`
 - Select `enterprise` in the Theme dropdown menu
 - Click `Save`
@@ -89,7 +89,7 @@ You can enable the **HumHub** Enterprise Edition - Theme by following steps:
 
 > Note: This chapter only describes the differences between the [standard theming](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) and the `Enterprise Edition`.
 
-** Create custom Enterprise theme copy **
+**Create custom Enterprise theme copy**
 
 The original enterprise theme is typically located at: `protected/modules/enterprise/themes/enterprise`
 
@@ -98,18 +98,18 @@ Steps:
 2. Make sure to set `$baseTheme: "enterprise";` or `$baseTheme: "enterprise-white";` in the `scss/variables.scss` file.
 3. Activate it in `Administration -> Settings -> Appearance`
 
-** Additional Sass variables **
+**Additional Sass variables**
 
 Variables starting with `$hh-et-` are specific to the Enterprise Theme.
 
 See file `themes/enterprise/scss/variables.scss` to get the list of these variables.
   
-> Note: Your theme might need to be migrated if a new HumHub or enterprise version comes out. This will not affect your custom themes thus your theme views might overwrite essential changes made in the HumHub views. To migrate your theme check the differences between your custom theme files (views, js, scss) and the enterprise default theme files and adopt necessary changes.
+> Note: Your theme might need to be migrated if a new HumHub or enterprise version comes out. This will not affect your custom themes, thus your theme views might overwrite essential changes made in the HumHub views. To migrate your theme, check the differences between your custom theme files (views, js, scss) and the enterprise default theme files and apply the necessary changes.
 
 
 ### Space Types
 
-Space types allows you to separate spaces into different categories (e.g. Department Spaces or Project Spaces).
+Space types allow you to separate spaces into different categories (e.g. Department Spaces or Project Spaces).
 
 ![Space Types](images/space-types.png)
 
@@ -123,7 +123,7 @@ You can create new space types at: `Administration` -> `Spaces` -> `Types`
 
 It's also possible to restrict Space creation by user groups.
 
-You can define these permission at: `Administration` -> `User` -> `Groups` -> `Select group` -> `Permissions`
+You can define these permissions at: `Administration` -> `User` -> `Groups` -> `Select group` -> `Permissions`
 
 ![Space Type Permissions](images/space-types-permissions.png)
 
@@ -134,19 +134,19 @@ The **HumHub** Enterprise Edition provides some advanced LDAP features.
 
 #### User Mapping
 
-You can assign user's group or space memberships automatically using LDAP configuration.
+You can assign users' group or space memberships automatically using the LDAP configuration.
 
-The mapping can be used by:
+The mapping can be based on:
 
 - User LDAP group memberships (memberOf field, e.g. CN=xyz_space_access,OU=Groups,DC=example,DC=com)
-- The part of the users base DN (e.g. OU=People,DC=example,DC=com)
+- Part of the user's base DN (e.g. OU=People,DC=example,DC=com)
 - Attribute values (e.g. street==Some Street or street=~Street)
 
-> Note: The mapping is handled by the hourly cron job and may takes some time to affect.
+> Note: The mapping is handled by the hourly cron job and may take some time to take effect.
 
 #### Space Mapping
 
-As administrative user, you can map a LDAP group directly to a space. 
+As an administrative user, you can map an LDAP group directly to a space. 
 
 Configuration page: `Open Space` -> `Members` -> `LDAP`
 
@@ -154,7 +154,7 @@ Configuration page: `Open Space` -> `Members` -> `LDAP`
 
 #### Group Mapping
 
-As administrative user, you can map a LDAP group against HumHub groups which are mainly used for administrative tasks. 
+As an administrative user, you can map an LDAP group to HumHub groups, which are mainly used for administrative tasks. 
 
 Configuration page: `Administration` -> `Users` -> `Groups` -> `Select a group` -> `LDAP`
 
@@ -163,9 +163,9 @@ Configuration page: `Administration` -> `Users` -> `Groups` -> `Select a group` 
 
 #### Profile Images
 
-You can also synchronize profile image from LDAP.
+You can also synchronize profile images from LDAP.
 
-Modify your local configuration `protected/config/common.php` and add following section:
+Modify your local configuration `protected/config/common.php` and add the following section:
 
 ```php
 <?php
@@ -192,7 +192,7 @@ Follow [the module installation guide](https://marketplace.humhub.com/module/sol
 
 ### JWT
 
-JWT SSO provides a single sign-on mechanism to automatically log in your users by a JWT Token.
+JWT SSO provides a single sign-on mechanism to automatically log in your users with a JWT token.
 
 More information:
 - https://jwt.io/
@@ -201,10 +201,10 @@ More information:
 
 #### Installation
 
-1.) Install JWT endpoint 
+1.) Install the JWT endpoint 
 You can find some example scripts at: protected/modules/enterprise/modules/jwt/examples.
 
-2.) Add following configuration to /protected/config/common.php
+2.) Add the following configuration to /protected/config/common.php
 
 ```php
 return [
@@ -259,9 +259,9 @@ You can define these rules at: `Administration` -> `Users` -> `Settings` -> `Whi
 ![E-Mail Whitelist](images/email-whitelist.png)
 
 
-### E-Mail Groupmapping
+### E-Mail Group Mapping
 
-The email mapping feature allows you to specify email rules for users which will be automatically assigned to a specified group after registration.
+The email mapping feature allows you to specify email rules for users who will be automatically assigned to a specified group after registration.
 
 You can define these rules at: `Administration` -> `Users` -> `Groups` -> `Select a group` -> `E-Mail Mapping`.
 
