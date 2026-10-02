@@ -19,7 +19,7 @@ More information about the features can be found in the respective module descri
 
 ### Advanced LDAP
 
-In addition to the basic LDAP functions included in the Community Edition, the [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap) module provides many other additional features.
+In addition to the basic LDAP functions included in the Community Edition, the [Advanced LDAP](https://marketplace.humhub.com/module/advanced-ldap) module provides many additional features.
 
 - Map LDAP users automatically to a Space or Group
 - Synchronize attached LDAP profile images
@@ -31,16 +31,16 @@ In addition, the Professional Edition offers the [Enterprise Theme](https://mark
 
 ### Translation Manager
 
-Easily modify and control used translation messages and available languages.
+Easily modify and control the translation messages in use and the available languages.
 
 - Search and modify individual translation messages
 - Restrict available languages for your users
-- Automatically search and replaces specific phrases (coming soon)
+- Automatically search and replace specific phrases (coming soon)
 
 
 ## Feature list
 
-Below you can see a complete overview of the currently available Professional Edition modules that are available in the Marketplace. 
+Below you can see a complete overview of the Professional Edition modules that are currently available in the Marketplace. 
 
 - [News](https://marketplace.humhub.com/module/news)
 

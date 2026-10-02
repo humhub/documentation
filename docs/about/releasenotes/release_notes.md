@@ -6,7 +6,7 @@ title: Overview
 The release notes give you an overview of the most important new features and changes for each major update.
 
 A complete overview of all changes, especially technical enhancements, can be found in the changelog. 
-In regards to own themes and individual modules, the corresponding guides at [https://docs.humhub.org/](https://docs.humhub.org/) must also be consulted! 
+With regard to custom themes and individual modules, the corresponding guides at [https://docs.humhub.org/](https://docs.humhub.org/) must also be consulted! 
 
 ## Release Notes
 

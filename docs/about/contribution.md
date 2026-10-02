@@ -10,7 +10,7 @@ for helping us improve the software, from simply giving us your feedback to cont
 
 Since we are a community driven software, we are very interested in your feedback and your specific HumHub use case.
 Be part of the [community](https://community.humhub.com/) and let us know about your experiences with HumHub or 
-share some of your ideas. Please keep in mind to always stay kind and patient, sometimes it may takes us some time
+share some of your ideas. Please keep in mind to always stay kind and patient, sometimes it may take us some time
 to respond to your requests. Furthermore, only contact administrators directly if you really need to, 
 we won't provide any kind of private support over the mail system.
 
@@ -20,16 +20,16 @@ in need of supportive community members.
 
 ## Report issues and feature requests
 
-One of the key benefits of an open source software is the possibility to openly discuss and report issues. HumHub
+One of the key benefits of open source software is the possibility to openly discuss and report issues. HumHub
 uses [GitHub](https://github.com/humhub/) as issue tracker in order to discuss issues as bug reports or feature requests
 and directly link them to the actual code base.
 
-Besides the core platform, all of our official open source modules are hosted on github. Furthermore, there are repositories
+Besides the core platform, all of our official open source modules are hosted on GitHub. Furthermore, there are repositories
 available solely for tracking issues of non open source modules as the Professional Edition as well as community contributed
 modules.
 
-In order for us to help you with your problems, please follow the [Support Guide](support.md) and ideally add as many
-information as possible or even a worked out concept to your feature requests.
+In order for us to help you with your problems, please follow the [Support Guide](support.md) and ideally add as much
+information as possible or even a worked-out concept to your feature requests.
 
 That said, feel free to open issues within the respective repository:
 
@@ -43,7 +43,7 @@ That said, feel free to open issues within the respective repository:
 
 Our [translation community](https://translate.humhub.org) is responsible for maintaining the translation of HumHub and
 its modules into more than 40 languages. If you want to be part of this community effort, just register to the translation community
-and join the space dedicated to your language. Since the translation activity highly depends on the dissemination of a language we
+and join the space dedicated to your language. Since the translation activity highly depends on the dissemination of a language, we
 are always in need of contributors especially for rather rare languages. Before starting with the actual translation, please
 make yourself familiar with the current wording and terms already in use and if needed first discuss changes of such
 terms with your fellow contributors if possible.
@@ -58,7 +58,7 @@ at the bottom of each guide, this requires a GitHub account.
 
 ## Improve the community theme
 
-You are a frontend developer or webdesigner, and you want to enhance the usability or overall appearance of the 
+You are a frontend developer or web designer, and you want to enhance the usability or overall appearance of the 
 HumHub community theme? Feel free to suggest your changes or concepts in the main [HumHub repository](https://github.com/humhub/humhub),
 or even [create and share your own theme](#create-your-own-modules-and-themes). In case you are not already familiar with 
 the theming mechanism of HumHub, take a look at our [Theming Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md).
@@ -79,8 +79,8 @@ bug fixes should be directed to the [master](https://github.com/humhub/humhub/tr
 
 ## Create your own modules and themes
 
-Anyone with development experiences can extend the HumHub universe with his own ideas by implementing and 
+Anyone with development experience can extend the HumHub universe with their own ideas by implementing and 
 sharing custom modules or themes. Please have a look at the [Development Guide](../develop/overview.md) or
 [Theming Guide](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) for more information about how to create custom modules and themes. 
-Note, that we can not integrate all community driven modules into our marketplace, but if you are confident your 
-module will be a good fit for our marketplace, let us know at [info@humhub.com](mailto:info@humhub.com)
+Note that we cannot integrate all community-driven modules into our marketplace, but if you are confident your 
+module will be a good fit for our marketplace, let us know at [info@humhub.com](mailto:info@humhub.com).
