@@ -3,7 +3,7 @@ id: release_notes_1_19
 title: HumHub 1.19
 ---
 
-## TBD (~September 2026; Beta available)
+## October 2026
 
 ### Sign-In & Sign-Up
 
