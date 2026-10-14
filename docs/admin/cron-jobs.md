@@ -12,6 +12,66 @@ required to handle such jobs. Since those settings are highly dependent on your 
 those setting will work for your. If you have trouble setting up the job scheduling described in this guide, please
 contact your provider to ask for support.
 
+## Overview
+
+There are two commands which needs to be scheduled:
+
+ - **CronJob** - `cron/run`
+ - **Queue** - `queue/run`
+
+### `cron/run`
+
+The cron command is used to run **scheduled jobs** which for example need to be executed hourly or daily. You can
+manually execute the cron command as follows:
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii cron/run
+```
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+```console
+php /path/to/humhub/protected/yii cron/run
+```
+
+</TabItem>
+</Tabs>
+
+### `queue/run`
+
+The queue command is used to run **asynchronous jobs** which are potentially long running and therefore need to
+be executed in the background. The queue can either be scheduled as CronJob (see below) or with the help of another job-runner like 
+for example [Supervisor](https://supervisord.org/) or [Systemd](https://www.freedesktop.org/wiki/Software/systemd/). 
+Please refer to the [Asynchronous Tasks](asynchronous-tasks.md) section for more details about queuing and job processing.
+
+The queue command can be executed manually as follows:
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii queue/run
+```
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+```console
+php /path/to/humhub/protected/yii queue/run
+```
+
+</TabItem>
+</Tabs>
+
+## CronJob configuration
+
+As mentioned before, the CronJob configuration highly depends on your server environment. The following section is meant
+to help you with the CronJob setup and includes a guide for some common environments.
+
 <Tabs groupId="install-method">
 <TabItem value="docker" label="Docker" default>
 
@@ -28,54 +88,8 @@ For larger setups you can move the scheduler and workers into dedicated, scalabl
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">
 
-On a manual installation you schedule the jobs yourself, as described in the sections below.
-
-</TabItem>
-</Tabs>
-
-:::note Manual / server installation
-The following sections apply to a **manual / server installation**. With the [Docker installation](installation-docker.md) the scheduler and workers run inside the image, so no host cron setup is needed.
-:::
-
-## Overview
-
-There are two commands which needs to be scheduled:
-
- - **CronJob** - `cron/run`
- - **Queue** - `queue/run`
-
-### `cron/run`
-
-The cron command is used to run **scheduled jobs** which for example need to be executed hourly or daily. You can
-manually execute the cron command as follows:
-
-```console
-php /path/to/humhub/protected/yii cron/run
-```
-
-### `queue/run`
-
-The queue command is used to run **asynchronous jobs** which are potentially long running and therefore need to
-be executed in the background. The queue can either be scheduled as CronJob (see below) or with the help of another job-runner like 
-for example [Supervisor](https://supervisord.org/) or [Systemd](https://www.freedesktop.org/wiki/Software/systemd/). 
-Please refer to the [Asynchronous Tasks](asynchronous-tasks.md) section for more details about queuing and job processing.
-
-The queue command can be executed manually as follows:
-
-```console
-php /path/to/humhub/protected/yii queue/run
-```
-
-
-
-## CronJob configuration
-
-As mentioned before, the CronJob configuration highly depends on your server environment. The following section is meant
-to help you with the CronJob setup and includes a guide for some common environments.
-
 If you are **not** using any other job-runner like _Supervisor_ or _Systemd_ for your queue, both commands can
-be scheduled as CronJob. Otherwise only the main `cron/run` command needs to be scheduled as CronJob. 
-
+be scheduled as CronJob. Otherwise only the main `cron/run` command needs to be scheduled as CronJob.
 
 **CronTab example**
 
@@ -93,6 +107,9 @@ command e.g. `/usr/bin/php /path/to/humhub/protected/yii queue/run --isolate=0`.
 Make sure to use the right [php cli executable](https://www.php.net/manual/en/features.commandline.php) for your jobs!
 :::
 
+</TabItem>
+</Tabs>
+
 You can find configuration examples for various environments in the ["Cron Job Setup" Wiki](https://community.humhub.com/content/perma?id=111873) in our [HumHub Community](https://community.humhub.com/).
 
 
@@ -105,7 +122,17 @@ while the `Done` value increases.
 
 ![Background Jobs Status](images/asynchronous_job_status.JPG)
 
-Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Background Jobs` 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Logging`.
+
+The scheduler and the queue workers additionally write their output to the container log, which you can follow with `docker compose logs -f humhub`. See [Logging](https://github.com/humhub/docker/blob/main/docs/logging.md) in the HumHub Docker repository for the available log targets and formats.
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
+Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Logging` 
 as well as using the following cron configuration to log the output of the command to a `queue.log` and `cron.log` file:
 
 ```
@@ -115,3 +142,6 @@ as well as using the following cron configuration to log the output of the comma
 
 The log output may give you some hints about the problem and ideally should either be empty or filled with some stats if
 the job ran correctly. The modification time of the file furthermore informs you about the last time the cron job ran.
+
+</TabItem>
+</Tabs>
