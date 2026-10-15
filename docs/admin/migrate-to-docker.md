@@ -17,12 +17,14 @@ A migration is a regular Docker restore. The only difference is where the data c
 3. **Import your database dump** into a new, empty database of the Docker stack, see [Database](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md#database) in the migration guide.
 4. **Copy your persistent data** into the data volume, see [Configuration](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md#configuration) and [Files, themes and modules](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md#files-themes-and-modules):
 
-   | Data | Source (existing installation) | Target (data volume) |
+   | Data | Source (existing installation) | Target (data directory) |
    |---|---|---|
-   | Configuration | `protected/config/` | `/data/config/` |
-   | Uploaded files | `uploads/` | `/data/uploads/` |
-   | Custom themes | `themes/<YourTheme>/` | `/data/themes/<YourTheme>/` |
-   | Custom modules | `protected/modules/<YourModule>/` | `/data/modules-custom/<YourModule>/` |
+   | Configuration | `protected/config/` | `config/` |
+   | Uploaded files | `uploads/` | `uploads/` |
+   | Custom themes | `themes/<YourTheme>/` | `themes/<YourTheme>/` |
+   | Custom modules | `protected/modules/<YourModule>/` | `modules-custom/<YourModule>/` |
+
+   You copy the files on the host, into the directory that is mounted as `/data` in the container. Following the [Docker Installation](installation-docker.md) example that directory is `/opt/humhub/humhub-data`.
 
 5. **Start the stack** and verify that login works, uploaded files are accessible and your configuration is in place, see [Finish](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md#finish).
 
