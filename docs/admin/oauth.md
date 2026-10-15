@@ -4,6 +4,9 @@ title: OAuth / OpenID Connect
 sidebar_label: OAuth / OpenID Connect
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 HumHub can authenticate users against external OAuth2 / OpenID Connect (OIDC) identity
 providers such as Keycloak, Authentik or any standards compliant provider.
 
@@ -86,9 +89,22 @@ Additional notes:
 
 After editing the configuration, flush the cache so the client registers cleanly:
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii cache/flush-all
+```
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
 ```
 php protected/yii cache/flush-all
 ```
+
+</TabItem>
+</Tabs>
 
 ## Redirect URI
 
