@@ -4,29 +4,27 @@ title: Docker Installation
 sidebar_label: Docker Installation
 ---
 
-The official [HumHub Docker image](https://github.com/humhub/docker) is the **recommended way to run HumHub**. It bundles the complete stack - web server with automatic HTTPS, cron scheduler, queue workers and real-time push (Mercure) - so most of the manual configuration described in the server-based guides is already done for you.
+The official HumHub Docker image is the **recommended way to run HumHub**. It bundles the complete stack (web server with automatic HTTPS, cron scheduler, queue workers and real-time push via Mercure), so most of the manual configuration described in the server-based guides is already done for you.
 
-:::tip
-This page gives you a production-ready starting point. For the full set of Docker-specific options, see the **[HumHub Docker repository](https://github.com/humhub/docker)**.
-:::
+The image is published on **[Docker Hub](https://hub.docker.com/r/humhub/humhub)**, which lists all available tags and is what your Docker host pulls from. Its sources, the complete list of environment variables and further example setups are maintained in the **[HumHub Docker repository](https://github.com/humhub/docker)**.
 
 ## Requirements
 
 - **Docker >= 20.10.13** with **Compose v2** (use the `docker compose` command; older setups use `docker-compose`)
 - A domain name pointing to the host if you want automatic HTTPS certificates
 
-You do **not** need to install PHP, a web server or set up cron manually - all of this is part of the image.
+You do **not** need to install PHP, a web server or set up cron manually, all of this is part of the image.
 
 ## Quick start
 
-Create a project directory and a `docker-compose.yml` file inside it:
+Create a project directory and change into it:
 
 ```bash
 mkdir -p /opt/humhub
 cd /opt/humhub
 ```
 
-A minimal, production-ready stack consists of the `humhub` service and a `db` (MariaDB) service:
+Now create a `compose.yml` file in that directory. A minimal stack consists of the `humhub` service and a `db` (MariaDB) service:
 
 ```yaml
 services:
@@ -67,7 +65,11 @@ services:
 ```
 
 :::caution
-Before starting, **change every example value** - at least `SERVER_NAME`, `HUMHUB_CONFIG__COMPONENTS__DB__PASSWORD` and `MYSQL_ROOT_PASSWORD`. Never use the example passwords in production.
+Before starting, **change every example value**, at least `SERVER_NAME`, `HUMHUB_CONFIG__COMPONENTS__DB__PASSWORD` and `MYSQL_ROOT_PASSWORD`. Never use the example passwords in production.
+:::
+
+:::note
+The `stable` tag always points to the latest stable HumHub release, so a `docker compose pull` can move a live site to a new minor or major version. For production, pin the version line you run instead, written as `humhub/humhub:<MAJOR>.<MINOR>`. Such a tag only receives the maintenance releases of that line. All available tags are listed on [Docker Hub](https://hub.docker.com/r/humhub/humhub), the current version line in the [Release Notes](../about/releasenotes/release_notes.md).
 :::
 
 Start the stack:
@@ -76,7 +78,7 @@ Start the stack:
 docker compose up -d
 ```
 
-Open your `SERVER_NAME` URL in the browser - the HumHub installer guides you through the remaining setup, exactly as with a manual installation.
+Open your `SERVER_NAME` URL in the browser. The HumHub installer guides you through the remaining setup, exactly as with a manual installation.
 
 ## What's already handled
 
@@ -85,14 +87,14 @@ The image runs these for you, so the corresponding manual guides are only releva
 | Concern | In Docker |
 |---|---|
 | Web server & HTTPS | Built-in (FrankenPHP/Caddy, automatic certificates via `SERVER_NAME`) |
-| [Cron jobs](cron-jobs.md) | Scheduler - `HUMHUB_DOCKER__AUTOSTART_SCHEDULER` (on by default) |
-| [Queue / async tasks](asynchronous-tasks.md) | Worker - `HUMHUB_DOCKER__AUTOSTART_WORKER` (on by default) |
-| Real-time push | Mercure - `HUMHUB_DOCKER__MERCURE_ENABLE` (on by default) |
+| [Cron jobs](cron-jobs.md) | Scheduler (`HUMHUB_DOCKER__AUTOSTART_SCHEDULER`, on by default) |
+| [Queue / async tasks](asynchronous-tasks.md) | Worker (`HUMHUB_DOCKER__AUTOSTART_WORKER`, on by default) |
+| Real-time push | Mercure (`HUMHUB_DOCKER__MERCURE_ENABLE`, on by default) |
 | [Pretty URLs](installation.md#pretty-urls) | Enabled by default |
 
 ## Configuration
 
-Docker configuration is done through **environment variables**, not by editing config files. Every HumHub config option maps to a `HUMHUB_CONFIG__...` variable (nested keys separated by `__`, camelCase written in upper snake case). For example:
+In Docker, configuration is primarily done through **environment variables**. Every HumHub config option maps to a `HUMHUB_CONFIG__...` variable. For example:
 
 ```yaml
 environment:
@@ -100,29 +102,31 @@ environment:
   - HUMHUB_CONFIG__NAME=My Network
 ```
 
-This is the same mechanism described in [Environment / .env configuration](dot-env.md) and [Advanced Configuration](advanced-configuration.md) - Docker just supplies the variables through Compose.
+This is the same mechanism described in [Environment / .env configuration](dot-env.md) and [Advanced Configuration](advanced-configuration.md). Docker only supplies the variables through Compose.
+
+The PHP configuration files still work. The image points HumHub's config directory to the data volume, so `common.php`, `web.php` and `console.php` in `humhub-data/config` are read exactly as on a server installation. Environment variables are applied after the configuration files, so a setting defined in both places is taken from the environment.
 
 ## Data & volumes
 
-All persistent data lives under the `/data` volume mounted into the container. The relevant sub-directories are:
+All persistent data lives in `/data` **inside the container**. On the host it is the directory you mount there, with the example above (`./humhub-data:/data` in `/opt/humhub`) that is `/opt/humhub/humhub-data`. The relevant sub-directories are:
 
-| Path | Content |
+| Sub-directory | Content |
 |---|---|
-| `/data/config` | Instance configuration (equivalent to `protected/config`) |
-| `/data/uploads` | Uploaded files |
-| `/data/modules` | Marketplace modules (installed automatically) |
-| `/data/modules-custom` | Your own / custom modules |
-| `/data/themes` | Custom themes |
-| `/data/logs` | Log files |
+| `config` | Instance configuration (equivalent to `protected/config`) |
+| `uploads` | Uploaded files |
+| `modules` | Marketplace modules (installed automatically) |
+| `modules-custom` | Your own / custom modules |
+| `themes` | Custom themes |
+| `logs` | Log files |
 
-Keep the `/data` volume (and your database) in your backup - see [Backup](backup.md).
+Keep this directory on the host and your database in your backup, see [Backup](backup.md).
 
-## Next steps
+## Further reading
 
-- [Backup & Restore](backup.md) - Docker backup service
-- [Updating HumHub](updating.md) - upgrading the image
-- [Command Line Interface](console.md) - running `yii` in the container
-- [Modules & Marketplace](modules.md) - custom modules in Docker
-- [Migrate to Docker](migrate-to-docker.md) - move an existing server installation
+- [Backup & Restore](backup.md): Docker backup service
+- [Updating HumHub](updating.md): upgrading the image
+- [Command Line Interface](console.md): running `yii` in the container
+- [Modules & Marketplace](modules.md): custom modules in Docker
+- [Migrate to Docker](migrate-to-docker.md): move an existing server installation
 
 For all Docker-specific details, environment variables and advanced compose setups, refer to the **[HumHub Docker repository](https://github.com/humhub/docker)**.
