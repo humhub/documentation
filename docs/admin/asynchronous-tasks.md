@@ -4,9 +4,6 @@ title: Asynchronous Task Processing
 sidebar_label: Asynchronous Task Processing
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Introduction
 ------------
 
@@ -22,32 +19,43 @@ Some examples for such background processes are:
 Workers / Job Processing
 ------------------------
 
-<Tabs groupId="install-method">
-<TabItem value="docker" label="Docker" default>
+### Docker
 
-The [Docker installation](installation-docker.md) runs the queue worker **inside the image** - no Supervisor, systemd or cron setup is required. Control it via environment variables:
+The [Docker installation](installation-docker.md) runs the queue worker **inside the image**, so you do not have to set up cron, Supervisor or systemd yourself. The container starts `queue/listen` under its own process manager, which is the same daemon approach described under Manual (Server) below.
 
-```yaml
-environment:
-  - HUMHUB_DOCKER__AUTOSTART_WORKER=true   # run the queue worker (default)
-  - HUMHUB_DOCKER__NUMPROCS_WORKER=2       # number of worker processes (default)
-```
-
-To scale workers independently, run them as a dedicated, replicated service - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups. The queue driver (MySQL/Redis) below is configured through `HUMHUB_CONFIG__...` environment variables.
-
-</TabItem>
-<TabItem value="manual" label="Manual (Server)">
-
-On a manual installation you run the worker yourself via cron, Supervisor or systemd, as described below.
-
-</TabItem>
-</Tabs>
-
-:::note Manual / server installation
-The following sections apply to a **manual / server installation**. With the [Docker installation](installation-docker.md) the queue worker already runs inside the image.
+:::tip
+The defaults below are suitable for most installations. You only need to change them if you split the stack into separate services.
 :::
 
-### Cronjob (Default)
+| Variable | Default | Purpose |
+|---|---|---|
+| `HUMHUB_DOCKER__AUTOSTART_WORKER` | `true` | Start the queue worker (`queue/listen`) |
+| `HUMHUB_DOCKER__NUMPROCS_WORKER` | `2` | Number of parallel worker processes |
+| `HUMHUB_DOCKER__AUTOSTART_SCHEDULER` | `true` | Start the scheduler, which runs `cron/run` every 60 seconds, see [Cron Jobs](cron-jobs.md) |
+| `HUMHUB_DOCKER__AUTOSTART_FRANKENPHP` | `true` | Start the built-in web server |
+
+**Separate worker services**
+
+For larger installations you can run the web server, the scheduler and the workers as separate services and scale the workers independently. Every service uses the same image and only switches off the processes it does not run:
+
+```yaml
+worker:
+  image: humhub/humhub:stable
+  deploy:
+    mode: replicated
+    replicas: 2
+  environment:
+    - HUMHUB_DOCKER__AUTOSTART_FRANKENPHP=false
+    - HUMHUB_DOCKER__AUTOSTART_SCHEDULER=false
+    - HUMHUB_DOCKER__AUTOSTART_WORKER=true
+    - HUMHUB_DOCKER__NUMPROCS_WORKER=1
+```
+
+The [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups.
+
+### Manual (Server)
+
+#### Cronjob (Default)
 
 You can start workers using cron by executing the queue/run command. It works as long as the queues contain jobs.
 
@@ -60,7 +68,7 @@ CronTab Example:
 In this case the cron will start the command every minute and execute scheduled tasks.
 
 
-### Daemon 
+#### Daemon 
 
 You can start a worker deamon using following command:
 
