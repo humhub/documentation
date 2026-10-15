@@ -37,7 +37,8 @@ Since HumHub itself can be used for a variety of use-cases, the required memory 
 
 | HumHub Version | PHP 8.5 | PHP 8.4 | PHP 8.3 | PHP 8.2 | PHP 8.1 | PHP 8.0 | PHP 7.4 | PHP 7.3 | PHP 7.2 | PHP 7.1 |
 |----------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| 1.19 (Upcoming)|   Yes   | **Yes** | **Yes** |   Yes   |   No    |   No    |   No    |   No    |   No    |   No    |
+| 1.20 (Upcoming)|   Yes   | **Yes** | **Yes** |   Yes   |   No    |   No    |   No    |   No    |   No    |   No    |
+| 1.19           |   Yes   | **Yes** | **Yes** |   Yes   |   No    |   No    |   No    |   No    |   No    |   No    |
 | 1.18           |   No    |   Yes   | **Yes** | **Yes** |   No    |   No    |   No    |   No    |   No    |   No    |
 | 1.17           |   No    |   No    | **Yes** | **Yes** |   Yes   |   No    |   No    |   No    |   No    |   No    |
 | 1.16           |   No    |   No    | **Yes** | **Yes** | **Yes** |   Yes   |   No    |   No    |   No    |   No    |
