@@ -10,6 +10,10 @@ A complete backup always consists of two parts:
 - the **database**
 - the **file storage** (uploads, configuration, custom modules and themes)
 
+:::note
+Store your backups outside of the data they contain: with Docker outside the data volume, on a server outside the web root and the `uploads` folder. Otherwise they are at risk of being publicly accessible or of getting backed up recursively by the next run. Ideally keep them on a separate partition or on remote storage. Rotating and cleaning up old backups is your responsibility.
+:::
+
 ## Docker
 
 For a Docker installation, backup and restore are documented in the [Docker Backup & Restore guide](https://github.com/humhub/docker/blob/main/docs/backup-restore.md) of the HumHub Docker repository. It also covers scheduled backups and all available options.
@@ -60,10 +64,6 @@ sudo tar czf <BACKUP_DIR>/humhub_files_`date +'%Y%m%d%H%M%S'`.tar.gz \
     humhub/uploads/ \
     humhub/themes/
 ```
-
-:::note
-Store your backups outside of the web root and outside of the `/uploads` folder, so they are not publicly accessible, and not backuped recursively by the next run.
-:::
 
 ### Restore HumHub from Backup Data
 
