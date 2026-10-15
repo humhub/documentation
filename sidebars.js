@@ -7,130 +7,116 @@
 
 module.exports = {
     About: [
+        'about/humhub',
         {
-            type: 'doc',
-            id: 'about/humhub'
-        },
-        {
-            type: 'category',
-            label: 'Release Notes',
-            items: [
+            'Release Notes': [
                 'about/releasenotes/release_notes',
                 'about/releasenotes/release_notes_1_19',
                 'about/releasenotes/release_notes_1_18',
                 'about/releasenotes/release_notes_1_17',
                 'about/releasenotes/release_notes_1_16',
-                'about/releasenotes/release_notes_1_15'
-            ]
+                'about/releasenotes/release_notes_1_15',
+            ],
         },
-        {
-            type: 'doc',
-            id: 'about/contribution'
-        },
-        {
-            type: 'doc',
-            id: 'about/support'
-        },
+        'about/contribution',
+        'about/support',
         /* {
             type: 'link',
             label: 'License',
-            href: 'https://www.humhub.com/licenses/'
+            href: 'https://www.humhub.com/licenses/',
         }, */
-
-       /* 'Release Notes': [
-            'about/spaces',
-        ],
-        'Contribution': [
-            'about/humhub',
-        ],*/
     ],
-    Administration: {
-        'Introduction': [
-            'admin/introduction',
-        ],
-        'Installation': [
-            'admin/installation-docker',
-            {
-                type: 'category',
-                label: 'Manual installation',
-                items: [
-                    'admin/requirements',
-                    'admin/server-setup',
-                    'admin/installation',
-                ],
-            },
-        ],
-        'Configuration': [
-            'admin/advanced-configuration',
-            'admin/dot-env',
-            'admin/config-options',
-            'admin/ldap',
-            'admin/oauth',
-            'admin/performance',
-            'admin/search',
-            'admin/uploads',
-            'admin/cron-jobs',
-            'admin/asynchronous-tasks',
-            'admin/permissions',
-            'admin/redis',
-            'admin/reverse-proxy',
-            'admin/logging',
-            'admin/translations',
-            'admin/security',
-        ],
-        'Maintenance': [
-            'admin/backup',
-            'admin/console',
-            'admin/modules',
-            'admin/troubleshooting'
-        ],
-        'Updating': [
-            'admin/updating',
-            'admin/updating-migration',
-            'admin/migrate-to-docker',
-        ],
-        /* 'HIDDEN': [
-            'admin/push-updates',
-            'admin/images',
-            {
-                type: 'category',
-                label: 'User & space administration',
-                items: [
-                    'adminuser/spaces',
-                    'adminuser/adminusers',
-                    'adminuser/permissions',
-                    'adminuser/modules',
-                    'adminuser/notifications',
-                    'adminuser/activities',
-                    'adminuser/emailsummaries',
-                ],
-            },
-            {
-                type: 'category',
-                label: 'User guide (draft)',
-                items: [
-                    'user/spaces',
-                    'user/user-management',
-                    'user/md-cheatsheet',
-                    'user/emoji-cheatsheet',
-                ],
-            },
-        ], */
-    },
-    Professional: {
-        'Overview': [
-            'professional-edition/pe-intro',
-            'professional-edition/features',
-            'professional-edition/support',
-            'professional-edition/saas',
-            'professional-edition/ee',
-        ]
-    },
-/*
-    User: {
-        'Overview': [
-//            'user/gettingstarted',
-        ]
-    }    
-*/
+    Administration: [
+        'admin/introduction',
+        {
+            'Installation': [
+                'admin/installation-docker',
+                {
+                    'Manual installation': [
+                        'admin/requirements',
+                        'admin/server-setup',
+                        'admin/installation',
+                    ],
+                },
+            ],
+        },
+        {
+            'Configuration': [
+                'admin/advanced-configuration',
+                'admin/dot-env',
+                'admin/config-options',
+                'admin/ldap',
+                'admin/oauth',
+                'admin/performance',
+                'admin/search',
+                'admin/uploads',
+                'admin/cron-jobs',
+                'admin/asynchronous-tasks',
+                'admin/permissions',
+                'admin/redis',
+                'admin/reverse-proxy',
+                'admin/logging',
+                'admin/translations',
+                'admin/security',
+            ],
+        },
+        {
+            'Maintenance': [
+                'admin/backup',
+                'admin/console',
+                'admin/modules',
+                'admin/troubleshooting',
+            ],
+        },
+        {
+            'Updating': [
+                'admin/updating',
+                'admin/updating-migration',
+                'admin/migrate-to-docker',
+            ],
+        },
+        /* {
+            'HIDDEN': [
+                'admin/push-updates',
+                'admin/images',
+                {
+                    'User & space administration': [
+                        'adminuser/spaces',
+                        'adminuser/adminusers',
+                        'adminuser/permissions',
+                        'adminuser/modules',
+                        'adminuser/notifications',
+                        'adminuser/activities',
+                        'adminuser/emailsummaries',
+                    ],
+                },
+                {
+                    'User guide (draft)': [
+                        'user/spaces',
+                        'user/user-management',
+                        'user/md-cheatsheet',
+                        'user/emoji-cheatsheet',
+                    ],
+                },
+            ],
+        }, */
+    ],
+    Professional: [
+        {
+            'Overview': [
+                'professional-edition/pe-intro',
+                'professional-edition/features',
+                'professional-edition/support',
+                'professional-edition/saas',
+                'professional-edition/ee',
+            ],
+        },
+    ],
+    /* User: [
+        {
+            'Overview': [
+                'user/gettingstarted',
+            ],
+        },
+    ], */
 };
