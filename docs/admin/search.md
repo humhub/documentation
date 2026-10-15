@@ -3,6 +3,9 @@ id: search
 title: Search
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **The built in search system is used for:**
 
 - Content
@@ -25,10 +28,23 @@ On this page click on the button "Rebuild search index". The process can take se
 
 To start the rebuild job, you need to run following command:
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii content-search/rebuild
+```
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
 ```
 cd /path/to/humhub/protected
 php yii content-search/rebuild
 ```
+
+</TabItem>
+</Tabs>
 
 ## File Content Indexing
 
