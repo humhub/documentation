@@ -10,10 +10,26 @@ The image is published on **[Docker Hub](https://hub.docker.com/r/humhub/humhub)
 
 ## Requirements
 
+### Docker
+
 - **Docker >= 20.10.13** with **Compose v2** (use the `docker compose` command; older setups use `docker-compose`)
 - A domain name pointing to the host if you want automatic HTTPS certificates
 
 You do **not** need to install PHP, a web server or set up cron manually, all of this is part of the image.
+
+### Memory
+
+Since HumHub itself can be used for a variety of use-cases, the required memory highly depends on the amount and activity within the network as well as the specific actions of the users. The host has to provide these resources for the container:
+
+**RAM**
+
+- 64 MB of memory per PHP process as a minimum. The container runs the web server, the scheduler and by default two queue workers side by side, so plan for several processes at once. If the database runs on the same host, add its memory on top.
+
+**Disk space**
+
+- 2 GB for the space taken by the Docker image itself
+- 100 MB for the database
+- additional space for the data volume, which grows with uploaded files, and for your backups. A well used, mature installation can easily grow to 10 GB and more.
 
 ## Quick start
 

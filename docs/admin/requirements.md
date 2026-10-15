@@ -27,6 +27,7 @@ Since HumHub itself can be used for a variety of use-cases, the required memory 
 
 - 500 MB for the applications
 - 100 MB for the database
+- additional space for the `uploads` directory, which grows with uploaded files, and for your backups. A well used, mature installation can easily grow to 10 GB and more.
 
 ## PHP Environment
 
