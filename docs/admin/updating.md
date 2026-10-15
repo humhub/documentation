@@ -4,9 +4,6 @@ title: Updating HumHub
 sidebar_label: Overview
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 The following **Migration Guides** will additionally be available for each new version release (except maintenance releases):
 - [Migration Guide: **Administrative Changes**](../admin/updating-migration.md) (Server Environment and System Requirements)
 - [Migration Guide: **Theming Related Changes**](https://github.com/humhub/humhub/blob/develop/docs/develop/theme-overview.md) (If you are using your own theme.)
@@ -16,8 +13,7 @@ Please follow these guides - if necessary - before you start the update process.
 
 We also recommend to create a complete **[backup](backup.md)** before each update (also for maintenance updates).
 
-<Tabs groupId="install-method">
-<TabItem value="docker" label="Docker" default>
+## Docker
 
 With the [Docker installation](installation-docker.md) you upgrade by switching the image tag and pulling the new image. Database and module migrations run automatically when the container starts.
 
@@ -31,19 +27,11 @@ With the [Docker installation](installation-docker.md) you upgrade by switching 
 
 The `Updater` module and the manual upgrade steps below are **not** used with Docker. For details and version pinning see the [Docker upgrade guide](https://github.com/humhub/docker/blob/main/docs/upgrading.md).
 
-</TabItem>
-<TabItem value="manual" label="Manual (Server)">
+## Manual (Server)
 
-For a manual / server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure - both described below.
+For a manual / server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure, both described below.
 
-</TabItem>
-</Tabs>
-
-:::note Manual / server installation
-The following sections apply to a **manual / server installation**. The [Docker installation](installation-docker.md) is upgraded by switching the image tag, as shown in the Docker tab above.
-:::
-
-## Updater Module
+### Updater Module
 
 The [HumHub Updater](https://marketplace.humhub.com/module/updater) Module enables updates of your HumHub platform 
 in just a few clicks and without any technical knowledge. 
@@ -73,7 +61,7 @@ Keep your updater module itself up to date, otherwise new versions may not be av
 :::
 
 
-## Upgrade manually
+### Upgrade manually
 
 :::note 
 The example commands presented here are based on the [Server Setup](server-setup.md) described here. 
@@ -173,7 +161,7 @@ rm -rf /var/www/humhub.backup
 
 
 
-## Git based Installations
+### Git based Installations
 
 
 If you're running an installation based on our git repository (not recommended for production installations), you can find more information about [updates](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md#updating) in our developer documentation. 
