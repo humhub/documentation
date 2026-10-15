@@ -122,18 +122,24 @@ while the `Done` value increases.
 
 ![Background Jobs Status](images/asynchronous_job_status.JPG)
 
+Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Logging`.
+In addition, the output of the two commands themselves can be examined, which differs between the installation methods:
+
 <Tabs groupId="install-method">
 <TabItem value="docker" label="Docker" default>
 
-Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Logging`.
+The scheduler and the queue workers write their output to the container log, which you can follow with:
 
-The scheduler and the queue workers additionally write their output to the container log, which you can follow with `docker compose logs -f humhub`. See [Logging](https://github.com/humhub/docker/blob/main/docs/logging.md) in the HumHub Docker repository for the available log targets and formats.
+```bash
+docker compose logs -f humhub
+```
+
+See [Logging](https://github.com/humhub/docker/blob/main/docs/logging.md) in the HumHub Docker repository for the available log targets and formats.
 
 </TabItem>
 <TabItem value="manual" label="Manual (Server)">
 
-Troubleshooting can be done by checking the usual backend logs under `Administration -> Information -> Logging` 
-as well as using the following cron configuration to log the output of the command to a `queue.log` and `cron.log` file:
+Use the following cron configuration to log the output of the commands to a `queue.log` and `cron.log` file:
 
 ```
 * * * * * /usr/bin/php /path/to/humhub/protected/yii queue/run >/path/to/queue.log 2>&1
