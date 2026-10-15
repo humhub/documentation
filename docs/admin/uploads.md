@@ -3,6 +3,9 @@ id: uploads
 title: File Management & Uploads
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 This part covers the topic of file uploads and the associated file management.
 
 
@@ -50,10 +53,23 @@ It is also possible to downscale already uploaded and processed files.
 
 To do this, the configuration must be adjusted to the desired options (see above) and then the following command must be executed:
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii file/downscale-images
+```
+
+</TabItem>
+<TabItem value="manual" label="Manual (Server)">
+
 ```
 cd protected
 php yii file/downscale-images
 ```
+
+</TabItem>
+</Tabs>
 
 :::caution
 The original files are overwritten and therefore this process cannot be undone.
