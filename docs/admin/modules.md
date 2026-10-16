@@ -32,6 +32,11 @@ After unpacking the custom module into the directory, navigate to **Administrati
 ![Activate Module](images/hh-docs-activate-module.png)
 
 **Updating modules manually:**
+
+:::tip Docker
+On the [Docker installation](installation-docker.md), marketplace modules are updated automatically on **every container start**: the image updates all installed marketplace modules to their latest compatible version, applies pending migrations and flushes the caches. So a restart of the container is all it takes. Only modules you placed on disk yourself still need the steps below.
+:::
+
 1. Unpack the `module_update.zip` file and overwrite the original files with new ones.
 2. Navigate to **Administration > Information > Database** to perform possible database migrations.
 

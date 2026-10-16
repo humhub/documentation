@@ -3,6 +3,9 @@ id: ldap
 title: LDAP
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 You can enable authentication against LDAP (e.g. against Active Directory or OpenLDAP) using the web interface at: `Administration -> Users -> Settings-> LDAP`.
 
 ### Advanced Features
@@ -95,6 +98,21 @@ Recreating the mappings works reliably based on the email addresses or usernames
 
 **Update Mapping for all users**
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+Run the following commands on the host, in the directory that holds your `compose.yml`:
+
+```bash
+docker compose exec humhub /app/yii ldap/mapping-clear
+docker compose exec humhub /app/yii ldap/mapping-rebuild
+
+docker compose exec humhub /app/yii ldap/status
+```
+
+</TabItem>
+<TabItem value="webserver" label="Web Server">
+
 Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
 
 ``` 
@@ -106,7 +124,25 @@ php yii ldap/mapping-rebuild
 php yii ldap/status
 ```
 
+</TabItem>
+</Tabs>
+
 **Update Mapping for a certain account**
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+Run the following commands on the host, in the directory that holds your `compose.yml`:
+
+```bash
+docker compose exec humhub /app/yii ldap/mapping-clear ldap someUserName
+docker compose exec humhub /app/yii ldap/mapping-rebuild
+
+docker compose exec humhub /app/yii ldap/status
+```
+
+</TabItem>
+<TabItem value="webserver" label="Web Server">
 
 Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
 
@@ -119,16 +155,32 @@ php yii ldap/mapping-rebuild
 php yii ldap/status
 ```
 
+</TabItem>
+</Tabs>
+
 ## LDAP Console Commands
 
 ### View all LDAP users
 
 Using the following command, a list of all users returned by the LDAP server (`User Filter` Configuration )is displayed. HumHub LDAP users that do not appear in the list are automatically disabled.  
 
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+```bash
+docker compose exec humhub /app/yii ldap/list-users
+```
+
+</TabItem>
+<TabItem value="webserver" label="Web Server">
+
 ```
 cd protected
 php yii ldap/list-users
 ``` 
+
+</TabItem>
+</Tabs>
 
 ## Active Directory
 

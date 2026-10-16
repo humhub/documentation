@@ -13,8 +13,25 @@ Please follow these guides - if necessary - before you start the update process.
 
 We also recommend to create a complete **[backup](backup.md)** before each update (also for maintenance updates).
 
+## Docker
 
-## Updater Module
+With the [Docker installation](installation-docker.md) you upgrade by switching the image tag and pulling the new image. Database and module migrations run automatically when the container starts.
+
+1. Create a [backup](backup.md).
+2. Set the desired image tag in your `compose.yml` (e.g. `humhub/humhub:stable` or a pinned version).
+3. Pull and restart:
+   ```bash
+   docker compose pull
+   docker compose up -d
+   ```
+
+The `Updater` module and the manual upgrade steps below are **not** used with Docker. For details and version pinning see the [Docker upgrade guide](https://github.com/humhub/docker/blob/main/docs/upgrading.md).
+
+## Web Server
+
+On a web server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure, both described below.
+
+### Updater Module
 
 The [HumHub Updater](https://marketplace.humhub.com/module/updater) Module enables updates of your HumHub platform 
 in just a few clicks and without any technical knowledge. 
@@ -44,7 +61,7 @@ Keep your updater module itself up to date, otherwise new versions may not be av
 :::
 
 
-## Upgrade manually
+### Upgrade manually
 
 :::note 
 The example commands presented here are based on the [Server Setup](server-setup.md) described here. 
@@ -144,7 +161,7 @@ rm -rf /var/www/humhub.backup
 
 
 
-## Git based Installations
+### Git based Installations
 
 
 If you're running an installation based on our git repository (not recommended for production installations), you can find more information about [updates](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md#updating) in our developer documentation. 

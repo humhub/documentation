@@ -6,6 +6,10 @@ sidebar_label: Troubleshooting & Help
 
 This guide provides some assistance for common administrative problems.
 
+:::tip Docker
+On the [Docker installation](installation-docker.md) most of the server-specific issues below (cron, php.ini, permissions) do not apply. To inspect what a container is doing, use `docker compose logs -f humhub`, and run console commands via `docker compose exec humhub /app/yii <command>` (see [Command Line Interface](console.md)).
+:::
+
 Cron Job Setup
 ----------------------------------------
 

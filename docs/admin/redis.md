@@ -6,7 +6,6 @@ sidebar_label: Redis
 
 We recommend installing an additional Redis server which can act as a caching, push service and job queuing service for HumHub.
 
-
 Basic Configuration
 ------------------
 

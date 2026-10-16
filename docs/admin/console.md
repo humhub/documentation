@@ -3,23 +3,77 @@ id: console
 title: Command Line Interface
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Some administrative tasks can also or exclusively be executed by console. This guide lists the most
 important console commands used to administer HumHub. All available console commands can be displayed 
-by running `php yii` within the `protected` directory of your HumHub installation.
+by running the `yii` command with no arguments.
+
+The available commands are the same for both installation methods, only the way you invoke `yii` differs between the two cases:
+
+<Tabs groupId="install-method">
+<TabItem value="docker" label="Docker" default>
+
+You run the command on the **host**, in the directory that holds your `compose.yml`. Docker executes it inside the running `humhub` container:
+
+```bash
+docker compose exec humhub /app/yii <command>
+```
+
+**Examples**
+
+List all available commands by leaving the route out:
+
+```bash
+docker compose exec humhub /app/yii
+```
+
+Flush the caches:
+
+```bash
+docker compose exec humhub /app/yii cache/flush-all
+```
+
+As a further variant you can address the container by its id instead, which is handy in scripts and outside the Compose directory:
+
+```bash
+docker exec -it $(docker compose ps -q humhub) /app/yii cache/flush-all
+```
+
+See the [Docker CLI guide](https://github.com/humhub/docker/blob/main/docs/cli.md) for details.
+
+</TabItem>
+<TabItem value="webserver" label="Web Server">
 
 :::important
 Make sure that you are working with the proper system user to prevent permission problems.
 To change the system user use e.g. ``su -s /bin/bash -l www-data``
 :::
 
-All of the following commands can be executed within the `@humhub/protected` directory.
-
-**Example**
+You run the command on the server itself, within the `@humhub/protected` directory of your HumHub installation.
 
 ```console
 cd protected
+php yii <command>
+```
+
+**Examples**
+
+List all available commands by leaving the route out:
+
+```console
+php yii
+```
+
+Flush the caches:
+
+```console
 php yii cache/flush-all
 ```
+
+</TabItem>
+</Tabs>
 
 ## Commands
 
@@ -86,9 +140,11 @@ Manages application migrations.
 
 **Include module migrations:**
 
-```console
-php yii migrate/up --includeModuleMigrations=1
+```bash
+<yii> migrate/up --includeModuleMigrations=1
 ```
+
+`<yii>` stands for the invocation shown at the top of this page, depending on your installation method.
 
 ### `module`
 

@@ -1,7 +1,12 @@
 ---
 id: installation
-title: HumHub Setup
+title: Web Server Installation
+sidebar_label: Installation
 ---
+
+:::tip
+The [Docker installation](installation-docker.md) is the recommended way to run HumHub. This page describes the classic installation of the packaged release on your own **web server**.
+:::
 
 :::tip
 Check out our [Community Wiki](https://community.humhub.com/s/installation-and-setup/wiki/overview/list-categories) for many more guides and tips on installing and running HumHub!
