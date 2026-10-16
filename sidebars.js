@@ -32,7 +32,7 @@ module.exports = {
             'Installation': [
                 'admin/installation-docker',
                 {
-                    'Manual installation': [
+                    'Web Server': [
                         'admin/requirements',
                         'admin/server-setup',
                         'admin/installation',

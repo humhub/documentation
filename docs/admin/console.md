@@ -44,7 +44,7 @@ docker exec -it $(docker compose ps -q humhub) /app/yii cache/flush-all
 See the [Docker CLI guide](https://github.com/humhub/docker/blob/main/docs/cli.md) for details.
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 :::important
 Make sure that you are working with the proper system user to prevent permission problems.

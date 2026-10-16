@@ -7,7 +7,7 @@ sidebar_label: Requirements
 This section lists all required and recommended server settings.
 
 :::tip
-These requirements apply to a **manual / server installation**. If you use the [Docker installation](installation-docker.md) you only need Docker >= 20.10.13 with Compose v2 - the image already bundles the web server, PHP and all required extensions.
+These requirements apply to a **web server installation**. If you use the [Docker installation](installation-docker.md) you only need Docker >= 20.10.13 with Compose v2 - the image already bundles the web server, PHP and all required extensions.
 :::
 
 ## Webserver

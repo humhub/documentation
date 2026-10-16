@@ -1,11 +1,11 @@
 ---
 id: installation
-title: Manual Installation
-sidebar_label: Manual Installation
+title: Web Server Installation
+sidebar_label: Installation
 ---
 
 :::tip
-The [Docker installation](installation-docker.md) is the recommended way to run HumHub. This page describes the classic **manual installation** of the packaged release on your own web server.
+The [Docker installation](installation-docker.md) is the recommended way to run HumHub. This page describes the classic installation of the packaged release on your own **web server**.
 :::
 
 :::tip

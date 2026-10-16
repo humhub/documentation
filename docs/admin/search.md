@@ -36,7 +36,7 @@ docker compose exec humhub /app/yii content-search/rebuild
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```
 cd /path/to/humhub/protected

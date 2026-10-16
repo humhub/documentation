@@ -97,7 +97,7 @@ docker compose exec humhub /app/yii cache/flush-all
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```
 php protected/yii cache/flush-all

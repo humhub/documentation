@@ -26,7 +26,7 @@ docker compose run --rm backup
 
 A backup run produces a single `humhub_backup_<TIMESTAMP>.tar` archive in the backup volume, containing the database dump and the storage archive. Set `HUMHUB_DOCKER__BACKUP_MERGE_ARCHIVES` to `false` to keep both parts as separate files and reduce the temporary space needed on the backup volume.
 
-## Manual (Server)
+## Web Server
 
 ### Create a Backup of HumHub Data
 

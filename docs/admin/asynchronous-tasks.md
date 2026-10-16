@@ -21,7 +21,7 @@ Workers / Job Processing
 
 ### Docker
 
-The [Docker installation](installation-docker.md) runs the queue worker **inside the image**, so you do not have to set up cron, Supervisor or systemd yourself. The container starts `queue/listen` under its own process manager, which is the same daemon approach described under Manual (Server) below.
+The [Docker installation](installation-docker.md) runs the queue worker **inside the image**, so you do not have to set up cron, Supervisor or systemd yourself. The container starts `queue/listen` under its own process manager, which is the same daemon approach described in the [Web Server](#web-server) section below.
 
 :::tip
 The defaults below are suitable for most installations. You only need to change them if you split the stack into separate services.
@@ -53,7 +53,7 @@ worker:
 
 The [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups.
 
-### Manual (Server)
+### Web Server
 
 #### Cronjob (Default)
 

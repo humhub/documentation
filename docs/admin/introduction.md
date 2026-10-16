@@ -15,7 +15,7 @@ Use this if you want a fast, reproducible setup with the least manual configurat
 
 - [Docker Installation](installation-docker.md)
 
-## 2. Manual / server installation
+## 2. Web Server
 
 The classic installation of the packaged release on your own web server (Apache or nginx + PHP + MariaDB/MySQL). This gives you full control over every part of the stack and is the right choice when you must integrate into an existing server environment or have specific hosting constraints.
 
@@ -23,10 +23,10 @@ Start here:
 
 - [System Requirements](requirements.md)
 - [Server Setup](server-setup.md)
-- [Manual Installation](installation.md)
+- [Web Server Installation](installation.md)
 
 :::tip
-Already running a manual server installation and want to move to Docker? See [Migrate to Docker](migrate-to-docker.md).
+Already running HumHub on your own web server and want to move to Docker? See [Migrate to Docker](migrate-to-docker.md).
 :::
 
 ## 3. Try it hosted (Demo & SaaS)
@@ -35,3 +35,7 @@ If you don't want to operate the software yourself, or just want to evaluate Hum
 
 - [Create a free demo / SaaS instance](https://saas.humhub.com/en/create)
 - See the [SaaS option](../professional-edition/saas.md) of the Professional Edition for details.
+
+## Docker or Web Server?
+
+Both self-hosted options run the same HumHub, but the commands you use and the places your files live differ. Wherever this guide has to describe both, it labels them **Docker** and **Web Server**, either as a section heading or as tabs above the examples. Pick the one that matches your installation.

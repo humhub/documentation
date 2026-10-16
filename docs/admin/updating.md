@@ -27,9 +27,9 @@ With the [Docker installation](installation-docker.md) you upgrade by switching 
 
 The `Updater` module and the manual upgrade steps below are **not** used with Docker. For details and version pinning see the [Docker upgrade guide](https://github.com/humhub/docker/blob/main/docs/upgrading.md).
 
-## Manual (Server)
+## Web Server
 
-For a manual / server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure, both described below.
+On a web server installation, use either the **Updater module** (recommended, no technical knowledge required) or the **manual upgrade** procedure, both described below.
 
 ### Updater Module
 

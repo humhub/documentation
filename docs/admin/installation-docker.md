@@ -1,10 +1,10 @@
 ---
 id: installation-docker
 title: Docker Installation
-sidebar_label: Docker Installation
+sidebar_label: Docker
 ---
 
-The official HumHub Docker image is the **recommended way to run HumHub**. It bundles the complete stack (web server with automatic HTTPS, cron scheduler, queue workers and real-time push via Mercure), so most of the manual configuration described in the server-based guides is already done for you.
+The official HumHub Docker image is the **recommended way to run HumHub**. It bundles the complete stack (web server with automatic HTTPS, cron scheduler, queue workers and real-time push via Mercure), so most of the configuration described in the web server guides is already done for you.
 
 The image is published on **[Docker Hub](https://hub.docker.com/r/humhub/humhub)**, which lists all available tags and is what your Docker host pulls from. Its sources, the complete list of environment variables and further example setups are maintained in the **[HumHub Docker repository](https://github.com/humhub/docker)**.
 
@@ -94,11 +94,11 @@ Start the stack:
 docker compose up -d
 ```
 
-Open your `SERVER_NAME` URL in the browser. The HumHub installer guides you through the remaining setup, exactly as with a manual installation.
+Open your `SERVER_NAME` URL in the browser. The HumHub installer guides you through the remaining setup, exactly as on a web server installation.
 
 ## What's already handled
 
-The image runs these for you, so the corresponding manual guides are only relevant for server installations:
+The image runs these for you, so the corresponding guides are only relevant for web server installations:
 
 | Concern | In Docker |
 |---|---|
@@ -120,7 +120,7 @@ environment:
 
 This is the same mechanism described in [Environment / .env configuration](dot-env.md) and [Advanced Configuration](advanced-configuration.md). Docker only supplies the variables through Compose.
 
-The PHP configuration files still work. The image points HumHub's config directory to the data volume, so `common.php`, `web.php` and `console.php` in `humhub-data/config` are read exactly as on a server installation. Environment variables are applied after the configuration files, so a setting defined in both places is taken from the environment.
+The PHP configuration files still work. The image points HumHub's config directory to the data volume, so `common.php`, `web.php` and `console.php` in `humhub-data/config` are read exactly as on a web server installation. Environment variables are applied after the configuration files, so a setting defined in both places is taken from the environment.
 
 ## Data & volumes
 
@@ -143,6 +143,6 @@ Keep this directory on the host and your database in your backup, see [Backup](b
 - [Updating HumHub](updating.md): upgrading the image
 - [Command Line Interface](console.md): running `yii` in the container
 - [Modules & Marketplace](modules.md): custom modules in Docker
-- [Migrate to Docker](migrate-to-docker.md): move an existing server installation
+- [Migrate to Docker](migrate-to-docker.md): move an existing web server installation
 
 For all Docker-specific details, environment variables and advanced compose setups, refer to the **[HumHub Docker repository](https://github.com/humhub/docker)**.

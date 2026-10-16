@@ -4,7 +4,7 @@ title: Migrate to Docker
 sidebar_label: Migrate to Docker
 ---
 
-This page describes how to move an existing **manual / server installation** to the [Docker setup](installation-docker.md). The authoritative, step by step guide lives in the [HumHub Docker repository](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md).
+This page describes how to move an existing **web server installation** to the [Docker setup](installation-docker.md). The authoritative, step by step guide lives in the [HumHub Docker repository](https://github.com/humhub/docker/blob/main/docs/migrate-to-docker.md).
 
 ## Principle
 

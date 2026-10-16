@@ -61,7 +61,7 @@ docker compose exec humhub /app/yii file/downscale-images
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```
 cd protected

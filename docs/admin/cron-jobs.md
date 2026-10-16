@@ -32,7 +32,7 @@ docker compose exec humhub /app/yii cron/run
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```console
 php /path/to/humhub/protected/yii cron/run
@@ -58,7 +58,7 @@ docker compose exec humhub /app/yii queue/run
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```console
 php /path/to/humhub/protected/yii queue/run
@@ -86,7 +86,7 @@ environment:
 For larger setups you can move the scheduler and workers into dedicated, scalable services - the [multi-service compose example](https://github.com/humhub/docker/blob/main/examples/compose-multi-services.yml) sketches possible multi-service setups.
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 If you are **not** using any other job-runner like _Supervisor_ or _Systemd_ for your queue, both commands can
 be scheduled as CronJob. Otherwise only the main `cron/run` command needs to be scheduled as CronJob.
@@ -137,7 +137,7 @@ docker compose logs -f humhub
 See [Logging](https://github.com/humhub/docker/blob/main/docs/logging.md) in the HumHub Docker repository for the available log targets and formats.
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 Use the following cron configuration to log the output of the commands to a `queue.log` and `cron.log` file:
 

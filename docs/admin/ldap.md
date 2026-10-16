@@ -111,7 +111,7 @@ docker compose exec humhub /app/yii ldap/status
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
 
@@ -142,7 +142,7 @@ docker compose exec humhub /app/yii ldap/status
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 Using the HumHub system user, go to the root directory of the HumHub application and execute the following commands: 
 
@@ -172,7 +172,7 @@ docker compose exec humhub /app/yii ldap/list-users
 ```
 
 </TabItem>
-<TabItem value="manual" label="Manual (Server)">
+<TabItem value="webserver" label="Web Server">
 
 ```
 cd protected
