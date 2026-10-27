@@ -22,7 +22,7 @@ Make sure your server meets the [System Requirements](requirements.md) before yo
 If you intend to setup a development environment for HumHub, follow the [Development Environment](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md)
 guide instead.
 
-The packaged version of HumHub is available at [https://download.humhub.com](https://download.humhub.com). Extract the
+The packaged version of HumHub is available at [https://www.humhub.com/downloads](https://www.humhub.com/downloads). Extract the
 downloaded package into a directory on your server (e.g. `/var/www/humhub`). This directory is your HumHub root,
 containing `index.php`, and must be used as the document root in your web server configuration (see
 [Web Server Configuration](server-setup.md#webserver)).
@@ -31,11 +31,12 @@ Example
 
 ```
 cd /tmp
-wget https://download.humhub.com/downloads/install/humhub-<version>.tar.gz
+wget "<download-url>" -O humhub-<version>.tar.gz
 tar xvfz humhub-<version>.tar.gz
 mv /tmp/humhub-<version> /var/www/humhub
 ```
-> Please replace `<version>` with the desired HumHub version e.g. `1.13.0`.
+> Please replace `<download-url>` with the download link of the desired package from
+> [https://www.humhub.com/downloads](https://www.humhub.com/downloads) and `<version>` with its HumHub version e.g. `1.13.0`.
 
 ## File permissions
 

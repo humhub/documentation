@@ -227,7 +227,7 @@ No changes required.
 **Migration Steps**
 
 1. Delete your current HumHub installation (Don't forget to make a backup as mentioned above, you will need these files later!)
-2. Download the latest HumHub package directly from [https://download.humhub.com](https://download.humhub.com) and extract it to your webroot or install it via [GitHub/Composer](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md#installation).
+2. Download the latest HumHub package directly from [https://www.humhub.com/downloads](https://www.humhub.com/downloads) and extract it to your webroot or install it via [GitHub/Composer](https://github.com/humhub/humhub/blob/develop/docs/develop/intro-environment.md#installation).
 3. **IMPORTANT**: Before starting the Web installer you have to restore the /uploads/ directory form your backup to your new installation
 4. Start the Web installer (e.g. [http://localhost/humhub](http://localhost/humhub)) and follow the instructions. If you enter the database name from your previous installation, HumHub will automatically migrate your existing database to the new version
 5. Reinstall all previously installed modules/themes

@@ -88,14 +88,16 @@ mv /var/www/humhub /var/www/humhub.backup
 
 **Download and Extract**
 
-Download the latest HumHub package from [https://download.humhub.com](https://download.humhub.com) and extract the package to your `web-root`.
+Download the latest HumHub package from [https://www.humhub.com/downloads](https://www.humhub.com/downloads) and extract the package to your `web-root`.
 
 ``` 
 cd /var/www
-wget https://download.humhub.com/downloads/install/humhub-1.13.0.tar.gz
-tar xvfz humhub-1.13.0.tar.gz
-mv humhub-1.13.0 humhub 
+wget "<download-url>" -O humhub-<version>.tar.gz
+tar xvfz humhub-<version>.tar.gz
+mv humhub-<version> humhub 
 ```
+> Please replace `<download-url>` with the download link of the desired package from
+> [https://www.humhub.com/downloads](https://www.humhub.com/downloads) and `<version>` with its HumHub version e.g. `1.13.0`.
 
 **Restore individual files**
 
