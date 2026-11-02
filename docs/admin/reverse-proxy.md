@@ -104,6 +104,8 @@ environment:
 
 With the list syntax, single quotes become part of the value and every request fails with HTTP 500.
 
+A file included with `env_file:` is read like a `.env` file, so single quotes work there. `docker run --env-file` and `env_file` with `format: raw` keep the quotes as part of the value. Writing the value without quotes (`HUMHUB_WEB_CONFIG__COMPONENTS__REQUEST__TRUSTED_HOSTS=["192.168.0.0/24"]`) works in all cases.
+
 :::warning Web configuration only
 Do not configure the trusted hosts in `protected/config/common.php` or with the `HUMHUB_CONFIG__` prefix. Both also apply to the console application, whose request component has no `trustedHosts` property. Every `yii` command (migrations, queue workers, cron jobs) then fails with `Setting unknown property: yii\console\Request::trustedHosts`. The web frontend keeps working, so the error is easy to miss.
 :::
