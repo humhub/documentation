@@ -1,7 +1,7 @@
 ---
 id: ee
 title: Enterprise Edition (Legacy)
-sidebar_label: Enterprise Edition
+sidebar_label: Enterprise Edition (Legacy)
 ---
 
 :::warning

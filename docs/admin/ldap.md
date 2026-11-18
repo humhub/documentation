@@ -20,6 +20,10 @@ The [Professional Edition](https://www.humhub.com/professional-edition/) module 
 More information can be found in the [module documentation](https://marketplace.humhub.com/module/advanced-ldap/manual).
 
 
+## Login
+
+Users are looked up by the `User Filter`, combined with the username attribute or the email attribute. Users can therefore log in with their username or their email address. The separate `Login Filter` was removed with HumHub 1.19.
+
 ## SSL (LDAPS)
 
 
@@ -186,8 +190,10 @@ php yii ldap/list-users
 
 ### Restrict to enabled users
 
-- Login Filter:  `(&(sAMAccountName=%s)(!userAccountControl:1.2.840.113556.1.4.803:=2))`
-- User Filter:  `"(&(objectClass=person)(memberOf=CN=Workers,CN=Users,DC=myDomain,DC=com)(!userAccountControl:1.2.840.113556.1.4.803:=2))"`
+- Login Filter (removed since v1.19):  `(&(sAMAccountName=%s)(!userAccountControl:1.2.840.113556.1.4.803:=2))`
+- User Filter:  `(&(objectClass=person)(memberOf=CN=Workers,CN=Users,DC=myDomain,DC=com)(!userAccountControl:1.2.840.113556.1.4.803:=2))`
+
+Since v1.19 it is sufficient to restrict the User Filter, which excludes disabled users both from login and from the synchronisation.
 
 ## Troubleshooting
 

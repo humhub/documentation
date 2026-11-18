@@ -10,6 +10,12 @@ In addition to this guide, you may also check the [**Theme Migration**](https://
 and [**Development Migration**](https://github.com/humhub/humhub/blob/develop/docs/develop/module-migrate.md) guides.
 
 
+1.19
+----
+
+- LDAP: Additional LDAP servers are now configured as connections in `modules.ldap.connections` (see [Multiple LDAP servers](https://marketplace.humhub.com/module/advanced-ldap/manual)). Auth client configurations under `components.authClientCollection.clients` which define connection options such as `hostname` or `baseDn` are no longer supported and cause an `UnknownPropertyException`. Move these options to `modules.ldap.connections`, keeping the previous client ID as connection ID.
+- LDAP: The `Login Filter` was removed. Users are looked up by the `User Filter` combined with the username or email attribute.
+
 1.18
 ----
 

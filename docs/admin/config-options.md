@@ -149,13 +149,18 @@ Since: `1.7`<br/>
 ### LDAP
 
 **pageSize** - The page size for ldap query, set to 0 to disable pagination.<br/>
-Default: `10000`<br/>
+Default: `1000`<br/>
 Data type: `Integer`<br/>
 Since: `1.6`<br/>
 
 **queriedAttributes** - The queried LDAP attributes, leave empty to retrieve all.<br/>
 Default: `[]`<br/>
 Data type: `Array`<br/>
+
+**connections** - Additional LDAP connections keyed by connection ID, see [Multiple LDAP servers](https://marketplace.humhub.com/module/advanced-ldap/manual).<br/>
+Default: `[]`<br/>
+Data type: `Array`<br/>
+Since: `1.19`<br/>
 
 ### Advanced-LDAP `PRO`
 
