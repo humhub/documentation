@@ -121,13 +121,15 @@ Console tools for manage Ldap
 
 | Command                | Description                                                           |    
 |------------------------|-----------------------------------------------------------------------|
-| `ldap/list` (default)  | Lists configured LDAP auth clients                                    | 
+| `ldap/list` (default)  | Lists configured LDAP connections                                     | 
 | `ldap/list-users`      | Lists all users found in the LDAP server                              |
-| `ldap/mapping-clear`   | Clears the `authclient_id` entries in the user table.                 |
-| `ldap/mapping-rebuild` | Rebuilds the `authclient_id` and auth_mode mappings in the user table |
+| `ldap/mapping-clear`   | Clears the LDAP user mappings (`user_auth` table)                     |
+| `ldap/mapping-rebuild` | Rebuilds the LDAP user mappings via email or username                 |
 | `ldap/show-user`       | Shows all returned user attributes provided by the LDAP connection   |
 | `ldap/status`          | Returns status information                                            |
 | `ldap/sync`            | Synchronizes all ldap users (if `autoRefresh` is enabled)             |
+
+Except for `ldap/list`, the commands accept a connection ID as parameter (default: `ldap`), e.g. `ldap/sync ldapServer2` or `ldap/show-user someUserName ldapServer2` (see [Multiple LDAP servers](https://marketplace.humhub.com/module/advanced-ldap/manual)).
 
 ### `migrate`
 
