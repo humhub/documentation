@@ -9,8 +9,8 @@ Check [docs.humhub.org](http://docs.humhub.org) for a live version!
 This project uses [npm](https://www.npmjs.com/) as its package manager and requires Node.js 18 or newer.
 
 No lockfile is committed: dependencies are resolved fresh from `package.json`
-on every install. This mirrors the production build server, which rebuilds the
-site the same way. If you need a reproducible tree while developing, keep the
+on every install. This mirrors the deploy workflow (see [Deployment](#deployment)),
+which builds the site the same way. If you need a reproducible tree while developing, keep the
 `package-lock.json` that `npm install` generates locally — it is ignored by git.
 
 ### Installation
@@ -64,11 +64,24 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 ### Deployment
 
+There is nothing to deploy by hand. Every push to `master` triggers the
+[Deploy documentation](.github/workflows/deploy.yml) GitHub Action, which runs
+`npm run build` and syncs the `build/` directory to the web server behind
+[docs.humhub.org](https://docs.humhub.org) via `rsync --delete` over SSH.
+
+To redeploy without a new commit, run the workflow manually: Actions → Deploy
+documentation → Run workflow, or
+
 ```
-$ GIT_USER=<Your GitHub username> USE_SSH=true npm run deploy
+$ gh workflow run deploy.yml -R humhub/documentation
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The connection settings (`DEPLOY_*`) are secrets of the `production`
+environment of this repository. The server side (deploy user, rrsync
+restriction, web server config) is documented in `DEPLOYMENT.md` of the
+internal `humhub/website` repository. Redirects for old or moved pages are
+also configured there, not in this repository. If you rename or remove a
+page, ask for a redirect to be added.
 
 ### Guidelines
 
