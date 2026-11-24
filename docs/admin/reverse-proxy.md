@@ -23,7 +23,7 @@ The proxy has to keep the original `Host` header and send the headers `X-Forward
 
 Common pitfalls:
 
-- Under FrankenPHP (e.g. the Docker image), `X-Forwarded-Host` is required, otherwise URLs end up with `:80`.
+- Under FrankenPHP, HumHub does not receive the `Host` header. Without `X-Forwarded-Host`, URLs end up with `:80`. The Docker image sets `X-Forwarded-Host` from `Host` if the proxy does not send it (since November 24, 2026, see [Docker CHANGELOG](https://github.com/humhub/docker/blob/main/docs/CHANGELOG.md)).
 - Without `X-Forwarded-Proto`, all URLs including the live updates URL use `http://`.
 - Live updates (`/.well-known/mercure`) usually pass the proxy without extra settings. For nginx, disabling response buffering for this location is a sensible precaution ([proxy_buffering](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering)):
 
